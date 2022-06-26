@@ -16,7 +16,7 @@ cd tailpages
 ```
 ...
 
-To enable typography plugin, inter font, and customizations by updating `tailwid.config.js` as follows:
+To enable typography plugin, enter the font and customizations by updating `tailwind.config.js` as follows:
 
 ```js
 const defaultTheme = require('tailwindcss/defaultTheme')
@@ -66,4 +66,4 @@ module.exports = {
 }
 ```
 
-See more examples at [here](https://harrywang.me/2022/01/18/tailpages-tutorial-technical.html)
+See more examples [here](https://harrywang.me/2022/01/18/tailpages-tutorial-technical.html)

@@ -10,8 +10,10 @@ If you know about `git` and feel good about contributing, but you're not sure ab
 
 1. **[Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository)** the `main` branch to your local device:
 ```(git)
-git clone 
+git clone --recurse-submodules git@github.com:Neuro-Mechatronics-Interfaces/NHP_Center_Out.git 
 ```
+  + _Note 1:_ you will want to replace `NHP_Center_Out` with the name of the desired repository.
+  + _Note 2:_ if you have not yet set up `git` and **[configured a credential manager](https://code.nml.wtf/tutorials/2022/06/26/credentials.html)**, please do that first.
 2. Make a **[Branch](https://git-scm.com/docs/git-branch)** on your local device:
 ```(git)
 git branch
