@@ -18,7 +18,7 @@ Next, you need to add the key to your GitHub account. Step-by-step instructions 
 
 Once you have completed these steps, you should be able to use `git` commands with this and other `Neuro-Mechatronics-Interfaces` organization repositories that you have access to via the `Weberlab` team.  
 
-### 3. Setup local repo ###
+## 3. Setup local repo ##
 With `git` installed and your `ssh` credentials ready, you should now be able to clone this repository. Navigate to where you want this repository to go (as a folder) right-click and click `Git Bash Here` then enter:  
 ```(git)
 git clone --recurse-submodules git@github.com:Neuro-Mechatronics-Interfaces/NHP_Center_Out.git
