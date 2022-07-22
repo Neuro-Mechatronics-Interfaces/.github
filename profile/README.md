@@ -25,7 +25,7 @@ I started this GitHub organization when I joined NML in Spring 2021, because I g
 ## Contributing ##
 If you are not familiar with `git` or version-control in general, it's recommended to familiarize yourself (it is a lot easier than you would think) by going **[here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)**.
 
-Please refer to **[this guide](https://code.nml.wtf/tutorials/contributing.html)** for how to contribute your own code.
+Please refer to **[this guide](https://code.nml.wtf/tutorials/2022/06/25/contributing.html)** for how to contribute your own code.
 
 ---
 
