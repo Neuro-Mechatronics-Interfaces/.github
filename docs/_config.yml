@@ -1,0 +1,58 @@
+# change the followings to match your Github username and repo name
+baseurl: "" # the name of your github repo
+url: "https://code.nml.wtf" # the url of your github pages
+# url: "http://127.0.0.1:4000" # toggle this if you want to run local jekyll server
+
+# metadata to describe when site was updated and by whom, last
+last_update: "2022-11-09"
+last_author: Max
+
+# site information used in page title, meta data etc.
+title: "WTF NML?"
+description: Repos, docs, and tech-protocols developed/maintained at the Neuro-Mechatronics Lab (NML).
+
+# color theme for links
+theme-color: stone # indigo|yellow|pink|green|stone|
+
+# homepage information
+author: Neuro-Mechatronics Lab
+author-bio: Code and documentation for the NML at CMU. # change to false to hide
+author-image: nml-official_banner__blown-up.png  # file must be in the /assets/img/ folder
+author-icon: nml-official_square.jpg             # file must (also) be in the /assets/img/ folder
+
+# navigation menu
+show-nav-menu: true
+
+nav-menu:
+- text: About
+  permalink: about
+- text: SOPs
+  permalink: sops
+- text: Tutorials
+  permalink: tutorials
+- text: Examples
+  permalink: examples
+- text: Tags
+  permalink: tag
+
+
+# use false to turn off any social media links
+twitter: https://twitter.com/dougweberlab
+facebook: false
+instagram: false
+github: https://github.com/Neuro-Mechatronics-Interfaces
+linkedin: https://www.linkedin.com/in/drdougweber/
+medium: false
+google-scholar: https://scholar.google.com/citations?user=7iFu3a4AAAAJ&hl=en&oi=sra
+email: neuromech@andrew.cmu.edu
+
+# footer information
+footer-msg: "Powered by Tailpages"
+footer-msg-link: https://github.com/harrywang/tailpages
+
+# google analytics
+google-analytics: G-4M7DTKYGC0
+
+# jekyll plugins - no need to change
+plugins:
+    - jekyll-seo-tag

@@ -1,0 +1,71 @@
+<style>
+    .tag_outline {
+        flex-direction:row;
+        align-items:center;
+        padding: 3px;
+        background-color:slategrey;    
+        outline-color:slategrey;
+        outline-width:0px;
+        border-width:0px;
+        border-radius:20px;
+    }
+    .tag_outline:hover, .tag_outline:focus {
+        transform: scale(1.4);
+        outline-color:black;
+        outline-width:2px;
+        border-width:4px;
+    }
+</style>
+
+
+
+<div class="shadow-s shadow-black prose w-full">
+    <input class="bg-left shadow-lg h-3 w-full text-center rounded-full" id="filter" type="text" style="background-image: url({{site.baseurl}}/assets/img/round_search_black_18dp.png); background-repeat:no-repeat; background-size: 32px 32px">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $("#filter").keyup(function(){
+   
+          // Retrieve the input field text and reset the count to zero
+          var filter = $(this).val(), count = 0;
+   
+          
+          // Loop through the comment list
+          $('#keywords div').each(function(){			
+              // If the list item does not contain the text phrase fade it out
+              if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                  $(this).hide();
+   
+              // Show the list item if the phrase matches and increase the count by 1
+              } else {
+                  $(this).show();
+                  count++;
+              }
+          
+          });
+          
+   
+      });
+  });
+  </script>
+
+{% for container in page.filterable %}
+<script>
+    $(document).ready(function(){
+      $("#filter").keyup(function(){
+   
+        // Retrieve the input field text and reset the count to zero
+        let s = $(this).val().toUpperCase();
+        if (s === "") {
+            $('#{{ container }} div, #{{ container }} ul, #{{ container }} li').show();
+        } else {
+            $('#{{ container }} div, #{{ container }} ul, #{{ container }} li').hide();
+            $(`#{{ container }} div[data-tags*=${s}], #{{ container }} div[data-title*=${s}], div[data-title*=${s}], #{{ container }} ul[data-tags*=${s}], #{{ container }} ul[data-title*=${s}], #{{ container }} li[data-tags*=${s}], #{{ container }} li[data-title*=${s}]`).show();
+        }
+      });
+  });
+</script>
+{% endfor %}
