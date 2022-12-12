@@ -26,8 +26,9 @@ I started this GitHub organization when I joined NML in Spring 2021, because I g
 --- 
 
 ## Repos ##  
-**WIP!** _(2022-08-08 -- Still trying to organize this part... Please excuse the poor organization while just trying to get an inventory of what is where.)_   
+**WIP!!** _(2022-12-12 -- Added links to new/missing MATLAB packges (`+io`, `+gui`, `+enum`).)_  
 **WIP!!** _(2022-08-18 -- Added some more links and stuff.)_  
+**WIP!** _(2022-08-08 -- Still trying to organize this part... Please excuse the poor organization while just trying to get an inventory of what is where.)_   
 
 ### Clubs ###  
 For now, just `programming club`, but I wasn't sure what header to put it under yet.  
@@ -75,6 +76,9 @@ Any such code repositories in this GitHub organization should start with the nam
 | **[+opx](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__opx)** | Adapted by Max from [Plexon](https://plexon.com/software-downloads/#software-downloads-SDKs) | MATLAB package gitmodule for working with OmniPlex (Plexon). | 
 | **[+error](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__error)** | [Max Murphy](https://github.com/m053m716) | MATLAB package gitmodule for error-handling that raises "standard" MATLAB exceptions. |
 | **[+digilent](https://github.com/Neuro-Mechatronics-Interfaces/Digilent_Snippet_Parsing)** | [Max Murphy](https://github.com/m053m716) | Parsing/processing for csv snippets collected using the Digilent Analog Discovery 2 in Oscilloscope mode using the Waveforms software. |
+| **[+enum](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__enum)** | [Max Murphy](https://github.com/m053m716) | Enumeration classes commonly used by Max. |
+| **[+io](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__io)** | [Max Murphy](https://github.com/m053m716) | Class with "loader" or "reader" functions (particularly useful for repos that access `raptor`). |
+| **[+gui](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__gui)** | [Max Murphy](https://github.com/m053m716) | "Light-weight" GUIs (not .mlapp applications) for data curation (and presumably other purposes). |
 
 ---
 
