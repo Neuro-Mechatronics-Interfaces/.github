@@ -42,6 +42,7 @@ Different ROS2 nodes (probably in Python3) that let task-devices communicate wit
 | **[NML Bag](https://github.com/ricmua/nml_bag)**           | [Andrew Whitford](https://github.com/ricmua)                        | A simple Python package for working with ROS2 bag files.                                             |
 | **[Force Dimension ROS2 package](https://github.com/ricmua/ros_force_dimension)** | [Andrew Whitford](https://github.com/ricmua) | A ROS2 package for interfacing with Force Dimension haptics robots.                                  |
 | **[ROS2 Data Agent](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Data_Agent)** | [Jonathan Shulgach](https://github.com/Jshulgach) | Code for a multipurpose file explorer specializing in reading ROS2 topic data from '.bag' or '.db3' files. |
+| **[ROS2 Reward Dispenser](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Reward_Dispenser)**           | [Jonathan Shulgach](https://github.com/Jshulgach)                        | A ROS2 package with Arduino sketches to operate a water reward system using serial commands. LED matrix display and loadcell measuring scale supported.                                            |
 
 ### Unity ###
 Repos for compiled application-specific Unity source code or maybe just the static executables?
