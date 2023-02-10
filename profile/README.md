@@ -67,26 +67,33 @@ Any such code repositories in this GitHub organization should start with the nam
 
 |   Name                                                     |  Maintainer                                                         | Description                                                                                          |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **[+default](https://github.com/m053m716/Matlab-Defaults)**           | [Max Murphy](https://github.com/m053m716)                        | Max's favorite default overrides for MATLAB built-ins such as `figure`.                      |
-| **[+plot](https://github.com/Neuro-Mechatronics-Interfaces/MATLAB_Data_Plots)**           | [Max Murphy](https://github.com/m053m716)                        | MATLAB package for different types of NML data plots.                    |
 | **[+circ](https://github.com/m053m716/-circ)**           | Adapted by Max from [Philipp Berens](berens@tuebingen.mpg.de) (MATLAB FEX originally)                        | Statistics package for distributions on circles.              |
-| **[+sounds](https://github.com/m053m716/-sounds)**           | [Max Murphy](https://github.com/m053m716)                        | Package with sound files (if initialized repo with Git-LFS) and function to play them.                |
-| **[+utils](https://github.com/Neuro-Mechatronics-Interfaces/NHP_MATLAB_Utilities)** | [Max Murphy](https://github.com/m053m716)   | Package with generic matlab utility functions, like parameter parsing from varargin, etc.             | 
-| **[+mats](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__mats)** | Adapted by Max from [Mats et al. 2021 JNE](https://kilthub.cmu.edu/articles/dataset/Simulation_files_for_current_field_computation_in_layer-homogeneous_media_applied_to_skull-transparent_currents/13281518/1) (and elsewhere)    | MATLAB package containing Mats' mystical field visualization tools.      |
-| **[+TMSiSAGA](https://github.com/Neuro-Mechatronics-Interfaces/TMSi_SAGA)** | Adapted by Max from [TMSi](https://info.tmsi.com/software-tmsi-polybench) | This repository contains code for the MATLAB and Python APIs compatible with Windows 10 v2.0.0 drivers and beyond for use with the TMSi SAGA data recorder. | 
-| **[+opx](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__opx)** | Adapted by Max from [Plexon](https://plexon.com/software-downloads/#software-downloads-SDKs) | MATLAB package gitmodule for working with OmniPlex (Plexon). | 
-| **[+error](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__error)** | [Max Murphy](https://github.com/m053m716) | MATLAB package gitmodule for error-handling that raises "standard" MATLAB exceptions. |
+| **[+default](https://github.com/m053m716/Matlab-Defaults)**           | [Max Murphy](https://github.com/m053m716)                        | Max's favorite default overrides for MATLAB built-ins such as `figure`.                      |
 | **[+digilent](https://github.com/Neuro-Mechatronics-Interfaces/Digilent_Snippet_Parsing)** | [Max Murphy](https://github.com/m053m716) | Parsing/processing for csv snippets collected using the Digilent Analog Discovery 2 in Oscilloscope mode using the Waveforms software. |
+| **[+ds8r](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__ds8r)** | [Jonathan Shulgach](https://github.com/Jshulgach) & [Max Murphy](https://github.com/m053m716) | MATLAB package gitmodule for running multiple DS8R via DAQ. | 
 | **[+enum](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__enum)** | [Max Murphy](https://github.com/m053m716) | Enumeration classes commonly used by Max. |
-| **[+io](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__io)** | [Max Murphy](https://github.com/m053m716) | Class with "loader" or "reader" functions (particularly useful for repos that access `raptor`). |
+| **[+error](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__error)** | [Max Murphy](https://github.com/m053m716) | MATLAB package gitmodule for error-handling that raises "standard" MATLAB exceptions. |
 | **[+gui](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__gui)** | [Max Murphy](https://github.com/m053m716) | "Light-weight" GUIs (not .mlapp applications) for data curation (and presumably other purposes). |
+| **[+io](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__io)** | [Max Murphy](https://github.com/m053m716) | Class with "loader" or "reader" functions (particularly useful for repos that access `raptor`). |
+| **[+mats](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__mats)** | Adapted by Max from [Mats et al. 2021 JNE](https://kilthub.cmu.edu/articles/dataset/Simulation_files_for_current_field_computation_in_layer-homogeneous_media_applied_to_skull-transparent_currents/13281518/1) (and elsewhere)    | MATLAB package containing Mats' mystical field visualization tools.      |
+| **[+opx](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__opx)** | Adapted by Max from [Plexon](https://plexon.com/software-downloads/#software-downloads-SDKs) | MATLAB package gitmodule for working with OmniPlex (Plexon). | 
+| **[+plot](https://github.com/Neuro-Mechatronics-Interfaces/MATLAB_Data_Plots)**           | [Max Murphy](https://github.com/m053m716)                        | MATLAB package for different types of NML data plots.                    |
+| **[+sounds](https://github.com/m053m716/-sounds)**           | [Max Murphy](https://github.com/m053m716)                        | Package with sound files (if initialized repo with Git-LFS) and function to play them.                |
+| **[+TMSiSAGA](https://github.com/Neuro-Mechatronics-Interfaces/TMSi_SAGA)** | Adapted by Max from [TMSi](https://info.tmsi.com/software-tmsi-polybench) | This repository contains code for the MATLAB and Python APIs compatible with Windows 10 v2.0.0 drivers and beyond for use with the TMSi SAGA data recorder. | 
+| **[+utils](https://github.com/Neuro-Mechatronics-Interfaces/NHP_MATLAB_Utilities)** | [Max Murphy](https://github.com/m053m716)   | Package with generic matlab utility functions, like parameter parsing from varargin, etc.             | 
 
 ---
 
 ## Contributing ##
+
+### Using git ###
 If you are not familiar with `git` or version-control in general, it's recommended to familiarize yourself (it is a lot easier than you would think) by going **[here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)**.
 
+### Contributing code ###
 Please refer to **[this guide](https://code.nml.wtf/tutorials/2022/06/25/contributing.html)** for how to contribute your own code.
+
+### Documenting contributions ###
+Please refer to **[this guide](https://code.nml.wtf/tutorials/2023/02/10/adding-a-repo.html)** for how to document your code contributions. **If you add a repo to this GitHub organization, _please_ follow these instructions when setting it up!**
 
 ---
 
