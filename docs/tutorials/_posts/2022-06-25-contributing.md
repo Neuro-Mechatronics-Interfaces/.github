@@ -3,6 +3,7 @@ layout: post
 title: Contributing
 about: How to contribute to an NML GitHub repository.
 tags: git instructions
+lastUpdated: 2023-02-10
 category: tutorials
 ---
 
@@ -49,7 +50,7 @@ git commit -m "I made an awesome text file with real changes."
 ```(git)
 git status # Should say "nothing to commit, working tree clean"
 ```
-9. It is also good practice to `tag` your commits and annotate what the tags mean. Ideally, your tag should make use of the `semver` [versioning scheme](https://semver.org/). The `tag` is a good way to keep track of what the most-current "ID" of the code base _should_ be, since otherwise you have to refer to some weird string of seemingly arbitrary numbers and letters (the commit `hash`). Because this is an example tutorial that exists at a specific stage of the `programming_club` repository, your tag will depend on the latest sub-version of the `v1.1.x` repo tag. On the GitHub page, check the tags to find the latest tag starting with `v1.1`, and increment the patch version by 1 on your tag (i.e. the next tag after my `v1.1.0` should be `v1.1.1`; it is okay to use double-digits since these are treated like strings, so `v1.1.10` is after `v1.1.9`, for example). 
+9. It is also good practice to `tag` your commits and annotate what the tags mean. Ideally, your tag should make use of the `semver` [versioning scheme](https://semver.org/). For more information about tagging, please check the [sop about using tags and staying sane with gitmodules](https://code.nml.wtf/sops/2022/10/23/tags_and_submodules). The `tag` is a good way to keep track of what the most-current "ID" of the code base _should_ be, since otherwise you have to refer to some weird string of seemingly arbitrary numbers and letters (the commit `hash`). Because this is an example tutorial that exists at a specific stage of the `programming_club` repository, your tag will depend on the latest sub-version of the `v1.1.x` repo tag. On the GitHub page, check the tags to find the latest tag starting with `v1.1`, and increment the patch version by 1 on your tag (i.e. the next tag after my `v1.1.0` should be `v1.1.1`; it is okay to use double-digits since these are treated like strings, so `v1.1.10` is after `v1.1.9`, for example). 
 ```(git)
 git tag -a v1.1.0 -m "MM initial tag in version with semver tag-incrementing exercise."  # replace v1.1.0 with your tag, and replace MM
 ```

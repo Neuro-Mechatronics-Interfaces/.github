@@ -3,6 +3,7 @@ layout: post-toc
 title: Setup your SSH credentials
 about: How to configure your credential manager for the NML GitHub.
 tags: git instructions ssh
+lastUpdated: 2022-06-26
 category: tutorials
 ---
 

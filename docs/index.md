@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-{% assign posts = site.posts | sort: 'date' | reverse %}
+{% assign posts = site.posts | sort: 'lastUpdated' | reverse %}
 
 <div id="posts">
   <h2>Recently-Added</h2>

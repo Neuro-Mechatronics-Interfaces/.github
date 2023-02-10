@@ -3,6 +3,7 @@ layout: post-toc
 title: How to use tags and gitmodules (submodules)
 about: This will help you stay sane while trying to work with Max.
 tags: git instructions gitmodules submodules packages matlab
+lastUpdated: 2022-10-23
 category: sops
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: Code Highlighting and Styling
 about: Using code highlighting and styling to customize pages with TailwindCSS.
 tags: html css tailwind syntax
+lastUpdated: 2022-02-09
 category: examples
 ---
 

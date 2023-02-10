@@ -3,11 +3,12 @@ layout: post
 title: Adding a Repo
 about: How to initially set up an NML GitHub repository.
 tags: git documentation instructions
+lastUpdated: 2023-02-10
 category: tutorials
 ---
 
 ## Check you are in the right tutorial first ## 
-If you know about `git` and feel good about contributing, but you're not sure about contributing to _these_ repos because you're worried you will break something--**don't be scared!** If you're not breaking _some_ code then you are probably doing things  wrong anyways. If you follow these steps, you can learn by working with the code without worrying about breaking others' code. Also, if your first thought when looking at the code in `step 1` is _"where exactly do I enter this?"_ then please **[start here instead](https://code.nml.wtf/tutorials/2022/06/26/credentials.html)**. 
+If you're completely new to `git`, or if you've used it before but don't know what setting up `ssh` credentials means, please **[start here instead](https://code.nml.wtf/tutorials/2022/06/26/credentials.html)**. 
 
 ## Creating a GitHub repo ##
 Basically there are a couple of places you should set up links to your repo, so that in the future we can find it and it just helps everything stay a little more organized. My typical process goes:
@@ -30,3 +31,18 @@ So yeah, that's basically it and it's really not a very cumbersome process. Once
 This is not really advanced, just extra. In the same `.github` repo that you may have cloned earlier (or via the NML GitHub organization web interface), you can go into the [`docs` folder](https://github.com/Neuro-Mechatronics-Interfaces/.github/tree/main/docs) (located at the repository root level). You will notice that this contains all the files used to generate this `WTF` website. So, let's say you have created a repo for processing EMG, then what would be super cool of you would be to go into the `examples/_posts` and copy one of the existing `.md` files, then mimic the syntax of that file to create your own `examples` post. Note that the IEEE-8601 format `YYYY-MM-DD` is required at the start of the filename, since that is used by `jekyll` when building the web application to create the link names for the generated html.  
 
 If you add any posts (`examples`, `sops`, or `tutorials`) to the `WTF` page in this way Max will find you and buy you a beer (or boba, or whatever, basically he owes you one). 
+
+### Wait, examples, sops, and tutorials? ###
+Yes, that's right. The `WTF` documentation is broken down into these three categories. "But Max, what goes where?" you ask...
+
+#### Examples ####
+As mentioned above, this would be where you show off how awesome you are at doing some kind of coding. I don't know maybe you want to brag about the amazing hand gestures you created in Blender? That really sick new physics collider for your Unity haptic integration module?? A parameters interface you wrote in Python??? Yeah, all of that stuff can go in Examples.
+
+#### Tutorials ####
+But Max, isn't a Tutorial just a glorified example? Yes, yes it is. The difference in this case is the `WTF` Tutorial is more general, so it should be things like I don't know, "how do I add a repository to the GitHub?" 
+
+#### SOPS ####
+This is a bit of a misnomer but it's in the spirit of "we're a lab." These are similar to tutorials, but it's more like, "please do it this way (or you will cause problems for everyone)" and less of "consider doing it this way."
+
+### But what about the API I wrote for <thing>? ###  
+Sorry, that doesn't go here. If you'd like to add your code to the GitHub organization, please feel free to do so (and contact Max with your GitHub account info if you need to be added as an administrator on the GitHub page). The relevant API documentation for <thing> should go in the `README.md` at the root level of your code repo. If you have a real API (i.e. the documentation requires more than one `README.md` file in the project root), you should consider adding a `wiki` to your repo using the convenient `Wiki` tab associated to every repository on GitHub, then linking to that wiki from the `README.md` (which will populate the landing page of your GitHub code repo any time somebody navigates there via web browser). If you've added these things to your project and still would like to add more documentation (bless your heart), please consider adding to the `Examples` section using the same post format as other files there, as learning code by example is often an effective way of sharing the relevant "how to" enough to help someone else get their experiments up and running.   
