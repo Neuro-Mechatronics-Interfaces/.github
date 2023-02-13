@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: post-toc
 title: Contributing
 about: How to contribute to an NML GitHub repository.
 tags: git instructions
+hidden: false
 lastUpdated: 2023-02-10
 category: tutorials
 ---

@@ -3,9 +3,12 @@ layout: post-toc
 title: EDA in MATLAB
 about: How to set up a MATLAB code repo for exploratory data analysis (EDA) after an experiment.
 tags: matlab data analysis
+hidden: true
 lastUpdated: 2022-06-25
 category: sops
 ---
+
+_WIP_
 
 # Preparing analysis environment #
 content

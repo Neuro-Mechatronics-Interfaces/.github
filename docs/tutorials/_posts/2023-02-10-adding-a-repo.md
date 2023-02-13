@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: post-toc
 title: Adding a Repo
 about: How to initially set up an NML GitHub repository.
 tags: git documentation instructions
+hidden: false
 lastUpdated: 2023-02-10
 category: tutorials
 ---
