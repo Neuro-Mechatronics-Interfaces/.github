@@ -20,15 +20,8 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 
 ---
 
-## A Note From [Max](murphylab.net) ##
-I started this GitHub organization when I joined NML in Spring 2021, because I generally am familiar with GitHub and kept my code in a GitHub Organization that stayed with the [lab where I did my dissertation research](https://github.com/Cortical-Plasticity-Lab). It's still not clear to me whether most code will end up here, on GitLab, on Google Drive, or on an internal server like raptor. However, I mostly use this organization to keep my own code that I develop while at NML documented and distributable within our team (and amongst collaborators). I had initially created some "GitHub Teams" to try and compartmentalize access to the different repos because there was initially some indication that human subjects research (and associated code) might be housed here. It looks like this is not an issue, but the Teams have persisted and at this point I'm moving away from using them. I think by now everyone should have access to what they need, **but please let me know** if you do not have access to a repo that you would like to use, and I will add you as quickly as I can!
-
---- 
-
 ## Repos ##  
-**WIP!!** _(2022-12-12 -- Added links to new/missing MATLAB packges (`+io`, `+gui`, `+enum`).)_  
-**WIP!!** _(2022-08-18 -- Added some more links and stuff.)_  
-**WIP!** _(2022-08-08 -- Still trying to organize this part... Please excuse the poor organization while just trying to get an inventory of what is where.)_   
+This README is a continual _work-in-progress_. Please add a brief snippet and link where you feel is appropriate, if you add any repository to this organization. This is typically better to do when you are just starting a project, as that is a good time to outline documentation for how you think the code should be organized anyways.  
 
 ### Clubs ###  
 For now, just `programming club`, but I wasn't sure what header to put it under yet.  
@@ -68,6 +61,7 @@ Any such code repositories in this GitHub organization should start with the nam
 |   Name                                                     |  Maintainer                                                         | Description                                                                                          |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **[+circ](https://github.com/m053m716/-circ)**           | Adapted by Max from [Philipp Berens](berens@tuebingen.mpg.de) (MATLAB FEX originally)                        | Statistics package for distributions on circles.              |
+| **[+cm](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__cm)**           | [Max Murphy](https://github.com/m053m716)                        | Colormaps for MATLAB projects scattered throughout this organization's repos.              |
 | **[+default](https://github.com/m053m716/Matlab-Defaults)**           | [Max Murphy](https://github.com/m053m716)                        | Max's favorite default overrides for MATLAB built-ins such as `figure`.                      |
 | **[+digilent](https://github.com/Neuro-Mechatronics-Interfaces/Digilent_Snippet_Parsing)** | [Max Murphy](https://github.com/m053m716) | Parsing/processing for csv snippets collected using the Digilent Analog Discovery 2 in Oscilloscope mode using the Waveforms software. |
 | **[+ds8r](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__ds8r)** | [Jonathan Shulgach](https://github.com/Jshulgach) & [Max Murphy](https://github.com/m053m716) | MATLAB package gitmodule for running multiple DS8R via DAQ. | 
