@@ -12,7 +12,7 @@ category: tutorials
 If you know about `git` and feel good about contributing, but you're not sure about contributing to _these_ repos because you're worried you will break something--**don't be scared!** If you're not breaking _some_ code then you are probably doing things  wrong anyways. If you follow these steps, you can learn by working with the code without worrying about breaking others' code. Also, if your first thought when looking at the code in `step 1` in the [example pull request](#example-pull-request) below, is _"where exactly do I enter this?"_ then please **[start here instead](https://code.nml.wtf/tutorials/2022/06/26/credentials.html)**. 
 
 ## Example Pull Request ##  
-Let's say that you want to interact with the [`programming club`](#https://github.com/Neuro-Mechatronics-Interfaces/programming_club) repo to practice using `git`. Try the steps below:  
+Let's say that you want to interact with the [`programming club`](https://github.com/Neuro-Mechatronics-Interfaces/programming_club) repo to practice using `git`. Try the steps below:  
 
 1. **[Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository)** the `main` branch to your local device:
 ```(git)
