@@ -60,6 +60,7 @@ Any such code repositories in this GitHub organization should start with the nam
 
 |   Name                                                     |  Maintainer                                                         | Description                                                                                          |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **[+bd](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__bd)** | [Max Murphy](https://github.com/m053m716) | MATLAB package for handling behavioral metadata such as trial success rate, trajectory curvature, etc...   |
 | **[+circ](https://github.com/m053m716/-circ)**           | Adapted by Max from [Philipp Berens](berens@tuebingen.mpg.de) (MATLAB FEX originally)                        | Statistics package for distributions on circles.              |
 | **[+cm](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__cm)**           | [Max Murphy](https://github.com/m053m716)                        | Colormaps for MATLAB projects scattered throughout this organization's repos.              |
 | **[+charts](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__charts)**           | [Max Murphy](https://github.com/m053m716)                        | MATLAB chart-classes (primarily for use with HD surface-EMG datasets).              |
