@@ -1,0 +1,16 @@
+\doxysection{include/math\+\_\+utilities.h File Reference}
+\hypertarget{math__utilities_8h}{}\label{math__utilities_8h}\index{include/math\_utilities.h@{include/math\_utilities.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___random_ga598bad1a64246a91b53706c6e7255d3e}{generate\+Random\+Control\+Times}} (double \texorpdfstring{$\ast$}{*}control\+Times, const size\+\_\+t num\+Points)
+\begin{DoxyCompactList}\small\item\em Generate random control times for cubic spline interpolation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___random_gae80a71e8fd32314d2fa5d21a8a556b4c}{generate\+Random\+Control\+Points}} (double \texorpdfstring{$\ast$}{*}control\+Points, const double max\+Value, const size\+\_\+t num\+Points)
+\begin{DoxyCompactList}\small\item\em Generate random control points for cubic spline interpolation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___random_gad7954e6a1b9ea073c7bc894dc5af85a9}{random\+\_\+int}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Generate a random integer between min and max (inclusive). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___interpolation_gababebbe204692721ab2a42ee40841caa}{cubic\+Spline2\+DInterpolant}} (double t, const double \texorpdfstring{$\ast$}{*}control\+Times, const double \texorpdfstring{$\ast$}{*}control\+PointsX, const double \texorpdfstring{$\ast$}{*}control\+PointsY, size\+\_\+t \texorpdfstring{$\ast$}{*}segment, const size\+\_\+t num\+Points, uint16\+\_\+t \texorpdfstring{$\ast$}{*}x, uint16\+\_\+t \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Perform cubic spline interpolation using de Boor\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}

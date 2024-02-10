@@ -1,0 +1,152 @@
+\chapter{Math Utilities}
+\hypertarget{index}{}\label{index}\index{Math Utilities@{Math Utilities}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+This is a small compiled library for {\ttfamily C} math utility functions. The library was compiled for Windows 64-\/bit and should work with 64-\/ or 32-\/bit windows architectures.
+
+\DoxyHorRuler{0}
+ \hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{\href{https://code.nml.wtf/docs}{\texttt{ Other Documentation}}}{\href{https://code.nml.wtf/docs}{\texttt{ Other Documentation}}}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Contents}{Contents}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Compiling
+\begin{DoxyItemize}
+\item Dynamic
+\item Static
+\item In Other Projects
+\end{DoxyItemize}
+\item Using \`{}gcc\`{} on Windows
+\item Random Point Generation
+\item Interpolation
+\item Random Integer Generation
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Compiling}{Compiling}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Dynamic Link Library}{Dynamic Link Library}}\label{index_autotoc_md5}
+To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/math\_utilities.dll\ -\/Iinclude\ src/math\_utilities.c\ -\/fPIC}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item The {\ttfamily -\/shared} option creates a shared object. ~\newline
+
+\item The {\ttfamily -\/o} is what the output file is. ~\newline
+
+\item The {\ttfamily -\/f\+PIC} option generates position-\/independent code, which is a pre-\/requisite for shared libraries. ~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Static Library}{Static Library}}\label{index_autotoc_md6}
+To re-\/compile the static library ({\ttfamily .lib}), use the following command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{gcc\ -\/c\ src/math\_utilities.c\ -\/Iinclude\ -\/o\ lib/math\_utilities.o\ \&\&\ ar\ rcs\ lib/math\_utilities.lib\ lib/math\_utilities.o}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{For External Use}{For External Use}}\label{index_autotoc_md7}
+Assume we have the following project folder structure\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{my\_project}
+\DoxyCodeLine{|-\/-\/src}
+\DoxyCodeLine{|\ \ |-\/-\/my\_code.c}
+\DoxyCodeLine{|\ \ |-\/-\/my\_code.h}
+\DoxyCodeLine{|\ \ |-\/-\/math\_utilities.h}
+\DoxyCodeLine{|}
+\DoxyCodeLine{|-\/-\/bin}
+\DoxyCodeLine{|\ \ |-\/-\/math\_utilities.dll}
+
+\end{DoxyCode}
+ To compile, you would use the following command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{gcc\ -\/o\ bin/my\_executable.exe\ src/my\_code.c\ -\/Lbin\ -\/lmath\_utilities}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Note about gcc}{Note about gcc}}\label{index_autotoc_md8}
+Note that to use {\ttfamily gcc} on a Windows 64-\/bit architecture, the simplest way is to download \`{}msys2\`{}, which will allow you to use {\ttfamily pacman} from an {\ttfamily msys2} terminal. You can first check to see if you already have {\ttfamily gcc} installed\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/Q\ |\ grep\ mingw-\/w64-\/x86\_64-\/gcc}
+
+\end{DoxyCode}
+ If you see anything in the terminal following this command, it means you already have {\ttfamily gcc}. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.)\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/S\ mingw-\/w64-\/x86\_64-\/toolchain}
+
+\end{DoxyCode}
+ This will give several options for what you can install. If you are unsure what to do, just install all of them. ~\newline
+ Finally, you may also want a toolchain for compiling 32-\/bit applications from your 64-\/bit Windows operating system. In that case, you can try\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/S\ mingw-\/w64-\/i686-\/toolchain}
+
+\end{DoxyCode}
+ The last step is to make sure the folder with the correct binaries are on your {\ttfamily PATH} environment variable. Probably the best strategy here, on a Windows device, is as follows\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Open the Start menu and type Environment, this should bring up a Control Panel shortcut to "{}\+Edit the System Environment Variables."{} Click that. ~\newline
+
+\item Click "{}\+Environment Variables..."{} at the bottom right. ~\newline
+
+\item Under System Variables, click "{}\+New..."{} and define a new environment variable\+: {\ttfamily MINGW\+\_\+\+PATH}. If you installed {\ttfamily msys2} in the default location, then go to {\ttfamily C\+:/mingw64}. You will be looking for the sub-\/folder containing binaries. In my install, that is located at {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw64\textbackslash{}bin} -- so that is my {\ttfamily MINGW\+\_\+\+PATH} environment variable. ~\newline
+
+\item Under User Variables, find {\ttfamily Path}. Click {\ttfamily Edit...} with {\ttfamily Path} selected. ~\newline
+
+\item In the new popup, click {\ttfamily New} to add a new {\ttfamily Path} value. Enter {\ttfamily MINGW\+\_\+\+PATH\%}. Now, you can add or remove {\ttfamily MINGW\+\_\+\+PATH\%} from the user {\ttfamily Path} variable depending on what compiler needs you have. Click on the newly added value, and click {\ttfamily Move Up} until it is at the top of the list. This ensures we don\textquotesingle{}t accidentally find {\ttfamily gcc} somewhere else and use a different unintended version. Note that if you want to switch between i.\+e. {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw32\textbackslash{}bin} and {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw64\textbackslash{}bin} it might just be easiest to change the value of {\ttfamily MINGW\+\_\+\+PATH} environment variable. ~\newline
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Random Point Generation}{Random Point Generation}}\label{index_autotoc_md9}
+\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{generate\+Random\+Control\+Points}{generate\+Random\+Control\+Points}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___random_gae80a71e8fd32314d2fa5d21a8a556b4c}{generateRandomControlPoints}}(\textcolor{keywordtype}{double}*\ controlPoints,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxValue,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ numPoints);}
+
+\end{DoxyCode}
+ {\bfseries{Inputs}}
+\begin{DoxyItemize}
+\item {\ttfamily control\+Points}\+: Pointer to an array to store the generated control points.
+\item {\ttfamily max\+Value}\+: The maximum value for generating random control points.
+\item {\ttfamily num\+Points}\+: The number of control points to generate.
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{generate\+Random\+Control\+Times}{generate\+Random\+Control\+Times}}\label{index_autotoc_md11}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___random_ga598bad1a64246a91b53706c6e7255d3e}{generateRandomControlTimes}}(\textcolor{keywordtype}{double}*\ controlTimes,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ numPoints);}
+
+\end{DoxyCode}
+ {\bfseries{Inputs}}
+\begin{DoxyItemize}
+\item {\ttfamily control\+Times}\+: Pointer to an array to store the generated control times.
+\item {\ttfamily num\+Points}\+: The number of control times to generate.
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Interpolation}{Interpolation}}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{cubic\+Spline2\+DInterpolant}{cubic\+Spline2\+DInterpolant}}\label{index_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___interpolation_gababebbe204692721ab2a42ee40841caa}{cubicSpline2DInterpolant}}(\textcolor{keywordtype}{double}\ t,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ controlTimes,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ controlPointsX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ controlPointsY,\ \textcolor{keywordtype}{size\_t}*\ segment,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ numPoints,\ CursorData*\ cursorData);}
+
+\end{DoxyCode}
+ {\bfseries{Inputs}}
+\begin{DoxyItemize}
+\item {\ttfamily t}\+: The parameter value for interpolation.
+\item {\ttfamily control\+Times}\+: Pointer to an array of control times.
+\item {\ttfamily control\+PointsX}\+: Pointer to an array of x-\/coordinate control points.
+\item {\ttfamily control\+PointsY}\+: Pointer to an array of y-\/coordinate control points.
+\item {\ttfamily segment}\+: Pointer to a variable indicating the current segment for interpolation.
+\item {\ttfamily num\+Points}\+: The number of control points.
+\item {\ttfamily cursor\+Data}\+: Pointer to a {\ttfamily Cursor\+Data} struct to store interpolated x and y coordinates.
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Random Integer Generation}{Random Integer Generation}}\label{index_autotoc_md14}
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{random\+\_\+int}{random\+\_\+int}}\label{index_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___random_gad7954e6a1b9ea073c7bc894dc5af85a9}{random\_int}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max);}
+
+\end{DoxyCode}
+ {\bfseries{Inputs}}
+\begin{DoxyItemize}
+\item {\ttfamily min}\+: The minimum value for the random integer (inclusive).
+\item {\ttfamily max}\+: The maximum value for the random integer (inclusive). 
+\end{DoxyItemize}

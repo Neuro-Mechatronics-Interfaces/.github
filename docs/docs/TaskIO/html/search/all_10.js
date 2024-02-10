@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['writecursordata_0',['writeCursorData',['../group___logging.html#ga543fa0b54d9ac5b3bba921b0a217ae19',1,'writeCursorData(FILE *logFile, CursorData *cursorData):&#160;logger.c'],['../group___logging.html#ga543fa0b54d9ac5b3bba921b0a217ae19',1,'writeCursorData(FILE *logFile, CursorData *cursorData):&#160;logger.c']]],
-  ['writestatedata_1',['writeStateData',['../group___logging.html#ga99d5e83d2de75efe3cc1b0c59dc47bf5',1,'writeStateData(FILE *logFile, StateData *stateData):&#160;logger.c'],['../group___logging.html#ga99d5e83d2de75efe3cc1b0c59dc47bf5',1,'writeStateData(FILE *logFile, StateData *stateData):&#160;logger.c']]]
+  ['update_0',['update',['../struct_thread_safe_cursor_args.html#a1fe1e9601eb1a6682bda8eb546273dcb',1,'ThreadSafeCursorArgs::update'],['../struct_thread_safe_state_args.html#a18a2b759aba4db5822a4c532c933b689',1,'ThreadSafeStateArgs::update']]],
+  ['usage_1',['Usage',['../group___tests.html#autotoc_md6',1,'']]]
 ];

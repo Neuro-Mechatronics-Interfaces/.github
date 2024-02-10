@@ -97,13 +97,16 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a>Compiled <code>c</code> application(s) to handle loading/saving of task metadata or prototype logs related to more-efficient logging/handling on NHP task. <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<hr  />
+ <h1><a class="anchor" id="autotoc_md2"></a>
+<a href="https://code.nml.wtf/docs">Other Documentation</a></h1>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Compiling</h1>
 <p>You can compile everything with a big long command, which recompiles the static libraries, links them, and finally includes them in a compiled tests.exe executable (in the <code>bin</code> sub-folder). This command assumes you are in <code>TaskIO</code> (folder containing <code>src</code>, <code>bin</code> etc.). <br  />
  </p><div class="fragment"><div class="line">gcc -c src/logger.c -o lib/logging.o -Iinclude &amp;&amp; gcc -c src/data_structures.c -Iinclude -o lib/data_structures.o &amp;&amp; gcc -c src/data_threads.c -o lib/data_threads.o -Iinclude &amp;&amp; ar rcs lib/Logging.lib lib/logging.o lib/data_structures.o lib/data_threads.o &amp;&amp; gcc src/tests.c -o bin/tests.exe -Isrc -Iinclude -Llib -lLogging -lmath_utilities</div>
 </div><!-- fragment --><p> It is faster to compile only the <code>tests.exe</code> executable if none of the other static libraries were modified. <br  />
  </p><div class="fragment"><div class="line">gcc src/tests.c -o bin/tests.exe -Isrc -Iinclude -Llib -lLogging -lmath_utilities</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 Tests</h1>
 <p>Once <code>tests.exe</code> is compiled, you can get a list of the test options using the <code>help</code> command: <br  />
  </p><div class="fragment"><div class="line">bin\tests.exe help</div>
@@ -127,7 +130,7 @@ Tests</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Example Testing</h2>
 <p>Start with <code>readconfig</code> which will also show you where the logger wants to save/load files on your local system. <br  />
  </p><div class="fragment"><div class="line">bin\tests.exe readconfig</div>

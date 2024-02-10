@@ -3,7 +3,11 @@
 \label{index_md__r_e_a_d_m_e}%
 \Hypertarget{index_md__r_e_a_d_m_e}%
 Compiled {\ttfamily c} application(s) to handle loading/saving of task metadata or prototype logs related to more-\/efficient logging/handling on NHP task. ~\newline
-\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Compiling}{Compiling}}\label{index_autotoc_md1}
+
+
+\DoxyHorRuler{0}
+ \hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{\href{https://code.nml.wtf/docs}{\texttt{ Other Documentation}}}{\href{https://code.nml.wtf/docs}{\texttt{ Other Documentation}}}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Compiling}{Compiling}}\label{index_autotoc_md3}
 You can compile everything with a big long command, which recompiles the static libraries, links them, and finally includes them in a compiled tests.\+exe executable (in the {\ttfamily bin} sub-\/folder). This command assumes you are in {\ttfamily Task\+IO} (folder containing {\ttfamily src}, {\ttfamily bin} etc.). ~\newline
  
 \begin{DoxyCode}{0}
@@ -16,7 +20,7 @@ You can compile everything with a big long command, which recompiles the static 
 \DoxyCodeLine{gcc\ src/tests.c\ -\/o\ bin/tests.exe\ -\/Isrc\ -\/Iinclude\ -\/Llib\ -\/lLogging\ -\/lmath\_utilities}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{index_autotoc_md4}
 Once {\ttfamily tests.\+exe} is compiled, you can get a list of the test options using the {\ttfamily help} command\+: ~\newline
  
 \begin{DoxyCode}{0}
@@ -43,7 +47,7 @@ Once {\ttfamily tests.\+exe} is compiled, you can get a list of the test options
 \item If {\ttfamily C\+:/\+Data/\+Task\+Logs} (or other folder specified in {\ttfamily bin/config.\+yaml}) does not exist yet, the first time running may throw an error but you should see the folder is created. Re-\/running should then produce the intended behavior. ~\newline
 
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Example Testing}{Example Testing}}\label{index_autotoc_md3}
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Example Testing}{Example Testing}}\label{index_autotoc_md5}
 Start with {\ttfamily readconfig} which will also show you where the logger wants to save/load files on your local system. ~\newline
  
 \begin{DoxyCode}{0}

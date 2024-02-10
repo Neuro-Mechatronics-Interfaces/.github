@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['line_20operation_0',['Command Line Operation',['../group___tests.html#autotoc_md5',1,'']]],
-  ['log_1',['log',['../struct_thread_safe_cursor_args.html#a85000e0f2458626977d76e277bbf80d3',1,'ThreadSafeCursorArgs::log'],['../struct_thread_safe_state_args.html#a638fb2f49a9f6960f66fc31b42f7ba4b',1,'ThreadSafeStateArgs::log']]],
-  ['logger_2ec_2',['logger.c',['../logger_8c.html',1,'']]],
-  ['logger_2eh_3',['logger.h',['../logger_8h.html',1,'']]],
-  ['logger_5fversion_4',['LOGGER_VERSION',['../logger_8h.html#a000e3652f1e9c5614417844941060a84',1,'logger.h']]],
-  ['loggerconfig_5',['LoggerConfig',['../struct_logger_config.html',1,'']]],
-  ['logging_20functions_6',['Logging Functions',['../group___logging.html',1,'']]],
-  ['logging_20io_20tests_7',['Logging IO Tests',['../group___tests.html',1,'']]],
-  ['logindex_8',['logIndex',['../struct_header_data.html#a8642af9f7b14f997da389cdb44c36fcf',1,'HeaderData']]],
-  ['logreadfolder_9',['logReadFolder',['../struct_logger_config.html#a4fbe73cd41a6d6bd5e9eb7a46d1581cf',1,'LoggerConfig']]],
-  ['logsavefolder_10',['logSaveFolder',['../struct_logger_config.html#a1cbe9147ade96fd8ddb049e224f98cde',1,'LoggerConfig']]],
-  ['logtype_11',['logType',['../struct_header_data.html#a8eed32bdc52ff438fc19f619e9d2143c',1,'HeaderData']]],
-  ['logversion_12',['logVersion',['../struct_header_data.html#a6a10936e7958a923656398e86222fd8d',1,'HeaderData']]]
+  ['init_0',['init',['../struct_thread_safe_cursor_args.html#a733a967245822c1540bf08f63684ce67',1,'ThreadSafeCursorArgs::init'],['../struct_thread_safe_state_args.html#a98593429959ece2466c8a36f44cf1b7b',1,'ThreadSafeStateArgs::init']]],
+  ['initcursorthreadargs_1',['initCursorThreadArgs',['../data__threads_8h.html#aef6162a4bb4ea6625e442f58c649fc18',1,'initCursorThreadArgs(ThreadSafeCursorArgs *args):&#160;data_threads.c'],['../data__threads_8c.html#aef6162a4bb4ea6625e442f58c649fc18',1,'initCursorThreadArgs(ThreadSafeCursorArgs *args):&#160;data_threads.c']]],
+  ['initstatethreadargs_2',['initStateThreadArgs',['../data__threads_8h.html#a4ea41404eb25aaac2484b766d3db212d',1,'initStateThreadArgs(ThreadSafeStateArgs *args):&#160;data_threads.c'],['../data__threads_8c.html#a4ea41404eb25aaac2484b766d3db212d',1,'initStateThreadArgs(ThreadSafeStateArgs *args):&#160;data_threads.c']]],
+  ['initx_3',['initx',['../struct_thread_safe_cursor_args.html#ae4751d3c7cfc58f2906af2b49c4eb850',1,'ThreadSafeCursorArgs::initx'],['../struct_thread_safe_state_args.html#a47bbff32cd43f49142136e4110dcf1a9',1,'ThreadSafeStateArgs::initx']]],
+  ['io_4',['Task IO',['../index.html',1,'']]],
+  ['io_20tests_5',['Logging IO Tests',['../group___tests.html',1,'']]]
 ];
