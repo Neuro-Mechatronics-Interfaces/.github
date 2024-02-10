@@ -1,0 +1,42 @@
+\doxysection{data\+\_\+structures.\+c}
+\hypertarget{data__structures_8c_source}{}\label{data__structures_8c_source}\index{src/data\_structures.c@{src/data\_structures.c}}
+\mbox{\hyperlink{data__structures_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00001}00001\ \textcolor{comment}{//data\_structures.c}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data__structures_8h}{data\_structures.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00004}00004\ \textcolor{comment}{//\ Function\ to\ format\ the\ timestamp\ into\ a\ string\ with\ milliseconds}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00005}\mbox{\hyperlink{data__structures_8h_a08100490035f9e44ccdb89edde095155}{00005}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__structures_8c_a08100490035f9e44ccdb89edde095155}{formatTimestampWithMillis}}(FILETIME\ ft,\ \textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{size\_t}\ bufferSize)\ \{}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Convert\ to\ a\ human-\/readable\ time\ format}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00008}00008\ \ \ \ \ SYSTEMTIME\ st,\ lt;}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00009}00009\ \ \ \ \ FileTimeToSystemTime(\&ft,\ \&st);}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00010}00010\ \ \ \ \ SystemTimeToTzSpecificLocalTime(NULL,\ \&st,\ \&lt);}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//\ printf("{}Timestamp:\ \%"{}\ PRIu64\ "{}\(\backslash\)n"{},\ timestamp);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00013}00013\ \ \ \ \ snprintf(buffer,\ bufferSize,\ \textcolor{stringliteral}{"{}\%04d-\/\%02d-\/\%02dT\%02d:\%02d:\%02d.\%03d"{}},\ lt.wYear,\ lt.wMonth,\ lt.wDay,\ lt.wHour,\ lt.wMinute,\ lt.wSecond,\ lt.wMilliseconds);}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00016}00016\ \textcolor{comment}{//\ Helper\ function\ to\ print\ a\ cursor\ datum\ to\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00017}\mbox{\hyperlink{data__structures_8h_a16abfd849e1779a4449e4b0af065b8c7}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__structures_8c_a16abfd849e1779a4449e4b0af065b8c7}{printCursorDatum}}(\mbox{\hyperlink{struct_cursor_data}{CursorData}}*\ cursorData)\ \{}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%7.3f\ ms\ -\/-\/\ X:\ \%u,\ Y:\ \%u\(\backslash\)n"{}},\ cursorData-\/>\mbox{\hyperlink{struct_cursor_data_a4656933639271e3bed09496d44ba4d09}{ts}}*1000.0,\ cursorData-\/>\mbox{\hyperlink{struct_cursor_data_a88e65a8e2e027ffb5befb23db6387527}{x}},\ cursorData-\/>\mbox{\hyperlink{struct_cursor_data_ae3250f9b991bb46541bf9861da5a7630}{y}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00021}00021\ \textcolor{comment}{//\ Helper\ function\ to\ print\ the\ header\ data\ to\ terminal}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00022}\mbox{\hyperlink{data__structures_8h_a2e282aea2deff291f7b730fdaf285753}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__structures_8c_a2e282aea2deff291f7b730fdaf285753}{printHeaderData}}(\mbox{\hyperlink{struct_header_data}{HeaderData}}*\ headerData)\ \{}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{char}\ timeBuffer[30];}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{data__structures_8c_a08100490035f9e44ccdb89edde095155}{formatTimestampWithMillis}}(*(FILETIME*)\&headerData-\/>\mbox{\hyperlink{struct_header_data_aad4af544ec73e58f9b45682f644a166a}{timestamp}},\ timeBuffer,\ 30);}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00025}00025\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Log\ Start:\ \%s\(\backslash\)n"{}},\ timeBuffer);}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00026}00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Log\ Type:\ \%s\(\backslash\)n"{}},\ headerData-\/>\mbox{\hyperlink{struct_header_data_a8eed32bdc52ff438fc19f619e9d2143c}{logType}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00027}00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Log\ Version:\ \%s\(\backslash\)n"{}},\ headerData-\/>\mbox{\hyperlink{struct_header_data_a6a10936e7958a923656398e86222fd8d}{logVersion}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00028}00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Log\ Index:\ \%d\(\backslash\)n"{}},\ headerData-\/>\mbox{\hyperlink{struct_header_data_a8642af9f7b14f997da389cdb44c36fcf}{logIndex}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00029}00029\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Chunk\ Size:\ \%d\(\backslash\)n"{}},\ headerData-\/>\mbox{\hyperlink{struct_header_data_a48a1a9dd8fd3ed9037e71620be4b6e0a}{chunkSize}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00032}00032\ \textcolor{comment}{//\ Helper\ function\ to\ print\ a\ state\ datum\ to\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00033}\mbox{\hyperlink{data__structures_8h_a01e2dc9a559c3be5329bfc5cf994198b}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__structures_8c_a01e2dc9a559c3be5329bfc5cf994198b}{printStateDatum}}(\mbox{\hyperlink{struct_state_data}{StateData}}*\ stateData)\ \{}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00034}00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%7.3f\ ms\ -\/-\/\ State:\ \%u,\ Orientation:\ \%u,\ Direction:\ \%u,\ Target:\ \%u\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ stateData-\/>\mbox{\hyperlink{struct_state_data_a24406f1fd7d9381a2eab000ae9228a1a}{ts}}*1000.0,\ stateData-\/>\mbox{\hyperlink{struct_state_data_aefb60dfd1ac9ae01ed1d517bedf5f633}{state}},\ stateData-\/>\mbox{\hyperlink{struct_state_data_a5a303b4cf145707f64cfc990a4382c4d}{orientation}},\ stateData-\/>\mbox{\hyperlink{struct_state_data_a42a7c3615804466aa53b2b8e1741324c}{direction}},\ stateData-\/>\mbox{\hyperlink{struct_state_data_ae3f155ac0c20aa83c0d00a7dd7688bc3}{target}});}
+\DoxyCodeLine{\Hypertarget{data__structures_8c_source_l00036}00036\ \}}
+
+\end{DoxyCode}

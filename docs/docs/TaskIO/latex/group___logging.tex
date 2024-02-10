@@ -1,0 +1,480 @@
+\doxysection{Logging Functions}
+\hypertarget{group___logging}{}\label{group___logging}\index{Logging Functions@{Logging Functions}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ULONGLONG \mbox{\hyperlink{group___logging_ga48d1fdc58eca18e99d188f9457eadb32}{get\+Current\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Get the current timestamp in milliseconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___logging_gaf1898537453977df6337eb90705248c6}{read\+Config}} (\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Read the configuration from the config.\+yaml file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group___logging_gaff502ebc7862ef8c0df94d92af545be0}{get\+Elapsed\+Time}} (LONGLONG qstart, LONGLONG qend)
+\begin{DoxyCompactList}\small\item\em Calculate the elapsed time between two given timestamps. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_gae610374f801a208816b451cc18ebe511}{cursor\+\_\+clock\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to generate cursor data timestamps. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_gad9d925b1aeb7de44e1956f461f423bab}{cursor\+\_\+producer\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to generate cursor data. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga18fb593edaa52e33a588de6f0c309c39}{cursor\+\_\+consumer\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to consume cursor data. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_gae7f4c8202c0cf8c97feb2ca99b511852}{state\+\_\+clock\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to generate state data timestamps. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga36a43c2a341e4edeb6b43f596669d402}{state\+\_\+producer\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to generate state data. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga6e18fff4219966d4cc08847ad2581e8b}{state\+\_\+consumer\+\_\+thread\+\_\+func}} (void \texorpdfstring{$\ast$}{*}arg)
+\begin{DoxyCompactList}\small\item\em Thread function to consume state data. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga32884b19b493d117cfb8d3f00516884c}{create\+Cursor\+Log}} (const char \texorpdfstring{$\ast$}{*}subject, uint16\+\_\+t index, \mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data, \mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Creates a cursor log file for writing. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga59895715a46f6b39c9860c416ce3c33b}{create\+State\+Log}} (const char \texorpdfstring{$\ast$}{*}subject, uint16\+\_\+t index, \mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data, \mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Creates a state log file for writing. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_ga57aa8270fc3b3f8c41ff0875e9f5a3cb}{open\+Cursor\+Log\+For\+Reading}} (const char \texorpdfstring{$\ast$}{*}subject, uint16\+\_\+t YYYY, uint8\+\_\+t MM, uint8\+\_\+t DD, uint16\+\_\+t index, \mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data, \mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Opens a cursor log file for reading. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___logging_gad789a3d04d13705f7f484d4b9670fbe8}{open\+State\+Log\+For\+Reading}} (const char \texorpdfstring{$\ast$}{*}subject, uint16\+\_\+t YYYY, uint8\+\_\+t MM, uint8\+\_\+t DD, uint16\+\_\+t index, \mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data, \mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Opens a state log file for reading. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___logging_gaefc0229f81ecdb28be83693094a355db}{read\+File\+Header}} (FILE \texorpdfstring{$\ast$}{*}log\+File, \mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data)
+\begin{DoxyCompactList}\small\item\em Reads the header data from the log file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___logging_ga907888d9f8fdb33c2e65851360cb3223}{read\+Next\+Cursor\+Datum}} (FILE \texorpdfstring{$\ast$}{*}cursor\+Log\+File, \mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}cursor\+Data)
+\begin{DoxyCompactList}\small\item\em Reads the next cursor datum from the cursor log file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___logging_ga6a19a13ad91b65b40660d767c4539680}{read\+Next\+State\+Datum}} (FILE \texorpdfstring{$\ast$}{*}state\+Log\+File, \mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}state\+Data)
+\begin{DoxyCompactList}\small\item\em Reads the next state datum from the state log file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___logging_ga543fa0b54d9ac5b3bba921b0a217ae19}{write\+Cursor\+Data}} (FILE \texorpdfstring{$\ast$}{*}log\+File, \mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}cursor\+Data)
+\begin{DoxyCompactList}\small\item\em Writes cursor data to the cursor log file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___logging_ga99d5e83d2de75efe3cc1b0c59dc47bf5}{write\+State\+Data}} (FILE \texorpdfstring{$\ast$}{*}log\+File, \mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}state\+Data)
+\begin{DoxyCompactList}\small\item\em Writes state data to the state log file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___logging_ga32884b19b493d117cfb8d3f00516884c}\label{group___logging_ga32884b19b493d117cfb8d3f00516884c} 
+\index{Logging Functions@{Logging Functions}!createCursorLog@{createCursorLog}}
+\index{createCursorLog@{createCursorLog}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{createCursorLog()}{createCursorLog()}}
+{\footnotesize\ttfamily FILE \texorpdfstring{$\ast$}{*} create\+Cursor\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{subject,  }\item[{uint16\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data,  }\item[{\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+
+
+Creates a cursor log file for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject of the log file. \\
+\hline
+{\em index} & The index of the log file. \\
+\hline
+{\em header\+Data} & Pointer to the header data structure. \\
+\hline
+{\em config} & Pointer to the logger configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the cursor log file if successful, NULL otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00398}{398}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga59895715a46f6b39c9860c416ce3c33b}\label{group___logging_ga59895715a46f6b39c9860c416ce3c33b} 
+\index{Logging Functions@{Logging Functions}!createStateLog@{createStateLog}}
+\index{createStateLog@{createStateLog}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{createStateLog()}{createStateLog()}}
+{\footnotesize\ttfamily FILE \texorpdfstring{$\ast$}{*} create\+State\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{subject,  }\item[{uint16\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data,  }\item[{\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+
+
+Creates a state log file for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject of the log file. \\
+\hline
+{\em index} & The index of the log file. \\
+\hline
+{\em header\+Data} & Pointer to the header data structure. \\
+\hline
+{\em config} & Pointer to the logger configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the state log file if successful, NULL otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00414}{414}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gae610374f801a208816b451cc18ebe511}\label{group___logging_gae610374f801a208816b451cc18ebe511} 
+\index{Logging Functions@{Logging Functions}!cursor\_clock\_thread\_func@{cursor\_clock\_thread\_func}}
+\index{cursor\_clock\_thread\_func@{cursor\_clock\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{cursor\_clock\_thread\_func()}{cursor\_clock\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} cursor\+\_\+clock\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to generate cursor data timestamps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00049}{49}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga18fb593edaa52e33a588de6f0c309c39}\label{group___logging_ga18fb593edaa52e33a588de6f0c309c39} 
+\index{Logging Functions@{Logging Functions}!cursor\_consumer\_thread\_func@{cursor\_consumer\_thread\_func}}
+\index{cursor\_consumer\_thread\_func@{cursor\_consumer\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{cursor\_consumer\_thread\_func()}{cursor\_consumer\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} cursor\+\_\+consumer\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to consume cursor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00129}{129}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gad9d925b1aeb7de44e1956f461f423bab}\label{group___logging_gad9d925b1aeb7de44e1956f461f423bab} 
+\index{Logging Functions@{Logging Functions}!cursor\_producer\_thread\_func@{cursor\_producer\_thread\_func}}
+\index{cursor\_producer\_thread\_func@{cursor\_producer\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{cursor\_producer\_thread\_func()}{cursor\_producer\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} cursor\+\_\+producer\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to generate cursor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00079}{79}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga48d1fdc58eca18e99d188f9457eadb32}\label{group___logging_ga48d1fdc58eca18e99d188f9457eadb32} 
+\index{Logging Functions@{Logging Functions}!getCurrentTimestamp@{getCurrentTimestamp}}
+\index{getCurrentTimestamp@{getCurrentTimestamp}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{getCurrentTimestamp()}{getCurrentTimestamp()}}
+{\footnotesize\ttfamily ULONGLONG get\+Current\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current timestamp in milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+The current timestamp in milliseconds. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00021}{21}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gaff502ebc7862ef8c0df94d92af545be0}\label{group___logging_gaff502ebc7862ef8c0df94d92af545be0} 
+\index{Logging Functions@{Logging Functions}!getElapsedTime@{getElapsedTime}}
+\index{getElapsedTime@{getElapsedTime}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{getElapsedTime()}{getElapsedTime()}}
+{\footnotesize\ttfamily double get\+Elapsed\+Time (\begin{DoxyParamCaption}\item[{LONGLONG}]{qstart,  }\item[{LONGLONG}]{qend }\end{DoxyParamCaption})}
+
+
+
+Calculate the elapsed time between two given timestamps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qstart} & The starting timestamp. \\
+\hline
+{\em qend} & The ending timestamp. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The elapsed time in seconds. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00039}{39}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga57aa8270fc3b3f8c41ff0875e9f5a3cb}\label{group___logging_ga57aa8270fc3b3f8c41ff0875e9f5a3cb} 
+\index{Logging Functions@{Logging Functions}!openCursorLogForReading@{openCursorLogForReading}}
+\index{openCursorLogForReading@{openCursorLogForReading}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{openCursorLogForReading()}{openCursorLogForReading()}}
+{\footnotesize\ttfamily FILE \texorpdfstring{$\ast$}{*} open\+Cursor\+Log\+For\+Reading (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{subject,  }\item[{uint16\+\_\+t}]{YYYY,  }\item[{uint8\+\_\+t}]{MM,  }\item[{uint8\+\_\+t}]{DD,  }\item[{uint16\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data,  }\item[{\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+
+
+Opens a cursor log file for reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject of the log file. \\
+\hline
+{\em YYYY} & Year. \\
+\hline
+{\em MM} & Month. \\
+\hline
+{\em DD} & Day. \\
+\hline
+{\em index} & The index of the log file. \\
+\hline
+{\em header\+Data} & Pointer to the header data structure. \\
+\hline
+{\em config} & Pointer to the logger configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the opened cursor log file if successful, NULL otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00549}{549}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gad789a3d04d13705f7f484d4b9670fbe8}\label{group___logging_gad789a3d04d13705f7f484d4b9670fbe8} 
+\index{Logging Functions@{Logging Functions}!openStateLogForReading@{openStateLogForReading}}
+\index{openStateLogForReading@{openStateLogForReading}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{openStateLogForReading()}{openStateLogForReading()}}
+{\footnotesize\ttfamily FILE \texorpdfstring{$\ast$}{*} open\+State\+Log\+For\+Reading (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{subject,  }\item[{uint16\+\_\+t}]{YYYY,  }\item[{uint8\+\_\+t}]{MM,  }\item[{uint8\+\_\+t}]{DD,  }\item[{uint16\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data,  }\item[{\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+
+
+Opens a state log file for reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject of the log file. \\
+\hline
+{\em YYYY} & Year. \\
+\hline
+{\em MM} & Month. \\
+\hline
+{\em DD} & Day. \\
+\hline
+{\em index} & The index of the log file. \\
+\hline
+{\em header\+Data} & Pointer to the header data structure. \\
+\hline
+{\em config} & Pointer to the logger configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the opened state log file if successful, NULL otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00567}{567}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gaf1898537453977df6337eb90705248c6}\label{group___logging_gaf1898537453977df6337eb90705248c6} 
+\index{Logging Functions@{Logging Functions}!readConfig@{readConfig}}
+\index{readConfig@{readConfig}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{readConfig()}{readConfig()}}
+{\footnotesize\ttfamily int read\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_logger_config}{Logger\+Config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+
+
+Read the configuration from the config.\+yaml file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00249}{249}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gaefc0229f81ecdb28be83693094a355db}\label{group___logging_gaefc0229f81ecdb28be83693094a355db} 
+\index{Logging Functions@{Logging Functions}!readFileHeader@{readFileHeader}}
+\index{readFileHeader@{readFileHeader}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{readFileHeader()}{readFileHeader()}}
+{\footnotesize\ttfamily int read\+File\+Header (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{log\+File,  }\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data }\end{DoxyParamCaption})}
+
+
+
+Reads the header data from the log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & Pointer to the log file. \\
+\hline
+{\em header\+Data} & Pointer to the header data structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if header was successfully read, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00623}{623}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga907888d9f8fdb33c2e65851360cb3223}\label{group___logging_ga907888d9f8fdb33c2e65851360cb3223} 
+\index{Logging Functions@{Logging Functions}!readNextCursorDatum@{readNextCursorDatum}}
+\index{readNextCursorDatum@{readNextCursorDatum}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{readNextCursorDatum()}{readNextCursorDatum()}}
+{\footnotesize\ttfamily int read\+Next\+Cursor\+Datum (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{cursor\+Log\+File,  }\item[{\mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}}]{cursor\+Data }\end{DoxyParamCaption})}
+
+
+
+Reads the next cursor datum from the cursor log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Log\+File} & Pointer to the cursor log file. \\
+\hline
+{\em cursor\+Data} & Pointer to store the cursor data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if data was successfully read, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00676}{676}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga6a19a13ad91b65b40660d767c4539680}\label{group___logging_ga6a19a13ad91b65b40660d767c4539680} 
+\index{Logging Functions@{Logging Functions}!readNextStateDatum@{readNextStateDatum}}
+\index{readNextStateDatum@{readNextStateDatum}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{readNextStateDatum()}{readNextStateDatum()}}
+{\footnotesize\ttfamily int read\+Next\+State\+Datum (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{state\+Log\+File,  }\item[{\mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}}]{state\+Data }\end{DoxyParamCaption})}
+
+
+
+Reads the next state datum from the state log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Log\+File} & Pointer to the state log file. \\
+\hline
+{\em state\+Data} & Pointer to store the state data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if data was successfully read, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00694}{694}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_gae7f4c8202c0cf8c97feb2ca99b511852}\label{group___logging_gae7f4c8202c0cf8c97feb2ca99b511852} 
+\index{Logging Functions@{Logging Functions}!state\_clock\_thread\_func@{state\_clock\_thread\_func}}
+\index{state\_clock\_thread\_func@{state\_clock\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{state\_clock\_thread\_func()}{state\_clock\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} state\+\_\+clock\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to generate state data timestamps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00155}{155}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga6e18fff4219966d4cc08847ad2581e8b}\label{group___logging_ga6e18fff4219966d4cc08847ad2581e8b} 
+\index{Logging Functions@{Logging Functions}!state\_consumer\_thread\_func@{state\_consumer\_thread\_func}}
+\index{state\_consumer\_thread\_func@{state\_consumer\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{state\_consumer\_thread\_func()}{state\_consumer\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} state\+\_\+consumer\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to consume state data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00224}{224}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga36a43c2a341e4edeb6b43f596669d402}\label{group___logging_ga36a43c2a341e4edeb6b43f596669d402} 
+\index{Logging Functions@{Logging Functions}!state\_producer\_thread\_func@{state\_producer\_thread\_func}}
+\index{state\_producer\_thread\_func@{state\_producer\_thread\_func}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{state\_producer\_thread\_func()}{state\_producer\_thread\_func()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} state\+\_\+producer\+\_\+thread\+\_\+func (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+Thread function to generate state data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the arguments structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00188}{188}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga543fa0b54d9ac5b3bba921b0a217ae19}\label{group___logging_ga543fa0b54d9ac5b3bba921b0a217ae19} 
+\index{Logging Functions@{Logging Functions}!writeCursorData@{writeCursorData}}
+\index{writeCursorData@{writeCursorData}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{writeCursorData()}{writeCursorData()}}
+{\footnotesize\ttfamily void write\+Cursor\+Data (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{log\+File,  }\item[{\mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}}]{cursor\+Data }\end{DoxyParamCaption})}
+
+
+
+Writes cursor data to the cursor log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & Pointer to the cursor log file. \\
+\hline
+{\em cursor\+Data} & Pointer to the cursor data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00523}{523}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+
+\Hypertarget{group___logging_ga99d5e83d2de75efe3cc1b0c59dc47bf5}\label{group___logging_ga99d5e83d2de75efe3cc1b0c59dc47bf5} 
+\index{Logging Functions@{Logging Functions}!writeStateData@{writeStateData}}
+\index{writeStateData@{writeStateData}!Logging Functions@{Logging Functions}}
+\doxysubsubsection{\texorpdfstring{writeStateData()}{writeStateData()}}
+{\footnotesize\ttfamily void write\+State\+Data (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{log\+File,  }\item[{\mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}}]{state\+Data }\end{DoxyParamCaption})}
+
+
+
+Writes state data to the state log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & Pointer to the state log file. \\
+\hline
+{\em state\+Data} & Pointer to the state data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{logger_8c_source_l00533}{533}} of file \mbox{\hyperlink{logger_8c_source}{logger.\+c}}.
+

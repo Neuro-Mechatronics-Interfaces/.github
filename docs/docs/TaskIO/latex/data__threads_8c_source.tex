@@ -1,0 +1,106 @@
+\doxysection{data\+\_\+threads.\+c}
+\hypertarget{data__threads_8c_source}{}\label{data__threads_8c_source}\index{src/data\_threads.c@{src/data\_threads.c}}
+\mbox{\hyperlink{data__threads_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00001}00001\ \textcolor{comment}{//data\_threads.c}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data__threads_8h}{data\_threads.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00006}00006\ \textcolor{comment}{//\ Initialize\ the\ cursor\ thread\ arguments}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00007}\mbox{\hyperlink{data__threads_8h_aef6162a4bb4ea6625e442f58c649fc18}{00007}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_aef6162a4bb4ea6625e442f58c649fc18}{initCursorThreadArgs}}(\mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}*\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00008}00008\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ab91e93578934fc61f05e4bf2867473f3}{cursorData}}\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_cursor_data}{CursorData}}));}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00009}00009\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a3baceee645555085b6837ad187f98c72}{sample\_period}}\ =\ 0.001;\ \textcolor{comment}{//\ Clock\ issues\ "{}tick"{}\ condition\ signal\ every\ 1-\/ms}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00010}00010\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_aed6eb8d328badd9e332cecb91901a312}{running}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00011}00011\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a4c2a869c9476db61f692348b97932ed3}{mutex}}\ =\ PTHREAD\_MUTEX\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00012}00012\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}}\ =\ PTHREAD\_MUTEX\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00013}00013\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_af70e1b197051b120408e33c71bce2dc4}{tick}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00014}00014\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a1fe1e9601eb1a6682bda8eb546273dcb}{update}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00015}00015\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a733a967245822c1540bf08f63684ce67}{init}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00018}00018\ \textcolor{comment}{//\ Initialize\ the\ state\ thread\ arguments}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00019}\mbox{\hyperlink{data__threads_8h_a4ea41404eb25aaac2484b766d3db212d}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_a4ea41404eb25aaac2484b766d3db212d}{initStateThreadArgs}}(\mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}*\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00020}00020\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a43cc943909a7c4fbd0e487b676ae14ed}{stateData}}\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_state_data}{StateData}}));}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00021}00021\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_aaf6804f6d67899dfa6e71b3b461770be}{sample\_period}}\ =\ 0.001;\ \textcolor{comment}{//\ Clock\ issues\ "{}tick"{}\ condition\ signal\ every\ 1-\/ms}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00022}00022\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_afa1728f79b6fa452bbd7cbf513880c5d}{running}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00023}00023\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_aa9ae6a10fc9227ac29171170fa6513ad}{mutex}}\ =\ PTHREAD\_MUTEX\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00024}00024\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a47bbff32cd43f49142136e4110dcf1a9}{initx}}\ =\ PTHREAD\_MUTEX\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00025}00025\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a7bf66b9050167f2af35c8cbda4be3c5f}{tick}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00026}00026\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a18a2b759aba4db5822a4c532c933b689}{update}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00027}00027\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a98593429959ece2466c8a36f44cf1b7b}{init}}\ =\ PTHREAD\_COND\_INITIALIZER;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00030}00030\ \textcolor{comment}{//\ Set\ sampling\ period\ for\ cursor\ clock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00031}\mbox{\hyperlink{data__threads_8h_a53212cd0f0b9c2e1944aba03b560e640}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_a53212cd0f0b9c2e1944aba03b560e640}{setCursorSamplePeriod}}(\mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}*\ args,\ \textcolor{keywordtype}{double}\ period)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00032}00032\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a3baceee645555085b6837ad187f98c72}{sample\_period}}\ =\ period;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00035}00035\ \textcolor{comment}{//\ Set\ sampling\ period\ for\ state\ clock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00036}\mbox{\hyperlink{data__threads_8h_ac2904da7d9858c8398737ab5e3ceab0b}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_ac2904da7d9858c8398737ab5e3ceab0b}{setStateSamplePeriod}}(\mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}*\ args,\ \textcolor{keywordtype}{double}\ period)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00037}00037\ \ \ \ \ args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_aaf6804f6d67899dfa6e71b3b461770be}{sample\_period}}\ =\ period;}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00040}00040\ \textcolor{comment}{//\ Start\ a\ cursor-\/related\ thread,\ acquiring\ mutex\ but\ not\ releasing\ it\ until\ \`{}trigger`\ condition}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00041}\mbox{\hyperlink{data__threads_8h_ae81be9d4f6a378af1e300e23df2a20ce}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_ae81be9d4f6a378af1e300e23df2a20ce}{startCursorThread}}(\mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}*\ args,\ \mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{ThreadFunc}}\ thread\_func,\ pthread\_t*\ thread,\ pthread\_mutex\_t*\ lock,\ pthread\_cond\_t*\ trigger,\ pthread\_attr\_t*\ attr)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ pthread\_mutex\_lock(lock);\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ we\ acquire\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (trigger\ \&\&\ lock)\ \{\ \textcolor{comment}{//\ If\ condition\ trigger\ is\ not\ NULL,\ we\ wait\ for\ the\ trigger\ while\ mutex\ is\ acquired.}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ pthread\_cond\_wait(trigger,\ lock);}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (pthread\_create(thread,\ attr,\ thread\_func,\ args))\ \{\ \textcolor{comment}{//\ create/start\ the\ thread}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ creating\ cursor\ thread.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(lock);\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ release\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00054}00054\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(lock);\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ release\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00060}00060\ \textcolor{comment}{//\ Start\ a\ state-\/related\ thread,\ acquiring\ mutex\ but\ not\ releasing\ it\ until\ \`{}trigger`\ condition}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00061}\mbox{\hyperlink{data__threads_8h_af5aacafca35f1f01d4ac4267b4f6aab4}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_af5aacafca35f1f01d4ac4267b4f6aab4}{startStateThread}}(\mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}*\ args,\ \mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{ThreadFunc}}\ thread\_func,\ pthread\_t*\ thread,\ pthread\_mutex\_t*\ lock,\ pthread\_cond\_t*\ trigger,\ pthread\_attr\_t*\ attr)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ we\ acquire\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ pthread\_mutex\_lock(lock);\ \textcolor{comment}{//\ acquire\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (trigger\ \&\&\ lock)\ \{\ \textcolor{comment}{//\ If\ condition\ trigger\ is\ not\ NULL,\ we\ wait\ for\ the\ trigger\ while\ mutex\ is\ acquired.}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ pthread\_cond\_wait(trigger,\ lock);}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (pthread\_create(thread,\ attr,\ thread\_func,\ args))\ \{\ \textcolor{comment}{//\ create/start\ the\ thread}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ creating\ state\ thread.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(lock);\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ release\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00074}00074\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (lock)\ \{\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(lock);\ \textcolor{comment}{//\ if\ mutex\ is\ not\ NULL,\ release\ the\ lock}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00080}00080\ \textcolor{comment}{//\ Cleanup\ the\ state\ thread\ arguments}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00081}\mbox{\hyperlink{data__threads_8h_aa2e42dbb22fe50f96b66ce1cb24b4e11}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_aa2e42dbb22fe50f96b66ce1cb24b4e11}{cleanupCursorThreadArgs}}(\mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}*\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00082}00082\ \ \ \ \ free(args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ab91e93578934fc61f05e4bf2867473f3}{cursorData}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00083}00083\ \ \ \ \ pthread\_mutex\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a4c2a869c9476db61f692348b97932ed3}{mutex}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00084}00084\ \ \ \ \ pthread\_mutex\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00085}00085\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_af70e1b197051b120408e33c71bce2dc4}{tick}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00086}00086\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a1fe1e9601eb1a6682bda8eb546273dcb}{update}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00087}00087\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a733a967245822c1540bf08f63684ce67}{init}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00088}00088\ \ \ \ \ free(args);}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00091}00091\ \textcolor{comment}{//\ Cleanup\ the\ state\ thread\ arguments}}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00092}\mbox{\hyperlink{data__threads_8h_a9a0409e3affda122ca96d7f26b7588bb}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{data__threads_8c_a9a0409e3affda122ca96d7f26b7588bb}{cleanupStateThreadArgs}}(\mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}*\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00093}00093\ \ \ \ \ free(args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a43cc943909a7c4fbd0e487b676ae14ed}{stateData}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00094}00094\ \ \ \ \ pthread\_mutex\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_aa9ae6a10fc9227ac29171170fa6513ad}{mutex}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00095}00095\ \ \ \ \ pthread\_mutex\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a47bbff32cd43f49142136e4110dcf1a9}{initx}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00096}00096\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a7bf66b9050167f2af35c8cbda4be3c5f}{tick}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00097}00097\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a18a2b759aba4db5822a4c532c933b689}{update}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00098}00098\ \ \ \ \ pthread\_cond\_destroy(\&args-\/>\mbox{\hyperlink{struct_thread_safe_state_args_a98593429959ece2466c8a36f44cf1b7b}{init}});}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00099}00099\ \ \ \ \ free(args);}
+\DoxyCodeLine{\Hypertarget{data__threads_8c_source_l00100}00100\ \}}
+
+\end{DoxyCode}

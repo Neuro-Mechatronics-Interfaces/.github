@@ -1,0 +1,76 @@
+\chapter{Task IO}
+\hypertarget{index}{}\label{index}\index{Task IO@{Task IO}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+Compiled {\ttfamily c} application(s) to handle loading/saving of task metadata or prototype logs related to more-\/efficient logging/handling on NHP task. ~\newline
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Compiling}{Compiling}}\label{index_autotoc_md1}
+You can compile everything with a big long command, which recompiles the static libraries, links them, and finally includes them in a compiled tests.\+exe executable (in the {\ttfamily bin} sub-\/folder). This command assumes you are in {\ttfamily Task\+IO} (folder containing {\ttfamily src}, {\ttfamily bin} etc.). ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ -\/c\ src/logger.c\ -\/o\ lib/logging.o\ -\/Iinclude\ \&\&\ gcc\ -\/c\ src/data\_structures.c\ -\/Iinclude\ -\/o\ lib/data\_structures.o\ \&\&\ gcc\ -\/c\ src/data\_threads.c\ -\/o\ lib/data\_threads.o\ -\/Iinclude\ \&\&\ ar\ rcs\ lib/Logging.lib\ lib/logging.o\ lib/data\_structures.o\ lib/data\_threads.o\ \&\&\ gcc\ src/tests.c\ -\/o\ bin/tests.exe\ -\/Isrc\ -\/Iinclude\ -\/Llib\ -\/lLogging\ -\/lmath\_utilities}
+
+\end{DoxyCode}
+ It is faster to compile only the {\ttfamily tests.\+exe} executable if none of the other static libraries were modified. ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ src/tests.c\ -\/o\ bin/tests.exe\ -\/Isrc\ -\/Iinclude\ -\/Llib\ -\/lLogging\ -\/lmath\_utilities}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{index_autotoc_md2}
+Once {\ttfamily tests.\+exe} is compiled, you can get a list of the test options using the {\ttfamily help} command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ help}
+
+\end{DoxyCode}
+ The different test command options are listed below\+: ~\newline
+
+\begin{DoxyItemize}
+\item {\ttfamily readconfig} -\/ Read and print the configuration from config.\+yaml. ~\newline
+
+\item {\ttfamily staticwrite} -\/ Checks that a static .txt file can be created (C\+:/\+Data/\+Task\+Logs/test.txt).
+\item {\ttfamily readcursor \texorpdfstring{$<$}{<}subject\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}YYYY\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}MM\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}DD\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}index\texorpdfstring{$>$}{>}} -\/ Read and print the values from the specified cursor log.
+\item {\ttfamily readstate \texorpdfstring{$<$}{<}subject\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}YYYY\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}MM\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}DD\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}index\texorpdfstring{$>$}{>}} -\/ Read and print the values from the specified state log.
+\item {\ttfamily writecursor \texorpdfstring{$<$}{<}subject\texorpdfstring{$>$}{>}} -\/ Create and write a sample cursor log. ~\newline
+
+\begin{DoxyItemize}
+\item If {\ttfamily C\+:/\+Data/\+Task\+Logs} (or other folder specified in {\ttfamily bin/config.\+yaml}) does not exist yet, the first time running may throw an error but you should see the folder is created. Re-\/running should then produce the intended behavior. ~\newline
+
+\end{DoxyItemize}
+\item {\ttfamily writestate \texorpdfstring{$<$}{<}subject\texorpdfstring{$>$}{>}} -\/ Create and write a sample state log. ~\newline
+
+\begin{DoxyItemize}
+\item If {\ttfamily C\+:/\+Data/\+Task\+Logs} (or other folder specified in {\ttfamily bin/config.\+yaml}) does not exist yet, the first time running may throw an error but you should see the folder is created. Re-\/running should then produce the intended behavior. ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Example Testing}{Example Testing}}\label{index_autotoc_md3}
+Start with {\ttfamily readconfig} which will also show you where the logger wants to save/load files on your local system. ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ readconfig}
+
+\end{DoxyCode}
+ Next, you can {\ttfamily writecursor} which will generate some random interpolated cursor paths that can be used for later tests. ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ writecursor\ MyTest}
+
+\end{DoxyCode}
+ This should generate a file in the save folder indicated by the {\ttfamily readconfig} step. If there is an error, try re-\/running as the error is probably just due to the folder not existing to begin with. Next, try reading back what you just generated. Assuming the date is 2024-\/02-\/08, then to access the log file you just created, follow syntax below\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ readcursor\ MyTest\ 2024\ 2\ 8\ 1}
+
+\end{DoxyCode}
+ Run the {\ttfamily writecursor} test again. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ writecursor\ MyTest}
+
+\end{DoxyCode}
+ You will notice that it auto-\/increments the file index, if you check the log save location returned by {\ttfamily bin\textbackslash{}tests.\+exe readconfig}. ~\newline
+ To read back the new file, just increment the index accordingly\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin\(\backslash\)tests.exe\ readcursor\ MyTest\ 2024\ 2\ 8\ 2}
+
+\end{DoxyCode}
+ 

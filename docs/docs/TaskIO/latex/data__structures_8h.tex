@@ -1,0 +1,72 @@
+\doxysection{include/data\+\_\+structures.h File Reference}
+\hypertarget{data__structures_8h}{}\label{data__structures_8h}\index{include/data\_structures.h@{include/data\_structures.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_logger_config}{Logger\+Config}}
+\item 
+struct \mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_state_data}{State\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_header_data}{Header\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data__structures_8h_a08100490035f9e44ccdb89edde095155}{format\+Timestamp\+With\+Millis}} (FILETIME ft, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+Size)
+\item 
+void \mbox{\hyperlink{data__structures_8h_a16abfd849e1779a4449e4b0af065b8c7}{print\+Cursor\+Datum}} (\mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}cursor\+Data)
+\item 
+void \mbox{\hyperlink{data__structures_8h_a2e282aea2deff291f7b730fdaf285753}{print\+Header\+Data}} (\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}header\+Data)
+\item 
+void \mbox{\hyperlink{data__structures_8h_a01e2dc9a559c3be5329bfc5cf994198b}{print\+State\+Datum}} (\mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}state\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{data__structures_8h_a08100490035f9e44ccdb89edde095155}\label{data__structures_8h_a08100490035f9e44ccdb89edde095155} 
+\index{data\_structures.h@{data\_structures.h}!formatTimestampWithMillis@{formatTimestampWithMillis}}
+\index{formatTimestampWithMillis@{formatTimestampWithMillis}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{formatTimestampWithMillis()}{formatTimestampWithMillis()}}
+{\footnotesize\ttfamily void format\+Timestamp\+With\+Millis (\begin{DoxyParamCaption}\item[{FILETIME}]{ft,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__structures_8c_source_l00005}{5}} of file \mbox{\hyperlink{data__structures_8c_source}{data\+\_\+structures.\+c}}.
+
+\Hypertarget{data__structures_8h_a16abfd849e1779a4449e4b0af065b8c7}\label{data__structures_8h_a16abfd849e1779a4449e4b0af065b8c7} 
+\index{data\_structures.h@{data\_structures.h}!printCursorDatum@{printCursorDatum}}
+\index{printCursorDatum@{printCursorDatum}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{printCursorDatum()}{printCursorDatum()}}
+{\footnotesize\ttfamily void print\+Cursor\+Datum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_data}{Cursor\+Data}} \texorpdfstring{$\ast$}{*}}]{cursor\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__structures_8c_source_l00017}{17}} of file \mbox{\hyperlink{data__structures_8c_source}{data\+\_\+structures.\+c}}.
+
+\Hypertarget{data__structures_8h_a2e282aea2deff291f7b730fdaf285753}\label{data__structures_8h_a2e282aea2deff291f7b730fdaf285753} 
+\index{data\_structures.h@{data\_structures.h}!printHeaderData@{printHeaderData}}
+\index{printHeaderData@{printHeaderData}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{printHeaderData()}{printHeaderData()}}
+{\footnotesize\ttfamily void print\+Header\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_header_data}{Header\+Data}} \texorpdfstring{$\ast$}{*}}]{header\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__structures_8c_source_l00022}{22}} of file \mbox{\hyperlink{data__structures_8c_source}{data\+\_\+structures.\+c}}.
+
+\Hypertarget{data__structures_8h_a01e2dc9a559c3be5329bfc5cf994198b}\label{data__structures_8h_a01e2dc9a559c3be5329bfc5cf994198b} 
+\index{data\_structures.h@{data\_structures.h}!printStateDatum@{printStateDatum}}
+\index{printStateDatum@{printStateDatum}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{printStateDatum()}{printStateDatum()}}
+{\footnotesize\ttfamily void print\+State\+Datum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_state_data}{State\+Data}} \texorpdfstring{$\ast$}{*}}]{state\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__structures_8c_source_l00033}{33}} of file \mbox{\hyperlink{data__structures_8c_source}{data\+\_\+structures.\+c}}.
+

@@ -1,0 +1,107 @@
+\doxysection{src/data\+\_\+threads.c File Reference}
+\hypertarget{data__threads_8c}{}\label{data__threads_8c}\index{src/data\_threads.c@{src/data\_threads.c}}
+{\ttfamily \#include "{}data\+\_\+threads.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data__threads_8c_aef6162a4bb4ea6625e442f58c649fc18}{init\+Cursor\+Thread\+Args}} (\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}args)
+\item 
+void \mbox{\hyperlink{data__threads_8c_a4ea41404eb25aaac2484b766d3db212d}{init\+State\+Thread\+Args}} (\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}args)
+\item 
+void \mbox{\hyperlink{data__threads_8c_a53212cd0f0b9c2e1944aba03b560e640}{set\+Cursor\+Sample\+Period}} (\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}args, double period)
+\item 
+void \mbox{\hyperlink{data__threads_8c_ac2904da7d9858c8398737ab5e3ceab0b}{set\+State\+Sample\+Period}} (\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}args, double period)
+\item 
+void \mbox{\hyperlink{data__threads_8c_ae81be9d4f6a378af1e300e23df2a20ce}{start\+Cursor\+Thread}} (\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{Thread\+Func}} thread\+\_\+func, pthread\+\_\+t \texorpdfstring{$\ast$}{*}thread, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}lock, pthread\+\_\+cond\+\_\+t \texorpdfstring{$\ast$}{*}trigger, pthread\+\_\+attr\+\_\+t \texorpdfstring{$\ast$}{*}attr)
+\item 
+void \mbox{\hyperlink{data__threads_8c_af5aacafca35f1f01d4ac4267b4f6aab4}{start\+State\+Thread}} (\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{Thread\+Func}} thread\+\_\+func, pthread\+\_\+t \texorpdfstring{$\ast$}{*}thread, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}lock, pthread\+\_\+cond\+\_\+t \texorpdfstring{$\ast$}{*}trigger, pthread\+\_\+attr\+\_\+t \texorpdfstring{$\ast$}{*}attr)
+\item 
+void \mbox{\hyperlink{data__threads_8c_aa2e42dbb22fe50f96b66ce1cb24b4e11}{cleanup\+Cursor\+Thread\+Args}} (\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}args)
+\item 
+void \mbox{\hyperlink{data__threads_8c_a9a0409e3affda122ca96d7f26b7588bb}{cleanup\+State\+Thread\+Args}} (\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{data__threads_8c_aa2e42dbb22fe50f96b66ce1cb24b4e11}\label{data__threads_8c_aa2e42dbb22fe50f96b66ce1cb24b4e11} 
+\index{data\_threads.c@{data\_threads.c}!cleanupCursorThreadArgs@{cleanupCursorThreadArgs}}
+\index{cleanupCursorThreadArgs@{cleanupCursorThreadArgs}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{cleanupCursorThreadArgs()}{cleanupCursorThreadArgs()}}
+{\footnotesize\ttfamily void cleanup\+Cursor\+Thread\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00081}{81}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_a9a0409e3affda122ca96d7f26b7588bb}\label{data__threads_8c_a9a0409e3affda122ca96d7f26b7588bb} 
+\index{data\_threads.c@{data\_threads.c}!cleanupStateThreadArgs@{cleanupStateThreadArgs}}
+\index{cleanupStateThreadArgs@{cleanupStateThreadArgs}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{cleanupStateThreadArgs()}{cleanupStateThreadArgs()}}
+{\footnotesize\ttfamily void cleanup\+State\+Thread\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00092}{92}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_aef6162a4bb4ea6625e442f58c649fc18}\label{data__threads_8c_aef6162a4bb4ea6625e442f58c649fc18} 
+\index{data\_threads.c@{data\_threads.c}!initCursorThreadArgs@{initCursorThreadArgs}}
+\index{initCursorThreadArgs@{initCursorThreadArgs}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{initCursorThreadArgs()}{initCursorThreadArgs()}}
+{\footnotesize\ttfamily void init\+Cursor\+Thread\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00007}{7}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_a4ea41404eb25aaac2484b766d3db212d}\label{data__threads_8c_a4ea41404eb25aaac2484b766d3db212d} 
+\index{data\_threads.c@{data\_threads.c}!initStateThreadArgs@{initStateThreadArgs}}
+\index{initStateThreadArgs@{initStateThreadArgs}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{initStateThreadArgs()}{initStateThreadArgs()}}
+{\footnotesize\ttfamily void init\+State\+Thread\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00019}{19}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_a53212cd0f0b9c2e1944aba03b560e640}\label{data__threads_8c_a53212cd0f0b9c2e1944aba03b560e640} 
+\index{data\_threads.c@{data\_threads.c}!setCursorSamplePeriod@{setCursorSamplePeriod}}
+\index{setCursorSamplePeriod@{setCursorSamplePeriod}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{setCursorSamplePeriod()}{setCursorSamplePeriod()}}
+{\footnotesize\ttfamily void set\+Cursor\+Sample\+Period (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}}]{args,  }\item[{double}]{period }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00031}{31}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_ac2904da7d9858c8398737ab5e3ceab0b}\label{data__threads_8c_ac2904da7d9858c8398737ab5e3ceab0b} 
+\index{data\_threads.c@{data\_threads.c}!setStateSamplePeriod@{setStateSamplePeriod}}
+\index{setStateSamplePeriod@{setStateSamplePeriod}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{setStateSamplePeriod()}{setStateSamplePeriod()}}
+{\footnotesize\ttfamily void set\+State\+Sample\+Period (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}}]{args,  }\item[{double}]{period }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00036}{36}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_ae81be9d4f6a378af1e300e23df2a20ce}\label{data__threads_8c_ae81be9d4f6a378af1e300e23df2a20ce} 
+\index{data\_threads.c@{data\_threads.c}!startCursorThread@{startCursorThread}}
+\index{startCursorThread@{startCursorThread}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{startCursorThread()}{startCursorThread()}}
+{\footnotesize\ttfamily void start\+Cursor\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_cursor_args}{Thread\+Safe\+Cursor\+Args}} \texorpdfstring{$\ast$}{*}}]{args,  }\item[{\mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{Thread\+Func}}}]{thread\+\_\+func,  }\item[{pthread\+\_\+t \texorpdfstring{$\ast$}{*}}]{thread,  }\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{lock,  }\item[{pthread\+\_\+cond\+\_\+t \texorpdfstring{$\ast$}{*}}]{trigger,  }\item[{pthread\+\_\+attr\+\_\+t \texorpdfstring{$\ast$}{*}}]{attr }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00041}{41}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+
+\Hypertarget{data__threads_8c_af5aacafca35f1f01d4ac4267b4f6aab4}\label{data__threads_8c_af5aacafca35f1f01d4ac4267b4f6aab4} 
+\index{data\_threads.c@{data\_threads.c}!startStateThread@{startStateThread}}
+\index{startStateThread@{startStateThread}!data\_threads.c@{data\_threads.c}}
+\doxysubsubsection{\texorpdfstring{startStateThread()}{startStateThread()}}
+{\footnotesize\ttfamily void start\+State\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_thread_safe_state_args}{Thread\+Safe\+State\+Args}} \texorpdfstring{$\ast$}{*}}]{args,  }\item[{\mbox{\hyperlink{data__threads_8h_a3469a576acb35dee78c151d0754f4123}{Thread\+Func}}}]{thread\+\_\+func,  }\item[{pthread\+\_\+t \texorpdfstring{$\ast$}{*}}]{thread,  }\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{lock,  }\item[{pthread\+\_\+cond\+\_\+t \texorpdfstring{$\ast$}{*}}]{trigger,  }\item[{pthread\+\_\+attr\+\_\+t \texorpdfstring{$\ast$}{*}}]{attr }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__threads_8c_source_l00061}{61}} of file \mbox{\hyperlink{data__threads_8c_source}{data\+\_\+threads.\+c}}.
+

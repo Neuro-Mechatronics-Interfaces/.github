@@ -4,7 +4,7 @@ url: "https://code.nml.wtf" # the url of your github pages
 # url: "http://127.0.0.1:4000" # toggle this if you want to run local jekyll server
 
 # metadata to describe when site was updated and by whom, last
-last_update: "2023-02-10"
+last_update: "2024-02-10"
 last_author: Max
 
 # site information used in page title, meta data etc.
@@ -26,6 +26,8 @@ show-nav-menu: true
 nav-menu:
 - text: About
   permalink: about
+- text: Documentation
+  permalink: docs
 - text: SOPs
   permalink: sops
 - text: Tutorials
