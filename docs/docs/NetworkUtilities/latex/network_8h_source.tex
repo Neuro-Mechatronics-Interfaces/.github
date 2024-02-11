@@ -1,0 +1,40 @@
+\doxysection{network.\+h}
+\hypertarget{network_8h_source}{}\label{network_8h_source}\index{include/network.h@{include/network.h}}
+\mbox{\hyperlink{network_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ NETWORK\_H}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ NETWORK\_H}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <io.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <tchar.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <winsock2.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <ws2tcpip.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00020}\mbox{\hyperlink{network_8h_a292cc67bb9753757dcf87aec471c0f3f}{00020}}\ \textcolor{preprocessor}{\#define\ UDP\_SERVER\_IP\ "{}192.168.0.53"{}}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00021}\mbox{\hyperlink{network_8h_a65aa3eb398c05dd4dc8fc91f7e835130}{00021}}\ \textcolor{preprocessor}{\#define\ UDP\_CURSOR\_PORT\ 3070}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00022}\mbox{\hyperlink{network_8h_a18f3742347b78564c55900bd18a03537}{00022}}\ \textcolor{preprocessor}{\#define\ UDP\_TARGET\_PORT\ 3071}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00023}\mbox{\hyperlink{network_8h_aa33f096879f8196da4d49841ed342651}{00023}}\ \textcolor{preprocessor}{\#define\ UDP\_PARAMETER\_PORT\ 3072}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00024}\mbox{\hyperlink{network_8h_a580d845e8ebbd7ada30d26d2e544f64c}{00024}}\ \textcolor{preprocessor}{\#define\ CURSOR\_MESSAGE\_FORMAT\ "{}\%d,\%d"{}}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00025}\mbox{\hyperlink{network_8h_a923fbc2ad755a2b75fb6abecfda82cce}{00025}}\ \textcolor{preprocessor}{\#define\ TARGET\_MESSAGE\_FORMAT\ "{}\%d,\%d,\%d,\%d"{}}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00050}00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{setNonBlocking}}(SOCKET\ socket);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{initializeWinsock}}();}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}();}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00084}00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___messaging_ga9995cb316a34479c457468a899c1500e}{sendCursorPosition}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ int16\_t\ x,\ int16\_t\ y);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00098}00098\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}{sendTargetUpdate}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ targetIndex,\ \textcolor{keywordtype}{int}\ renderFlag);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00103}00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ NETWORK\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

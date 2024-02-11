@@ -1,0 +1,76 @@
+\doxysection{Port Creation}
+\hypertarget{group___port_creation}{}\label{group___port_creation}\index{Port Creation@{Port Creation}}
+
+
+Functions related to initializing network ports and setting their properties.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{set\+Non\+Blocking}} (SOCKET socket)
+\begin{DoxyCompactList}\small\item\em Sets the given socket to non-\/blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{initialize\+Winsock}} ()
+\begin{DoxyCompactList}\small\item\em Initializes Winsock library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{cleanup\+Winsock}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up resources used by Winsock library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to initializing network ports and setting their properties. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___port_creation_ga1af42a80836683ce46af20b6768565bb}\label{group___port_creation_ga1af42a80836683ce46af20b6768565bb} 
+\index{Port Creation@{Port Creation}!cleanupWinsock@{cleanupWinsock}}
+\index{cleanupWinsock@{cleanupWinsock}!Port Creation@{Port Creation}}
+\doxysubsubsection{\texorpdfstring{cleanupWinsock()}{cleanupWinsock()}}
+{\footnotesize\ttfamily void cleanup\+Winsock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up resources used by Winsock library. 
+
+This function cleans up resources used by the Winsock library. It should be called when Winsock is no longer needed. 
+
+Definition at line \mbox{\hyperlink{network_8c_source_l00020}{20}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+
+\Hypertarget{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}\label{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0} 
+\index{Port Creation@{Port Creation}!initializeWinsock@{initializeWinsock}}
+\index{initializeWinsock@{initializeWinsock}!Port Creation@{Port Creation}}
+\doxysubsubsection{\texorpdfstring{initializeWinsock()}{initializeWinsock()}}
+{\footnotesize\ttfamily void initialize\+Winsock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes Winsock library. 
+
+This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the program exits with failure. 
+
+Definition at line \mbox{\hyperlink{network_8c_source_l00012}{12}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+
+\Hypertarget{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}\label{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba} 
+\index{Port Creation@{Port Creation}!setNonBlocking@{setNonBlocking}}
+\index{setNonBlocking@{setNonBlocking}!Port Creation@{Port Creation}}
+\doxysubsubsection{\texorpdfstring{setNonBlocking()}{setNonBlocking()}}
+{\footnotesize\ttfamily void set\+Non\+Blocking (\begin{DoxyParamCaption}\item[{SOCKET}]{socket }\end{DoxyParamCaption})}
+
+
+
+Sets the given socket to non-\/blocking mode. 
+
+This function sets the specified socket to non-\/blocking mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket to set to non-\/blocking mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{network_8c_source_l00007}{7}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+

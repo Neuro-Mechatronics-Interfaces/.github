@@ -12,10 +12,14 @@ This page contains links to automatically-generated documentation produced using
 ---
 
 ### Repos ###
+#### Applications ####
 * [`TaskIO`]({{site.baseurl}}/docs/TaskIO/html/index.html) - NHP Wrist Center-Out task compiled c-applications for logging and configuration. 
-* [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`NHP_Wrist_Center_Out`]({{site.baseurl}}/docs/NHP_Wrist_Center_Out/html/index.html) - Compiled c-application for rendering the NHP wrist task on Jetson Nano 2 running Ubuntu 20.4.  
 * [`StateServer`]({{site.baseurl}}/docs/StateServer/html/index.html) - Compiled c-application for managing the real-time state timing, transitions, and logging used in the NHP wrist task (runs on Windows 10 64-bit).  
+
+#### Libraries ####
+* [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
+* [`NetworkUtilities`]({{site.baseurl}}/docs/NetworkUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 
 ### Contributing ###
 If you are contributing code and would like to use Doxygen to help maintain the documentation, then follow these steps:  
