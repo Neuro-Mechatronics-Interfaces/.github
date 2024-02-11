@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['sample_5fperiod_0',['sample_period',['../struct_thread_safe_cursor_args.html#a3baceee645555085b6837ad187f98c72',1,'ThreadSafeCursorArgs::sample_period'],['../struct_thread_safe_state_args.html#aaf6804f6d67899dfa6e71b3b461770be',1,'ThreadSafeStateArgs::sample_period']]],
-  ['setcursorsampleperiod_1',['setCursorSamplePeriod',['../data__threads_8h.html#a53212cd0f0b9c2e1944aba03b560e640',1,'setCursorSamplePeriod(ThreadSafeCursorArgs *args, double period):&#160;data_threads.c'],['../data__threads_8c.html#a53212cd0f0b9c2e1944aba03b560e640',1,'setCursorSamplePeriod(ThreadSafeCursorArgs *args, double period):&#160;data_threads.c']]],
-  ['setstatesampleperiod_2',['setStateSamplePeriod',['../data__threads_8h.html#ac2904da7d9858c8398737ab5e3ceab0b',1,'setStateSamplePeriod(ThreadSafeStateArgs *args, double period):&#160;data_threads.c'],['../data__threads_8c.html#ac2904da7d9858c8398737ab5e3ceab0b',1,'setStateSamplePeriod(ThreadSafeStateArgs *args, double period):&#160;data_threads.c']]],
-  ['startcursorthread_3',['startCursorThread',['../data__threads_8h.html#ae81be9d4f6a378af1e300e23df2a20ce',1,'startCursorThread(ThreadSafeCursorArgs *args, ThreadFunc thread_func, pthread_t *thread, pthread_mutex_t *lock, pthread_cond_t *trigger, pthread_attr_t *attr):&#160;data_threads.c'],['../data__threads_8c.html#ae81be9d4f6a378af1e300e23df2a20ce',1,'startCursorThread(ThreadSafeCursorArgs *args, ThreadFunc thread_func, pthread_t *thread, pthread_mutex_t *lock, pthread_cond_t *trigger, pthread_attr_t *attr):&#160;data_threads.c']]],
-  ['startstatethread_4',['startStateThread',['../data__threads_8h.html#af5aacafca35f1f01d4ac4267b4f6aab4',1,'startStateThread(ThreadSafeStateArgs *args, ThreadFunc thread_func, pthread_t *thread, pthread_mutex_t *lock, pthread_cond_t *trigger, pthread_attr_t *attr):&#160;data_threads.c'],['../data__threads_8c.html#af5aacafca35f1f01d4ac4267b4f6aab4',1,'startStateThread(ThreadSafeStateArgs *args, ThreadFunc thread_func, pthread_t *thread, pthread_mutex_t *lock, pthread_cond_t *trigger, pthread_attr_t *attr):&#160;data_threads.c']]],
-  ['state_5',['state',['../struct_state_data.html#aefb60dfd1ac9ae01ed1d517bedf5f633',1,'StateData']]],
-  ['state_5fclock_5fthread_5ffunc_6',['state_clock_thread_func',['../group___logging.html#gae7f4c8202c0cf8c97feb2ca99b511852',1,'state_clock_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#gae7f4c8202c0cf8c97feb2ca99b511852',1,'state_clock_thread_func(void *arg):&#160;logger.c']]],
-  ['state_5fconsumer_5fthread_5ffunc_7',['state_consumer_thread_func',['../group___logging.html#ga6e18fff4219966d4cc08847ad2581e8b',1,'state_consumer_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#ga6e18fff4219966d4cc08847ad2581e8b',1,'state_consumer_thread_func(void *arg):&#160;logger.c']]],
-  ['state_5fproducer_5fthread_5ffunc_8',['state_producer_thread_func',['../group___logging.html#ga36a43c2a341e4edeb6b43f596669d402',1,'state_producer_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#ga36a43c2a341e4edeb6b43f596669d402',1,'state_producer_thread_func(void *arg):&#160;logger.c']]],
-  ['statedata_9',['StateData',['../struct_state_data.html',1,'']]],
-  ['statedata_10',['stateData',['../struct_thread_safe_state_args.html#a43cc943909a7c4fbd0e487b676ae14ed',1,'ThreadSafeStateArgs']]]
+  ['target_0',['target',['../struct_state_data.html#ae3f155ac0c20aa83c0d00a7dd7688bc3',1,'StateData']]],
+  ['task_20io_1',['Task IO',['../index.html',1,'']]],
+  ['testing_2',['Testing',['../index.html#autotoc_md4',1,'Example Testing'],['../group___tests.html#autotoc_md7',1,'Example Testing']]],
+  ['tests_3',['Tests',['../group___tests.html',1,'Logging IO Tests'],['../index.html#autotoc_md3',1,'Tests']]],
+  ['tests_2ec_4',['tests.c',['../tests_8c.html',1,'']]],
+  ['threadfunc_5',['ThreadFunc',['../data__threads_8h.html#a3469a576acb35dee78c151d0754f4123',1,'data_threads.h']]],
+  ['threadsafecursorargs_6',['ThreadSafeCursorArgs',['../struct_thread_safe_cursor_args.html',1,'']]],
+  ['threadsafestateargs_7',['ThreadSafeStateArgs',['../struct_thread_safe_state_args.html',1,'']]],
+  ['tick_8',['tick',['../struct_thread_safe_cursor_args.html#af70e1b197051b120408e33c71bce2dc4',1,'ThreadSafeCursorArgs::tick'],['../struct_thread_safe_state_args.html#a7bf66b9050167f2af35c8cbda4be3c5f',1,'ThreadSafeStateArgs::tick']]],
+  ['timestamp_9',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
+  ['ts_10',['ts',['../struct_cursor_data.html#a4656933639271e3bed09496d44ba4d09',1,'CursorData::ts'],['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData::ts']]]
 ];

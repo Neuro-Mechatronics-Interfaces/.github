@@ -95,5 +95,21 @@
 \DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00094}00094\ \ \ \ \ *x\ =\ (resultX\ >\ 0)\ ?\ (uint16\_t)resultX\ :\ 0;}
 \DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00095}00095\ \ \ \ \ *y\ =\ (resultY\ >\ 0)\ ?\ (uint16\_t)resultY\ :\ 0;}
 \DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00108}\mbox{\hyperlink{group___thresholding_ga029af4807ed29b73579a97eccf27fecf}{00108}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___thresholding_ga029af4807ed29b73579a97eccf27fecf}{spatialL2Threshold}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ x\_target,\ \textcolor{keywordtype}{double}\ y\_target,\ \textcolor{keywordtype}{double}\ radius)\ \{}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{double}\ distanceSquared\ =\ pow(x\ -\/\ x\_target,\ 2)\ +\ pow(y\ -\/\ y\_target,\ 2);}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{return}\ (distanceSquared\ <=\ pow(radius,\ 2))\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00123}\mbox{\hyperlink{group___linear_algebra_ga5eba7421a5a93e77ba105e5f20d7ad6e}{00123}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___linear_algebra_ga5eba7421a5a93e77ba105e5f20d7ad6e}{matrixMultiply}}(\textcolor{keywordtype}{double}*\ B,\ \textcolor{keywordtype}{double}*\ A,\ \textcolor{keywordtype}{double}*\ x,\ \textcolor{keywordtype}{size\_t}\ N,\ \textcolor{keywordtype}{size\_t}\ M,\ \textcolor{keywordtype}{size\_t}\ k)\ \{}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ N;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ k;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ B[i\ *\ k\ +\ j]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ l\ =\ 0;\ l\ <\ M;\ ++l)\ \{}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ B[i\ *\ k\ +\ j]\ +=\ A[i\ *\ M\ +\ l]\ *\ x[l\ *\ k\ +\ j];}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math__utilities_8c_source_l00132}00132\ \}}
 
 \end{DoxyCode}

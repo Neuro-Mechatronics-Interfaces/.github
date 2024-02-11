@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['point_20generation_0',['Random Point Generation',['../index.html#autotoc_md9',1,'']]]
+  ['spatiall2threshold_0',['spatialL2Threshold',['../group___thresholding.html#ga029af4807ed29b73579a97eccf27fecf',1,'spatialL2Threshold(double x, double y, double x_target, double y_target, double radius):&#160;math_utilities.c'],['../group___thresholding.html#ga029af4807ed29b73579a97eccf27fecf',1,'spatialL2Threshold(double x, double y, double x_target, double y_target, double radius):&#160;math_utilities.c']]],
+  ['static_20library_1',['Static Library',['../index.html#autotoc_md5',1,'']]]
 ];

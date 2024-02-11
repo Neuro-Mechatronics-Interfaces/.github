@@ -1,0 +1,50 @@
+\doxysection{Thresholding}
+\hypertarget{group___thresholding}{}\label{group___thresholding}\index{Thresholding@{Thresholding}}
+
+
+Functions for determining whether signal features meet a given criterion.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group___thresholding_ga029af4807ed29b73579a97eccf27fecf}{spatial\+L2\+Threshold}} (double x, double y, double x\+\_\+target, double y\+\_\+target, double radius)
+\begin{DoxyCompactList}\small\item\em Determine whether a point is within a given radius of a target point in 2D space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for determining whether signal features meet a given criterion. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___thresholding_ga029af4807ed29b73579a97eccf27fecf}\label{group___thresholding_ga029af4807ed29b73579a97eccf27fecf} 
+\index{Thresholding@{Thresholding}!spatialL2Threshold@{spatialL2Threshold}}
+\index{spatialL2Threshold@{spatialL2Threshold}!Thresholding@{Thresholding}}
+\doxysubsubsection{\texorpdfstring{spatialL2Threshold()}{spatialL2Threshold()}}
+{\footnotesize\ttfamily int spatial\+L2\+Threshold (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{x\+\_\+target,  }\item[{double}]{y\+\_\+target,  }\item[{double}]{radius }\end{DoxyParamCaption})}
+
+
+
+Determine whether a point is within a given radius of a target point in 2D space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the point. \\
+\hline
+{\em y} & The y-\/coordinate of the point. \\
+\hline
+{\em x\+\_\+target} & The x-\/coordinate of the target point. \\
+\hline
+{\em y\+\_\+target} & The y-\/coordinate of the target point. \\
+\hline
+{\em radius} & The radius within which to check if the point lies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the point is within the radius of the target point, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{math__utilities_8c_source_l00108}{108}} of file \mbox{\hyperlink{math__utilities_8c_source}{math\+\_\+utilities.\+c}}.
+

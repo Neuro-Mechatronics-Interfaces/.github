@@ -97,7 +97,8 @@ $(function(){initNavTree('math__utilities_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">math_utilities.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 </div>
@@ -117,6 +118,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gababebbe204692721ab2a42ee40841caa" id="r_gababebbe204692721ab2a42ee40841caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___interpolation.html#gababebbe204692721ab2a42ee40841caa">cubicSpline2DInterpolant</a> (double t, const double *controlTimes, const double *controlPointsX, const double *controlPointsY, size_t *segment, const size_t numPoints, uint16_t *x, uint16_t *y)</td></tr>
 <tr class="memdesc:gababebbe204692721ab2a42ee40841caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform cubic spline interpolation using de Boor's algorithm.  <br /></td></tr>
 <tr class="separator:gababebbe204692721ab2a42ee40841caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga029af4807ed29b73579a97eccf27fecf" id="r_ga029af4807ed29b73579a97eccf27fecf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___thresholding.html#ga029af4807ed29b73579a97eccf27fecf">spatialL2Threshold</a> (double x, double y, double x_target, double y_target, double radius)</td></tr>
+<tr class="memdesc:ga029af4807ed29b73579a97eccf27fecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether a point is within a given radius of a target point in 2D space.  <br /></td></tr>
+<tr class="separator:ga029af4807ed29b73579a97eccf27fecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5eba7421a5a93e77ba105e5f20d7ad6e" id="r_ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___linear_algebra.html#ga5eba7421a5a93e77ba105e5f20d7ad6e">matrixMultiply</a> (double *B, double *A, double *x, size_t N, size_t M, size_t k)</td></tr>
+<tr class="memdesc:ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication: B = A * x.  <br /></td></tr>
+<tr class="separator:ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interpolation_0',['Interpolation',['../group___interpolation.html',1,'']]]
+  ['algebra_0',['Linear Algebra',['../group___linear_algebra.html',1,'']]]
 ];

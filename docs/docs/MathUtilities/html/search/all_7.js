@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['integer_20generation_0',['Random Integer Generation',['../index.html#autotoc_md14',1,'']]],
-  ['interpolation_1',['Interpolation',['../group___interpolation.html',1,'Interpolation'],['../index.html#autotoc_md12',1,'Interpolation']]]
+  ['library_0',['Library',['../index.html#autotoc_md4',1,'Dynamic Link Library'],['../index.html#autotoc_md5',1,'Static Library']]],
+  ['linear_20algebra_1',['Linear Algebra',['../group___linear_algebra.html',1,'']]],
+  ['link_20library_2',['Dynamic Link Library',['../index.html#autotoc_md4',1,'']]]
 ];

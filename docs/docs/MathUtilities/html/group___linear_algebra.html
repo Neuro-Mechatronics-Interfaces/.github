@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MathUtilities: Interpolation</title>
+<title>MathUtilities: Linear Algebra</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('group___interpolation.html',''); initResizable(); });
+$(function(){initNavTree('group___linear_algebra.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,87 +94,75 @@ $(function(){initNavTree('group___interpolation.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Interpolation</div></div>
+  <div class="headertitle"><div class="title">Linear Algebra</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Functions related to interpolation.  
+<p>Functions for linear algebra operations.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gababebbe204692721ab2a42ee40841caa" id="r_gababebbe204692721ab2a42ee40841caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gababebbe204692721ab2a42ee40841caa">cubicSpline2DInterpolant</a> (double t, const double *controlTimes, const double *controlPointsX, const double *controlPointsY, size_t *segment, const size_t numPoints, uint16_t *x, uint16_t *y)</td></tr>
-<tr class="memdesc:gababebbe204692721ab2a42ee40841caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform cubic spline interpolation using de Boor's algorithm.  <br /></td></tr>
-<tr class="separator:gababebbe204692721ab2a42ee40841caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5eba7421a5a93e77ba105e5f20d7ad6e" id="r_ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5eba7421a5a93e77ba105e5f20d7ad6e">matrixMultiply</a> (double *B, double *A, double *x, size_t N, size_t M, size_t k)</td></tr>
+<tr class="memdesc:ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication: B = A * x.  <br /></td></tr>
+<tr class="separator:ga5eba7421a5a93e77ba105e5f20d7ad6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions related to interpolation. </p>
+<p>Functions for linear algebra operations. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gababebbe204692721ab2a42ee40841caa" name="gababebbe204692721ab2a42ee40841caa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gababebbe204692721ab2a42ee40841caa">&#9670;&#160;</a></span>cubicSpline2DInterpolant()</h2>
+<a id="ga5eba7421a5a93e77ba105e5f20d7ad6e" name="ga5eba7421a5a93e77ba105e5f20d7ad6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5eba7421a5a93e77ba105e5f20d7ad6e">&#9670;&#160;</a></span>matrixMultiply()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void cubicSpline2DInterpolant </td>
+          <td class="memname">void matrixMultiply </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em>, </span></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>B</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>controlTimes</em>, </span></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>A</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>controlPointsX</em>, </span></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>controlPointsY</em>, </span></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>N</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>segment</em>, </span></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>M</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>numPoints</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Perform cubic spline interpolation using de Boor's algorithm. </p>
+<p>Perform matrix multiplication: B = A * x. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">t</td><td>The parameter value for interpolation. </td></tr>
-    <tr><td class="paramname">controlTimes</td><td>Pointer to an array of control times. </td></tr>
-    <tr><td class="paramname">controlPointsX</td><td>Pointer to an array of x-coordinate control points. </td></tr>
-    <tr><td class="paramname">controlPointsY</td><td>Pointer to an array of y-coordinate control points. </td></tr>
-    <tr><td class="paramname">segment</td><td>Pointer to a variable indicating the current segment for interpolation. </td></tr>
-    <tr><td class="paramname">numPoints</td><td>The number of control points. </td></tr>
-    <tr><td class="paramname">x</td><td>Pointer to store the interpolated x-coordinate. </td></tr>
-    <tr><td class="paramname">y</td><td>Pointer to store the interpolated y-coordinate. </td></tr>
+    <tr><td class="paramname">B</td><td>Pointer to the result matrix B. </td></tr>
+    <tr><td class="paramname">A</td><td>Pointer to the matrix A (N rows by M columns). </td></tr>
+    <tr><td class="paramname">x</td><td>Pointer to the matrix x (M rows by k columns). </td></tr>
+    <tr><td class="paramname">N</td><td>Number of rows in matrix A. </td></tr>
+    <tr><td class="paramname">M</td><td>Number of columns in matrix A (and rows in matrix x). </td></tr>
+    <tr><td class="paramname">k</td><td>Number of columns in matrix x. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="math__utilities_8c_source.html#l00054">54</a> of file <a class="el" href="math__utilities_8c_source.html">math_utilities.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math__utilities_8c_source.html#l00123">123</a> of file <a class="el" href="math__utilities_8c_source.html">math_utilities.c</a>.</p>
 
 </div>
 </div>
