@@ -24,18 +24,20 @@
 \DoxyCodeLine{\Hypertarget{network_8h_source_l00024}\mbox{\hyperlink{network_8h_a580d845e8ebbd7ada30d26d2e544f64c}{00024}}\ \textcolor{preprocessor}{\#define\ CURSOR\_MESSAGE\_FORMAT\ "{}\%d,\%d"{}}}
 \DoxyCodeLine{\Hypertarget{network_8h_source_l00025}\mbox{\hyperlink{network_8h_a923fbc2ad755a2b75fb6abecfda82cce}{00025}}\ \textcolor{preprocessor}{\#define\ TARGET\_MESSAGE\_FORMAT\ "{}\%d,\%d,\%d,\%d"{}}}
 \DoxyCodeLine{\Hypertarget{network_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{setNonBlocking}}(SOCKET\ socket);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00055}00055\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initializeWinsock}}();}
 \DoxyCodeLine{\Hypertarget{network_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00065}00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initializeWinsock}}();}
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00081}00081\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{initializeUDPsock}}(\textcolor{keywordtype}{int}\ *udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ udpServerAddr,\ uint16\_t\ port);}
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00101}00101\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{sendCursorPosition}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ int16\_t\ x,\ int16\_t\ y);}
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00116}00116\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{sendTargetUpdate}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ targetIndex,\ \textcolor{keywordtype}{int}\ renderFlag);}
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00130}00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}();}
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00131}00131\ }
-\DoxyCodeLine{\Hypertarget{network_8h_source_l00134}00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ NETWORK\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00072}00072\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga9c26022fa61448e4f95aa9837016a749}{initializeUDPsock}}(\textcolor{keywordtype}{int}\ *udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ udpServerAddr,\ \textcolor{keywordtype}{char}*\ serverIP,\ uint16\_t\ port);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga26cae777cee8ec996251dab63cb40da7}{setBlocking}}(SOCKET\ socket);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00092}00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{setNonBlocking}}(SOCKET\ socket);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00112}00112\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{sendCursorPosition}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ int16\_t\ x,\ int16\_t\ y);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00127}00127\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{sendTargetUpdate}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ targetIndex,\ \textcolor{keywordtype}{int}\ renderFlag);}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00141}00141\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}();}
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{network_8h_source_l00145}00145\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ NETWORK\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}
