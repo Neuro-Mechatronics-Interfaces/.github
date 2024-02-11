@@ -103,24 +103,24 @@ $(function(){initNavTree('group___messaging.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga9995cb316a34479c457468a899c1500e" id="r_ga9995cb316a34479c457468a899c1500e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9995cb316a34479c457468a899c1500e">sendCursorPosition</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int16_t x, int16_t y)</td></tr>
-<tr class="memdesc:ga9995cb316a34479c457468a899c1500e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
-<tr class="separator:ga9995cb316a34479c457468a899c1500e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf82ea370b9eefac030e42fc7b8f100dd" id="r_gaf82ea370b9eefac030e42fc7b8f100dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf82ea370b9eefac030e42fc7b8f100dd">sendTargetUpdate</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int x, int y, int targetIndex, int renderFlag)</td></tr>
-<tr class="memdesc:gaf82ea370b9eefac030e42fc7b8f100dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends target update information over UDP socket.  <br /></td></tr>
-<tr class="separator:gaf82ea370b9eefac030e42fc7b8f100dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d21378b8f3bd51fd2157930de9b139f" id="r_ga7d21378b8f3bd51fd2157930de9b139f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7d21378b8f3bd51fd2157930de9b139f">sendCursorPosition</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int16_t x, int16_t y)</td></tr>
+<tr class="memdesc:ga7d21378b8f3bd51fd2157930de9b139f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
+<tr class="separator:ga7d21378b8f3bd51fd2157930de9b139f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00dd7fbc289ed250870a37fb306a6080" id="r_ga00dd7fbc289ed250870a37fb306a6080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga00dd7fbc289ed250870a37fb306a6080">sendTargetUpdate</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int x, int y, int targetIndex, int renderFlag)</td></tr>
+<tr class="memdesc:ga00dd7fbc289ed250870a37fb306a6080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends target update information over UDP socket.  <br /></td></tr>
+<tr class="separator:ga00dd7fbc289ed250870a37fb306a6080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to formatting messages for transmission or for handling their receipt. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga9995cb316a34479c457468a899c1500e" name="ga9995cb316a34479c457468a899c1500e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9995cb316a34479c457468a899c1500e">&#9670;&#160;</a></span>sendCursorPosition()</h2>
+<a id="ga7d21378b8f3bd51fd2157930de9b139f" name="ga7d21378b8f3bd51fd2157930de9b139f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d21378b8f3bd51fd2157930de9b139f">&#9670;&#160;</a></span>sendCursorPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sendCursorPosition </td>
+          <td class="memname">int sendCursorPosition </td>
           <td>(</td>
           <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
         </tr>
@@ -153,19 +153,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="network_8c_source.html#l00024">24</a> of file <a class="el" href="network_8c_source.html">network.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="network_8c_source.html#l00048">48</a> of file <a class="el" href="network_8c_source.html">network.c</a>.</p>
 
 </div>
 </div>
-<a id="gaf82ea370b9eefac030e42fc7b8f100dd" name="gaf82ea370b9eefac030e42fc7b8f100dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf82ea370b9eefac030e42fc7b8f100dd">&#9670;&#160;</a></span>sendTargetUpdate()</h2>
+<a id="ga00dd7fbc289ed250870a37fb306a6080" name="ga00dd7fbc289ed250870a37fb306a6080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00dd7fbc289ed250870a37fb306a6080">&#9670;&#160;</a></span>sendTargetUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sendTargetUpdate </td>
+          <td class="memname">int sendTargetUpdate </td>
           <td>(</td>
           <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
         </tr>
@@ -210,8 +211,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="network_8c_source.html#l00041">41</a> of file <a class="el" href="network_8c_source.html">network.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="network_8c_source.html#l00067">67</a> of file <a class="el" href="network_8c_source.html">network.c</a>.</p>
 
 </div>
 </div>

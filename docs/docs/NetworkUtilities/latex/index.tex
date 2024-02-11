@@ -23,7 +23,7 @@ To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following c
  
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ (bash)}
-\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/Network.dll\ -\/Iinclude\ src/network.c\ -\/ws2\_32}
+\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/Network.dll\ -\/Iinclude\ src/network.c\ -\/lws2\_32}
 
 \end{DoxyCode}
 
@@ -32,7 +32,7 @@ To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following c
 
 \item The {\ttfamily -\/o} is what the output file is. ~\newline
 
-\item The {\ttfamily -\/f\+PIC} option generates position-\/independent code, which is a pre-\/requisite for shared libraries. ~\newline
+\item The {\ttfamily -\/lws2\+\_\+32} option links against the {\ttfamily winsock2} library. ~\newline
 
 \end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Static Library}{Static Library}}\label{index_autotoc_md5}
 To re-\/compile the static library ({\ttfamily .lib}), use the following command\+: ~\newline

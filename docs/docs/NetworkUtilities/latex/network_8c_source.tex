@@ -10,48 +10,76 @@
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00009}00009\ \ \ \ \ ioctlsocket(socket,\ FIONBIO,\ \&mode);}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00010}00010\ \}}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00012}\mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{initializeWinsock}}()\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00012}\mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{00012}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initializeWinsock}}()\ \{}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00013}00013\ \ \ \ \ WSADATA\ wsaData;}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (WSAStartup(MAKEWORD(2,\ 2),\ \&wsaData)\ !=\ 0)\ \{}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Failed\ to\ initialize\ Winsock\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ exit(EXIT\_FAILURE);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
 \DoxyCodeLine{\Hypertarget{network_8c_source_l00017}00017\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00018}00018\ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00020}\mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}()\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00021}00021\ \ \ \ \ WSACleanup();}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00022}00022\ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00024}\mbox{\hyperlink{group___messaging_ga9995cb316a34479c457468a899c1500e}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___messaging_ga9995cb316a34479c457468a899c1500e}{sendCursorPosition}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ int16\_t\ x,\ int16\_t\ y)\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{char}\ message[16];}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ messageLength;}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00028}00028\ \ \ \ \ messageLength\ =\ snprintf(message,\ \textcolor{keyword}{sizeof}(message),\ \mbox{\hyperlink{network_8h_a580d845e8ebbd7ada30d26d2e544f64c}{CURSOR\_MESSAGE\_FORMAT}},\ x,\ y);}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (messageLength\ <\ 0\ ||\ messageLength\ >=\ \textcolor{keyword}{sizeof}(message))\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ formatting\ cursor\ message\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00032}00032\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sending\ cursor\ message:\ \%s\(\backslash\)n"{}},\ message);}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00034}00034\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (sendto(udpSocket,\ message,\ messageLength,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ SOCKET\_ERROR)\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ sending\ cursor\ message:\ \%d\(\backslash\)n"{}},\ WSAGetLastError());}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00038}00038\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00039}00039\ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00041}\mbox{\hyperlink{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}{sendTargetUpdate}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ targetIndex,\ \textcolor{keywordtype}{int}\ renderFlag)\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{char}\ message[16];}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{int}\ messageLength;}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00045}00045\ \ \ \ \ messageLength\ =\ snprintf(message,\ \textcolor{keyword}{sizeof}(message),\ \mbox{\hyperlink{network_8h_a923fbc2ad755a2b75fb6abecfda82cce}{TARGET\_MESSAGE\_FORMAT}},\ x,\ y,\ targetIndex,\ renderFlag);}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (messageLength\ <\ 0\ ||\ messageLength\ >=\ \textcolor{keyword}{sizeof}(message))\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ formatting\ target\ message\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00049}00049\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (sendto(udpSocket,\ message,\ messageLength,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ SOCKET\_ERROR)\ \{}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ sending\ target\ message:\ \%d\(\backslash\)n"{}},\ WSAGetLastError());}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00053}00053\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{network_8c_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00021}\mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}()\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00022}00022\ \ \ \ \ WSACleanup();}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00025}\mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{00025}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{initializeUDPsock}}(\textcolor{keywordtype}{int}\ *udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ udpServerAddr,\ uint16\_t\ port)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Create\ UDP\ sockets}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00027}00027\ \ \ \ \ *udpSocket\ =\ socket(AF\_INET,\ SOCK\_DGRAM,\ 0);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (*udpSocket\ ==\ INVALID\_SOCKET)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ creating\ UDP\ sockets:\ \%d\(\backslash\)n"{}},\ WSAGetLastError());}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}();}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Configure\ server\ addresses\ using\ inet\_pton}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00036}00036\ \ \ \ \ memset(\&udpServerAddr,\ 0,\ \textcolor{keyword}{sizeof}(udpServerAddr));}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00037}00037\ \ \ \ \ udpServerAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00038}00038\ \ \ \ \ udpServerAddr.sin\_port\ =\ htons(port);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (inet\_pton(AF\_INET,\ \mbox{\hyperlink{network_8h_a292cc67bb9753757dcf87aec471c0f3f}{UDP\_SERVER\_IP}},\ \&(udpServerAddr.sin\_addr.s\_addr))\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Invalid\ cursor\ server\ IP\ address\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ closesocket(*udpSocket);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanupWinsock}}();}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00048}\mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{00048}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{sendCursorPosition}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ int16\_t\ x,\ int16\_t\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{char}\ message[16];}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ messageLength;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00052}00052\ \ \ \ \ messageLength\ =\ snprintf(message,\ \textcolor{keyword}{sizeof}(message),\ \mbox{\hyperlink{network_8h_a580d845e8ebbd7ada30d26d2e544f64c}{CURSOR\_MESSAGE\_FORMAT}},\ x,\ y);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (messageLength\ <\ 0\ ||\ messageLength\ >=\ \textcolor{keyword}{sizeof}(message))\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ formatting\ cursor\ message\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00056}00056\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sending\ cursor\ message:\ \%s\(\backslash\)n"{}},\ message);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (sendto(udpSocket,\ message,\ messageLength,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ SOCKET\_ERROR)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ sending\ cursor\ message:\ \%d\(\backslash\)n"{}},\ WSAGetLastError());}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00067}\mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{00067}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{sendTargetUpdate}}(SOCKET\ udpSocket,\ \textcolor{keyword}{struct}\ sockaddr\_in\ serverAddr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ targetIndex,\ \textcolor{keywordtype}{int}\ renderFlag)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{char}\ message[16];}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{int}\ messageLength;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00071}00071\ \ \ \ \ messageLength\ =\ snprintf(message,\ \textcolor{keyword}{sizeof}(message),\ \mbox{\hyperlink{network_8h_a923fbc2ad755a2b75fb6abecfda82cce}{TARGET\_MESSAGE\_FORMAT}},\ x,\ y,\ targetIndex,\ renderFlag);}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{if}\ (messageLength\ <\ 0\ ||\ messageLength\ >=\ \textcolor{keyword}{sizeof}(message))\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ formatting\ target\ message\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (sendto(udpSocket,\ message,\ messageLength,\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&serverAddr,\ \textcolor{keyword}{sizeof}(serverAddr))\ ==\ SOCKET\_ERROR)\ \{}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error\ sending\ target\ message:\ \%d\(\backslash\)n"{}},\ WSAGetLastError());}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{network_8c_source_l00082}00082\ \}}
 
 \end{DoxyCode}

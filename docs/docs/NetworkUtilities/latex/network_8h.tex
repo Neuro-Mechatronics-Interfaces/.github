@@ -35,14 +35,16 @@ Header file for network utility functions.
 \item 
 void \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{set\+Non\+Blocking}} (SOCKET socket)
 \begin{DoxyCompactList}\small\item\em Sets the given socket to non-\/blocking mode. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{initialize\+Winsock}} ()
+int \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initialize\+Winsock}} ()
 \begin{DoxyCompactList}\small\item\em Initializes Winsock library. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{cleanup\+Winsock}} ()
-\begin{DoxyCompactList}\small\item\em Cleans up resources used by Winsock library. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___messaging_ga9995cb316a34479c457468a899c1500e}{send\+Cursor\+Position}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int16\+\_\+t x, int16\+\_\+t y)
+int \mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{initialize\+UDPsock}} (int \texorpdfstring{$\ast$}{*}udp\+Socket, struct sockaddr\+\_\+in udp\+Server\+Addr, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Initializes a UDP socket and configures server address. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{send\+Cursor\+Position}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int16\+\_\+t x, int16\+\_\+t y)
 \begin{DoxyCompactList}\small\item\em Sends cursor position over UDP socket. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}{send\+Target\+Update}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int x, int y, int target\+Index, int render\+Flag)
-\begin{DoxyCompactList}\small\item\em Sends target update information over UDP socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{send\+Target\+Update}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int x, int y, int target\+Index, int render\+Flag)
+\begin{DoxyCompactList}\small\item\em Sends target update information over UDP socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___clean_up_ga1af42a80836683ce46af20b6768565bb}{cleanup\+Winsock}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up resources used by Winsock library. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

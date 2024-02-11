@@ -4,7 +4,7 @@ var indexSectionsWithContent =
   1: "nr",
   2: "cis",
   3: "ctu",
-  4: "cmp",
+  4: "cmpu",
   5: "nu"
 };
 

@@ -115,13 +115,13 @@ Compiling</h1>
 Dynamic Link Library</h2>
 <p>To re-compile the dynamic link library (<code>.dll</code>), use the following command: <br  />
  </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -ws2_32</div>
+<div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -lws2_32</div>
 </div><!-- fragment --><ul>
 <li>The <code>-shared</code> option creates a shared object. <br  />
 </li>
 <li>The <code>-o</code> is what the output file is. <br  />
 </li>
-<li>The <code>-fPIC</code> option generates position-independent code, which is a pre-requisite for shared libraries. <br  />
+<li>The <code>-lws2_32</code> option links against the <code>winsock2</code> library. <br  />
 </li>
 </ul>
 <h2><a class="anchor" id="autotoc_md5"></a>

@@ -8,9 +8,9 @@ Functions related to formatting messages for transmission or for handling their 
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{group___messaging_ga9995cb316a34479c457468a899c1500e}{send\+Cursor\+Position}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int16\+\_\+t x, int16\+\_\+t y)
+int \mbox{\hyperlink{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}{send\+Cursor\+Position}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int16\+\_\+t x, int16\+\_\+t y)
 \begin{DoxyCompactList}\small\item\em Sends cursor position over UDP socket. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}{send\+Target\+Update}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int x, int y, int target\+Index, int render\+Flag)
+int \mbox{\hyperlink{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}{send\+Target\+Update}} (SOCKET udp\+Socket, struct sockaddr\+\_\+in server\+Addr, int x, int y, int target\+Index, int render\+Flag)
 \begin{DoxyCompactList}\small\item\em Sends target update information over UDP socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -20,11 +20,11 @@ Functions related to formatting messages for transmission or for handling their 
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{group___messaging_ga9995cb316a34479c457468a899c1500e}\label{group___messaging_ga9995cb316a34479c457468a899c1500e} 
+\Hypertarget{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f}\label{group___messaging_ga7d21378b8f3bd51fd2157930de9b139f} 
 \index{Messaging@{Messaging}!sendCursorPosition@{sendCursorPosition}}
 \index{sendCursorPosition@{sendCursorPosition}!Messaging@{Messaging}}
 \doxysubsubsection{\texorpdfstring{sendCursorPosition()}{sendCursorPosition()}}
-{\footnotesize\ttfamily void send\+Cursor\+Position (\begin{DoxyParamCaption}\item[{SOCKET}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{server\+Addr,  }\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int send\+Cursor\+Position (\begin{DoxyParamCaption}\item[{SOCKET}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{server\+Addr,  }\item[{int16\+\_\+t}]{x,  }\item[{int16\+\_\+t}]{y }\end{DoxyParamCaption})}
 
 
 
@@ -43,15 +43,18 @@ This function sends cursor position data over the specified UDP socket.
 {\em y} & The y-\/coordinate of the cursor position. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, EXIT\+\_\+\+FAILURE on failure. 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00024}{24}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+Definition at line \mbox{\hyperlink{network_8c_source_l00048}{48}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 
-\Hypertarget{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd}\label{group___messaging_gaf82ea370b9eefac030e42fc7b8f100dd} 
+\Hypertarget{group___messaging_ga00dd7fbc289ed250870a37fb306a6080}\label{group___messaging_ga00dd7fbc289ed250870a37fb306a6080} 
 \index{Messaging@{Messaging}!sendTargetUpdate@{sendTargetUpdate}}
 \index{sendTargetUpdate@{sendTargetUpdate}!Messaging@{Messaging}}
 \doxysubsubsection{\texorpdfstring{sendTargetUpdate()}{sendTargetUpdate()}}
-{\footnotesize\ttfamily void send\+Target\+Update (\begin{DoxyParamCaption}\item[{SOCKET}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{server\+Addr,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{target\+Index,  }\item[{int}]{render\+Flag }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int send\+Target\+Update (\begin{DoxyParamCaption}\item[{SOCKET}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{server\+Addr,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{target\+Index,  }\item[{int}]{render\+Flag }\end{DoxyParamCaption})}
 
 
 
@@ -74,7 +77,10 @@ This function sends target update information over the specified UDP socket.
 {\em render\+Flag} & The render flag indicating whether to render the target. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, EXIT\+\_\+\+FAILURE on failure. 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00041}{41}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+Definition at line \mbox{\hyperlink{network_8c_source_l00067}{67}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 

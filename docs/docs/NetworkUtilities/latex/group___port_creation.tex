@@ -10,10 +10,10 @@ Functions related to initializing network ports and setting their properties.
 \item 
 void \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{set\+Non\+Blocking}} (SOCKET socket)
 \begin{DoxyCompactList}\small\item\em Sets the given socket to non-\/blocking mode. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}{initialize\+Winsock}} ()
+int \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initialize\+Winsock}} ()
 \begin{DoxyCompactList}\small\item\em Initializes Winsock library. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga1af42a80836683ce46af20b6768565bb}{cleanup\+Winsock}} ()
-\begin{DoxyCompactList}\small\item\em Cleans up resources used by Winsock library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{initialize\+UDPsock}} (int \texorpdfstring{$\ast$}{*}udp\+Socket, struct sockaddr\+\_\+in udp\+Server\+Addr, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Initializes a UDP socket and configures server address. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -22,31 +22,48 @@ Functions related to initializing network ports and setting their properties.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{group___port_creation_ga1af42a80836683ce46af20b6768565bb}\label{group___port_creation_ga1af42a80836683ce46af20b6768565bb} 
-\index{Port Creation@{Port Creation}!cleanupWinsock@{cleanupWinsock}}
-\index{cleanupWinsock@{cleanupWinsock}!Port Creation@{Port Creation}}
-\doxysubsubsection{\texorpdfstring{cleanupWinsock()}{cleanupWinsock()}}
-{\footnotesize\ttfamily void cleanup\+Winsock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}\label{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b} 
+\index{Port Creation@{Port Creation}!initializeUDPsock@{initializeUDPsock}}
+\index{initializeUDPsock@{initializeUDPsock}!Port Creation@{Port Creation}}
+\doxysubsubsection{\texorpdfstring{initializeUDPsock()}{initializeUDPsock()}}
+{\footnotesize\ttfamily int initialize\+UDPsock (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{udp\+Server\+Addr,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
 
 
 
-Cleans up resources used by Winsock library. 
+Initializes a UDP socket and configures server address. 
 
-This function cleans up resources used by the Winsock library. It should be called when Winsock is no longer needed. 
+This function initializes a UDP socket and configures the server address using the provided parameters. It creates a UDP socket, sets it up with the specified server address and port, and assigns the socket to the provided pointer. If any errors occur during socket creation or address configuration, the appropriate error message is printed to stderr, Winsock resources are cleaned up, and the function returns EXIT\+\_\+\+FAILURE.
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00020}{20}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 
-\Hypertarget{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0}\label{group___port_creation_ga55f626a41fcd8effa37fbcd41387f5c0} 
+\begin{DoxyParams}{Parameters}
+{\em udp\+Socket} & A pointer to an integer where the UDP socket descriptor will be stored. \\
+\hline
+{\em udp\+Server\+Addr} & The server address structure (struct sockaddr\+\_\+in) to configure the socket with. \\
+\hline
+{\em port} & The port on the server that will be bound by this UDP socket. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, EXIT\+\_\+\+FAILURE on failure. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{network_8c_source_l00025}{25}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+
+\Hypertarget{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}\label{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157} 
 \index{Port Creation@{Port Creation}!initializeWinsock@{initializeWinsock}}
 \index{initializeWinsock@{initializeWinsock}!Port Creation@{Port Creation}}
 \doxysubsubsection{\texorpdfstring{initializeWinsock()}{initializeWinsock()}}
-{\footnotesize\ttfamily void initialize\+Winsock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int initialize\+Winsock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Initializes Winsock library. 
 
-This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the program exits with failure. 
+\begin{DoxyReturn}{Returns}
+0 on success, EXIT\+\_\+\+FAILURE on failure.
+\end{DoxyReturn}
+This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the function returns EXIT\+\_\+\+FAILURE code. 
 
 Definition at line \mbox{\hyperlink{network_8c_source_l00012}{12}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 
