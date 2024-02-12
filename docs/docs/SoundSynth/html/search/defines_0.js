@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pi_0',['PI',['../soundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca',1,'soundsynth.c']]]
+  ['pi_0',['PI',['../wsoundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca',1,'wsoundsynth.c']]]
 ];

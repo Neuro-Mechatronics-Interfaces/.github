@@ -22,14 +22,14 @@ This is a small compiled library for {\ttfamily C} synthesizing simple sounds/to
 To re-\/compile the executable {\ttfamily bin/play.\+exe} use the following command\+: ~\newline
  
 \begin{DoxyCode}{0}
-\DoxyCodeLine{gcc\ src/soundsynth.c\ -\/o\ bin/play.exe\ -\/Iinclude\ -\/lwinmm}
+\DoxyCodeLine{gcc\ src/wsoundsynth.c\ -\/o\ bin/wplay.exe\ -\/Iinclude\ -\/lwinmm}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Dynamic Link Library}{Dynamic Link Library}}\label{index_autotoc_md5}
 To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following command\+: ~\newline
  
 \begin{DoxyCode}{0}
-\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/SoundSynth.dll\ -\/Iinclude\ src/soundsynth.c\ -\/lwinmm}
+\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/WSoundSynth.dll\ -\/Iinclude\ src/wsoundsynth.c\ -\/lwinmm}
 
 \end{DoxyCode}
 
@@ -38,13 +38,13 @@ To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following c
 
 \item The {\ttfamily -\/o} is what the output file is. ~\newline
 
-\item The {\ttfamily -\/lws2\+\_\+32} option links against the {\ttfamily winsock2} library. ~\newline
+\item The {\ttfamily -\/lwinmm} option links against the windows multimedia library. ~\newline
 
 \end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Static Library}{Static Library}}\label{index_autotoc_md6}
 To re-\/compile the static library ({\ttfamily .lib}), use the following command\+: ~\newline
  
 \begin{DoxyCode}{0}
-\DoxyCodeLine{gcc\ -\/c\ src/soundsynth.c\ -\/Iinclude\ -\/o\ lib/soundsynth.o\ -\/lwinmm\ \&\&\ ar\ rcs\ lib/SoundSynth.lib\ lib/soundsynth.o}
+\DoxyCodeLine{gcc\ -\/c\ src/wsoundsynth.c\ -\/Iinclude\ -\/o\ lib/wsoundsynth.o\ -\/lwinmm\ \&\&\ ar\ rcs\ lib/WSoundSynth.lib\ lib/wsoundsynth.o}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{For External Use}{For External Use}}\label{index_autotoc_md7}
@@ -58,16 +58,16 @@ Assume we have the following project folder structure\+: ~\newline
 \DoxyCodeLine{|\ \ |-\/-\/my\_code.h}
 \DoxyCodeLine{|}
 \DoxyCodeLine{|-\/-\/include}
-\DoxyCodeLine{|\ \ |-\/-\/network.h}
+\DoxyCodeLine{|\ \ |-\/-\/wsoundsynth.h}
 \DoxyCodeLine{|}
 \DoxyCodeLine{|-\/-\/bin}
-\DoxyCodeLine{|\ \ |-\/-\/Network.dll}
+\DoxyCodeLine{|\ \ |-\/-\/WSoundSynth.dll}
 
 \end{DoxyCode}
  To compile, you would use the following command\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ (bash)}
-\DoxyCodeLine{gcc\ -\/o\ bin/my\_executable.exe\ src/my\_code.c\ -\/Lbin\ -\/Iinclude\ -\/lNetwork}
+\DoxyCodeLine{gcc\ -\/o\ bin/my\_executable.exe\ src/my\_code.c\ -\/Lbin\ -\/Iinclude\ -\/lWSoundSynth}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Note about gcc}{Note about gcc}}\label{index_autotoc_md8}

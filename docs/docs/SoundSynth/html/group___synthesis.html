@@ -103,15 +103,15 @@ $(function(){initNavTree('group___synthesis.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga108b7e9551ae5db89a3b9c1384d7618f" id="r_ga108b7e9551ae5db89a3b9c1384d7618f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga108b7e9551ae5db89a3b9c1384d7618f">generateSinWave</a> (short *buffer, int sampleRate, double frequency, double duration)</td></tr>
-<tr class="memdesc:ga108b7e9551ae5db89a3b9c1384d7618f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a sinusoidal wave with a specified frequency and duration.  <br /></td></tr>
-<tr class="separator:ga108b7e9551ae5db89a3b9c1384d7618f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e0c8dd4fd8875c0f665967d88706328" id="r_ga0e0c8dd4fd8875c0f665967d88706328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0e0c8dd4fd8875c0f665967d88706328">generateSinWave</a> (short *buffer, double frequency, double volume, int sampleRate, int numSamples)</td></tr>
+<tr class="memdesc:ga0e0c8dd4fd8875c0f665967d88706328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a sinusoidal wave with a specified frequency and duration.  <br /></td></tr>
+<tr class="separator:ga0e0c8dd4fd8875c0f665967d88706328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to generating sounds either directly in time-domain or using frequency-domain heuristics. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga108b7e9551ae5db89a3b9c1384d7618f" name="ga108b7e9551ae5db89a3b9c1384d7618f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga108b7e9551ae5db89a3b9c1384d7618f">&#9670;&#160;</a></span>generateSinWave()</h2>
+<a id="ga0e0c8dd4fd8875c0f665967d88706328" name="ga0e0c8dd4fd8875c0f665967d88706328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e0c8dd4fd8875c0f665967d88706328">&#9670;&#160;</a></span>generateSinWave()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,17 +124,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>frequency</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>volume</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numSamples</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -144,14 +149,15 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buffer</td><td>Pointer to the buffer where the waveform will be stored. </td></tr>
-    <tr><td class="paramname">sampleRate</td><td>The sample rate of the waveform (e.g., 44100 for CD quality). </td></tr>
     <tr><td class="paramname">frequency</td><td>The frequency of the sinusoidal wave in Hz. </td></tr>
-    <tr><td class="paramname">duration</td><td>The duration of the waveform in seconds. </td></tr>
+    <tr><td class="paramname">volume</td><td>The volume of the waveform (scaled between 0 and 1). </td></tr>
+    <tr><td class="paramname">sampleRate</td><td>The sample rate of the waveform (e.g., 44100 for CD quality). </td></tr>
+    <tr><td class="paramname">numSamples</td><td>The number of samples in the waveform (likely, the length of buffer). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="soundsynth_8c_source.html#l00006">6</a> of file <a class="el" href="soundsynth_8c_source.html">soundsynth.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wsoundsynth_8c_source.html#l00006">6</a> of file <a class="el" href="wsoundsynth_8c_source.html">wsoundsynth.c</a>.</p>
 
 </div>
 </div>

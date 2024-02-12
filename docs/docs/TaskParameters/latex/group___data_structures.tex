@@ -1,0 +1,113 @@
+\doxysection{Data Structures}
+\hypertarget{group___data_structures}{}\label{group___data_structures}\index{Data Structures@{Data Structures}}
+
+
+Task parameter enumerations and parameter structure.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Struct to hold task parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___data_structures_gacb79bf25c513b97b69d12ee5ac806204}{Mode\+Option}} \{ \mbox{\hyperlink{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a50696eda0128e0d2b4affe4e842f6dc6}{STANDARD\+\_\+\+PRACTICE}}
+, \mbox{\hyperlink{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a61f6dee017c65a84a4cecb84b4b8127b}{STANDARD\+\_\+\+RECORDING}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerations for task modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___data_structures_gab0e9495183d9b6a0fe550d3bfcaed5a6}{Orientation\+Option}} \{ \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a7d60bffdf68936b5011970a02c818b7c}{PRO}}
+, \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a3bc56824c91d97fcda36dc99687bb236}{MID}}
+, \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a537ce468ab4995128e563fd87eb274a9}{SUP}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerations for orientations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___data_structures_ga81a39c5893ca9823181ce8f54ee6284f}{print\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Prints task parameters to the terminal for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task parameter enumerations and parameter structure. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group___data_structures_gacb79bf25c513b97b69d12ee5ac806204}\label{group___data_structures_gacb79bf25c513b97b69d12ee5ac806204} 
+\index{Data Structures@{Data Structures}!ModeOption@{ModeOption}}
+\index{ModeOption@{ModeOption}!Data Structures@{Data Structures}}
+\doxysubsubsection{\texorpdfstring{ModeOption}{ModeOption}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___data_structures_gacb79bf25c513b97b69d12ee5ac806204}{Mode\+Option}}}
+
+
+
+Enumerations for task modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD\_PRACTICE@{STANDARD\_PRACTICE}!Data Structures@{Data Structures}}\index{Data Structures@{Data Structures}!STANDARD\_PRACTICE@{STANDARD\_PRACTICE}}}\Hypertarget{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a50696eda0128e0d2b4affe4e842f6dc6}\label{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a50696eda0128e0d2b4affe4e842f6dc6} 
+STANDARD\+\_\+\+PRACTICE&Practice mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD\_RECORDING@{STANDARD\_RECORDING}!Data Structures@{Data Structures}}\index{Data Structures@{Data Structures}!STANDARD\_RECORDING@{STANDARD\_RECORDING}}}\Hypertarget{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a61f6dee017c65a84a4cecb84b4b8127b}\label{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a61f6dee017c65a84a4cecb84b4b8127b} 
+STANDARD\+\_\+\+RECORDING&Recording mode \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{parameters_8h_source_l00040}{40}} of file \mbox{\hyperlink{parameters_8h_source}{parameters.\+h}}.
+
+\Hypertarget{group___data_structures_gab0e9495183d9b6a0fe550d3bfcaed5a6}\label{group___data_structures_gab0e9495183d9b6a0fe550d3bfcaed5a6} 
+\index{Data Structures@{Data Structures}!OrientationOption@{OrientationOption}}
+\index{OrientationOption@{OrientationOption}!Data Structures@{Data Structures}}
+\doxysubsubsection{\texorpdfstring{OrientationOption}{OrientationOption}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___data_structures_gab0e9495183d9b6a0fe550d3bfcaed5a6}{Orientation\+Option}}}
+
+
+
+Enumerations for orientations. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRO@{PRO}!Data Structures@{Data Structures}}\index{Data Structures@{Data Structures}!PRO@{PRO}}}\Hypertarget{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a7d60bffdf68936b5011970a02c818b7c}\label{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a7d60bffdf68936b5011970a02c818b7c} 
+PRO&Pro orientation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MID@{MID}!Data Structures@{Data Structures}}\index{Data Structures@{Data Structures}!MID@{MID}}}\Hypertarget{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a3bc56824c91d97fcda36dc99687bb236}\label{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a3bc56824c91d97fcda36dc99687bb236} 
+MID&Mid orientation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUP@{SUP}!Data Structures@{Data Structures}}\index{Data Structures@{Data Structures}!SUP@{SUP}}}\Hypertarget{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a537ce468ab4995128e563fd87eb274a9}\label{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a537ce468ab4995128e563fd87eb274a9} 
+SUP&Sup orientation \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{parameters_8h_source_l00049}{49}} of file \mbox{\hyperlink{parameters_8h_source}{parameters.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___data_structures_ga81a39c5893ca9823181ce8f54ee6284f}\label{group___data_structures_ga81a39c5893ca9823181ce8f54ee6284f} 
+\index{Data Structures@{Data Structures}!printParameters@{printParameters}}
+\index{printParameters@{printParameters}!Data Structures@{Data Structures}}
+\doxysubsubsection{\texorpdfstring{printParameters()}{printParameters()}}
+{\footnotesize\ttfamily void print\+Parameters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}}]{params }\end{DoxyParamCaption})}
+
+
+
+Prints task parameters to the terminal for debugging purposes. 
+
+This function prints the given task parameters to the terminal in a human-\/readable format for debugging purposes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Pointer to the \doxylink{struct_task_parameters}{Task\+Parameters} struct to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00144}{144}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+

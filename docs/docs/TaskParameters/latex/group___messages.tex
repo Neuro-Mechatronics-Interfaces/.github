@@ -1,0 +1,64 @@
+\doxysection{Message Handling}
+\hypertarget{group___messages}{}\label{group___messages}\index{Message Handling@{Message Handling}}
+
+
+Handling of message transmission and receipt.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___messages_gafc63d963106381a45301ba76725e668a}{pack\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Packs \doxylink{struct_task_parameters}{Task\+Parameters} struct into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___messages_ga73f706874a00908abc656fd822e18819}{unpack\+Parameters}} (\mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Unpacks byte buffer into \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handling of message transmission and receipt. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___messages_gafc63d963106381a45301ba76725e668a}\label{group___messages_gafc63d963106381a45301ba76725e668a} 
+\index{Message Handling@{Message Handling}!packParameters@{packParameters}}
+\index{packParameters@{packParameters}!Message Handling@{Message Handling}}
+\doxysubsubsection{\texorpdfstring{packParameters()}{packParameters()}}
+{\footnotesize\ttfamily void pack\+Parameters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}}]{params,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Packs \doxylink{struct_task_parameters}{Task\+Parameters} struct into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Pointer to the \doxylink{struct_task_parameters}{Task\+Parameters} struct to pack. \\
+\hline
+{\em buffer} & Pointer to the byte buffer where packed data will be stored. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00176}{176}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+
+\Hypertarget{group___messages_ga73f706874a00908abc656fd822e18819}\label{group___messages_ga73f706874a00908abc656fd822e18819} 
+\index{Message Handling@{Message Handling}!unpackParameters@{unpackParameters}}
+\index{unpackParameters@{unpackParameters}!Message Handling@{Message Handling}}
+\doxysubsubsection{\texorpdfstring{unpackParameters()}{unpackParameters()}}
+{\footnotesize\ttfamily void unpack\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}}]{params,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Unpacks byte buffer into \doxylink{struct_task_parameters}{Task\+Parameters} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Pointer to the \doxylink{struct_task_parameters}{Task\+Parameters} struct to populate. \\
+\hline
+{\em buffer} & Pointer to the byte buffer containing packed data. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00180}{180}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+

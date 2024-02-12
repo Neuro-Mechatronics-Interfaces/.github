@@ -1,0 +1,45 @@
+\doxysection{src/parameters.c File Reference}
+\hypertarget{parameters_8c}{}\label{parameters_8c}\index{src/parameters.c@{src/parameters.c}}
+
+
+Task parameter data structures/functions.  
+
+
+{\ttfamily \#include "{}parameters.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{parse\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Parses a parameter file and populates a \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___files_gaed5766b3ea91d3a21ae1d85a37d30989}{write\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Writes task parameters to a parameter file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___data_structures_ga81a39c5893ca9823181ce8f54ee6284f}{print\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Prints task parameters to the terminal for debugging purposes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___messages_gafc63d963106381a45301ba76725e668a}{pack\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Packs \doxylink{struct_task_parameters}{Task\+Parameters} struct into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___messages_ga73f706874a00908abc656fd822e18819}{unpack\+Parameters}} (\mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Unpacks byte buffer into \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parameters_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task parameter data structures/functions. 
+
+
+
+Definition in file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{parameters_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{parameters_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{parameters.c@{parameters.c}!main@{main}}
+\index{main@{main}!parameters.c@{parameters.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00185}{185}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+

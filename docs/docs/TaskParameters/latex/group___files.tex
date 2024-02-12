@@ -1,0 +1,66 @@
+\doxysection{Parameter Files}
+\hypertarget{group___files}{}\label{group___files}\index{Parameter Files@{Parameter Files}}
+
+
+Handling of parameter file read and write operations.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{parse\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Parses a parameter file and populates a \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___files_gaed5766b3ea91d3a21ae1d85a37d30989}{write\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Writes task parameters to a parameter file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handling of parameter file read and write operations. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___files_ga589270ff19aa1098209a49c79129373b}\label{group___files_ga589270ff19aa1098209a49c79129373b} 
+\index{Parameter Files@{Parameter Files}!parseParameterFile@{parseParameterFile}}
+\index{parseParameterFile@{parseParameterFile}!Parameter Files@{Parameter Files}}
+\doxysubsubsection{\texorpdfstring{parseParameterFile()}{parseParameterFile()}}
+{\footnotesize\ttfamily void parse\+Parameter\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}}]{params }\end{DoxyParamCaption})}
+
+
+
+Parses a parameter file and populates a \doxylink{struct_task_parameters}{Task\+Parameters} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the parameter file. \\
+\hline
+{\em params} & Pointer to the \doxylink{struct_task_parameters}{Task\+Parameters} struct to populate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00009}{9}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+
+\Hypertarget{group___files_gaed5766b3ea91d3a21ae1d85a37d30989}\label{group___files_gaed5766b3ea91d3a21ae1d85a37d30989} 
+\index{Parameter Files@{Parameter Files}!writeParameterFile@{writeParameterFile}}
+\index{writeParameterFile@{writeParameterFile}!Parameter Files@{Parameter Files}}
+\doxysubsubsection{\texorpdfstring{writeParameterFile()}{writeParameterFile()}}
+{\footnotesize\ttfamily void write\+Parameter\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}}]{params }\end{DoxyParamCaption})}
+
+
+
+Writes task parameters to a parameter file. 
+
+This function writes the given task parameters to a parameter file with the specified filename.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the parameter file to write. \\
+\hline
+{\em params} & Pointer to the \doxylink{struct_task_parameters}{Task\+Parameters} struct containing the parameters to write. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameters_8c_source_l00102}{102}} of file \mbox{\hyperlink{parameters_8c_source}{parameters.\+c}}.
+

@@ -1,0 +1,80 @@
+\doxysection{include/parameters.h File Reference}
+\hypertarget{parameters_8h}{}\label{parameters_8h}\index{include/parameters.h@{include/parameters.h}}
+
+
+Header file for task parameter data structures/functions.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Struct to hold task parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{parameters_8h_a7a0e42045a627f907d6016f710a8190b}{MAX\+\_\+\+PARAM\+\_\+\+NAME\+\_\+\+LENGTH}}~32
+\item 
+\#define \mbox{\hyperlink{parameters_8h_af0f2173e3b202ddf5756531b4471dcb2}{MAX\+\_\+\+LINE\+\_\+\+LENGTH}}~64
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___data_structures_gacb79bf25c513b97b69d12ee5ac806204}{Mode\+Option}} \{ \mbox{\hyperlink{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a50696eda0128e0d2b4affe4e842f6dc6}{STANDARD\+\_\+\+PRACTICE}}
+, \mbox{\hyperlink{group___data_structures_ggacb79bf25c513b97b69d12ee5ac806204a61f6dee017c65a84a4cecb84b4b8127b}{STANDARD\+\_\+\+RECORDING}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerations for task modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___data_structures_gab0e9495183d9b6a0fe550d3bfcaed5a6}{Orientation\+Option}} \{ \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a7d60bffdf68936b5011970a02c818b7c}{PRO}}
+, \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a3bc56824c91d97fcda36dc99687bb236}{MID}}
+, \mbox{\hyperlink{group___data_structures_ggab0e9495183d9b6a0fe550d3bfcaed5a6a537ce468ab4995128e563fd87eb274a9}{SUP}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerations for orientations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{parse\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Parses a parameter file and populates a \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___files_gaed5766b3ea91d3a21ae1d85a37d30989}{write\+Parameter\+File}} (const char \texorpdfstring{$\ast$}{*}filename, const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Writes task parameters to a parameter file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___data_structures_ga81a39c5893ca9823181ce8f54ee6284f}{print\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Prints task parameters to the terminal for debugging purposes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___messages_gafc63d963106381a45301ba76725e668a}{pack\+Parameters}} (const \mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Packs \doxylink{struct_task_parameters}{Task\+Parameters} struct into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___messages_ga73f706874a00908abc656fd822e18819}{unpack\+Parameters}} (\mbox{\hyperlink{struct_task_parameters}{Task\+Parameters}} \texorpdfstring{$\ast$}{*}params, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Unpacks byte buffer into \doxylink{struct_task_parameters}{Task\+Parameters} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for task parameter data structures/functions. 
+
+
+
+Definition in file \mbox{\hyperlink{parameters_8h_source}{parameters.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{parameters_8h_af0f2173e3b202ddf5756531b4471dcb2}\label{parameters_8h_af0f2173e3b202ddf5756531b4471dcb2} 
+\index{parameters.h@{parameters.h}!MAX\_LINE\_LENGTH@{MAX\_LINE\_LENGTH}}
+\index{MAX\_LINE\_LENGTH@{MAX\_LINE\_LENGTH}!parameters.h@{parameters.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LINE\_LENGTH}{MAX\_LINE\_LENGTH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LINE\+\_\+\+LENGTH~64}
+
+
+
+Definition at line \mbox{\hyperlink{parameters_8h_source_l00010}{10}} of file \mbox{\hyperlink{parameters_8h_source}{parameters.\+h}}.
+
+\Hypertarget{parameters_8h_a7a0e42045a627f907d6016f710a8190b}\label{parameters_8h_a7a0e42045a627f907d6016f710a8190b} 
+\index{parameters.h@{parameters.h}!MAX\_PARAM\_NAME\_LENGTH@{MAX\_PARAM\_NAME\_LENGTH}}
+\index{MAX\_PARAM\_NAME\_LENGTH@{MAX\_PARAM\_NAME\_LENGTH}!parameters.h@{parameters.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_PARAM\_NAME\_LENGTH}{MAX\_PARAM\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+PARAM\+\_\+\+NAME\+\_\+\+LENGTH~32}
+
+
+
+Definition at line \mbox{\hyperlink{parameters_8h_source_l00009}{9}} of file \mbox{\hyperlink{parameters_8h_source}{parameters.\+h}}.
+

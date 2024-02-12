@@ -1,4 +1,4 @@
 var group___synthesis =
 [
-    [ "generateSinWave", "group___synthesis.html#ga108b7e9551ae5db89a3b9c1384d7618f", null ]
+    [ "generateSinWave", "group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328", null ]
 ];
