@@ -1,0 +1,108 @@
+\chapter{Sound Synthesizer}
+\hypertarget{index}{}\label{index}\index{Sound Synthesizer@{Sound Synthesizer}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+This is a small compiled library for {\ttfamily C} synthesizing simple sounds/tones and playing them. The library was compiled for Windows 64-\/bit and should work with 64-\/ or 32-\/bit windows architectures.
+
+{\itshape \href{https://code.nml.wtf/docs}{\texttt{ (Return)}}}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Contents}{Contents}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Compiling
+\begin{DoxyItemize}
+\item Dynamic
+\item Static
+\item In Other Projects
+\end{DoxyItemize}
+\item Using \`{}gcc\`{} on Windows
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Compiling}{Compiling}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Executables}{Executables}}\label{index_autotoc_md4}
+To re-\/compile the executable {\ttfamily bin/play.\+exe} use the following command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ src/soundsynth.c\ -\/o\ bin/play.exe\ -\/Iinclude\ -\/lwinmm}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Dynamic Link Library}{Dynamic Link Library}}\label{index_autotoc_md5}
+To re-\/compile the dynamic link library ({\ttfamily .dll}), use the following command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ -\/shared\ -\/o\ bin/SoundSynth.dll\ -\/Iinclude\ src/soundsynth.c\ -\/lwinmm}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item The {\ttfamily -\/shared} option creates a shared object. ~\newline
+
+\item The {\ttfamily -\/o} is what the output file is. ~\newline
+
+\item The {\ttfamily -\/lws2\+\_\+32} option links against the {\ttfamily winsock2} library. ~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Static Library}{Static Library}}\label{index_autotoc_md6}
+To re-\/compile the static library ({\ttfamily .lib}), use the following command\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ -\/c\ src/soundsynth.c\ -\/Iinclude\ -\/o\ lib/soundsynth.o\ -\/lwinmm\ \&\&\ ar\ rcs\ lib/SoundSynth.lib\ lib/soundsynth.o}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{For External Use}{For External Use}}\label{index_autotoc_md7}
+Assume we have the following project folder structure\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{my\_project}
+\DoxyCodeLine{|-\/-\/src}
+\DoxyCodeLine{|\ \ |-\/-\/my\_code.c}
+\DoxyCodeLine{|\ \ |-\/-\/my\_code.h}
+\DoxyCodeLine{|}
+\DoxyCodeLine{|-\/-\/include}
+\DoxyCodeLine{|\ \ |-\/-\/network.h}
+\DoxyCodeLine{|}
+\DoxyCodeLine{|-\/-\/bin}
+\DoxyCodeLine{|\ \ |-\/-\/Network.dll}
+
+\end{DoxyCode}
+ To compile, you would use the following command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{gcc\ -\/o\ bin/my\_executable.exe\ src/my\_code.c\ -\/Lbin\ -\/Iinclude\ -\/lNetwork}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Note about gcc}{Note about gcc}}\label{index_autotoc_md8}
+Note that to use {\ttfamily gcc} on a Windows 64-\/bit architecture, the simplest way is to download \`{}msys2\`{}, which will allow you to use {\ttfamily pacman} from an {\ttfamily msys2} terminal. You can first check to see if you already have {\ttfamily gcc} installed\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/Q\ |\ grep\ mingw-\/w64-\/x86\_64-\/gcc}
+
+\end{DoxyCode}
+ If you see anything in the terminal following this command, it means you already have {\ttfamily gcc}. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.)\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/S\ mingw-\/w64-\/x86\_64-\/toolchain}
+
+\end{DoxyCode}
+ This will give several options for what you can install. If you are unsure what to do, just install all of them. ~\newline
+ Finally, you may also want a toolchain for compiling 32-\/bit applications from your 64-\/bit Windows operating system. In that case, you can try\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (bash)}
+\DoxyCodeLine{pacman\ -\/S\ mingw-\/w64-\/i686-\/toolchain}
+
+\end{DoxyCode}
+ The last step is to make sure the folder with the correct binaries are on your {\ttfamily PATH} environment variable. Probably the best strategy here, on a Windows device, is as follows\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Open the Start menu and type Environment, this should bring up a Control Panel shortcut to "{}\+Edit the System Environment Variables."{} Click that. ~\newline
+
+\item Click "{}\+Environment Variables..."{} at the bottom right. ~\newline
+
+\item Under System Variables, click "{}\+New..."{} and define a new environment variable\+: {\ttfamily MINGW\+\_\+\+PATH}. If you installed {\ttfamily msys2} in the default location, then go to {\ttfamily C\+:/mingw64}. You will be looking for the sub-\/folder containing binaries. In my install, that is located at {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw64\textbackslash{}bin} -- so that is my {\ttfamily MINGW\+\_\+\+PATH} environment variable. ~\newline
+
+\item Under User Variables, find {\ttfamily Path}. Click {\ttfamily Edit...} with {\ttfamily Path} selected. ~\newline
+
+\item In the new popup, click {\ttfamily New} to add a new {\ttfamily Path} value. Enter {\ttfamily MINGW\+\_\+\+PATH\%}. Now, you can add or remove {\ttfamily MINGW\+\_\+\+PATH\%} from the user {\ttfamily Path} variable depending on what compiler needs you have. Click on the newly added value, and click {\ttfamily Move Up} until it is at the top of the list. This ensures we don\textquotesingle{}t accidentally find {\ttfamily gcc} somewhere else and use a different unintended version. Note that if you want to switch between i.\+e. {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw32\textbackslash{}bin} and {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}mingw64\textbackslash{}bin} it might just be easiest to change the value of {\ttfamily MINGW\+\_\+\+PATH} environment variable. ~\newline
+ 
+\end{DoxyEnumerate}

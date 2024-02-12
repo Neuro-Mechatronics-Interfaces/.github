@@ -20,6 +20,7 @@ This page contains links to automatically-generated documentation produced using
 #### Libraries ####
 * [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`NetworkUtilities`]({{site.baseurl}}/docs/NetworkUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
+* [`SoundSynth`]({{site.baseurl}}/docs/SoundSynth/html/index.html) - Compiled c-library with some compiled applications for synthesizing sinusoidal tones and playback on Windows devices.  
 
 ### Contributing ###
 If you are contributing code and would like to use Doxygen to help maintain the documentation, then follow these steps:  

@@ -1,0 +1,45 @@
+\doxysection{Implementation}
+\hypertarget{group___implementation}{}\label{group___implementation}\index{Implementation@{Implementation}}
+
+
+Functions related to playback of synthesized tones or recording/saving files for later playback/use.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___implementation_gac8348ef30fad935e7ccea27791c5909b}{play\+Audio}} (short \texorpdfstring{$\ast$}{*}buffer, int num\+Samples, int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Play audio stored in the provided buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to playback of synthesized tones or recording/saving files for later playback/use. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___implementation_gac8348ef30fad935e7ccea27791c5909b}\label{group___implementation_gac8348ef30fad935e7ccea27791c5909b} 
+\index{Implementation@{Implementation}!playAudio@{playAudio}}
+\index{playAudio@{playAudio}!Implementation@{Implementation}}
+\doxysubsubsection{\texorpdfstring{playAudio()}{playAudio()}}
+{\footnotesize\ttfamily void play\+Audio (\begin{DoxyParamCaption}\item[{short \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{num\+Samples,  }\item[{int}]{sample\+Rate }\end{DoxyParamCaption})}
+
+
+
+Play audio stored in the provided buffer. 
+
+This function plays audio stored in the buffer using the system\textquotesingle{}s default audio output device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer containing audio data. \\
+\hline
+{\em num\+Samples} & The number of samples in the buffer. \\
+\hline
+{\em sample\+Rate} & The sample rate of the audio data (e.\+g., 44100 for CD quality). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{soundsynth_8c_source_l00018}{18}} of file \mbox{\hyperlink{soundsynth_8c_source}{soundsynth.\+c}}.
+

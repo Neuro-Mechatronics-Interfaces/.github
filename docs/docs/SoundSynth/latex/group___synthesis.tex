@@ -1,0 +1,47 @@
+\doxysection{Synthesizing Sounds}
+\hypertarget{group___synthesis}{}\label{group___synthesis}\index{Synthesizing Sounds@{Synthesizing Sounds}}
+
+
+Functions related to generating sounds either directly in time-\/domain or using frequency-\/domain heuristics.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___synthesis_ga108b7e9551ae5db89a3b9c1384d7618f}{generate\+Sin\+Wave}} (short \texorpdfstring{$\ast$}{*}buffer, int sample\+Rate, double frequency, double duration)
+\begin{DoxyCompactList}\small\item\em Generate a sinusoidal wave with a specified frequency and duration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to generating sounds either directly in time-\/domain or using frequency-\/domain heuristics. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___synthesis_ga108b7e9551ae5db89a3b9c1384d7618f}\label{group___synthesis_ga108b7e9551ae5db89a3b9c1384d7618f} 
+\index{Synthesizing Sounds@{Synthesizing Sounds}!generateSinWave@{generateSinWave}}
+\index{generateSinWave@{generateSinWave}!Synthesizing Sounds@{Synthesizing Sounds}}
+\doxysubsubsection{\texorpdfstring{generateSinWave()}{generateSinWave()}}
+{\footnotesize\ttfamily void generate\+Sin\+Wave (\begin{DoxyParamCaption}\item[{short \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{sample\+Rate,  }\item[{double}]{frequency,  }\item[{double}]{duration }\end{DoxyParamCaption})}
+
+
+
+Generate a sinusoidal wave with a specified frequency and duration. 
+
+This function generates a sinusoidal wave with the given frequency and duration. The waveform is stored in the provided buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer where the waveform will be stored. \\
+\hline
+{\em sample\+Rate} & The sample rate of the waveform (e.\+g., 44100 for CD quality). \\
+\hline
+{\em frequency} & The frequency of the sinusoidal wave in Hz. \\
+\hline
+{\em duration} & The duration of the waveform in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{soundsynth_8c_source_l00006}{6}} of file \mbox{\hyperlink{soundsynth_8c_source}{soundsynth.\+c}}.
+

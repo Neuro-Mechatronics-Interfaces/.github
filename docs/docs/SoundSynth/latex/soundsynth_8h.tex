@@ -1,0 +1,28 @@
+\doxysection{include/soundsynth.h File Reference}
+\hypertarget{soundsynth_8h}{}\label{soundsynth_8h}\index{include/soundsynth.h@{include/soundsynth.h}}
+
+
+Header file for sound synthesis and playback library.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___synthesis_ga108b7e9551ae5db89a3b9c1384d7618f}{generate\+Sin\+Wave}} (short \texorpdfstring{$\ast$}{*}buffer, int sample\+Rate, double frequency, double duration)
+\begin{DoxyCompactList}\small\item\em Generate a sinusoidal wave with a specified frequency and duration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___implementation_gac8348ef30fad935e7ccea27791c5909b}{play\+Audio}} (short \texorpdfstring{$\ast$}{*}buffer, int num\+Samples, int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Play audio stored in the provided buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for sound synthesis and playback library. 
+
+
+
+Definition in file \mbox{\hyperlink{soundsynth_8h_source}{soundsynth.\+h}}.
+
