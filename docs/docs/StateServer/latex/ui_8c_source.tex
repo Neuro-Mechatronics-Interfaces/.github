@@ -1,0 +1,122 @@
+\doxysection{ui.\+c}
+\hypertarget{ui_8c_source}{}\label{ui_8c_source}\index{src/ui.c@{src/ui.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}ui.h"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00003}00003\ \textcolor{comment}{//\ Global\ variables}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00004}00004\ HWND\ hwndLargeTextBox,\ hwndSmallTextBox,\ hwndButton;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00006}00006\ \textcolor{keywordtype}{int}\ WINAPI\ WinMain(HINSTANCE\ hInstance,\ HINSTANCE\ hPrevInstance,\ LPSTR\ lpCmdLine,\ \textcolor{keywordtype}{int}\ nCmdShow)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Register\ the\ window\ class}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ CLASS\_NAME[]\ =\ \textcolor{stringliteral}{"{}MyWindowClass"{}};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00009}00009\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00010}00010\ \ \ \ \ WNDCLASS\ wc\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00011}00011\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00012}00012\ \ \ \ \ wc.lpfnWndProc\ =\ WndProc;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00013}00013\ \ \ \ \ wc.hInstance\ =\ hInstance;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00014}00014\ \ \ \ \ wc.lpszClassName\ =\ CLASS\_NAME;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00015}00015\ \ \ \ \ wc.hbrBackground\ =\ (HBRUSH)(COLOR\_WINDOW\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00017}00017\ \ \ \ \ RegisterClass(\&wc);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00018}00018\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ window}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00020}00020\ \ \ \ \ HWND\ hwnd\ =\ CreateWindowEx(}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Optional\ window\ styles}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ CLASS\_NAME,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Window\ class}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Chat\ Window"{}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Window\ title}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ WS\_OVERLAPPEDWINDOW,\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Window\ style}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ CW\_USEDEFAULT,\ CW\_USEDEFAULT,\ \ \ \textcolor{comment}{//\ Position}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ 640,\ 500,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Size}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ NULL,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parent\ window}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ NULL,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Menu}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ hInstance,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Instance\ handle}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ NULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Additional\ application\ data}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00031}00031\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (hwnd\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ large\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00038}00038\ \ \ \ \ hwndLargeTextBox\ =\ CreateWindowEx(}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ 0,\ \textcolor{stringliteral}{"{}EDIT"{}},\ \textcolor{stringliteral}{"{}"{}},\ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ WS\_CHILD\ |\ WS\_VISIBLE\ |\ WS\_VSCROLL\ |\ ES\_MULTILINE\ |\ ES\_AUTOVSCROLL\ |\ WS\_BORDER\ |\ ES\_READONLY,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ 10,\ 10,\ 600,\ 400,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ hwnd,\ NULL,\ hInstance,\ NULL}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00043}00043\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ small\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00046}00046\ \ \ \ \ hwndSmallTextBox\ =\ CreateWindowEx(}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ 0,\ \textcolor{stringliteral}{"{}EDIT"{}},\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ WS\_CHILD\ |\ WS\_VISIBLE\ |\ ES\_AUTOHSCROLL\ |\ WS\_BORDER,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ 10,\ 420,\ 450,\ 25,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ hwnd,\ NULL,\ hInstance,\ NULL}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00051}00051\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00052}00052\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ button}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00054}00054\ \ \ \ \ hwndButton\ =\ CreateWindowEx(}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ 0,\ \textcolor{stringliteral}{"{}BUTTON"{}},\ \textcolor{stringliteral}{"{}Send"{}},}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ WS\_CHILD\ |\ WS\_VISIBLE\ |\ BS\_PUSHBUTTON,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ 470,\ 420,\ 140,\ 25,}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ hwnd,\ (HMENU)1,\ hInstance,\ NULL}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00059}00059\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Show\ the\ window}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00062}00062\ \ \ \ \ ShowWindow(hwnd,\ nCmdShow);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Run\ the\ message\ loop}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00065}00065\ \ \ \ \ MSG\ msg\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{while}\ (GetMessage(\&msg,\ NULL,\ 0,\ 0))\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ TranslateMessage(\&msg);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ DispatchMessage(\&msg);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00074}00074\ LRESULT\ CALLBACK\ WndProc(HWND\ hwnd,\ UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{switch}\ (message)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WM\_COMMAND:}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (HIWORD(wParam)\ ==\ BN\_CLICKED\ \&\&\ (HWND)lParam\ ==\ hwndButton)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Button\ clicked,\ add\ text\ from\ small\ text\ box\ to\ large\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[256];}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GetWindowText(hwndSmallTextBox,\ buffer,\ \textcolor{keyword}{sizeof}(buffer));}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(buffer,\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}});\ \textcolor{comment}{//\ Add\ a\ newline}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddTextToLargeTextBox(buffer);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SetWindowText(hwndSmallTextBox,\ \textcolor{stringliteral}{"{}"{}});\ \textcolor{comment}{//\ Clear\ small\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SetFocus(hwndSmallTextBox);\ \textcolor{comment}{//\ Set\ focus\ to\ small\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WM\_KEYDOWN:}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wParam\ ==\ VK\_RETURN\ \&\&\ GetFocus()\ ==\ hwndSmallTextBox)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enter\ key\ pressed,\ perform\ the\ same\ action\ as\ clicking\ Send\ button}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SendMessage(hwnd,\ WM\_COMMAND,\ MAKEWPARAM(0,\ BN\_CLICKED),\ (LPARAM)hwndButton);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WM\_DESTROY:}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ PostQuitMessage(0);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DefWindowProc(hwnd,\ message,\ wParam,\ lParam);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00102}00102\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00106}00106\ \textcolor{keywordtype}{void}\ AddTextToLargeTextBox(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text)\ \{}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ Get\ current\ text\ of\ large\ text\ box}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ GetWindowTextLength(hwndLargeTextBox);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00109}00109\ \ \ \ \ SendMessage(hwndLargeTextBox,\ EM\_SETSEL,\ len,\ len);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00110}00110\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00111}00111\ \ \ \ \ \textcolor{comment}{//\ Append\ new\ text}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00112}00112\ \ \ \ \ SendMessage(hwndLargeTextBox,\ EM\_REPLACESEL,\ FALSE,\ (LPARAM)text);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00113}00113\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Scroll\ to\ end}}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00115}00115\ \ \ \ \ SendMessage(hwndLargeTextBox,\ EM\_SCROLLCARET,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{ui_8c_source_l00116}00116\ \}}
+
+\end{DoxyCode}

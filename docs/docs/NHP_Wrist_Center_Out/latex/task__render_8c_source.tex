@@ -1,0 +1,201 @@
+\doxysection{task\+\_\+render.\+c}
+\hypertarget{task__render_8c_source}{}\label{task__render_8c_source}\index{src/task\_render.c@{src/task\_render.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <X11/Xlib.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <X11/Xutil.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00010}00010\ \textcolor{preprocessor}{\#define\ CURSOR\_RADIUS\ 8}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00011}00011\ \textcolor{preprocessor}{\#define\ TARGET\_RADIUS\ 45}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00012}00012\ \textcolor{preprocessor}{\#define\ CIRCLE\_SPEED\ 5}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00013}00013\ \textcolor{preprocessor}{\#define\ MICROSECONDS\_BETWEEN\_FRAMES\ 5000}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00014}00014\ \textcolor{preprocessor}{\#define\ UDP\_CURSOR\_PORT\ 3070}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00015}00015\ \textcolor{preprocessor}{\#define\ UDP\_TARGET\_PORT\ 3071}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00016}00016\ \textcolor{preprocessor}{\#define\ MAX\_TARGETS\ 9}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00018}00018\ Display*\ display;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00019}00019\ Window\ window;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00020}00020\ GC\ gc;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00021}00021\ XEvent\ event;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00023}\mbox{\hyperlink{struct_circle}{00023}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circle}{Circle}}\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00024}\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{00024}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00025}\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{00025}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00026}\mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{00026}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00027}\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{00027}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00028}00028\ \};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00030}00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circle}{Circle}}\ cursor;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00031}00031\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circle}{Circle}}\ targets[MAX\_TARGETS];}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00033}00033\ \textcolor{keywordtype}{void}\ setNonBlocking(\textcolor{keywordtype}{int}\ socket)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{int}\ flags\ =\ fcntl(socket,\ F\_GETFL,\ 0);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00035}00035\ \ \ \ \ fcntl(socket,\ F\_SETFL,\ flags\ |\ O\_NONBLOCK);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00038}00038\ \textcolor{keywordtype}{void}\ drawCircle(Display*\ display,\ Window\ window,\ GC\ gc,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}})\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00039}00039\ \ \ \ \ XDrawArc(display,\ window,\ gc,\ \mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}}\ -\/\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}},\ \mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}}\ -\/\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}},\ 2\ *\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}},\ 2\ *\ \mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}},\ 0,\ 360\ *\ 64);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00042}00042\ \textcolor{keywordtype}{void}\ drawTarget(Display*\ display,\ Window\ window,\ GC\ gc,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circle}{Circle}}\ target)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (target.\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}})\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ drawCircle(display,\ window,\ gc,\ target.\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}},\ target.\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}},\ target.\mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}});}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00048}00048\ \textcolor{keywordtype}{void}\ updateCursor(\textcolor{keywordtype}{int}\ udpSocket)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[1024];}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ clientAddr;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00051}00051\ \ \ \ \ socklen\_t\ clientLen\ =\ \textcolor{keyword}{sizeof}(clientAddr);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00053}00053\ \ \ \ \ ssize\_t\ receivedBytes\ =\ recvfrom(udpSocket,\ buffer,\ \textcolor{keyword}{sizeof}(buffer),\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&clientAddr,\ \&clientLen);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (receivedBytes\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ buffer[receivedBytes]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parse\ the\ message\ (assuming\ it's\ a\ string\ with\ x,y\ format)}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ receivedX,\ receivedY;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sscanf(buffer,\ \textcolor{stringliteral}{"{}\%d,\%d"{}},\ \&receivedX,\ \&receivedY)\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ cursor\ position\ based\ on\ received\ data}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}}\ =\ receivedX;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}}\ =\ receivedY;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00068}00068\ \textcolor{keywordtype}{void}\ updateTargets(\textcolor{keywordtype}{int}\ udpSocket)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[1024];}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ clientAddr;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00071}00071\ \ \ \ \ socklen\_t\ clientLen\ =\ \textcolor{keyword}{sizeof}(clientAddr);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00073}00073\ \ \ \ \ ssize\_t\ receivedBytes\ =\ recvfrom(udpSocket,\ buffer,\ \textcolor{keyword}{sizeof}(buffer),\ 0,\ (\textcolor{keyword}{struct}\ sockaddr*)\&clientAddr,\ \&clientLen);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (receivedBytes\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ buffer[receivedBytes]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parse\ the\ message\ (assuming\ it's\ a\ string\ with\ x,y,k,z\ format)}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ receivedX,\ receivedY,\ receivedTarget,\ receivedRender;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sscanf(buffer,\ \textcolor{stringliteral}{"{}\%d,\%d,\%d,\%d"{}},\ \&receivedX,\ \&receivedY,\ \&receivedTarget,\ \&receivedRender)\ ==\ 4)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ cursor\ position\ based\ on\ received\ data}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ targets[receivedTarget].\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}}\ =\ receivedX;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ targets[receivedTarget].\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}}\ =\ receivedY;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ targets[receivedTarget].\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}}\ =\ receivedRender;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00089}00089\ \textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00090}00090\ \ \ \ \ display\ =\ XOpenDisplay(NULL);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (!display)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Unable\ to\ open\ X\ display\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{int}\ screen\ =\ DefaultScreen(display);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00097}00097\ \ \ \ \ Window\ root\ =\ RootWindow(display,\ screen);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00099}00099\ \ \ \ \ XWindowAttributes\ rootAttr;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00100}00100\ \ \ \ \ XGetWindowAttributes(display,\ root,\ \&rootAttr);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00102}00102\ \ \ \ \ window\ =\ XCreateSimpleWindow(display,\ root,\ 0,\ 0,\ rootAttr.width,\ rootAttr.height,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00104}00104\ \ \ \ \ XSelectInput(display,\ window,\ ExposureMask\ |\ KeyPressMask);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00105}00105\ \ \ \ \ XMapWindow(display,\ window);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00107}00107\ \ \ \ \ gc\ =\ XCreateGC(display,\ window,\ 0,\ NULL);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00109}00109\ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}}\ =\ rootAttr.width\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00110}00110\ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}}\ =\ rootAttr.height\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00111}00111\ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}}\ =\ CURSOR\_RADIUS;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00112}00112\ \ \ \ \ cursor.\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Initialize\ targets}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MAX\_TARGETS;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ targets[i].\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ targets[i].\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ targets[i].\mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}}\ =\ TARGET\_RADIUS;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ targets[i].\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ UDP\ socket\ initialization\ for\ cursor\ and\ targets}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{int}\ udpCursorSocket\ =\ socket(AF\_INET,\ SOCK\_DGRAM,\ 0);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{int}\ udpTargetSocket\ =\ socket(AF\_INET,\ SOCK\_DGRAM,\ 0);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (udpCursorSocket\ <\ 0\ ||\ udpTargetSocket\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Error\ opening\ UDP\ sockets"{}});}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00130}00130\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00131}00131\ \ \ \ \ setNonBlocking(udpCursorSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00132}00132\ \ \ \ \ setNonBlocking(udpTargetSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00134}00134\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_in\ cursorAddr,\ targetAddr;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00135}00135\ \ \ \ \ cursorAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00136}00136\ \ \ \ \ cursorAddr.sin\_port\ =\ htons(UDP\_CURSOR\_PORT);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00137}00137\ \ \ \ \ cursorAddr.sin\_addr.s\_addr\ =\ INADDR\_ANY;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00139}00139\ \ \ \ \ targetAddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00140}00140\ \ \ \ \ targetAddr.sin\_port\ =\ htons(UDP\_TARGET\_PORT);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00141}00141\ \ \ \ \ targetAddr.sin\_addr.s\_addr\ =\ INADDR\_ANY;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{if}\ (bind(udpCursorSocket,\ (\textcolor{keyword}{struct}\ sockaddr*)\&cursorAddr,\ \textcolor{keyword}{sizeof}(cursorAddr))\ <\ 0\ ||}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ bind(udpTargetSocket,\ (\textcolor{keyword}{struct}\ sockaddr*)\&targetAddr,\ \textcolor{keyword}{sizeof}(targetAddr))\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Error\ binding\ UDP\ sockets"{}});}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ close(udpCursorSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ close(udpTargetSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Receive\ UDP\ message\ for\ cursor}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ updateCursor(udpCursorSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Receive\ UDP\ message\ for\ targets}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ updateTargets(udpTargetSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ previous\ rendering}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00159}00159\ \ \ \ \ \ \ \ \ XSetForeground(display,\ gc,\ BlackPixel(display,\ screen));}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00160}00160\ \ \ \ \ \ \ \ \ XFillRectangle(display,\ window,\ gc,\ 0,\ 0,\ rootAttr.width,\ rootAttr.height);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00161}00161\ \ \ \ \ \textcolor{comment}{//\ Set\ foreground\ color\ to\ white\ for\ anything\ else\ we\ render:}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00162}00162\ \ \ \ \ XSetForeground(display,\ gc,\ WhitePixel(display,\ screen));}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ targets}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MAX\_TARGETS;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ drawTarget(display,\ window,\ gc,\ targets[i]);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ cursor}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cursor.\mbox{\hyperlink{struct_circle_a60014e9f82ad6f1049e5121cfc4a3552}{render}})\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ drawCircle(display,\ window,\ gc,\ cursor.\mbox{\hyperlink{struct_circle_abceecd15b990054ddc30441cfcbb205d}{x}},\ cursor.\mbox{\hyperlink{struct_circle_a78aef28b3c176d14e8d25f8cd84e7dfd}{y}},\ cursor.\mbox{\hyperlink{struct_circle_a897ad7e556f1e90142093c69079d8b05}{radius}});}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Force\ the\ window\ to\ be\ redrawn}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ XFlush(display);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Introduce\ a\ delay\ between\ frames}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ usleep(MICROSECONDS\_BETWEEN\_FRAMES);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ for\ events\ (including\ key\ presses)}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (XPending(display))\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ XNextEvent(display,\ \&event);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ KeyPress)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (XLookupKeysym(\&event.xkey,\ 0)\ ==\ XK\_Escape)\ \{}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exit\ the\ program\ on\ Escape\ key\ press}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ close(udpCursorSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ close(udpTargetSocket);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XDestroyWindow(display,\ window);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XCloseDisplay(display);}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00194}00194\ \}}
+\DoxyCodeLine{\Hypertarget{task__render_8c_source_l00195}00195\ }
+
+\end{DoxyCode}

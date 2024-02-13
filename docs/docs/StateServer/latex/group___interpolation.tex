@@ -1,0 +1,49 @@
+\doxysection{Interpolation}
+\hypertarget{group___interpolation}{}\label{group___interpolation}\index{Interpolation@{Interpolation}}
+
+
+Functions related to interpolation.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___interpolation_gababebbe204692721ab2a42ee40841caa}{cubic\+Spline2\+DInterpolant}} (double t, const double \texorpdfstring{$\ast$}{*}control\+Times, const double \texorpdfstring{$\ast$}{*}control\+PointsX, const double \texorpdfstring{$\ast$}{*}control\+PointsY, size\+\_\+t \texorpdfstring{$\ast$}{*}segment, const size\+\_\+t num\+Points, uint16\+\_\+t \texorpdfstring{$\ast$}{*}x, uint16\+\_\+t \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Perform cubic spline interpolation using de Boor\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to interpolation. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___interpolation_gababebbe204692721ab2a42ee40841caa}\label{group___interpolation_gababebbe204692721ab2a42ee40841caa} 
+\index{Interpolation@{Interpolation}!cubicSpline2DInterpolant@{cubicSpline2DInterpolant}}
+\index{cubicSpline2DInterpolant@{cubicSpline2DInterpolant}!Interpolation@{Interpolation}}
+\doxysubsubsection{\texorpdfstring{cubicSpline2DInterpolant()}{cubicSpline2DInterpolant()}}
+{\footnotesize\ttfamily void cubic\+Spline2\+DInterpolant (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{control\+Times,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{control\+PointsX,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{control\+PointsY,  }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{segment,  }\item[{const size\+\_\+t}]{num\+Points,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{x,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{y }\end{DoxyParamCaption})}
+
+
+
+Perform cubic spline interpolation using de Boor\textquotesingle{}s algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The parameter value for interpolation. \\
+\hline
+{\em control\+Times} & Pointer to an array of control times. \\
+\hline
+{\em control\+PointsX} & Pointer to an array of x-\/coordinate control points. \\
+\hline
+{\em control\+PointsY} & Pointer to an array of y-\/coordinate control points. \\
+\hline
+{\em segment} & Pointer to a variable indicating the current segment for interpolation. \\
+\hline
+{\em num\+Points} & The number of control points. \\
+\hline
+{\em x} & Pointer to store the interpolated x-\/coordinate. \\
+\hline
+{\em y} & Pointer to store the interpolated y-\/coordinate. \\
+\hline
+\end{DoxyParams}
