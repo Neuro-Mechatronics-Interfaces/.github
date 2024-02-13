@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jetson_20nano_0',['Jetson Nano',['../index.html#autotoc_md3',1,'']]]
+  ['jetson_20nano_0',['Jetson Nano',['../index.html#jetson-nano',1,'']]]
 ];

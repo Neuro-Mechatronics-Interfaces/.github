@@ -1,6 +1,6 @@
 var index =
 [
-    [ "Compilation", "index.html#autotoc_md2", [
-      [ "Jetson Nano", "index.html#autotoc_md3", null ]
+    [ "Compilation", "index.html#compilation", [
+      [ "Jetson Nano", "index.html#jetson-nano", null ]
     ] ]
 ];

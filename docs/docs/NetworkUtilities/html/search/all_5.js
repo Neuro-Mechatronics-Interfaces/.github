@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gcc_0',['Note about gcc',['../index.html#autotoc_md7',1,'']]]
+  ['gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
 ];
