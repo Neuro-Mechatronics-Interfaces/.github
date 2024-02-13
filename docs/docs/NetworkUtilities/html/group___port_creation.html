@@ -106,12 +106,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5ee93bf6ea9d1f37eedb43e05ebf0157" id="r_ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ee93bf6ea9d1f37eedb43e05ebf0157">initializeWinsock</a> ()</td></tr>
 <tr class="memdesc:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes Winsock library.  <br /></td></tr>
 <tr class="separator:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaca987f2e3c79bcd8634284953ab9a28d" id="r_gaca987f2e3c79bcd8634284953ab9a28d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaca987f2e3c79bcd8634284953ab9a28d">initializeUDPClientSocket</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *serverIP, uint16_t port)</td></tr>
-<tr class="memdesc:gaca987f2e3c79bcd8634284953ab9a28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
-<tr class="separator:gaca987f2e3c79bcd8634284953ab9a28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10261707629d43e8de5c81d115292c1b" id="r_ga10261707629d43e8de5c81d115292c1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga10261707629d43e8de5c81d115292c1b">initializeUDPServerSocket</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *serverIP, uint16_t port)</td></tr>
-<tr class="memdesc:ga10261707629d43e8de5c81d115292c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
-<tr class="separator:ga10261707629d43e8de5c81d115292c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea2e8433844f1fe499127f1ec0aa089b" id="r_gaea2e8433844f1fe499127f1ec0aa089b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaea2e8433844f1fe499127f1ec0aa089b">initializeUDPClientSocket</a> (SOCKET *udpSocket, struct sockaddr_in *serverAddr, char *serverIP, uint16_t port)</td></tr>
+<tr class="memdesc:gaea2e8433844f1fe499127f1ec0aa089b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
+<tr class="separator:gaea2e8433844f1fe499127f1ec0aa089b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga886364c39477e6170b570627298b8b69" id="r_ga886364c39477e6170b570627298b8b69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga886364c39477e6170b570627298b8b69">initializeUDPServerSocket</a> (SOCKET *udpSocket, struct sockaddr_in *serverAddr, uint16_t port)</td></tr>
+<tr class="memdesc:ga886364c39477e6170b570627298b8b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
+<tr class="separator:ga886364c39477e6170b570627298b8b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26cae777cee8ec996251dab63cb40da7" id="r_ga26cae777cee8ec996251dab63cb40da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26cae777cee8ec996251dab63cb40da7">setBlocking</a> (SOCKET socket)</td></tr>
 <tr class="memdesc:ga26cae777cee8ec996251dab63cb40da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given socket to blocking mode.  <br /></td></tr>
 <tr class="separator:ga26cae777cee8ec996251dab63cb40da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,8 +122,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to initializing network ports and setting their properties. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaca987f2e3c79bcd8634284953ab9a28d" name="gaca987f2e3c79bcd8634284953ab9a28d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaca987f2e3c79bcd8634284953ab9a28d">&#9670;&#160;</a></span>initializeUDPClientSocket()</h2>
+<a id="gaea2e8433844f1fe499127f1ec0aa089b" name="gaea2e8433844f1fe499127f1ec0aa089b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea2e8433844f1fe499127f1ec0aa089b">&#9670;&#160;</a></span>initializeUDPClientSocket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,12 +131,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int initializeUDPClientSocket </td>
           <td>(</td>
-          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+          <td class="paramtype">SOCKET *</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
+          <td class="paramtype">struct sockaddr_in *</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -156,7 +156,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">udpSocket</td><td>A pointer to an integer where the UDP socket descriptor will be stored. </td></tr>
-    <tr><td class="paramname">serverAddr</td><td>The address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
+    <tr><td class="paramname">serverAddr</td><td>Pointer to the address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
     <tr><td class="paramname">serverIP</td><td>The IP address of the connection (char*; IPv4). </td></tr>
     <tr><td class="paramname">port</td><td>The port on the server that will be bound by this UDP socket. </td></tr>
   </table>
@@ -166,8 +166,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga10261707629d43e8de5c81d115292c1b" name="ga10261707629d43e8de5c81d115292c1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10261707629d43e8de5c81d115292c1b">&#9670;&#160;</a></span>initializeUDPServerSocket()</h2>
+<a id="ga886364c39477e6170b570627298b8b69" name="ga886364c39477e6170b570627298b8b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga886364c39477e6170b570627298b8b69">&#9670;&#160;</a></span>initializeUDPServerSocket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,17 +175,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int initializeUDPServerSocket </td>
           <td>(</td>
-          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+          <td class="paramtype">SOCKET *</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>serverIP</em>, </span></td>
+          <td class="paramtype">struct sockaddr_in *</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -200,8 +195,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">udpSocket</td><td>A pointer to an integer where the UDP socket descriptor will be stored. </td></tr>
-    <tr><td class="paramname">serverAddr</td><td>The address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
-    <tr><td class="paramname">serverIP</td><td>The IP address of the connection (char*; IPv4). </td></tr>
+    <tr><td class="paramname">serverAddr</td><td>Pointer to the address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
     <tr><td class="paramname">port</td><td>The port on the server that will be bound by this UDP socket. </td></tr>
   </table>
   </dd>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handling_0',['Message Handling',['../group___messages.html',1,'']]]
+  ['note_20about_20gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
 ];

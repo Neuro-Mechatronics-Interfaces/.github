@@ -8,19 +8,13 @@
     <loc>https://code.nml.wtf/docs/group___logging.html</loc>
   </url>
   <url>
+    <loc>https://code.nml.wtf/docs/group___timing.html</loc>
+  </url>
+  <url>
     <loc>https://code.nml.wtf/docs/group___tests.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/struct_cursor_data.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_header_data.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_logger_config.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_state_data.html</loc>
+    <loc>https://code.nml.wtf/docs/group___enumerations.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_thread_safe_cursor_args.html</loc>
@@ -72,30 +66,6 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions_vars.html</loc>

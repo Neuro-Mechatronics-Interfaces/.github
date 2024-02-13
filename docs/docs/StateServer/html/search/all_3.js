@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interpolation_0',['Interpolation',['../group___interpolation.html',1,'']]]
+  ['functions_0',['Timing Functions',['../group___timing.html',1,'']]]
 ];

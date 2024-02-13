@@ -25,14 +25,14 @@
 var NAVTREE =
 [
   [ "StateServer", "index.html", [
-    [ "State Server", "index.html", null ],
+    [ "State Server", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"group___interpolation.html"
+"group___callbacks.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

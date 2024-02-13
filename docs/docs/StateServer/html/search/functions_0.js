@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cubicspline2dinterpolant_0',['cubicSpline2DInterpolant',['../group___interpolation.html#gababebbe204692721ab2a42ee40841caa',1,'math_utilities.h']]]
+  ['addtexttolargetextbox_0',['AddTextToLargeTextBox',['../group___callbacks.html#ga02a353afa894bb258f0bca3433e00850',1,'AddTextToLargeTextBox(const char *text):&#160;ui.c'],['../group___callbacks.html#ga02a353afa894bb258f0bca3433e00850',1,'AddTextToLargeTextBox(const char *text):&#160;ui.c']]]
 ];

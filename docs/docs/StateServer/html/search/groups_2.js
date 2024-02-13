@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_20algebra_0',['Linear Algebra',['../group___linear_algebra.html',1,'']]]
+  ['functions_0',['Timing Functions',['../group___timing.html',1,'']]]
 ];

@@ -5,8 +5,6 @@ var group___logging =
     [ "cursor_clock_thread_func", "group___logging.html#gae610374f801a208816b451cc18ebe511", null ],
     [ "cursor_consumer_thread_func", "group___logging.html#ga18fb593edaa52e33a588de6f0c309c39", null ],
     [ "cursor_producer_thread_func", "group___logging.html#gad9d925b1aeb7de44e1956f461f423bab", null ],
-    [ "getCurrentTimestamp", "group___logging.html#ga48d1fdc58eca18e99d188f9457eadb32", null ],
-    [ "getElapsedTime", "group___logging.html#gaff502ebc7862ef8c0df94d92af545be0", null ],
     [ "openCursorLogForReading", "group___logging.html#ga57aa8270fc3b3f8c41ff0875e9f5a3cb", null ],
     [ "openStateLogForReading", "group___logging.html#gad789a3d04d13705f7f484d4b9670fbe8", null ],
     [ "readConfig", "group___logging.html#gaf1898537453977df6337eb90705248c6", null ],

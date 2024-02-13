@@ -103,16 +103,87 @@ $(function(){initNavTree('group___messaging.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga199f827a3bea1e6c5b91c9fd7976074f" id="r_ga199f827a3bea1e6c5b91c9fd7976074f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga199f827a3bea1e6c5b91c9fd7976074f">sendMessage</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *message)</td></tr>
+<tr class="memdesc:ga199f827a3bea1e6c5b91c9fd7976074f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
+<tr class="separator:ga199f827a3bea1e6c5b91c9fd7976074f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7d21378b8f3bd51fd2157930de9b139f" id="r_ga7d21378b8f3bd51fd2157930de9b139f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7d21378b8f3bd51fd2157930de9b139f">sendCursorPosition</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int16_t x, int16_t y)</td></tr>
 <tr class="memdesc:ga7d21378b8f3bd51fd2157930de9b139f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
 <tr class="separator:ga7d21378b8f3bd51fd2157930de9b139f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga00dd7fbc289ed250870a37fb306a6080" id="r_ga00dd7fbc289ed250870a37fb306a6080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga00dd7fbc289ed250870a37fb306a6080">sendTargetUpdate</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, int x, int y, int targetIndex, int renderFlag)</td></tr>
 <tr class="memdesc:ga00dd7fbc289ed250870a37fb306a6080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends target update information over UDP socket.  <br /></td></tr>
 <tr class="separator:ga00dd7fbc289ed250870a37fb306a6080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82017dab2a76199e764ff280d806e981" id="r_ga82017dab2a76199e764ff280d806e981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga82017dab2a76199e764ff280d806e981">receiveCursorMessage</a> (SOCKET udpSocket, RenderedCircleData *cursor)</td></tr>
+<tr class="memdesc:ga82017dab2a76199e764ff280d806e981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives cursor message over UDP socket.  <br /></td></tr>
+<tr class="separator:ga82017dab2a76199e764ff280d806e981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25068958ba8c13fcde3458ae83ece136" id="r_ga25068958ba8c13fcde3458ae83ece136"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga25068958ba8c13fcde3458ae83ece136">receiveTargetMessage</a> (SOCKET udpSocket, RenderedCircleData **targets)</td></tr>
+<tr class="memdesc:ga25068958ba8c13fcde3458ae83ece136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives target message over UDP socket.  <br /></td></tr>
+<tr class="separator:ga25068958ba8c13fcde3458ae83ece136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to formatting messages for transmission or for handling their receipt. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga82017dab2a76199e764ff280d806e981" name="ga82017dab2a76199e764ff280d806e981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82017dab2a76199e764ff280d806e981">&#9670;&#160;</a></span>receiveCursorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void receiveCursorMessage </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RenderedCircleData *</td>          <td class="paramname"><span class="paramname"><em>cursor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receives cursor message over UDP socket. </p>
+<p>This function receives cursor message data over the specified UDP socket. It receives the message, parses it assuming it's in the format "x,y", and updates the cursor position based on the received data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">udpSocket</td><td>The UDP socket to receive the cursor message on. </td></tr>
+    <tr><td class="paramname">cursor</td><td>Pointer to the struct where cursor data will be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga25068958ba8c13fcde3458ae83ece136" name="ga25068958ba8c13fcde3458ae83ece136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25068958ba8c13fcde3458ae83ece136">&#9670;&#160;</a></span>receiveTargetMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void receiveTargetMessage </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RenderedCircleData **</td>          <td class="paramname"><span class="paramname"><em>targets</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receives target message over UDP socket. </p>
+<p>This function receives target message data over the specified UDP socket. It receives the message, parses it assuming it's in the format "x,y,targetIndex,renderFlag", and updates the corresponding target position and render flag based on the received data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">udpSocket</td><td>The UDP socket to receive the target message on. </td></tr>
+    <tr><td class="paramname">targets</td><td>Array of pointers to RenderedCircleData representing targets. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga7d21378b8f3bd51fd2157930de9b139f" name="ga7d21378b8f3bd51fd2157930de9b139f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7d21378b8f3bd51fd2157930de9b139f">&#9670;&#160;</a></span>sendCursorPosition()</h2>
 
@@ -153,7 +224,45 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS on success, EXIT_FAILURE on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga199f827a3bea1e6c5b91c9fd7976074f" name="ga199f827a3bea1e6c5b91c9fd7976074f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga199f827a3bea1e6c5b91c9fd7976074f">&#9670;&#160;</a></span>sendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sendMessage </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends cursor position over UDP socket. </p>
+<p>This function sends cursor position data over the specified UDP socket.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">udpSocket</td><td>The UDP socket to send the cursor position over. </td></tr>
+    <tr><td class="paramname">serverAddr</td><td>The server address structure for UDP remote socket. </td></tr>
+    <tr><td class="paramname">message</td><td>The message to send to the server. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS on success, EXIT_FAILURE on failure. </dd></dl>
 
 </div>
 </div>
@@ -209,7 +318,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS on success, EXIT_FAILURE on failure. </dd></dl>
 
 </div>
 </div>

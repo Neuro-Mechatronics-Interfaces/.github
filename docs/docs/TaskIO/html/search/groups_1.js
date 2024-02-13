@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['io_20tests_0',['Logging IO Tests',['../group___tests.html',1,'']]]
+  ['functions_0',['Functions',['../group___logging.html',1,'Logging Functions'],['../group___timing.html',1,'Timing Functions']]]
 ];

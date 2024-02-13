@@ -5,16 +5,28 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://code.nml.wtf/docs/group___random.html</loc>
+    <loc>https://code.nml.wtf/docs/group___port_creation.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___interpolation.html</loc>
+    <loc>https://code.nml.wtf/docs/group___messaging.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___thresholding.html</loc>
+    <loc>https://code.nml.wtf/docs/group___clean_up.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___linear_algebra.html</loc>
+    <loc>https://code.nml.wtf/docs/group___timing.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___external.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___callbacks.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___utility.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___enumerations.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/dir_d44c64559bbebec7f509842c48db8b23.html</loc>

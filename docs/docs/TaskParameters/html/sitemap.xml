@@ -5,16 +5,10 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://code.nml.wtf/docs/group___data_structures.html</loc>
-  </url>
-  <url>
     <loc>https://code.nml.wtf/docs/group___files.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___messages.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_task_parameters.html</loc>
+    <loc>https://code.nml.wtf/docs/group___data_structures.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/dir_d44c64559bbebec7f509842c48db8b23.html</loc>
@@ -30,83 +24,5 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/topics.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/annotated.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/classes.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
 </urlset>

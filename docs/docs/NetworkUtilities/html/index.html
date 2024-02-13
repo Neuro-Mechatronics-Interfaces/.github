@@ -114,8 +114,7 @@ Compiling</h1>
 <h2><a class="anchor" id="dynamic-link-library"></a>
 Dynamic Link Library</h2>
 <p>To re-compile the dynamic link library (<code>.dll</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -lws2_32</div>
+ </p><div class="fragment"><div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -lws2_32 -Llib -lDataStructures</div>
 </div><!-- fragment --><ul>
 <li>The <code>-shared</code> option creates a shared object. <br  />
 </li>
@@ -127,13 +126,11 @@ Dynamic Link Library</h2>
 <h2><a class="anchor" id="static-library"></a>
 Static Library</h2>
 <p>To re-compile the static library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -c src/network.c -Iinclude -o lib/network.o -lws2_32 &amp;&amp; ar rcs lib/Network.lib lib/network.o</div>
+ </p><div class="fragment"><div class="line">gcc -c src/network.c -Iinclude -o lib/network.o -lws2_32 -Llib -lDataStructures &amp;&amp; ar rcs lib/Network.lib lib/network.o</div>
 </div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">my_project</div>
+ </p><div class="fragment"><div class="line">my_project</div>
 <div class="line">|--src</div>
 <div class="line">|  |--my_code.c</div>
 <div class="line">|  |--my_code.h</div>
@@ -141,10 +138,10 @@ For External Use</h2>
 <div class="line">|--include</div>
 <div class="line">|  |--network.h</div>
 <div class="line">|</div>
-<div class="line">|--bin</div>
-<div class="line">|  |--Network.dll</div>
+<div class="line">|--lib</div>
+<div class="line">|  |--Network.lib</div>
 </div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -o bin/my_executable.exe src/my_code.c -Lbin -Iinclude -lNetwork</div>
+<div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -Iinclude -lNetwork</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
 <p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>

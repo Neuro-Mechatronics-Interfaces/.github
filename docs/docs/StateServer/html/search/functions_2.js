@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['matrixmultiply_0',['matrixMultiply',['../group___linear_algebra.html#ga5eba7421a5a93e77ba105e5f20d7ad6e',1,'math_utilities.h']]]
+  ['getcurrenttimestamp_0',['getCurrentTimestamp',['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___external.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;ui.c']]],
+  ['getelapsedtime_1',['getElapsedTime',['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___external.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;ui.c']]]
 ];

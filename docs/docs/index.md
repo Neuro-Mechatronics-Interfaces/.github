@@ -18,6 +18,7 @@ This page contains links to automatically-generated documentation produced using
 * [`StateServer`]({{site.baseurl}}/docs/StateServer/html/index.html) - Compiled c-application for managing the real-time state timing, transitions, and logging used in the NHP wrist task (runs on Windows 10 64-bit).  
 
 #### Libraries ####
+* [`DataStructures`]({{site.baseurl}}/docs/DataStructures/html/index.html) - Compiled c-library with common data structures for the NHP wrist center-out and other tasks.  
 * [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`NetworkUtilities`]({{site.baseurl}}/docs/NetworkUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`SoundSynth`]({{site.baseurl}}/docs/SoundSynth/html/index.html) - Compiled c-library with some compiled applications for synthesizing sinusoidal tones and playback on Windows devices.  
