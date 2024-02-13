@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['formattimestampwithmillis_0',['formatTimestampWithMillis',['../data__structures_8h.html#a08100490035f9e44ccdb89edde095155',1,'formatTimestampWithMillis(FILETIME ft, char *buffer, size_t bufferSize):&#160;data_structures.c'],['../data__structures_8c.html#a08100490035f9e44ccdb89edde095155',1,'formatTimestampWithMillis(FILETIME ft, char *buffer, size_t bufferSize):&#160;data_structures.c']]]
+  ['getcurrenttimestamp_0',['getCurrentTimestamp',['../group___logging.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;logger.c'],['../group___logging.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;logger.c']]],
+  ['getelapsedtime_1',['getElapsedTime',['../group___logging.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;logger.c'],['../group___logging.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;logger.c']]]
 ];

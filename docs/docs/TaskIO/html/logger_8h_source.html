@@ -100,16 +100,16 @@ $(function(){initNavTree('logger_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">logger.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="logger_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LOGGER_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LOGGER_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;shlwapi.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma comment(lib, &quot;shlwapi.lib&quot;)  </span><span class="comment">// Link against shlwapi.lib</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="data__structures_8h.html">data_structures.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="data__threads_8h.html">data_threads.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="math__utilities_8h.html">math_utilities.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;data_structures.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;data_threads.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;math_utilities.h&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
@@ -118,13 +118,13 @@ $(function(){initNavTree('logger_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="logger_8h.html#a000e3652f1e9c5614417844941060a84">   22</a></span><span class="preprocessor">#define LOGGER_VERSION &quot;1.1.0&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="logger_8h.html#a09dbbd73a84cf772b421c6024b65b1fd">   23</a></span><span class="preprocessor">#define FILE_BUFFER_SIZE 4096</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="logger_8h.html#aedf0a2c802ee46ea569bade3b08e9c29">   24</a></span><span class="preprocessor">#define NUM_CURSOR_CONTROL_POINTS 15</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="logger_8h.html#aea24b039020bafe94fcfd1e89254a405">   25</a></span><span class="preprocessor">#define CURSOR_X_MAX 1072.0</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="logger_8h.html#a76207bb7450580a55a46da47d09f82cc">   26</a></span><span class="preprocessor">#define CURSOR_Y_MAX 712.0</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define LOGGER_VERSION &quot;1.1.0&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define FILE_BUFFER_SIZE 4096</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define NUM_CURSOR_CONTROL_POINTS 15</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define CURSOR_X_MAX 1072.0</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define CURSOR_Y_MAX 712.0</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <span class="keyword">const</span> LONGLONG <a class="code hl_variable" href="logger_8h.html#af0d7df9ec131357b6a9c13bc7cc505cd">PROCESSOR_FREQUENCY</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <span class="keyword">const</span> LONGLONG PROCESSOR_FREQUENCY;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>ULONGLONG <a class="code hl_function" href="group___logging.html#ga48d1fdc58eca18e99d188f9457eadb32">getCurrentTimestamp</a>();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
@@ -165,8 +165,6 @@ $(function(){initNavTree('logger_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> <span class="comment">// end of Logging group</span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#endif </span><span class="comment">// LOGGER_H</span></div>
-<div class="ttc" id="adata__structures_8h_html"><div class="ttname"><a href="data__structures_8h.html">data_structures.h</a></div></div>
-<div class="ttc" id="adata__threads_8h_html"><div class="ttname"><a href="data__threads_8h.html">data_threads.h</a></div></div>
 <div class="ttc" id="agroup___logging_html_ga18fb593edaa52e33a588de6f0c309c39"><div class="ttname"><a href="group___logging.html#ga18fb593edaa52e33a588de6f0c309c39">cursor_consumer_thread_func</a></div><div class="ttdeci">void * cursor_consumer_thread_func(void *arg)</div><div class="ttdoc">Thread function to consume cursor data.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00129">logger.c:129</a></div></div>
 <div class="ttc" id="agroup___logging_html_ga32884b19b493d117cfb8d3f00516884c"><div class="ttname"><a href="group___logging.html#ga32884b19b493d117cfb8d3f00516884c">createCursorLog</a></div><div class="ttdeci">FILE * createCursorLog(const char *subject, uint16_t index, HeaderData *headerData, LoggerConfig *config)</div><div class="ttdoc">Creates a cursor log file for writing.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00398">logger.c:398</a></div></div>
 <div class="ttc" id="agroup___logging_html_ga36a43c2a341e4edeb6b43f596669d402"><div class="ttname"><a href="group___logging.html#ga36a43c2a341e4edeb6b43f596669d402">state_producer_thread_func</a></div><div class="ttdeci">void * state_producer_thread_func(void *arg)</div><div class="ttdoc">Thread function to generate state data.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00188">logger.c:188</a></div></div>
@@ -185,8 +183,6 @@ $(function(){initNavTree('logger_8h_source.html',''); initResizable(); });
 <div class="ttc" id="agroup___logging_html_gaefc0229f81ecdb28be83693094a355db"><div class="ttname"><a href="group___logging.html#gaefc0229f81ecdb28be83693094a355db">readFileHeader</a></div><div class="ttdeci">int readFileHeader(FILE *logFile, HeaderData *headerData)</div><div class="ttdoc">Reads the header data from the log file.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00623">logger.c:623</a></div></div>
 <div class="ttc" id="agroup___logging_html_gaf1898537453977df6337eb90705248c6"><div class="ttname"><a href="group___logging.html#gaf1898537453977df6337eb90705248c6">readConfig</a></div><div class="ttdeci">int readConfig(LoggerConfig *config)</div><div class="ttdoc">Read the configuration from the config.yaml file.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00249">logger.c:249</a></div></div>
 <div class="ttc" id="agroup___logging_html_gaff502ebc7862ef8c0df94d92af545be0"><div class="ttname"><a href="group___logging.html#gaff502ebc7862ef8c0df94d92af545be0">getElapsedTime</a></div><div class="ttdeci">double getElapsedTime(LONGLONG qstart, LONGLONG qend)</div><div class="ttdoc">Calculate the elapsed time between two given timestamps.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00039">logger.c:39</a></div></div>
-<div class="ttc" id="alogger_8h_html_af0d7df9ec131357b6a9c13bc7cc505cd"><div class="ttname"><a href="logger_8h.html#af0d7df9ec131357b6a9c13bc7cc505cd">PROCESSOR_FREQUENCY</a></div><div class="ttdeci">const LONGLONG PROCESSOR_FREQUENCY</div><div class="ttdoc">The frequency of the processor.</div><div class="ttdef"><b>Definition</b> <a href="logger_8c_source.html#l00014">logger.c:14</a></div></div>
-<div class="ttc" id="amath__utilities_8h_html"><div class="ttname"><a href="math__utilities_8h.html">math_utilities.h</a></div></div>
 <div class="ttc" id="astruct_cursor_data_html"><div class="ttname"><a href="struct_cursor_data.html">CursorData</a></div><div class="ttdef"><b>Definition</b> <a href="data__structures_8h_source.html#l00020">data_structures.h:20</a></div></div>
 <div class="ttc" id="astruct_header_data_html"><div class="ttname"><a href="struct_header_data.html">HeaderData</a></div><div class="ttdef"><b>Definition</b> <a href="data__structures_8h_source.html#l00036">data_structures.h:36</a></div></div>
 <div class="ttc" id="astruct_logger_config_html"><div class="ttname"><a href="struct_logger_config.html">LoggerConfig</a></div><div class="ttdef"><b>Definition</b> <a href="data__structures_8h_source.html#l00014">data_structures.h:14</a></div></div>
@@ -196,7 +192,7 @@ $(function(){initNavTree('logger_8h_source.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="logger_8h.html">logger.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>logger.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

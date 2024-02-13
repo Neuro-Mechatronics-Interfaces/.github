@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['printcursordatum_0',['printCursorDatum',['../data__structures_8h.html#a16abfd849e1779a4449e4b0af065b8c7',1,'printCursorDatum(CursorData *cursorData):&#160;data_structures.c'],['../data__structures_8c.html#a16abfd849e1779a4449e4b0af065b8c7',1,'printCursorDatum(CursorData *cursorData):&#160;data_structures.c']]],
-  ['printheaderdata_1',['printHeaderData',['../data__structures_8h.html#a2e282aea2deff291f7b730fdaf285753',1,'printHeaderData(HeaderData *headerData):&#160;data_structures.c'],['../data__structures_8c.html#a2e282aea2deff291f7b730fdaf285753',1,'printHeaderData(HeaderData *headerData):&#160;data_structures.c']]],
-  ['printstatedatum_2',['printStateDatum',['../data__structures_8h.html#a01e2dc9a559c3be5329bfc5cf994198b',1,'printStateDatum(StateData *stateData):&#160;data_structures.c'],['../data__structures_8c.html#a01e2dc9a559c3be5329bfc5cf994198b',1,'printStateDatum(StateData *stateData):&#160;data_structures.c']]],
-  ['processor_5ffrequency_3',['PROCESSOR_FREQUENCY',['../logger_8h.html#af0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;logger.c'],['../logger_8c.html#af0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;logger.c'],['../tests_8c.html#af0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;logger.c']]]
+  ['sample_5fperiod_0',['sample_period',['../struct_thread_safe_cursor_args.html#a3baceee645555085b6837ad187f98c72',1,'ThreadSafeCursorArgs::sample_period'],['../struct_thread_safe_state_args.html#aaf6804f6d67899dfa6e71b3b461770be',1,'ThreadSafeStateArgs::sample_period']]],
+  ['state_1',['state',['../struct_state_data.html#aefb60dfd1ac9ae01ed1d517bedf5f633',1,'StateData']]],
+  ['state_5fclock_5fthread_5ffunc_2',['state_clock_thread_func',['../group___logging.html#gae7f4c8202c0cf8c97feb2ca99b511852',1,'state_clock_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#gae7f4c8202c0cf8c97feb2ca99b511852',1,'state_clock_thread_func(void *arg):&#160;logger.c']]],
+  ['state_5fconsumer_5fthread_5ffunc_3',['state_consumer_thread_func',['../group___logging.html#ga6e18fff4219966d4cc08847ad2581e8b',1,'state_consumer_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#ga6e18fff4219966d4cc08847ad2581e8b',1,'state_consumer_thread_func(void *arg):&#160;logger.c']]],
+  ['state_5fproducer_5fthread_5ffunc_4',['state_producer_thread_func',['../group___logging.html#ga36a43c2a341e4edeb6b43f596669d402',1,'state_producer_thread_func(void *arg):&#160;logger.c'],['../group___logging.html#ga36a43c2a341e4edeb6b43f596669d402',1,'state_producer_thread_func(void *arg):&#160;logger.c']]],
+  ['statedata_5',['StateData',['../struct_state_data.html',1,'']]],
+  ['statedata_6',['stateData',['../struct_thread_safe_state_args.html#a43cc943909a7c4fbd0e487b676ae14ed',1,'ThreadSafeStateArgs']]]
 ];

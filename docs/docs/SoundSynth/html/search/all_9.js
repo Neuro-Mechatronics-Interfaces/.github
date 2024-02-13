@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['note_20about_20gcc_0',['Note about gcc',['../index.html#autotoc_md8',1,'']]]
+  ['playaudio_0',['playAudio',['../group___implementation.html#ga236f8b03f36ea9f85ee07ae1d153f162',1,'playAudio(short *buffer, int sampleRate, int numSamples):&#160;wsoundsynth.c'],['../group___implementation.html#ga236f8b03f36ea9f85ee07ae1d153f162',1,'playAudio(short *buffer, int sampleRate, int numSamples):&#160;wsoundsynth.c']]]
 ];

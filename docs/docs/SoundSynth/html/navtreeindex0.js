@@ -1,11 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,1],
-"dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,0],
-"files.html":[2,0],
-"globals.html":[2,1,0],
-"globals_defs.html":[2,1,2],
-"globals_func.html":[2,1,1],
 "group___implementation.html":[1,1],
 "group___implementation.html#ga236f8b03f36ea9f85ee07ae1d153f162":[1,1,0],
 "group___synthesis.html":[1,0],
@@ -20,11 +14,5 @@ var NAVTREEINDEX0 =
 "index.html#autotoc_md7":[0,1,3],
 "index.html#autotoc_md8":[0,2],
 "pages.html":[],
-"topics.html":[1],
-"wsoundsynth_8c.html":[2,0,1,0],
-"wsoundsynth_8c.html#a0ddf1224851353fc92bfbff6f499fa97":[2,0,1,0,2],
-"wsoundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca":[2,0,1,0,0],
-"wsoundsynth_8c_source.html":[2,0,1,0],
-"wsoundsynth_8h.html":[2,0,0,0],
-"wsoundsynth_8h_source.html":[2,0,0,0]
+"topics.html":[1]
 };

@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['random_5fint_0',['random_int',['../math__utilities_8h.html#ad7954e6a1b9ea073c7bc894dc5af85a9',1,'math_utilities.h']]],
-  ['readconfig_1',['readConfig',['../group___logging.html#gaf1898537453977df6337eb90705248c6',1,'readConfig(LoggerConfig *config):&#160;logger.c'],['../group___logging.html#gaf1898537453977df6337eb90705248c6',1,'readConfig(LoggerConfig *config):&#160;logger.c']]],
-  ['readfileheader_2',['readFileHeader',['../group___logging.html#gaefc0229f81ecdb28be83693094a355db',1,'readFileHeader(FILE *logFile, HeaderData *headerData):&#160;logger.c'],['../group___logging.html#gaefc0229f81ecdb28be83693094a355db',1,'readFileHeader(FILE *logFile, HeaderData *headerData):&#160;logger.c']]],
-  ['readme_2emd_3',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readnextcursordatum_4',['readNextCursorDatum',['../group___logging.html#ga907888d9f8fdb33c2e65851360cb3223',1,'readNextCursorDatum(FILE *cursorLogFile, CursorData *cursorData):&#160;logger.c'],['../group___logging.html#ga907888d9f8fdb33c2e65851360cb3223',1,'readNextCursorDatum(FILE *cursorLogFile, CursorData *cursorData):&#160;logger.c']]],
-  ['readnextstatedatum_5',['readNextStateDatum',['../group___logging.html#ga6a19a13ad91b65b40660d767c4539680',1,'readNextStateDatum(FILE *stateLogFile, StateData *stateData):&#160;logger.c'],['../group___logging.html#ga6a19a13ad91b65b40660d767c4539680',1,'readNextStateDatum(FILE *stateLogFile, StateData *stateData):&#160;logger.c']]],
-  ['running_6',['running',['../struct_thread_safe_cursor_args.html#aed6eb8d328badd9e332cecb91901a312',1,'ThreadSafeCursorArgs::running'],['../struct_thread_safe_state_args.html#afa1728f79b6fa452bbd7cbf513880c5d',1,'ThreadSafeStateArgs::running']]]
+  ['target_0',['target',['../struct_state_data.html#ae3f155ac0c20aa83c0d00a7dd7688bc3',1,'StateData']]],
+  ['task_20io_1',['Task IO',['../index.html',1,'']]],
+  ['testing_2',['Testing',['../index.html#autotoc_md4',1,'Example Testing'],['../group___tests.html#autotoc_md7',1,'Example Testing']]],
+  ['tests_3',['Tests',['../group___tests.html',1,'Logging IO Tests'],['../index.html#autotoc_md3',1,'Tests']]],
+  ['threadsafecursorargs_4',['ThreadSafeCursorArgs',['../struct_thread_safe_cursor_args.html',1,'']]],
+  ['threadsafestateargs_5',['ThreadSafeStateArgs',['../struct_thread_safe_state_args.html',1,'']]],
+  ['tick_6',['tick',['../struct_thread_safe_cursor_args.html#af70e1b197051b120408e33c71bce2dc4',1,'ThreadSafeCursorArgs::tick'],['../struct_thread_safe_state_args.html#a7bf66b9050167f2af35c8cbda4be3c5f',1,'ThreadSafeStateArgs::tick']]],
+  ['timestamp_7',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
+  ['ts_8',['ts',['../struct_cursor_data.html#a4656933639271e3bed09496d44ba4d09',1,'CursorData::ts'],['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData::ts']]]
 ];

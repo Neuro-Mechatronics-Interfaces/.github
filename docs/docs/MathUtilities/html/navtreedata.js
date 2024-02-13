@@ -26,20 +26,13 @@ var NAVTREE =
 [
   [ "MathUtilities", "index.html", [
     [ "Math Utilities", "index.html", "index" ],
-    [ "Topics", "topics.html", "topics" ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
-      ] ]
-    ] ]
+    [ "Topics", "topics.html", "topics" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
+"group___interpolation.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

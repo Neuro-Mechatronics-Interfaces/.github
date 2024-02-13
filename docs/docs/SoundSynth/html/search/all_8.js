@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../wsoundsynth_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'wsoundsynth.c']]]
+  ['note_20about_20gcc_0',['Note about gcc',['../index.html#autotoc_md8',1,'']]]
 ];

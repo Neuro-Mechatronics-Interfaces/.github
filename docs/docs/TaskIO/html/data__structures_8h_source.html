@@ -100,7 +100,7 @@ $(function(){initNavTree('data__structures_8h_source.html',''); initResizable();
   <div class="headertitle"><div class="title">data_structures.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="data__structures_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// data_structures.h</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// data_structures.h</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef DATA_STRUCTURES_H</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define DATA_STRUCTURES_H</span></div>
@@ -152,22 +152,18 @@ $(function(){initNavTree('data__structures_8h_source.html',''); initResizable();
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// Function to format the timestamp into a string with milliseconds</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="data__structures_8h.html#a08100490035f9e44ccdb89edde095155">formatTimestampWithMillis</a>(FILETIME ft, <span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> bufferSize);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> formatTimestampWithMillis(FILETIME ft, <span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> bufferSize);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// Helper function to print a cursor datum to the terminal</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="data__structures_8h.html#a16abfd849e1779a4449e4b0af065b8c7">printCursorDatum</a>(<a class="code hl_struct" href="struct_cursor_data.html">CursorData</a>* cursorData);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> printCursorDatum(<a class="code hl_struct" href="struct_cursor_data.html">CursorData</a>* cursorData);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// Helper function to print the header data to terminal</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="data__structures_8h.html#a2e282aea2deff291f7b730fdaf285753">printHeaderData</a>(<a class="code hl_struct" href="struct_header_data.html">HeaderData</a>* headerData);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> printHeaderData(<a class="code hl_struct" href="struct_header_data.html">HeaderData</a>* headerData);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// Helper function to print a state datum to the terminal</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="data__structures_8h.html#a01e2dc9a559c3be5329bfc5cf994198b">printStateDatum</a>(<a class="code hl_struct" href="struct_state_data.html">StateData</a>* stateData);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> printStateDatum(<a class="code hl_struct" href="struct_state_data.html">StateData</a>* stateData);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">// DATA_STRUCTURES_H</span></div>
-<div class="ttc" id="adata__structures_8h_html_a01e2dc9a559c3be5329bfc5cf994198b"><div class="ttname"><a href="data__structures_8h.html#a01e2dc9a559c3be5329bfc5cf994198b">printStateDatum</a></div><div class="ttdeci">void printStateDatum(StateData *stateData)</div><div class="ttdef"><b>Definition</b> <a href="data__structures_8c_source.html#l00033">data_structures.c:33</a></div></div>
-<div class="ttc" id="adata__structures_8h_html_a08100490035f9e44ccdb89edde095155"><div class="ttname"><a href="data__structures_8h.html#a08100490035f9e44ccdb89edde095155">formatTimestampWithMillis</a></div><div class="ttdeci">void formatTimestampWithMillis(FILETIME ft, char *buffer, size_t bufferSize)</div><div class="ttdef"><b>Definition</b> <a href="data__structures_8c_source.html#l00005">data_structures.c:5</a></div></div>
-<div class="ttc" id="adata__structures_8h_html_a16abfd849e1779a4449e4b0af065b8c7"><div class="ttname"><a href="data__structures_8h.html#a16abfd849e1779a4449e4b0af065b8c7">printCursorDatum</a></div><div class="ttdeci">void printCursorDatum(CursorData *cursorData)</div><div class="ttdef"><b>Definition</b> <a href="data__structures_8c_source.html#l00017">data_structures.c:17</a></div></div>
-<div class="ttc" id="adata__structures_8h_html_a2e282aea2deff291f7b730fdaf285753"><div class="ttname"><a href="data__structures_8h.html#a2e282aea2deff291f7b730fdaf285753">printHeaderData</a></div><div class="ttdeci">void printHeaderData(HeaderData *headerData)</div><div class="ttdef"><b>Definition</b> <a href="data__structures_8c_source.html#l00022">data_structures.c:22</a></div></div>
 <div class="ttc" id="astruct_cursor_data_html"><div class="ttname"><a href="struct_cursor_data.html">CursorData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00020">data_structures.h:20</a></div></div>
 <div class="ttc" id="astruct_cursor_data_html_a4656933639271e3bed09496d44ba4d09"><div class="ttname"><a href="struct_cursor_data.html#a4656933639271e3bed09496d44ba4d09">CursorData::ts</a></div><div class="ttdeci">double ts</div><div class="ttdef"><b>Definition</b> <a href="#l00021">data_structures.h:21</a></div></div>
 <div class="ttc" id="astruct_cursor_data_html_a88e65a8e2e027ffb5befb23db6387527"><div class="ttname"><a href="struct_cursor_data.html#a88e65a8e2e027ffb5befb23db6387527">CursorData::x</a></div><div class="ttdeci">uint16_t x</div><div class="ttdef"><b>Definition</b> <a href="#l00022">data_structures.h:22</a></div></div>
@@ -188,7 +184,7 @@ $(function(){initNavTree('data__structures_8h_source.html',''); initResizable();
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="data__structures_8h.html">data_structures.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>data_structures.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

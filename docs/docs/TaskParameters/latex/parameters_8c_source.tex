@@ -1,9 +1,9 @@
 \doxysection{parameters.\+c}
 \hypertarget{parameters_8c_source}{}\label{parameters_8c_source}\index{src/parameters.c@{src/parameters.c}}
-\mbox{\hyperlink{parameters_8c}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parameters_8h}{parameters.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}parameters.h"{}}}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00008}00008\ \textcolor{comment}{//\ Function\ to\ parse\ parameter\ file\ and\ populate\ TaskParameters\ struct}}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00009}\mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{00009}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{parseParameterFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{struct_task_parameters}{TaskParameters}}\ *params)\ \{}
@@ -13,10 +13,10 @@
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ exit(EXIT\_FAILURE);}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00014}00014\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{char}\ line[\mbox{\hyperlink{parameters_8h_af0f2173e3b202ddf5756531b4471dcb2}{MAX\_LINE\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{char}\ line[MAX\_LINE\_LENGTH];}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(line,\ \textcolor{keyword}{sizeof}(line),\ file))\ \{}
-\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ paramName[\mbox{\hyperlink{parameters_8h_a7a0e42045a627f907d6016f710a8190b}{MAX\_PARAM\_NAME\_LENGTH}}];}
-\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ paramValue[\mbox{\hyperlink{parameters_8h_af0f2173e3b202ddf5756531b4471dcb2}{MAX\_LINE\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ paramName[MAX\_PARAM\_NAME\_LENGTH];}
+\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ paramValue[MAX\_LINE\_LENGTH];}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sscanf(line,\ \textcolor{stringliteral}{"{}\%s\(\backslash\)t\%s"{}},\ paramName,\ paramValue)\ !=\ 2)\ \{}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Invalid\ line:\ \%s\(\backslash\)n"{}},\ line);}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
@@ -173,7 +173,7 @@
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00182}00182\ \}}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00183}00183\ }
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00184}00184\ \textcolor{comment}{//\ Example\ usage:}}
-\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00185}\mbox{\hyperlink{parameters_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00185}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parameters_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{parameters_8c_source_l00185}00185\ \textcolor{keywordtype}{int}\ main()\ \{}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00186}00186\ \ \ \ \ \mbox{\hyperlink{struct_task_parameters}{TaskParameters}}*\ params\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_task_parameters}{TaskParameters}}));}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{group___files_ga589270ff19aa1098209a49c79129373b}{parseParameterFile}}(\textcolor{stringliteral}{"{}example.txt"{}},\ params);}
 \DoxyCodeLine{\Hypertarget{parameters_8c_source_l00188}00188\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Contents\ from\ example.txt:\(\backslash\)n"{}});}

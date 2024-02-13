@@ -8,14 +8,12 @@ Functions related to initializing network ports and setting their properties.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{set\+Non\+Blocking}} (SOCKET socket)
+\begin{DoxyCompactList}\small\item\em Sets the given socket to non-\/blocking mode. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}{initialize\+Winsock}} ()
 \begin{DoxyCompactList}\small\item\em Initializes Winsock library. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{group___port_creation_ga9c26022fa61448e4f95aa9837016a749}{initialize\+UDPsock}} (int \texorpdfstring{$\ast$}{*}udp\+Socket, struct sockaddr\+\_\+in udp\+Server\+Addr, char \texorpdfstring{$\ast$}{*}server\+IP, uint16\+\_\+t port)
-\begin{DoxyCompactList}\small\item\em Initializes a UDP socket and configures server address. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga26cae777cee8ec996251dab63cb40da7}{set\+Blocking}} (SOCKET socket)
-\begin{DoxyCompactList}\small\item\em Sets the given socket to blocking mode. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}{set\+Non\+Blocking}} (SOCKET socket)
-\begin{DoxyCompactList}\small\item\em Sets the given socket to non-\/blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}{initialize\+UDPsock}} (int \texorpdfstring{$\ast$}{*}udp\+Socket, struct sockaddr\+\_\+in udp\+Server\+Addr, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Initializes a UDP socket and configures server address. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -24,11 +22,11 @@ Functions related to initializing network ports and setting their properties.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{group___port_creation_ga9c26022fa61448e4f95aa9837016a749}\label{group___port_creation_ga9c26022fa61448e4f95aa9837016a749} 
+\Hypertarget{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b}\label{group___port_creation_ga74bfcf0321b2813cb8fe23273c9dae3b} 
 \index{Port Creation@{Port Creation}!initializeUDPsock@{initializeUDPsock}}
 \index{initializeUDPsock@{initializeUDPsock}!Port Creation@{Port Creation}}
 \doxysubsubsection{\texorpdfstring{initializeUDPsock()}{initializeUDPsock()}}
-{\footnotesize\ttfamily int initialize\+UDPsock (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{udp\+Server\+Addr,  }\item[{char \texorpdfstring{$\ast$}{*}}]{server\+IP,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int initialize\+UDPsock (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{udp\+Socket,  }\item[{struct sockaddr\+\_\+in}]{udp\+Server\+Addr,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
 
 
 
@@ -42,8 +40,6 @@ This function initializes a UDP socket and configures the server address using t
 \hline
 {\em udp\+Server\+Addr} & The server address structure (struct sockaddr\+\_\+in) to configure the socket with. \\
 \hline
-{\em server\+IP} & The server IP address (char\texorpdfstring{$\ast$}{*}; IPv4). \\
-\hline
 {\em port} & The port on the server that will be bound by this UDP socket. \\
 \hline
 \end{DoxyParams}
@@ -52,7 +48,7 @@ This function initializes a UDP socket and configures the server address using t
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00026}{26}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+Definition at line \mbox{\hyperlink{network_8c_source_l00025}{25}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 
 \Hypertarget{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157}\label{group___port_creation_ga5ee93bf6ea9d1f37eedb43e05ebf0157} 
 \index{Port Creation@{Port Creation}!initializeWinsock@{initializeWinsock}}
@@ -69,31 +65,7 @@ Initializes Winsock library.
 \end{DoxyReturn}
 This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the function returns EXIT\+\_\+\+FAILURE code. 
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00007}{7}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
-
-\Hypertarget{group___port_creation_ga26cae777cee8ec996251dab63cb40da7}\label{group___port_creation_ga26cae777cee8ec996251dab63cb40da7} 
-\index{Port Creation@{Port Creation}!setBlocking@{setBlocking}}
-\index{setBlocking@{setBlocking}!Port Creation@{Port Creation}}
-\doxysubsubsection{\texorpdfstring{setBlocking()}{setBlocking()}}
-{\footnotesize\ttfamily void set\+Blocking (\begin{DoxyParamCaption}\item[{SOCKET}]{socket }\end{DoxyParamCaption})}
-
-
-
-Sets the given socket to blocking mode. 
-
-This function sets the specified socket to blocking mode.
-
-
-\begin{DoxyParams}{Parameters}
-{\em socket} & The socket to set to blocking mode. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{network_8c_source_l00016}{16}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+Definition at line \mbox{\hyperlink{network_8c_source_l00012}{12}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 
 \Hypertarget{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba}\label{group___port_creation_ga3eb74aed34ee71625a337a5fa9a4f5ba} 
 \index{Port Creation@{Port Creation}!setNonBlocking@{setNonBlocking}}
@@ -117,5 +89,5 @@ void
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{network_8c_source_l00021}{21}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
+Definition at line \mbox{\hyperlink{network_8c_source_l00007}{7}} of file \mbox{\hyperlink{network_8c_source}{network.\+c}}.
 

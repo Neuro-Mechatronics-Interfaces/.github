@@ -1,30 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "acdefgilmnprstu",
-  1: "nr",
-  2: "cis",
-  3: "ctu",
-  4: "cmpu",
-  5: "nu"
+  0: "acdefgilmnpsu",
+  1: "cis",
+  2: "cmpu",
+  3: "nu"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "defines",
-  4: "groups",
-  5: "pages"
+  1: "functions",
+  2: "groups",
+  3: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Macros",
-  4: "Modules",
-  5: "Pages"
+  1: "Functions",
+  2: "Modules",
+  3: "Pages"
 };
 

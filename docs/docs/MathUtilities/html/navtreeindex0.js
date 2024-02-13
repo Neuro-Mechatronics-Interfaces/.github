@@ -1,10 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,1],
-"dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,0],
-"files.html":[2,0],
-"globals.html":[2,1,0],
-"globals_func.html":[2,1,1],
 "group___interpolation.html":[1,1],
 "group___interpolation.html#gababebbe204692721ab2a42ee40841caa":[1,1,0],
 "group___linear_algebra.html":[1,3],
@@ -30,10 +25,6 @@ var NAVTREEINDEX0 =
 "index.html#autotoc_md7":[0,2],
 "index.html#autotoc_md8":[0,2,0],
 "index.html#autotoc_md9":[0,2,0,0],
-"math__utilities_8c.html":[2,0,1,0],
-"math__utilities_8c_source.html":[2,0,1,0],
-"math__utilities_8h.html":[2,0,0,0],
-"math__utilities_8h_source.html":[2,0,0,0],
 "pages.html":[],
 "topics.html":[1]
 };

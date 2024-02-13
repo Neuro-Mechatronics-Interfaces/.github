@@ -1,6 +1,6 @@
 \doxysection{logger.\+h}
 \hypertarget{logger_8h_source}{}\label{logger_8h_source}\index{include/logger.h@{include/logger.h}}
-\mbox{\hyperlink{logger_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00001}00001\ }
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ LOGGER\_H}}
@@ -9,9 +9,9 @@
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00009}00009\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}shlwapi.lib"{})\ \ }\textcolor{comment}{//\ Link\ against\ shlwapi.lib}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data__structures_8h}{data\_structures.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data__threads_8h}{data\_threads.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__utilities_8h}{math\_utilities.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}data\_structures.h"{}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}data\_threads.h"{}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}math\_utilities.h"{}}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
@@ -20,13 +20,13 @@
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <time.h>}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <windows.h>}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00022}\mbox{\hyperlink{logger_8h_a000e3652f1e9c5614417844941060a84}{00022}}\ \textcolor{preprocessor}{\#define\ LOGGER\_VERSION\ "{}1.1.0"{}}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00023}\mbox{\hyperlink{logger_8h_a09dbbd73a84cf772b421c6024b65b1fd}{00023}}\ \textcolor{preprocessor}{\#define\ FILE\_BUFFER\_SIZE\ 4096}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00024}\mbox{\hyperlink{logger_8h_aedf0a2c802ee46ea569bade3b08e9c29}{00024}}\ \textcolor{preprocessor}{\#define\ NUM\_CURSOR\_CONTROL\_POINTS\ 15}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00025}\mbox{\hyperlink{logger_8h_aea24b039020bafe94fcfd1e89254a405}{00025}}\ \textcolor{preprocessor}{\#define\ CURSOR\_X\_MAX\ 1072.0}}
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00026}\mbox{\hyperlink{logger_8h_a76207bb7450580a55a46da47d09f82cc}{00026}}\ \textcolor{preprocessor}{\#define\ CURSOR\_Y\_MAX\ 712.0}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ LOGGER\_VERSION\ "{}1.1.0"{}}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ FILE\_BUFFER\_SIZE\ 4096}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ NUM\_CURSOR\_CONTROL\_POINTS\ 15}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ CURSOR\_X\_MAX\ 1072.0}}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00026}00026\ \textcolor{preprocessor}{\#define\ CURSOR\_Y\_MAX\ 712.0}}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{logger_8h_source_l00031}00031\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ LONGLONG\ \mbox{\hyperlink{logger_8h_af0d7df9ec131357b6a9c13bc7cc505cd}{PROCESSOR\_FREQUENCY}};}
+\DoxyCodeLine{\Hypertarget{logger_8h_source_l00031}00031\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ LONGLONG\ PROCESSOR\_FREQUENCY;}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00032}00032\ }
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00044}00044\ ULONGLONG\ \mbox{\hyperlink{group___logging_ga48d1fdc58eca18e99d188f9457eadb32}{getCurrentTimestamp}}();}
 \DoxyCodeLine{\Hypertarget{logger_8h_source_l00045}00045\ }

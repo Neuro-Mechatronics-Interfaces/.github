@@ -1,27 +1,24 @@
 var indexSectionsWithContent =
 {
   0: "acdefgilmnprstu",
-  1: "mr",
-  2: "cgmrs",
-  3: "ailrt",
-  4: "mu"
+  1: "cgmrs",
+  2: "ailrt",
+  3: "mu"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "groups",
-  4: "pages"
+  1: "functions",
+  2: "groups",
+  3: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Modules",
-  4: "Pages"
+  1: "Functions",
+  2: "Modules",
+  3: "Pages"
 };
 

@@ -100,14 +100,14 @@ $(function(){initNavTree('wsoundsynth_8c_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">wsoundsynth.c</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="wsoundsynth_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="wsoundsynth_8h.html">wsoundsynth.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;wsoundsynth.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="wsoundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca">    3</a></span><span class="preprocessor">#define PI 3.14159265</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define PI 3.14159265</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Function to generate a sinusoidal wave</span></div>
 <div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328">    6</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328">generateSinWave</a>(<span class="keywordtype">short</span> *buffer, <span class="keywordtype">double</span> frequency, <span class="keywordtype">double</span> volume, <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> numSamples) {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">double</span> increment = 2.0 * <a class="code hl_define" href="wsoundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca">PI</a> * frequency / sampleRate;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">double</span> increment = 2.0 * PI * frequency / sampleRate;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">double</span> angle = 0.0;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numSamples; i++) {</div>
@@ -167,8 +167,7 @@ $(function(){initNavTree('wsoundsynth_8c_source.html',''); initResizable(); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="wsoundsynth_8c.html#a0ddf1224851353fc92bfbff6f499fa97">   64</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="wsoundsynth_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> opt;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> sampleRate = 44100; <span class="comment">// CD quality sample rate</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">double</span> frequency = 440.0; <span class="comment">// A4 note frequency</span></div>
@@ -209,18 +208,14 @@ $(function(){initNavTree('wsoundsynth_8c_source.html',''); initResizable(); });
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    free(buffer);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-</div>
 <div class="ttc" id="agroup___implementation_html_ga236f8b03f36ea9f85ee07ae1d153f162"><div class="ttname"><a href="group___implementation.html#ga236f8b03f36ea9f85ee07ae1d153f162">playAudio</a></div><div class="ttdeci">void playAudio(short *buffer, int sampleRate, int numSamples)</div><div class="ttdoc">Play audio stored in the provided buffer.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">wsoundsynth.c:17</a></div></div>
 <div class="ttc" id="agroup___synthesis_html_ga0e0c8dd4fd8875c0f665967d88706328"><div class="ttname"><a href="group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328">generateSinWave</a></div><div class="ttdeci">void generateSinWave(short *buffer, double frequency, double volume, int sampleRate, int numSamples)</div><div class="ttdoc">Generate a sinusoidal wave with a specified frequency and duration.</div><div class="ttdef"><b>Definition</b> <a href="#l00006">wsoundsynth.c:6</a></div></div>
-<div class="ttc" id="awsoundsynth_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="wsoundsynth_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="#l00064">wsoundsynth.c:64</a></div></div>
-<div class="ttc" id="awsoundsynth_8c_html_a598a3330b3c21701223ee0ca14316eca"><div class="ttname"><a href="wsoundsynth_8c.html#a598a3330b3c21701223ee0ca14316eca">PI</a></div><div class="ttdeci">#define PI</div><div class="ttdef"><b>Definition</b> <a href="#l00003">wsoundsynth.c:3</a></div></div>
-<div class="ttc" id="awsoundsynth_8h_html"><div class="ttname"><a href="wsoundsynth_8h.html">wsoundsynth.h</a></div><div class="ttdoc">Header file for sound synthesis and playback library.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="wsoundsynth_8c.html">wsoundsynth.c</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>wsoundsynth.c</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

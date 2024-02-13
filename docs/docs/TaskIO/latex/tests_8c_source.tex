@@ -1,11 +1,11 @@
 \doxysection{tests.\+c}
 \hypertarget{tests_8c_source}{}\label{tests_8c_source}\index{src/tests.c@{src/tests.c}}
-\mbox{\hyperlink{tests_8c}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}logger.h"{}}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00010}00010\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ LONGLONG\ \mbox{\hyperlink{tests_8c_af0d7df9ec131357b6a9c13bc7cc505cd}{PROCESSOR\_FREQUENCY}};}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00010}00010\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ LONGLONG\ PROCESSOR\_FREQUENCY;}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00011}00011\ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00024}00024\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ printTestCommandHelp(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ programName);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00025}00025\ }
@@ -54,16 +54,16 @@
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00180}00180\ \ \ \ \ pthread\_attr\_setschedparam(\&attr,\ \&param);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00181}00181\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00182}00182\ \ \ \ \ \textcolor{comment}{//\ Starts\ cursor\ producer\ thread\ (simulates\ cursor\ position)}}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{data__threads_8h_ae81be9d4f6a378af1e300e23df2a20ce}{startCursorThread}}(args,\ \mbox{\hyperlink{group___logging_gad9d925b1aeb7de44e1956f461f423bab}{cursor\_producer\_thread\_func}},\ \&producer\_thread,\ \&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}},\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00183}00183\ \ \ \ \ startCursorThread(args,\ \mbox{\hyperlink{group___logging_gad9d925b1aeb7de44e1956f461f423bab}{cursor\_producer\_thread\_func}},\ \&producer\_thread,\ \&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}},\ NULL,\ NULL);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00184}00184\ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00185}00185\ \ \ \ \ \textcolor{comment}{//\ Starts\ cursor\ consumer\ thread\ (saves\ cursor\ logs)}}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00186}00186\ \ \ \ \ \mbox{\hyperlink{data__threads_8h_ae81be9d4f6a378af1e300e23df2a20ce}{startCursorThread}}(args,\ \mbox{\hyperlink{group___logging_ga18fb593edaa52e33a588de6f0c309c39}{cursor\_consumer\_thread\_func}},\ \&consumer\_thread,\ \&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}},\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00186}00186\ \ \ \ \ startCursorThread(args,\ \mbox{\hyperlink{group___logging_ga18fb593edaa52e33a588de6f0c309c39}{cursor\_consumer\_thread\_func}},\ \&consumer\_thread,\ \&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_ae4751d3c7cfc58f2906af2b49c4eb850}{initx}},\ NULL,\ NULL);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00187}00187\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00188}00188\ \ \ \ \ \textcolor{comment}{//\ Sleep\ for\ 50-\/ms\ ensuring\ we\ acquire\ mutex\ lock\ on\ Cursor\ Clock\ thread:}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00189}00189\ \ \ \ \ Sleep(50);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00190}00190\ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00191}00191\ \ \ \ \ \textcolor{comment}{//\ Starts\ cursor\ clock\ (issues\ "{}tick"{}\ trigger\ periodically)}}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{data__threads_8h_ae81be9d4f6a378af1e300e23df2a20ce}{startCursorThread}}(args,\ \mbox{\hyperlink{group___logging_gae610374f801a208816b451cc18ebe511}{cursor\_clock\_thread\_func}},\ \&clock\_thread,\ NULL,\ NULL,\ \&attr);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00192}00192\ \ \ \ \ startCursorThread(args,\ \mbox{\hyperlink{group___logging_gae610374f801a208816b451cc18ebe511}{cursor\_clock\_thread\_func}},\ \&clock\_thread,\ NULL,\ NULL,\ \&attr);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00193}00193\ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00194}00194\ \ \ \ \ pthread\_mutex\_lock(\&args-\/>\mbox{\hyperlink{struct_thread_safe_cursor_args_a4c2a869c9476db61f692348b97932ed3}{mutex}});}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00195}00195\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Threads\ created\ and\ running...\(\backslash\)n"{}});}
@@ -164,7 +164,7 @@
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00290}00290\ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00291}00291\ \ \ \ \ \textcolor{comment}{//\ Read\ and\ print\ cursor\ data\ from\ the\ log\ file}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00292}00292\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{group___logging_ga907888d9f8fdb33c2e65851360cb3223}{readNextCursorDatum}}(cursorLogFile,\ cursorData))\ \{}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00293}00293\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__structures_8h_a16abfd849e1779a4449e4b0af065b8c7}{printCursorDatum}}(cursorData);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00293}00293\ \ \ \ \ \ \ \ \ printCursorDatum(cursorData);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00294}00294\ \ \ \ \ \}\ \textcolor{comment}{//\ end\ while;\ readNextCursorDatum\ closes\ stateLogFile\ automatically.}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00295}00295\ \}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00296}00296\ }
@@ -177,7 +177,7 @@
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00303}00303\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00304}00304\ \ \ \ \ \textcolor{comment}{//\ Read\ and\ print\ state\ data\ from\ the\ log\ file}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00305}00305\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{group___logging_ga6a19a13ad91b65b40660d767c4539680}{readNextStateDatum}}(stateLogFile,\ stateData))\ \{}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00306}00306\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__structures_8h_a01e2dc9a559c3be5329bfc5cf994198b}{printStateDatum}}(stateData);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00306}00306\ \ \ \ \ \ \ \ \ printStateDatum(stateData);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00307}00307\ \ \ \ \ \}\ \textcolor{comment}{//\ end\ while;\ readNextStateDatum\ closes\ stateLogFile\ automatically.}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00308}00308\ \}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00309}00309\ }
@@ -206,17 +206,17 @@
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(argv[1],\ \textcolor{stringliteral}{"{}writecursor"{}})\ ==\ 0)\ \{}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Test\ creating\ and\ writing\ cursor\ log}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}*\ args\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_thread_safe_cursor_args}{ThreadSafeCursorArgs}}));}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__threads_8h_aef6162a4bb4ea6625e442f58c649fc18}{initCursorThreadArgs}}(args);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ initCursorThreadArgs(args);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Running\ testCreateAndWriteCursorLog\ for\ \%s...\(\backslash\)n"{}},\ argv[2]);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ testCreateAndWriteCursorLog(argv[2],\ headerData,\ config,\ args);}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__threads_8h_aa2e42dbb22fe50f96b66ce1cb24b4e11}{cleanupCursorThreadArgs}}(args);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ cleanupCursorThreadArgs(args);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00339}00339\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(argv[1],\ \textcolor{stringliteral}{"{}writestate"{}})\ ==\ 0)\ \{}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Test\ creating\ and\ writing\ state\ log}}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}*\ args\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_thread_safe_state_args}{ThreadSafeStateArgs}}));}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__threads_8h_a4ea41404eb25aaac2484b766d3db212d}{initStateThreadArgs}}(args);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ initStateThreadArgs(args);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Running\ testCreateAndWriteStateLog\ for\ \%s...\(\backslash\)n"{}},\ argv[2]);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ testCreateAndWriteStateLog(argv[2],\ headerData,\ config,\ args);}
-\DoxyCodeLine{\Hypertarget{tests_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{data__threads_8h_a9a0409e3affda122ca96d7f26b7588bb}{cleanupStateThreadArgs}}(args);}
+\DoxyCodeLine{\Hypertarget{tests_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ cleanupStateThreadArgs(args);}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}Error:\ Unknown\ test\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{tests_8c_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ printTestCommandHelp(argv[0]);}
