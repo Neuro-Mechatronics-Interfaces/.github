@@ -103,34 +103,45 @@ $(function(){initNavTree('group___port_creation.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3eb74aed34ee71625a337a5fa9a4f5ba" id="r_ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3eb74aed34ee71625a337a5fa9a4f5ba">setNonBlocking</a> (SOCKET socket)</td></tr>
-<tr class="memdesc:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given socket to non-blocking mode.  <br /></td></tr>
-<tr class="separator:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ee93bf6ea9d1f37eedb43e05ebf0157" id="r_ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ee93bf6ea9d1f37eedb43e05ebf0157">initializeWinsock</a> ()</td></tr>
 <tr class="memdesc:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes Winsock library.  <br /></td></tr>
 <tr class="separator:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga74bfcf0321b2813cb8fe23273c9dae3b" id="r_ga74bfcf0321b2813cb8fe23273c9dae3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga74bfcf0321b2813cb8fe23273c9dae3b">initializeUDPsock</a> (int *udpSocket, struct sockaddr_in udpServerAddr, uint16_t port)</td></tr>
-<tr class="memdesc:ga74bfcf0321b2813cb8fe23273c9dae3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
-<tr class="separator:ga74bfcf0321b2813cb8fe23273c9dae3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca987f2e3c79bcd8634284953ab9a28d" id="r_gaca987f2e3c79bcd8634284953ab9a28d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaca987f2e3c79bcd8634284953ab9a28d">initializeUDPClientSocket</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *serverIP, uint16_t port)</td></tr>
+<tr class="memdesc:gaca987f2e3c79bcd8634284953ab9a28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
+<tr class="separator:gaca987f2e3c79bcd8634284953ab9a28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10261707629d43e8de5c81d115292c1b" id="r_ga10261707629d43e8de5c81d115292c1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga10261707629d43e8de5c81d115292c1b">initializeUDPServerSocket</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *serverIP, uint16_t port)</td></tr>
+<tr class="memdesc:ga10261707629d43e8de5c81d115292c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a UDP socket and configures server address.  <br /></td></tr>
+<tr class="separator:ga10261707629d43e8de5c81d115292c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26cae777cee8ec996251dab63cb40da7" id="r_ga26cae777cee8ec996251dab63cb40da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26cae777cee8ec996251dab63cb40da7">setBlocking</a> (SOCKET socket)</td></tr>
+<tr class="memdesc:ga26cae777cee8ec996251dab63cb40da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given socket to blocking mode.  <br /></td></tr>
+<tr class="separator:ga26cae777cee8ec996251dab63cb40da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3eb74aed34ee71625a337a5fa9a4f5ba" id="r_ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3eb74aed34ee71625a337a5fa9a4f5ba">setNonBlocking</a> (SOCKET socket)</td></tr>
+<tr class="memdesc:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given socket to non-blocking mode.  <br /></td></tr>
+<tr class="separator:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to initializing network ports and setting their properties. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga74bfcf0321b2813cb8fe23273c9dae3b" name="ga74bfcf0321b2813cb8fe23273c9dae3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga74bfcf0321b2813cb8fe23273c9dae3b">&#9670;&#160;</a></span>initializeUDPsock()</h2>
+<a id="gaca987f2e3c79bcd8634284953ab9a28d" name="gaca987f2e3c79bcd8634284953ab9a28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca987f2e3c79bcd8634284953ab9a28d">&#9670;&#160;</a></span>initializeUDPClientSocket()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int initializeUDPsock </td>
+          <td class="memname">int initializeUDPClientSocket </td>
           <td>(</td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>udpServerAddr</em>, </span></td>
+          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>serverIP</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -145,12 +156,57 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">udpSocket</td><td>A pointer to an integer where the UDP socket descriptor will be stored. </td></tr>
-    <tr><td class="paramname">udpServerAddr</td><td>The server address structure (struct sockaddr_in) to configure the socket with. </td></tr>
+    <tr><td class="paramname">serverAddr</td><td>The address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
+    <tr><td class="paramname">serverIP</td><td>The IP address of the connection (char*; IPv4). </td></tr>
     <tr><td class="paramname">port</td><td>The port on the server that will be bound by this UDP socket. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS on success, EXIT_FAILURE on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga10261707629d43e8de5c81d115292c1b" name="ga10261707629d43e8de5c81d115292c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10261707629d43e8de5c81d115292c1b">&#9670;&#160;</a></span>initializeUDPServerSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int initializeUDPServerSocket </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>udpSocket</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct sockaddr_in</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>serverIP</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a UDP socket and configures server address. </p>
+<p>This function initializes a UDP socket and configures the server address using the provided parameters. It creates a UDP socket, sets it up with the specified server address and port, and assigns the socket to the provided pointer. If any errors occur during socket creation or address configuration, the appropriate error message is printed to stderr, Winsock resources are cleaned up, and the function returns EXIT_FAILURE.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">udpSocket</td><td>A pointer to an integer where the UDP socket descriptor will be stored. </td></tr>
+    <tr><td class="paramname">serverAddr</td><td>The address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
+    <tr><td class="paramname">serverIP</td><td>The IP address of the connection (char*; IPv4). </td></tr>
+    <tr><td class="paramname">port</td><td>The port on the server that will be bound by this UDP socket. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS on success, EXIT_FAILURE on failure. </dd></dl>
 
 </div>
 </div>
@@ -172,6 +228,33 @@ Functions</h2></td></tr>
 <p>Initializes Winsock library. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure.</dd></dl>
 <p>This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the function returns EXIT_FAILURE code. </p>
+
+</div>
+</div>
+<a id="ga26cae777cee8ec996251dab63cb40da7" name="ga26cae777cee8ec996251dab63cb40da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26cae777cee8ec996251dab63cb40da7">&#9670;&#160;</a></span>setBlocking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBlocking </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET</td>          <td class="paramname"><span class="paramname"><em>socket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the given socket to blocking mode. </p>
+<p>This function sets the specified socket to blocking mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>The socket to set to blocking mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
