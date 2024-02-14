@@ -23,11 +23,11 @@ var searchData=
   ['target_5f1200_20',['TARGET_1200',['../group___enumerations.html#gga31488d29805a596498c0234ae392d35daf4778c49504c79033d2425438967ae32',1,'data_structures.h']]],
   ['targetdiameter_21',['targetDiameter',['../struct_task_parameters.html#a54647edd2604a6b2a642197012135b7a',1,'TaskParameters']]],
   ['taskparameters_22',['TaskParameters',['../struct_task_parameters.html',1,'']]],
-  ['timeout_5fadvance_23',['TIMEOUT_ADVANCE',['../group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a38cb4c71683c402c50cbc10f30fb5db6',1,'data_structures.h']]],
-  ['timeout_5ffail_24',['TIMEOUT_FAIL',['../group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a53bb4f4b4a8eadecdecb78058bfcf87d',1,'data_structures.h']]],
-  ['timestamp_25',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
-  ['to_20other_20projects_26',['Copying to Other Projects',['../index.html#copying-to-other-projects',1,'']]],
-  ['traveldistance_27',['travelDistance',['../struct_task_parameters.html#a27952cd199426534d126aa07675caa59',1,'TaskParameters']]],
-  ['trigger_28',['Trigger',['../group___enumerations.html#ga68dc8420d4850fe68378bc682c360e30',1,'data_structures.h']]],
-  ['ts_29',['ts',['../struct_cursor_data.html#a4656933639271e3bed09496d44ba4d09',1,'CursorData::ts'],['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData::ts']]]
+  ['timestamp_23',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
+  ['tl_24',['tl',['../struct_state_data.html#ae8f658dc0d5e5b40c1462b3e13335102',1,'StateData']]],
+  ['to_20other_20projects_25',['Copying to Other Projects',['../index.html#copying-to-other-projects',1,'']]],
+  ['transition_26',['transition',['../struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647',1,'StateData']]],
+  ['transition_27',['Transition',['../group___enumerations.html#ga705b6d5c20f363b5e02982179fe730bf',1,'data_structures.h']]],
+  ['traveldistance_28',['travelDistance',['../struct_task_parameters.html#a27952cd199426534d126aa07675caa59',1,'TaskParameters']]],
+  ['ts_29',['ts',['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData']]]
 ];

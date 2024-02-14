@@ -1,7 +1,8 @@
 var NAVTREEINDEX0 =
 {
 "group___data_structures.html":[1,1],
-"group___data_structures.html#ga81a39c5893ca9823181ce8f54ee6284f":[1,1,0],
+"group___data_structures.html#ga10dab33281aebb5b261618ab79d0f9f2":[1,1,0],
+"group___data_structures.html#ga81a39c5893ca9823181ce8f54ee6284f":[1,1,1],
 "group___files.html":[1,0],
 "group___files.html#ga589270ff19aa1098209a49c79129373b":[1,0,0],
 "group___files.html#gaed5766b3ea91d3a21ae1d85a37d30989":[1,0,1],

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.2.0</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -151,17 +151,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of states in the task.  <a href="#ga5d74787dedbc4e11c1ab15bf487e61f8">More...</a><br /></td></tr>
 <tr class="separator:ga5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68dc8420d4850fe68378bc682c360e30" id="r_ga68dc8420d4850fe68378bc682c360e30"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga68dc8420d4850fe68378bc682c360e30">Trigger</a> { <br />
-&#160;&#160;<a class="el" href="#gga68dc8420d4850fe68378bc682c360e30a5608a4f2a5646263df78d73dd5925019">ENTER_TARGET_ADVANCE</a> = 1
-, <a class="el" href="#gga68dc8420d4850fe68378bc682c360e30af5aa114a2e2a44696d5d7c54ee4885af">EXIT_TARGET_FAIL</a> = 2
-, <a class="el" href="#gga68dc8420d4850fe68378bc682c360e30a24e79cbe500e9ef35374434e9e533685">EXIT_TARGET_ADVANCE</a> = 4
-, <a class="el" href="#gga68dc8420d4850fe68378bc682c360e30a53bb4f4b4a8eadecdecb78058bfcf87d">TIMEOUT_FAIL</a> = 8
+<tr class="memitem:ga705b6d5c20f363b5e02982179fe730bf" id="r_ga705b6d5c20f363b5e02982179fe730bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga705b6d5c20f363b5e02982179fe730bf">Transition</a> { <br />
+&#160;&#160;<a class="el" href="#gga705b6d5c20f363b5e02982179fe730bfa56b36d0d0bb01b339cf1041adc08e262">PAUSE</a> = 0
+, <a class="el" href="#gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51">REPEAT</a> = 1
+, <a class="el" href="#gga705b6d5c20f363b5e02982179fe730bfade3fd11080d31927ed6732ccad31fee6">ADVANCE</a> = 2
+, <a class="el" href="#gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5">OVERSHOOT</a> = 4
 , <br />
-&#160;&#160;<a class="el" href="#gga68dc8420d4850fe68378bc682c360e30a38cb4c71683c402c50cbc10f30fb5db6">TIMEOUT_ADVANCE</a> = 16
+&#160;&#160;<a class="el" href="#gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715">FAIL</a> = 8
 <br />
  }</td></tr>
-<tr class="memdesc:ga68dc8420d4850fe68378bc682c360e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of state triggers.  <a href="#ga68dc8420d4850fe68378bc682c360e30">More...</a><br /></td></tr>
-<tr class="separator:ga68dc8420d4850fe68378bc682c360e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga705b6d5c20f363b5e02982179fe730bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of state transitions.  <a href="#ga705b6d5c20f363b5e02982179fe730bf">More...</a><br /></td></tr>
+<tr class="separator:ga705b6d5c20f363b5e02982179fe730bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Key experimental categories or task state enumerations. </p>
@@ -308,29 +308,29 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a id="ga68dc8420d4850fe68378bc682c360e30" name="ga68dc8420d4850fe68378bc682c360e30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68dc8420d4850fe68378bc682c360e30">&#9670;&#160;</a></span>Trigger</h2>
+<a id="ga705b6d5c20f363b5e02982179fe730bf" name="ga705b6d5c20f363b5e02982179fe730bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga705b6d5c20f363b5e02982179fe730bf">&#9670;&#160;</a></span>Transition</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#ga68dc8420d4850fe68378bc682c360e30">Trigger</a></td>
+          <td class="memname">enum <a class="el" href="#ga705b6d5c20f363b5e02982179fe730bf">Transition</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enumeration of state triggers. </p>
+<p>Enumeration of state transitions. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga68dc8420d4850fe68378bc682c360e30a5608a4f2a5646263df78d73dd5925019" name="gga68dc8420d4850fe68378bc682c360e30a5608a4f2a5646263df78d73dd5925019"></a>ENTER_TARGET_ADVANCE&#160;</td><td class="fielddoc"><p>Entered target advance trigger. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfa56b36d0d0bb01b339cf1041adc08e262" name="gga705b6d5c20f363b5e02982179fe730bfa56b36d0d0bb01b339cf1041adc08e262"></a>PAUSE&#160;</td><td class="fielddoc"><p>Pause the state machine. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga68dc8420d4850fe68378bc682c360e30af5aa114a2e2a44696d5d7c54ee4885af" name="gga68dc8420d4850fe68378bc682c360e30af5aa114a2e2a44696d5d7c54ee4885af"></a>EXIT_TARGET_FAIL&#160;</td><td class="fielddoc"><p>Exited target fail trigger. </p>
+<tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51" name="gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51"></a>REPEAT&#160;</td><td class="fielddoc"><p>Repeat the current state. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga68dc8420d4850fe68378bc682c360e30a24e79cbe500e9ef35374434e9e533685" name="gga68dc8420d4850fe68378bc682c360e30a24e79cbe500e9ef35374434e9e533685"></a>EXIT_TARGET_ADVANCE&#160;</td><td class="fielddoc"><p>Exited target advance trigger. </p>
+<tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfade3fd11080d31927ed6732ccad31fee6" name="gga705b6d5c20f363b5e02982179fe730bfade3fd11080d31927ed6732ccad31fee6"></a>ADVANCE&#160;</td><td class="fielddoc"><p>Advance to the next state. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga68dc8420d4850fe68378bc682c360e30a53bb4f4b4a8eadecdecb78058bfcf87d" name="gga68dc8420d4850fe68378bc682c360e30a53bb4f4b4a8eadecdecb78058bfcf87d"></a>TIMEOUT_FAIL&#160;</td><td class="fielddoc"><p>Timeout fail trigger. </p>
+<tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5" name="gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5"></a>OVERSHOOT&#160;</td><td class="fielddoc"><p>Move to the OVERSHOOT state. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga68dc8420d4850fe68378bc682c360e30a38cb4c71683c402c50cbc10f30fb5db6" name="gga68dc8420d4850fe68378bc682c360e30a38cb4c71683c402c50cbc10f30fb5db6"></a>TIMEOUT_ADVANCE&#160;</td><td class="fielddoc"><p>Timeout advance trigger. </p>
+<tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715" name="gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715"></a>FAIL&#160;</td><td class="fielddoc"><p>Fail, returning to T1_MOVE state. </p>
 </td></tr>
 </table>
 

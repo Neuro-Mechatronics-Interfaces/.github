@@ -144,15 +144,12 @@ For External Use</h2>
 <div class="line">|</div>
 <div class="line">|--bin</div>
 <div class="line">|  |--WSoundSynth.dll</div>
-</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -o bin/my_executable.exe src/my_code.c -Lbin -Iinclude -lTaskParameters</div>
+</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line">gcc -o bin/my_executable.exe src/my_code.c -Lbin -Iinclude -lTaskParameters</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
-<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
+<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
 </div><!-- fragment --><p> If you see anything in the terminal following this command, it means you already have <code>gcc</code>. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.): <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
+ </p><div class="fragment"><div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
 </div><!-- fragment --><p> This will give several options for what you can install. If you are unsure what to do, just install all of them. <br  />
  Finally, you may also want a toolchain for compiling 32-bit applications from your 64-bit Windows operating system. In that case, you can try: <br  />
  </p><div class="fragment"><div class="line"> (bash)</div>

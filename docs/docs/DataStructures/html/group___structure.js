@@ -33,15 +33,17 @@ var group___structure =
       [ "logSaveFolder", "struct_logger_config.html#a1cbe9147ade96fd8ddb049e224f98cde", null ]
     ] ],
     [ "CursorData", "struct_cursor_data.html", [
-      [ "ts", "struct_cursor_data.html#a4656933639271e3bed09496d44ba4d09", null ],
       [ "x", "struct_cursor_data.html#a88e65a8e2e027ffb5befb23db6387527", null ],
       [ "y", "struct_cursor_data.html#ae3250f9b991bb46541bf9861da5a7630", null ]
     ] ],
     [ "StateData", "struct_state_data.html", [
+      [ "cursor", "struct_state_data.html#afe08168370c8df46524090e5d865a552", null ],
       [ "direction", "struct_state_data.html#adb44ba8486e2cd6839cf1d30d66b3d09", null ],
       [ "orientation", "struct_state_data.html#a043ee18ae314c12cce0603b0f4789dfc", null ],
       [ "state", "struct_state_data.html#a63143802109c13ece432c04705084c65", null ],
       [ "target", "struct_state_data.html#a6292e811be9a16b7119d08023b43dc4a", null ],
+      [ "tl", "struct_state_data.html#ae8f658dc0d5e5b40c1462b3e13335102", null ],
+      [ "transition", "struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647", null ],
       [ "ts", "struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a", null ]
     ] ],
     [ "RenderedCircleData", "struct_rendered_circle_data.html", [

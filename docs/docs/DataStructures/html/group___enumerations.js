@@ -36,11 +36,11 @@ var group___enumerations =
       [ "TARGET_0600", "group___enumerations.html#gga31488d29805a596498c0234ae392d35da6ffbd37e243fd563a8abfda7c478f779", null ],
       [ "TARGET_0430", "group___enumerations.html#gga31488d29805a596498c0234ae392d35da8b9bdd414544b407bbfe64f1a2615981", null ]
     ] ],
-    [ "Trigger", "group___enumerations.html#ga68dc8420d4850fe68378bc682c360e30", [
-      [ "ENTER_TARGET_ADVANCE", "group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a5608a4f2a5646263df78d73dd5925019", null ],
-      [ "EXIT_TARGET_FAIL", "group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30af5aa114a2e2a44696d5d7c54ee4885af", null ],
-      [ "EXIT_TARGET_ADVANCE", "group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a24e79cbe500e9ef35374434e9e533685", null ],
-      [ "TIMEOUT_FAIL", "group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a53bb4f4b4a8eadecdecb78058bfcf87d", null ],
-      [ "TIMEOUT_ADVANCE", "group___enumerations.html#gga68dc8420d4850fe68378bc682c360e30a38cb4c71683c402c50cbc10f30fb5db6", null ]
+    [ "Transition", "group___enumerations.html#ga705b6d5c20f363b5e02982179fe730bf", [
+      [ "PAUSE", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa56b36d0d0bb01b339cf1041adc08e262", null ],
+      [ "REPEAT", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51", null ],
+      [ "ADVANCE", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfade3fd11080d31927ed6732ccad31fee6", null ],
+      [ "OVERSHOOT", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5", null ],
+      [ "FAIL", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715", null ]
     ] ]
 ];

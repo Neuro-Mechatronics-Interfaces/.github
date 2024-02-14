@@ -5,7 +5,7 @@ var indexSectionsWithContent =
   2: "fipu",
   3: "bcdflmnorstxy",
   4: "dmost",
-  5: "eimoprst",
+  5: "afimoprst",
   6: "defimsu",
   7: "ds"
 };
