@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['for_20external_20use_0',['For External Use',['../index.html#for-external-use',1,'']]]
+  ['gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
 ];

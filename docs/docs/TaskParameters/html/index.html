@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.1.1</span>
+   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.1.2</span>
    </div>
    <div id="projectbrief">Compiled `c` library for task parameter data structures and functions.</div>
   </td>
@@ -103,7 +103,6 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
-<li>Dynamic</li>
 <li>Libraries</li>
 <li><a class="el" href="#copying">Copying</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
@@ -113,11 +112,7 @@ Contents</h1>
 </ul>
 <h1><a class="anchor" id="compiling"></a>
 Compiling</h1>
-<h2><a class="anchor" id="executables"></a>
-Executables</h2>
-<p>To re-compile the executable <code>bin/test.exe</code> use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc src/parameters.c -o bin/test.exe -Iinclude</div>
-</div><!-- fragment --><h2><a class="anchor" id="libraries"></a>
+<h2><a class="anchor" id="libraries"></a>
 Libraries</h2>
 <p>To re-compile the dynamic link library (<code>.dll</code>) and static link library (<code>.lib</code>), use the following command: <br  />
  </p><div class="fragment"><div class="line">gcc -shared -o bin/TaskParameters.dll -Iinclude src/parameters.c &amp;&amp; gcc -c src/parameters.c -Iinclude -o lib/parameters.o &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>

@@ -27,9 +27,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.2.1</span>
    </div>
-   <div id="projectbrief">A small compiled library for C network utility functions. The library was compiled for Windows 64-bit and should work with 64- or 32-bit windows architectures.</div>
+   <div id="projectbrief">A small compiled library for C network utility functions.</div>
   </td>
  </tr>
  </tbody>
@@ -118,6 +118,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3eb74aed34ee71625a337a5fa9a4f5ba" id="r_ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3eb74aed34ee71625a337a5fa9a4f5ba">setNonBlocking</a> (SOCKET socket)</td></tr>
 <tr class="memdesc:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given socket to non-blocking mode.  <br /></td></tr>
 <tr class="separator:ga3eb74aed34ee71625a337a5fa9a4f5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54467c11765690526ab81ece02e18927" id="r_ga54467c11765690526ab81ece02e18927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga54467c11765690526ab81ece02e18927">updateServerIPandPort</a> (struct sockaddr_in *serverAddr, char *serverIP, uint16_t serverPort)</td></tr>
+<tr class="memdesc:ga54467c11765690526ab81ece02e18927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-configure server address and port.  <br /></td></tr>
+<tr class="separator:ga54467c11765690526ab81ece02e18927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to initializing network ports and setting their properties. </p>
@@ -276,6 +279,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ga54467c11765690526ab81ece02e18927" name="ga54467c11765690526ab81ece02e18927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54467c11765690526ab81ece02e18927">&#9670;&#160;</a></span>updateServerIPandPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateServerIPandPort </td>
+          <td>(</td>
+          <td class="paramtype">struct sockaddr_in *</td>          <td class="paramname"><span class="paramname"><em>serverAddr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>serverIP</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>serverPort</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Re-configure server address and port. </p>
+<p>This function re-configures the server address and port using the provided input IPv4 IP address and port number. <br  />
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serverAddr</td><td>Pointer to the address structure of the server connection (struct sockaddr_in) to configure the socket with. </td></tr>
+    <tr><td class="paramname">serverIP</td><td>The IP address of the connection (char*; IPv4). </td></tr>
+    <tr><td class="paramname">serverPort</td><td>The port on the server that will be bound by this UDP socket. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

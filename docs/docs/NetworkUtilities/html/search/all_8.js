@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['messaging_0',['Messaging',['../group___messaging.html',1,'']]]
+  ['network_20utilities_0',['Network Utilities',['../index.html',1,'']]],
+  ['note_20about_20gcc_1',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
 ];

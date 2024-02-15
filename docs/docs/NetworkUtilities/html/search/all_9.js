@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['network_20utilities_0',['Network Utilities',['../index.html',1,'']]],
-  ['note_20about_20gcc_1',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
+  ['port_20creation_0',['Port Creation',['../group___port_creation.html',1,'']]]
 ];

@@ -21,7 +21,7 @@ var searchData=
   ['target_5f0900_18',['TARGET_0900',['../group___enumerations.html#gga31488d29805a596498c0234ae392d35da6ee4fcbf615c255b0350b9b9a8c58069',1,'data_structures.h']]],
   ['target_5f1030_19',['TARGET_1030',['../group___enumerations.html#gga31488d29805a596498c0234ae392d35da14d9cc9da23383e971008d4c4d473495',1,'data_structures.h']]],
   ['target_5f1200_20',['TARGET_1200',['../group___enumerations.html#gga31488d29805a596498c0234ae392d35daf4778c49504c79033d2425438967ae32',1,'data_structures.h']]],
-  ['targetdiameter_21',['targetDiameter',['../struct_task_parameters.html#a54647edd2604a6b2a642197012135b7a',1,'TaskParameters']]],
+  ['targetradius_21',['targetRadius',['../struct_task_parameters.html#a74fc0a103a3f8cba0b56b391035d91f2',1,'TaskParameters']]],
   ['taskparameters_22',['TaskParameters',['../struct_task_parameters.html',1,'']]],
   ['timestamp_23',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
   ['tl_24',['tl',['../struct_state_data.html#ae8f658dc0d5e5b40c1462b3e13335102',1,'StateData']]],
@@ -30,7 +30,7 @@ var searchData=
   ['total_5fsuccesses_27',['total_successes',['../struct_trial_data.html#a80956b6599bf51ceb7aeaea303d84522',1,'TrialData']]],
   ['transition_28',['transition',['../struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647',1,'StateData']]],
   ['transition_29',['Transition',['../group___enumerations.html#ga705b6d5c20f363b5e02982179fe730bf',1,'data_structures.h']]],
-  ['traveldistance_30',['travelDistance',['../struct_task_parameters.html#a27952cd199426534d126aa07675caa59',1,'TaskParameters']]],
+  ['traveldistance_30',['travelDistance',['../struct_task_parameters.html#ab94f99d2133081ace7ff1aa115c71b67',1,'TaskParameters']]],
   ['trialdata_31',['TrialData',['../struct_trial_data.html',1,'']]],
   ['ts_32',['ts',['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData']]]
 ];

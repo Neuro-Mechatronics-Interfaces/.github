@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "acdefgilmnprsu",
-  1: "cirs",
+  0: "acefgilmnprsu",
+  1: "cirsu",
   2: "cmpu",
   3: "nu"
 };

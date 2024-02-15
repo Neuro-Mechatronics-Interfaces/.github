@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "ConnectionData", "struct_connection_data.html", "struct_connection_data" ],
     [ "CursorData", "struct_cursor_data.html", "struct_cursor_data" ],
     [ "FlagData", "struct_flag_data.html", "struct_flag_data" ],
     [ "HeaderData", "struct_header_data.html", "struct_header_data" ],
