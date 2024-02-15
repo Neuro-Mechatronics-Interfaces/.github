@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.2.2</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -95,15 +95,15 @@ $(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Data Structures </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a>This is a small compiled library for <code>C</code> data structures in the NHP Wrist center-out and other tasks. The library was compiled for Windows 64-bit and should work with 64- or 32-bit windows architectures.</p>
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a>This is a small compiled library for <code>C</code> data structures in the NHP Wrist center-out and other tasks.</p>
 <p><em><a href="https://code.nml.wtf/docs">(Return)</a></em></p>
 <hr  />
 <h1><a class="anchor" id="contents"></a>
 Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
-<li><a class="el" href="#dynamic-link-library">Dynamic</a></li>
-<li><a class="el" href="#static-library">Static</a></li>
+<li><a class="el" href="#libraries">Libraries</a></li>
+<li><a class="el" href="#copying-to-other-projects">Copying</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
 </li>
@@ -111,25 +111,14 @@ Contents</h1>
 </ul>
 <h1><a class="anchor" id="compiling"></a>
 Compiling</h1>
-<h2><a class="anchor" id="dynamic-link-library"></a>
-Dynamic Link Library</h2>
-<p>To re-compile the dynamic link library (<code>.dll</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -shared -o bin/DataStructures.dll -Iinclude src/data_structures.c</div>
-</div><!-- fragment --><ul>
-<li>The <code>-shared</code> option creates a shared object. <br  />
-</li>
-<li>The <code>-o</code> is what the output file is. <br  />
-</li>
-</ul>
-<h2><a class="anchor" id="static-library"></a>
-Static Library</h2>
-<p>To re-compile the static library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -c src/data_structures.c -Iinclude -o lib/data_structures.o &amp;&amp; ar rcs lib/DataStructures.lib lib/data_structures.o</div>
+<h2><a class="anchor" id="libraries"></a>
+Libraries</h2>
+<p>To re-compile the static (<code>.lib</code>) and dynamic (<code>.dll</code>) libraries, use the following command: <br  />
+ </p><div class="fragment"><div class="line">gcc -shared -o bin/DataStructures.dll src/data_structures.c &amp;&amp; gcc -c src/data_structures.c -o lib/data_structures.o &amp;&amp; ar rcs lib/DataStructures.lib lib/data_structures.o</div>
 </div><!-- fragment --><h2><a class="anchor" id="copying-to-other-projects"></a>
 Copying to Other Projects</h2>
 <p>For convenience, to copy over to projects that use this library use the following commands. These should be run from the project root folder, assuming the other relevant projects are nested within a folder that is one level up from this project's root. First, copy over the static compiled library: <br  />
- </p><div class="fragment"><div class="line">cp lib/DataStructures.lib ../NetworkUtilities/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../StateServer/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskIO/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskParameters/lib/DataStructures.lib</div>
-</div><!-- fragment --><p> Then, copy over the header file: </p><div class="fragment"><div class="line">cp include/data_structures.h ../NetworkUtilities/include/data_structures.h &amp;&amp; cp include/data_structures.h ../StateServer/include/data_structures.h &amp;&amp; cp include/data_structures.h ../TaskIO/include/data_structures.h &amp;&amp; cp include/data_structures.h ../TaskParameters/include/data_structures.h</div>
+ </p><div class="fragment"><div class="line">cp lib/DataStructures.lib ../NetworkUtilities/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../StateServer/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskIO/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskParameters/lib/DataStructures.lib &amp;&amp; cp src/data_structures.h ../NetworkUtilities/include/data_structures.h &amp;&amp; cp src/data_structures.h ../StateServer/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskIO/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskParameters/include/data_structures.h</div>
 </div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />

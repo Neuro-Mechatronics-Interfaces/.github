@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['callbacks_0',['Callbacks',['../group___callbacks.html',1,'']]],
-  ['clean_20up_1',['Clean-Up',['../group___clean_up.html',1,'']]],
-  ['creation_2',['Port Creation',['../group___port_creation.html',1,'']]]
+  ['and_20cleanup_0',['Initialization and Cleanup',['../group___init_cleanup.html',1,'']]]
 ];

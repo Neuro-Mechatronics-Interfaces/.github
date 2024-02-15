@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['initializeudpclientsocket_0',['initializeUDPClientSocket',['../group___port_creation.html#gaea2e8433844f1fe499127f1ec0aa089b',1,'network.h']]],
-  ['initializeudpserversocket_1',['initializeUDPServerSocket',['../group___port_creation.html#ga886364c39477e6170b570627298b8b69',1,'network.h']]],
-  ['initializewinsock_2',['initializeWinsock',['../group___port_creation.html#ga5ee93bf6ea9d1f37eedb43e05ebf0157',1,'network.h']]]
+  ['initthreadargs_0',['initThreadArgs',['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c'],['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c']]],
+  ['inputhandler_1',['inputHandler',['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c'],['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c']]]
 ];

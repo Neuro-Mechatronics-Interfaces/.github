@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loggerconfig_0',['LoggerConfig',['../struct_logger_config.html',1,'']]]
+  ['headerdata_0',['HeaderData',['../struct_header_data.html',1,'']]]
 ];

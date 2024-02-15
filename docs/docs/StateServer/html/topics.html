@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.2.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -97,14 +97,21 @@ $(function(){initNavTree('topics.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock">Here is a list of all topics with brief descriptions:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:dynsection.toggleLevel(1);">1</span><span onclick="javascript:dynsection.toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___port_creation.html" target="_self">Port Creation</a></td><td class="desc">Functions related to initializing network ports and setting their properties </td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___messaging.html" target="_self">Messaging</a></td><td class="desc">Functions related to formatting messages for transmission or for handling their receipt </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___clean_up.html" target="_self">Clean-Up</a></td><td class="desc">Functions related to shutdown and cleaning up network ports etc. on application exit </td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_3_" class="arrow" onclick="dynsection.toggleFolder('3_')">&#9660;</span><a class="el" href="group___timing.html" target="_self">Timing Functions</a></td><td class="desc">Utility functions for timing things </td></tr>
-<tr id="row_3_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group___enumerations.html" target="_self">Enumerations</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___external.html" target="_self">External</a></td><td class="desc">External functions and variables probably from Windows API </td></tr>
-<tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___callbacks.html" target="_self">Callbacks</a></td><td class="desc">Functions assigned to Windows Process callbacks using Windows API for GUI </td></tr>
-<tr id="row_6_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___utility.html" target="_self">Utilities</a></td><td class="desc">Sub-routines used from within Windows Process callback specific cases </td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___state_machine.html" target="_self">Task State Machine</a></td><td class="desc">Core logic flow of wrist center-out NHP task. <br  />
+ </td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___structures.html" target="_self">Data Structures</a></td><td class="desc">Thread-safe data structure to share data between synchronized threads. <br  />
+ </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___init_cleanup.html" target="_self">Initialization and Cleanup</a></td><td class="desc">Allocate memory and deallocate it and make sure threads are closed. <br  />
+ </td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___handlers.html" target="_self">Handler Threads</a></td><td class="desc">Core of the multi-threaded <code>state_server</code> application. <br  />
+ </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___starters.html" target="_self">Startup Routines</a></td><td class="desc">Start the handler threads with appropriate attributes and data. <br  />
+ </td></tr>
+<tr id="row_5_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_5_" class="arrow" onclick="dynsection.toggleFolder('5_')">&#9660;</span><a class="el" href="group___timing.html" target="_self">Timing Functions</a></td><td class="desc">Utility functions for timing things </td></tr>
+<tr id="row_5_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group___enumerations.html" target="_self">Enumerations</a></td><td class="desc"></td></tr>
+<tr id="row_6_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___external.html" target="_self">External</a></td><td class="desc">External functions and variables probably from Windows API </td></tr>
+<tr id="row_7_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___callbacks.html" target="_self">Callbacks</a></td><td class="desc">Functions assigned to Windows Process callbacks using Windows API for GUI </td></tr>
+<tr id="row_8_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group___utility.html" target="_self">Utilities</a></td><td class="desc">Sub-routines used from within Windows Process callback specific cases </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

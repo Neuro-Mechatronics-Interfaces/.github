@@ -10,11 +10,11 @@ var NAVTREEINDEX0 =
 "index.html":[0],
 "index.html#compiling":[0,1],
 "index.html#contents":[0,0],
-"index.html#dynamic-link-library":[0,1,1],
+"index.html#copying":[0,1,2],
 "index.html#executables":[0,1,0],
 "index.html#for-external-use":[0,1,3],
+"index.html#libraries":[0,1,1],
 "index.html#note-about-gcc":[0,2],
-"index.html#static-library":[0,1,2],
 "pages.html":[],
 "topics.html":[1]
 };

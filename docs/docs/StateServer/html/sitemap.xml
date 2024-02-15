@@ -5,13 +5,19 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://code.nml.wtf/docs/group___port_creation.html</loc>
+    <loc>https://code.nml.wtf/docs/group___state_machine.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___messaging.html</loc>
+    <loc>https://code.nml.wtf/docs/group___structures.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___clean_up.html</loc>
+    <loc>https://code.nml.wtf/docs/group___init_cleanup.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___handlers.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___starters.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/group___timing.html</loc>
@@ -29,7 +35,7 @@
     <loc>https://code.nml.wtf/docs/group___enumerations.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/dir_d44c64559bbebec7f509842c48db8b23.html</loc>
+    <loc>https://code.nml.wtf/docs/struct_thread_safe_args.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/dir_68267d1309a1af8e8297ef4c3efbcdba.html</loc>
@@ -42,5 +48,65 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/topics.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/annotated.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/classes.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
 </urlset>

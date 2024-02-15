@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.2.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -102,20 +102,36 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 <h1><a class="anchor" id="contents"></a>
 Contents</h1>
 <ul>
-<li><a class="el" href="#compiling">Compiling</a></li>
+<li><a class="el" href="#state-machine">State Machine</a></li>
+<li><a class="el" href="#compiling">Compiling</a><ul>
+<li><a class="el" href="#applications">Applications</a></li>
+<li><a class="el" href="#libraries">Libraries</a></li>
+</ul>
+</li>
 <li><a class="el" href="#note-about-gcc">Using `gcc` on Windows</a></li>
 </ul>
-<h1><a class="anchor" id="compiling"></a>
+<h1><a class="anchor" id="state-machine"></a>
+State Machine</h1>
+<p>The wrist center-out task state machine for the NHP task runs as shown by the following image generated using <code>graphviz</code>: <br  />
+ <img src="state_transition_flowchart.png" alt="Figure 1: NHP wrist center-out task state machine." class="inline"/>. <br  />
+ To modify this image, you need to update the corresponding lines in <code>state_transition_flowchart.dot</code> in this repository and then re-run <code>graphviz</code>: <br  />
+ </p><div class="fragment"><div class="line">dot -Tpng state_transition_flowchart.dot -o &quot;C:/Path/To/NML_DOXY_DOCS_REPO/state_transition_flowchart.png&quot;</div>
+</div><!-- fragment --><h1><a class="anchor" id="compiling"></a>
 Compiling</h1>
+<h2><a class="anchor" id="applications"></a>
+Applications</h2>
 <p>To re-compile the executable <code>bin/ui.exe</code> use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc src/ui.c -o bin/ui.exe -Iinclude -Llib -lNetwork -lws2_32</div>
+ </p><div class="fragment"><div class="line">gcc src/ui.c -o bin/ui.exe -Iinclude -Llib -lNetwork -lws2_32 -lDataStructures -lTaskParameters -lTiming</div>
+</div><!-- fragment --><p>To re-compile the executable <code>bin/test_sender.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc src/test_sender.c -o bin/test_sender.exe -Iinclude -Llib -lNetwork -lws2_32 -lDataStructures -lTiming -lTaskParameters</div>
+</div><!-- fragment --><p>To re-compile the executable <code>bin/state_server.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc src/state_server.c -o bin/state_server.exe -Iinclude -Llib -lNetwork -lws2_32 -lDataStructures -lTiming -lTaskParameters -lMathUtilities</div>
+</div><!-- fragment --> <h2><a class="anchor" id="libraries"></a>
+Libraries</h2>
+<p>To compile the static and dynamic libraries for <code>Timing</code>, use the following syntax: </p><div class="fragment"><div class="line">gcc src/timing.c -o bin/Timing.dll &amp;&amp; gcc -c src/timing.c -o lib/timing.o &amp;&amp; ar rcs lib/Timing.lib lib/timing.o</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
-<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
+<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
 </div><!-- fragment --><p> If you see anything in the terminal following this command, it means you already have <code>gcc</code>. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.): <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
+ </p><div class="fragment"><div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
 </div><!-- fragment --><p> This will give several options for what you can install. If you are unsure what to do, just install all of them. <br  />
  Finally, you may also want a toolchain for compiling 32-bit applications from your 64-bit Windows operating system. In that case, you can try: <br  />
  </p><div class="fragment"><div class="line"> (bash)</div>

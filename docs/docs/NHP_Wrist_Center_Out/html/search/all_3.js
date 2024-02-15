@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['out_0',['NHP Wrist Center-Out',['../index.html',1,'']]]
+  ['jetson_20nano_0',['Jetson Nano',['../index.html#jetson-nano',1,'']]]
 ];

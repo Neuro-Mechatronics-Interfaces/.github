@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['maxintertrialtime_0',['maxINTERTRIALTime',['../struct_task_parameters.html#a79be26fab8d8536ae50f55b8ac67b76a',1,'TaskParameters']]],
-  ['maxovershoots_1',['maxOvershoots',['../struct_task_parameters.html#a149b7d786d214bebd2381f5f7e39c0ad',1,'TaskParameters']]],
-  ['maxt1hold1time_2',['maxT1HOLD1Time',['../struct_task_parameters.html#a650d773099ad0b3faa77eab6f201a36d',1,'TaskParameters']]],
-  ['maxt1hold2time_3',['maxT1HOLD2Time',['../struct_task_parameters.html#aca0d58639168b6f762bb9975b2d67249',1,'TaskParameters']]],
-  ['maxtrials_4',['maxTrials',['../struct_task_parameters.html#a1562ef93386f0d6ff8ccc080351667d9',1,'TaskParameters']]],
-  ['minintertrialtime_5',['minINTERTRIALTime',['../struct_task_parameters.html#a96718f1b79e4a3dd696fa77c92148295',1,'TaskParameters']]],
-  ['mint1hold1time_6',['minT1HOLD1Time',['../struct_task_parameters.html#a7f0b90c60c5374528ffa9b125060c5fb',1,'TaskParameters']]],
-  ['mint1hold2time_7',['minT1HOLD2Time',['../struct_task_parameters.html#adab18ec2a690b100525ca49c071058da',1,'TaskParameters']]],
-  ['mode_8',['mode',['../struct_task_parameters.html#a6e044b35908f9b1330a045bb0e4bbb14',1,'TaskParameters']]]
+  ['linewidth_0',['lineWidth',['../struct_task_parameters.html#a67ab06677b277faeb67ff9499b3293ef',1,'TaskParameters']]],
+  ['logindex_1',['logIndex',['../struct_header_data.html#a8642af9f7b14f997da389cdb44c36fcf',1,'HeaderData']]],
+  ['logreadfolder_2',['logReadFolder',['../struct_logger_config.html#a4fbe73cd41a6d6bd5e9eb7a46d1581cf',1,'LoggerConfig']]],
+  ['logsavefolder_3',['logSaveFolder',['../struct_logger_config.html#a1cbe9147ade96fd8ddb049e224f98cde',1,'LoggerConfig']]],
+  ['logtype_4',['logType',['../struct_header_data.html#a8eed32bdc52ff438fc19f619e9d2143c',1,'HeaderData']]],
+  ['logversion_5',['logVersion',['../struct_header_data.html#a6a10936e7958a923656398e86222fd8d',1,'HeaderData']]]
 ];

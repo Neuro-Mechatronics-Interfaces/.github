@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['note_20about_20gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
+  ['point_20generation_0',['Random Point Generation',['../index.html#random-point-generation',1,'']]]
 ];

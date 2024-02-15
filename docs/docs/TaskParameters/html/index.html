@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Compiled `c` library for task parameter data structures and functions.</div>
   </td>
@@ -103,8 +103,9 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
-<li><a class="el" href="#dynamic-link-library">Dynamic</a></li>
-<li><a class="el" href="#static-library">Static</a></li>
+<li>Dynamic</li>
+<li>Libraries</li>
+<li><a class="el" href="#copying">Copying</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
 </li>
@@ -116,35 +117,28 @@ Compiling</h1>
 Executables</h2>
 <p>To re-compile the executable <code>bin/test.exe</code> use the following command: <br  />
  </p><div class="fragment"><div class="line">gcc src/parameters.c -o bin/test.exe -Iinclude</div>
-</div><!-- fragment --><h2><a class="anchor" id="dynamic-link-library"></a>
-Dynamic Link Library</h2>
-<p>To re-compile the dynamic link library (<code>.dll</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -shared -o bin/TaskParameters.dll -Iinclude src/parameters.c</div>
-</div><!-- fragment --><ul>
-<li>The <code>-shared</code> option creates a shared object. <br  />
-</li>
-<li>The <code>-o</code> is what the output file is. <br  />
-</li>
-</ul>
-<h2><a class="anchor" id="static-library"></a>
-Static Library</h2>
-<p>To re-compile the static library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -c src/parameters.c -Iinclude -o lib/parameters.o &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>
+</div><!-- fragment --><h2><a class="anchor" id="libraries"></a>
+Libraries</h2>
+<p>To re-compile the dynamic link library (<code>.dll</code>) and static link library (<code>.lib</code>), use the following command: <br  />
+ </p><div class="fragment"><div class="line">gcc -shared -o bin/TaskParameters.dll -Iinclude src/parameters.c &amp;&amp; gcc -c src/parameters.c -Iinclude -o lib/parameters.o &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>
+</div><!-- fragment --><h2><a class="anchor" id="copying"></a>
+Copying</h2>
+<p>To copy to the relevant other projects, use the following command: <br  />
+ </p><div class="fragment"><div class="line">cp src/parameters.h ../TaskIO/include/parameters.h &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskIO/lib/TaskParameters.lib &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib</div>
 </div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">my_project</div>
+ </p><div class="fragment"><div class="line">my_project</div>
 <div class="line">|--src</div>
 <div class="line">|  |--my_code.c</div>
 <div class="line">|  |--my_code.h</div>
 <div class="line">|</div>
 <div class="line">|--include</div>
-<div class="line">|  |--wsoundsynth.h</div>
+<div class="line">|  |--parameters.h</div>
 <div class="line">|</div>
-<div class="line">|--bin</div>
-<div class="line">|  |--WSoundSynth.dll</div>
-</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line">gcc -o bin/my_executable.exe src/my_code.c -Lbin -Iinclude -lTaskParameters</div>
+<div class="line">|--lib</div>
+<div class="line">|  |--TaskParameters.lib</div>
+</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -Iinclude -lTaskParameters</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
 <p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>

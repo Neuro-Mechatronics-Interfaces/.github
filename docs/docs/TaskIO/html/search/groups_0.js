@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enumerations_0',['Enumerations',['../group___enumerations.html',1,'']]]
+  ['functions_0',['Logging Functions',['../group___logging.html',1,'']]]
 ];

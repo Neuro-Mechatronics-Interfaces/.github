@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['originaleditwndproc_0',['OriginalEditWndProc',['../group___external.html#ga5b9c577313e5ddddb2f5a53596c8f8e2',1,'OriginalEditWndProc:&#160;ui.c'],['../group___external.html#ga5b9c577313e5ddddb2f5a53596c8f8e2',1,'OriginalEditWndProc:&#160;ui.c']]]
+  ['cursor_0',['cursor',['../struct_thread_safe_args.html#a119a4e370f08dea845e70b87470976fd',1,'ThreadSafeArgs']]],
+  ['cursor_5flog_1',['cursor_log',['../struct_thread_safe_args.html#a5fc00f7a898b930f6022be7260a87dbd',1,'ThreadSafeArgs']]]
 ];

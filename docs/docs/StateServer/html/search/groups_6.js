@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['up_0',['Clean-Up',['../group___clean_up.html',1,'']]],
-  ['utilities_1',['Utilities',['../group___utility.html',1,'']]]
+  ['initialization_20and_20cleanup_0',['Initialization and Cleanup',['../group___init_cleanup.html',1,'']]]
 ];

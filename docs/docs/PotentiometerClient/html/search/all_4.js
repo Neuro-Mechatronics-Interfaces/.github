@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['isfull_0',['isFull',['../class_circular_buffer.html#a46ba3ae720499af31baf047c94e74266',1,'CircularBuffer']]]
+  ['potentiometer_20client_0',['Potentiometer Client',['../index.html',1,'']]],
+  ['push_1',['push',['../class_circular_buffer.html#aaa3d25987977c270542a525be8db7232',1,'CircularBuffer::push(T value)'],['../class_circular_buffer.html#a6f04cdfffc6a49c77ccece38ace74bb5',1,'CircularBuffer::push(const T *value)']]]
 ];

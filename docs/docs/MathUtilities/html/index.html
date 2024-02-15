@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Common math functions shared across compiled apps at NML-NHP.</div>
   </td>
@@ -102,8 +102,7 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
-<li><a class="el" href="#dynamic-link-library">Dynamic</a></li>
-<li><a class="el" href="#static-library">Static</a></li>
+<li><a class="el" href="#libraries">Libraries</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
 </li>
@@ -114,38 +113,23 @@ Contents</h1>
 </ul>
 <h1><a class="anchor" id="compiling"></a>
 Compiling</h1>
-<h2><a class="anchor" id="dynamic-link-library"></a>
-Dynamic Link Library</h2>
-<p>To re-compile the dynamic link library (<code>.dll</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -shared -o bin/math_utilities.dll -Iinclude src/math_utilities.c -fPIC</div>
-</div><!-- fragment --><ul>
-<li>The <code>-shared</code> option creates a shared object. <br  />
-</li>
-<li>The <code>-o</code> is what the output file is. <br  />
-</li>
-<li>The <code>-fPIC</code> option generates position-independent code, which is a pre-requisite for shared libraries. <br  />
-</li>
-</ul>
-<h2><a class="anchor" id="static-library"></a>
-Static Library</h2>
-<p>To re-compile the static library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -c src/math_utilities.c -Iinclude -o lib/math_utilities.o &amp;&amp; ar rcs lib/math_utilities.lib lib/math_utilities.o</div>
+<h2><a class="anchor" id="libraries"></a>
+Libraries</h2>
+<p>To re-compile the dynamic link library (<code>.dll</code>) and static library (<code>.lib</code>) use the following command: <br  />
+ </p><div class="fragment"><div class="line">gcc -shared -o bin/MathUtilities.dll src/math_utilities.c -fPIC &amp;&amp; gcc -c src/math_utilities.c -o lib/math_utilities.o &amp;&amp; ar rcs lib/MathUtilities.lib lib/math_utilities.o</div>
 </div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />
- </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">my_project</div>
+ </p><div class="fragment"><div class="line">my_project</div>
 <div class="line">|--src</div>
 <div class="line">|  |--my_code.c</div>
 <div class="line">|  |--my_code.h</div>
 <div class="line">|  |--math_utilities.h</div>
 <div class="line">|</div>
-<div class="line">|--bin</div>
-<div class="line">|  |--math_utilities.dll</div>
+<div class="line">|--lib</div>
+<div class="line">|  |--MathUtilities.lib</div>
 </div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line"> (bash)</div>
-<div class="line">gcc -o bin/my_executable.exe src/my_code.c -Lbin -lmath_utilities</div>
+<div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -lMathUtilities</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
 <p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>
@@ -194,7 +178,7 @@ Interpolation</h2>
 <h3><a class="anchor" id="cubicspline2dinterpolant"></a>
 cubicSpline2DInterpolant</h3>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="group___interpolation.html#gababebbe204692721ab2a42ee40841caa">cubicSpline2DInterpolant</a>(<span class="keywordtype">double</span> t, <span class="keyword">const</span> <span class="keywordtype">double</span>* controlTimes, <span class="keyword">const</span> <span class="keywordtype">double</span>* controlPointsX, <span class="keyword">const</span> <span class="keywordtype">double</span>* controlPointsY, <span class="keywordtype">size_t</span>* segment, <span class="keyword">const</span> <span class="keywordtype">size_t</span> numPoints, CursorData* cursorData);</div>
-<div class="ttc" id="agroup___interpolation_html_gababebbe204692721ab2a42ee40841caa"><div class="ttname"><a href="group___interpolation.html#gababebbe204692721ab2a42ee40841caa">cubicSpline2DInterpolant</a></div><div class="ttdeci">void cubicSpline2DInterpolant(double t, const double *controlTimes, const double *controlPointsX, const double *controlPointsY, size_t *segment, const size_t numPoints, uint16_t *x, uint16_t *y)</div><div class="ttdoc">Perform cubic spline interpolation using de Boor's algorithm.</div><div class="ttdef"><b>Definition</b> math_utilities.c:54</div></div>
+<div class="ttc" id="agroup___interpolation_html_gababebbe204692721ab2a42ee40841caa"><div class="ttname"><a href="group___interpolation.html#gababebbe204692721ab2a42ee40841caa">cubicSpline2DInterpolant</a></div><div class="ttdeci">void cubicSpline2DInterpolant(double t, const double *controlTimes, const double *controlPointsX, const double *controlPointsY, size_t *segment, const size_t numPoints, uint16_t *x, uint16_t *y)</div><div class="ttdoc">Perform cubic spline interpolation using de Boor's algorithm.</div><div class="ttdef"><b>Definition</b> math_utilities.c:70</div></div>
 </div><!-- fragment --><p> <b>Inputs</b></p><ul>
 <li><code>t</code>: The parameter value for interpolation.</li>
 <li><code>controlTimes</code>: Pointer to an array of control times.</li>

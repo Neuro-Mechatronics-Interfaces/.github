@@ -26,8 +26,11 @@ var searchData=
   ['timestamp_23',['timestamp',['../struct_header_data.html#aad4af544ec73e58f9b45682f644a166a',1,'HeaderData']]],
   ['tl_24',['tl',['../struct_state_data.html#ae8f658dc0d5e5b40c1462b3e13335102',1,'StateData']]],
   ['to_20other_20projects_25',['Copying to Other Projects',['../index.html#copying-to-other-projects',1,'']]],
-  ['transition_26',['transition',['../struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647',1,'StateData']]],
-  ['transition_27',['Transition',['../group___enumerations.html#ga705b6d5c20f363b5e02982179fe730bf',1,'data_structures.h']]],
-  ['traveldistance_28',['travelDistance',['../struct_task_parameters.html#a27952cd199426534d126aa07675caa59',1,'TaskParameters']]],
-  ['ts_29',['ts',['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData']]]
+  ['total_5fattempts_26',['total_attempts',['../struct_trial_data.html#a22fcd09bc8ecbf2ab6808ba7ce00c579',1,'TrialData']]],
+  ['total_5fsuccesses_27',['total_successes',['../struct_trial_data.html#a80956b6599bf51ceb7aeaea303d84522',1,'TrialData']]],
+  ['transition_28',['transition',['../struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647',1,'StateData']]],
+  ['transition_29',['Transition',['../group___enumerations.html#ga705b6d5c20f363b5e02982179fe730bf',1,'data_structures.h']]],
+  ['traveldistance_30',['travelDistance',['../struct_task_parameters.html#a27952cd199426534d126aa07675caa59',1,'TaskParameters']]],
+  ['trialdata_31',['TrialData',['../struct_trial_data.html',1,'']]],
+  ['ts_32',['ts',['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData']]]
 ];

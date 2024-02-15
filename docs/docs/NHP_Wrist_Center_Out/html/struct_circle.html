@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NHP_Wrist_Center_Out<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">NHP_Wrist_Center_Out<span id="projectnumber">&#160;1.1.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application run on Jetson Nano 2, which renders uses `XLib11` libraries to render the white cursor and targets on a black background, moving the cursor and showing or hiding targets as a function of received UDP messages.</div>
   </td>
@@ -97,6 +97,11 @@ $(function(){initNavTree('struct_circle.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Circle Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a circle with coordinates, radius, and render flag.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;task_render.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -109,7 +114,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a60014e9f82ad6f1049e5121cfc4a3552" id="r_a60014e9f82ad6f1049e5121cfc4a3552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60014e9f82ad6f1049e5121cfc4a3552">render</a></td></tr>
 <tr class="separator:a60014e9f82ad6f1049e5121cfc4a3552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a circle with coordinates, radius, and render flag. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="a897ad7e556f1e90142093c69079d8b05" name="a897ad7e556f1e90142093c69079d8b05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a897ad7e556f1e90142093c69079d8b05">&#9670;&#160;</a></span>radius</h2>
 
@@ -121,6 +128,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The radius of the circle </p>
 
 </div>
 </div>
@@ -135,6 +143,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flag indicating whether to render the circle </p>
 
 </div>
 </div>
@@ -149,6 +158,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The x-coordinate of the circle's center </p>
 
 </div>
 </div>
@@ -163,6 +173,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The y-coordinate of the circle's center </p>
 
 </div>
 </div>

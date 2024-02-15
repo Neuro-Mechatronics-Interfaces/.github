@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tick_0',['tick',['../struct_thread_safe_cursor_args.html#af70e1b197051b120408e33c71bce2dc4',1,'ThreadSafeCursorArgs::tick'],['../struct_thread_safe_state_args.html#a7bf66b9050167f2af35c8cbda4be3c5f',1,'ThreadSafeStateArgs::tick']]]
+  ['update_0',['update',['../struct_thread_safe_cursor_args.html#a1fe1e9601eb1a6682bda8eb546273dcb',1,'ThreadSafeCursorArgs::update'],['../struct_thread_safe_state_args.html#a18a2b759aba4db5822a4c532c933b689',1,'ThreadSafeStateArgs::update']]]
 ];

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.2.2</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -103,6 +103,12 @@ $(function(){initNavTree('group___initialization.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga5629506ee11be923044eddc18ab14df2" id="r_ga5629506ee11be923044eddc18ab14df2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5629506ee11be923044eddc18ab14df2">initLogicFlags</a> (<a class="el" href="struct_flag_data.html">FlagData</a> *flags)</td></tr>
+<tr class="memdesc:ga5629506ee11be923044eddc18ab14df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logical flag structure.  <br /></td></tr>
+<tr class="separator:ga5629506ee11be923044eddc18ab14df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47845e3d13cbfb2673c2cb3749ed8729" id="r_ga47845e3d13cbfb2673c2cb3749ed8729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga47845e3d13cbfb2673c2cb3749ed8729">initTrialData</a> (<a class="el" href="struct_trial_data.html">TrialData</a> *trial)</td></tr>
+<tr class="memdesc:ga47845e3d13cbfb2673c2cb3749ed8729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the trial-data-tracking structure.  <br /></td></tr>
+<tr class="separator:ga47845e3d13cbfb2673c2cb3749ed8729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga74b3e3a180f252ea3315d2bede200ec0" id="r_ga74b3e3a180f252ea3315d2bede200ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga74b3e3a180f252ea3315d2bede200ec0">initStateData</a> (<a class="el" href="struct_state_data.html">StateData</a> *stateData)</td></tr>
 <tr class="memdesc:ga74b3e3a180f252ea3315d2bede200ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> structure with default values.  <br /></td></tr>
 <tr class="separator:ga74b3e3a180f252ea3315d2bede200ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +118,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaec0563041f2db766a375f855bc7df28e" id="r_gaec0563041f2db766a375f855bc7df28e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaec0563041f2db766a375f855bc7df28e">initRenderedCircleData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *data)</td></tr>
 <tr class="memdesc:gaec0563041f2db766a375f855bc7df28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <a class="el" href="struct_rendered_circle_data.html" title="Structure to store &lt;x,y&gt; coordinate and radius/whether to show circle.">RenderedCircleData</a> structure with default values.  <br /></td></tr>
 <tr class="separator:gaec0563041f2db766a375f855bc7df28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eda5c665c0273004859ac0bae51cd21" id="r_ga2eda5c665c0273004859ac0bae51cd21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2eda5c665c0273004859ac0bae51cd21">resetTrialData</a> (<a class="el" href="struct_trial_data.html">TrialData</a> *trialData)</td></tr>
+<tr class="memdesc:ga2eda5c665c0273004859ac0bae51cd21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the trial-data-tracking structure for a new set of trials.  <br /></td></tr>
+<tr class="separator:ga2eda5c665c0273004859ac0bae51cd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Initializers for each different type of state data structure. </p>
@@ -135,6 +144,31 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cursorData</td><td>Pointer to the <a class="el" href="struct_cursor_data.html" title="Structure to store timestamped cursor data.">CursorData</a> structure to be initialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5629506ee11be923044eddc18ab14df2" name="ga5629506ee11be923044eddc18ab14df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5629506ee11be923044eddc18ab14df2">&#9670;&#160;</a></span>initLogicFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initLogicFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_flag_data.html">FlagData</a> *</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the logical flag structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>Pointer to <a class="el" href="struct_flag_data.html" title="Data structure for tracking logical flags.">FlagData</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,6 +219,56 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stateData</td><td>Pointer to the <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> structure to be initialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga47845e3d13cbfb2673c2cb3749ed8729" name="ga47845e3d13cbfb2673c2cb3749ed8729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47845e3d13cbfb2673c2cb3749ed8729">&#9670;&#160;</a></span>initTrialData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initTrialData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trial_data.html">TrialData</a> *</td>          <td class="paramname"><span class="paramname"><em>trial</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the trial-data-tracking structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trial</td><td>Pointer to <a class="el" href="struct_trial_data.html" title="Data structure for tracking basic task success rates.">TrialData</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2eda5c665c0273004859ac0bae51cd21" name="ga2eda5c665c0273004859ac0bae51cd21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2eda5c665c0273004859ac0bae51cd21">&#9670;&#160;</a></span>resetTrialData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetTrialData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trial_data.html">TrialData</a> *</td>          <td class="paramname"><span class="paramname"><em>trialData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the trial-data-tracking structure for a new set of trials. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trialData</td><td>Pointer to <a class="el" href="struct_trial_data.html" title="Data structure for tracking basic task success rates.">TrialData</a> structure. </td></tr>
   </table>
   </dd>
 </dl>

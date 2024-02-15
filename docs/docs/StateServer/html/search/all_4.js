@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]],
-  ['getcurrenttimestamp_1',['getCurrentTimestamp',['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___external.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;ui.c']]],
-  ['getelapsedtime_2',['getElapsedTime',['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___external.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;ui.c']]]
+  ['flags_0',['flags',['../struct_thread_safe_args.html#a73b99d5c8f27ebe00308f802449cdb84',1,'ThreadSafeArgs']]],
+  ['functions_1',['Timing Functions',['../group___timing.html',1,'']]]
 ];

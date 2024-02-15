@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timing_20functions_0',['Timing Functions',['../group___timing.html',1,'']]]
+  ['handler_20threads_0',['Handler Threads',['../group___handlers.html',1,'']]]
 ];

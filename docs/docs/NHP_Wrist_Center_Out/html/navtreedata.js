@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "NHP_Wrist_Center_Out", "index.html", [
     [ "NHP Wrist Center-Out", "index.html", "index" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

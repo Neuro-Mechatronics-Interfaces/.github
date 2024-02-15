@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initializeudpclientsocket_0',['initializeUDPClientSocket',['../group___port_creation.html#gaea2e8433844f1fe499127f1ec0aa089b',1,'network.h']]],
-  ['initializeudpserversocket_1',['initializeUDPServerSocket',['../group___port_creation.html#ga886364c39477e6170b570627298b8b69',1,'network.h']]],
-  ['initializewinsock_2',['initializeWinsock',['../group___port_creation.html#ga5ee93bf6ea9d1f37eedb43e05ebf0157',1,'network.h']]]
+  ['gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]],
+  ['getcurrenttimestamp_1',['getCurrentTimestamp',['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;ui.c'],['../group___external.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c']]],
+  ['getelapsedtime_2',['getElapsedTime',['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;ui.c'],['../group___external.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c']]]
 ];

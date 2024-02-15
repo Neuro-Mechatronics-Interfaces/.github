@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dynamic_20link_20library_0',['Dynamic Link Library',['../index.html#dynamic-link-library',1,'']]]
+  ['external_20use_0',['For External Use',['../index.html#for-external-use',1,'']]]
 ];

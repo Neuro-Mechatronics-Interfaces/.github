@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../group___tests.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'tests.c']]],
-  ['mutex_1',['mutex',['../struct_thread_safe_cursor_args.html#a4c2a869c9476db61f692348b97932ed3',1,'ThreadSafeCursorArgs::mutex'],['../struct_thread_safe_state_args.html#aa9ae6a10fc9227ac29171170fa6513ad',1,'ThreadSafeStateArgs::mutex']]]
+  ['opencursorlogforreading_0',['openCursorLogForReading',['../group___logging.html#ga57aa8270fc3b3f8c41ff0875e9f5a3cb',1,'openCursorLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, uint16_t index, HeaderData *headerData, LoggerConfig *config):&#160;logger.c'],['../group___logging.html#ga57aa8270fc3b3f8c41ff0875e9f5a3cb',1,'openCursorLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, uint16_t index, HeaderData *headerData, LoggerConfig *config):&#160;logger.c']]],
+  ['openstatelogforreading_1',['openStateLogForReading',['../group___logging.html#gad789a3d04d13705f7f484d4b9670fbe8',1,'openStateLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, uint16_t index, HeaderData *headerData, LoggerConfig *config):&#160;logger.c'],['../group___logging.html#gad789a3d04d13705f7f484d4b9670fbe8',1,'openStateLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, uint16_t index, HeaderData *headerData, LoggerConfig *config):&#160;logger.c']]],
+  ['operation_2',['Command Line Operation',['../group___tests.html#command-line-operation',1,'']]]
 ];

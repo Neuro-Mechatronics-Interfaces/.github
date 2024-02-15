@@ -2,10 +2,6 @@ var NAVTREEINDEX0 =
 {
 "group___clean_up.html":[1,2],
 "group___clean_up.html#ga1af42a80836683ce46af20b6768565bb":[1,2,0],
-"group___enumerations.html":[1,3,0],
-"group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32":[1,3,0,0],
-"group___enumerations.html#gaf0d7df9ec131357b6a9c13bc7cc505cd":[1,3,0,2],
-"group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0":[1,3,0,1],
 "group___messaging.html":[1,1],
 "group___messaging.html#ga00dd7fbc289ed250870a37fb306a6080":[1,1,4],
 "group___messaging.html#ga199f827a3bea1e6c5b91c9fd7976074f":[1,1,3],
@@ -18,7 +14,6 @@ var NAVTREEINDEX0 =
 "group___port_creation.html#ga5ee93bf6ea9d1f37eedb43e05ebf0157":[1,0,2],
 "group___port_creation.html#ga886364c39477e6170b570627298b8b69":[1,0,1],
 "group___port_creation.html#gaea2e8433844f1fe499127f1ec0aa089b":[1,0,0],
-"group___timing.html":[1,3],
 "index.html":[],
 "index.html":[0],
 "index.html#compiling":[0,1],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['originaleditwndproc_0',['OriginalEditWndProc',['../group___external.html#ga5b9c577313e5ddddb2f5a53596c8f8e2',1,'OriginalEditWndProc:&#160;ui.c'],['../group___external.html#ga5b9c577313e5ddddb2f5a53596c8f8e2',1,'OriginalEditWndProc:&#160;ui.c']]]
+  ['libraries_0',['Libraries',['../index.html#libraries',1,'']]],
+  ['logging_1',['logging',['../struct_thread_safe_args.html#ace44d00a54a671d03312f50e12bc0361',1,'ThreadSafeArgs']]]
 ];

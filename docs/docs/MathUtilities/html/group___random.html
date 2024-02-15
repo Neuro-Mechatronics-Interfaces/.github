@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Common math functions shared across compiled apps at NML-NHP.</div>
   </td>
@@ -112,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gad7954e6a1b9ea073c7bc894dc5af85a9" id="r_gad7954e6a1b9ea073c7bc894dc5af85a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad7954e6a1b9ea073c7bc894dc5af85a9">random_int</a> (int min, int max)</td></tr>
 <tr class="memdesc:gad7954e6a1b9ea073c7bc894dc5af85a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random integer between min and max (inclusive).  <br /></td></tr>
 <tr class="separator:gad7954e6a1b9ea073c7bc894dc5af85a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d227e6e808be789c0391873ea7a4ec3" id="r_ga8d227e6e808be789c0391873ea7a4ec3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8d227e6e808be789c0391873ea7a4ec3">randomExponentialSeconds</a> (double minSeconds, double maxSeconds)</td></tr>
+<tr class="memdesc:ga8d227e6e808be789c0391873ea7a4ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random floating point value (seconds) between a minimum and maximum value.  <br /></td></tr>
+<tr class="separator:ga8d227e6e808be789c0391873ea7a4ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to random number generation. </p>
@@ -210,6 +213,38 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The generated random integer. </dd></dl>
+
+</div>
+</div>
+<a id="ga8d227e6e808be789c0391873ea7a4ec3" name="ga8d227e6e808be789c0391873ea7a4ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8d227e6e808be789c0391873ea7a4ec3">&#9670;&#160;</a></span>randomExponentialSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double randomExponentialSeconds </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>minSeconds</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>maxSeconds</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a random floating point value (seconds) between a minimum and maximum value. </p>
+<p>If the maximum is less than or equal to the minimum, returns the minimum value. Otherwise, computes an exponential distribution between the minimum and maximum values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minSeconds</td><td>The minimum value in seconds. </td></tr>
+    <tr><td class="paramname">maxSeconds</td><td>The maximum value in seconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random floating point value in seconds. </dd></dl>
 
 </div>
 </div>

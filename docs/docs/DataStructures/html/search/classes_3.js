@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['renderedcircledata_0',['RenderedCircleData',['../struct_rendered_circle_data.html',1,'']]]
+  ['loggerconfig_0',['LoggerConfig',['../struct_logger_config.html',1,'']]]
 ];

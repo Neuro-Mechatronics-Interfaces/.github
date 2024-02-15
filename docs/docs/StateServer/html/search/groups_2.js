@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['functions_0',['Timing Functions',['../group___timing.html',1,'']]]
+  ['data_20structures_0',['Data Structures',['../group___structures.html',1,'']]]
 ];
