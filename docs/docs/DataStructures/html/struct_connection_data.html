@@ -117,14 +117,52 @@ Data Fields</h2></td></tr>
 <tr class="separator:aaf874df631677312cd1668feadf7ebd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31249aa302a238786dd464c8697fdb63" id="r_a31249aa302a238786dd464c8697fdb63"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31249aa302a238786dd464c8697fdb63">server_ip</a> [16]</td></tr>
 <tr class="separator:a31249aa302a238786dd464c8697fdb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ddae04a27d5abed317706bc76da2c6" id="r_a83ddae04a27d5abed317706bc76da2c6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ddae04a27d5abed317706bc76da2c6">server_controller_port</a></td></tr>
-<tr class="separator:a83ddae04a27d5abed317706bc76da2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4563a96f2952aaa107521ac3c237e2fe" id="r_a4563a96f2952aaa107521ac3c237e2fe"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4563a96f2952aaa107521ac3c237e2fe">server_control_port</a></td></tr>
+<tr class="separator:a4563a96f2952aaa107521ac3c237e2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe551a8d0ec1982105ab40c3748ec0c7" id="r_afe551a8d0ec1982105ab40c3748ec0c7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe551a8d0ec1982105ab40c3748ec0c7">server_parameter_port</a></td></tr>
 <tr class="separator:afe551a8d0ec1982105ab40c3748ec0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea24363b708c7fef15a5d25863d78b21" id="r_aea24363b708c7fef15a5d25863d78b21"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea24363b708c7fef15a5d25863d78b21">server_cursor_port</a></td></tr>
+<tr class="separator:aea24363b708c7fef15a5d25863d78b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182323d8022f329161557b04bb22fce9" id="r_a182323d8022f329161557b04bb22fce9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182323d8022f329161557b04bb22fce9">server_target_port</a></td></tr>
+<tr class="separator:a182323d8022f329161557b04bb22fce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ead8c430344815ad50c7f90c01e032b" id="r_a6ead8c430344815ad50c7f90c01e032b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ead8c430344815ad50c7f90c01e032b">controller_ip</a> [16]</td></tr>
+<tr class="separator:a6ead8c430344815ad50c7f90c01e032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb96e803386833eaa639b19b8df5b98" id="r_a7eb96e803386833eaa639b19b8df5b98"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eb96e803386833eaa639b19b8df5b98">controller_request_port</a></td></tr>
+<tr class="separator:a7eb96e803386833eaa639b19b8df5b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structure related to connection IP and port addresses. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a6ead8c430344815ad50c7f90c01e032b" name="a6ead8c430344815ad50c7f90c01e032b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ead8c430344815ad50c7f90c01e032b">&#9670;&#160;</a></span>controller_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ConnectionData::controller_ip[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>IP address of device running the controller UI. </p>
+
+</div>
+</div>
+<a id="a7eb96e803386833eaa639b19b8df5b98" name="a7eb96e803386833eaa639b19b8df5b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb96e803386833eaa639b19b8df5b98">&#9670;&#160;</a></span>controller_request_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ConnectionData::controller_request_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Port on controller device for request messages. </p>
+
+</div>
+</div>
 <a id="a7f42345a56c391644d56be097d1bad1f" name="a7f42345a56c391644d56be097d1bad1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f42345a56c391644d56be097d1bad1f">&#9670;&#160;</a></span>render_cursor_port</h2>
 
@@ -200,18 +238,33 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a83ddae04a27d5abed317706bc76da2c6" name="a83ddae04a27d5abed317706bc76da2c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ddae04a27d5abed317706bc76da2c6">&#9670;&#160;</a></span>server_controller_port</h2>
+<a id="a4563a96f2952aaa107521ac3c237e2fe" name="a4563a96f2952aaa107521ac3c237e2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4563a96f2952aaa107521ac3c237e2fe">&#9670;&#160;</a></span>server_control_port</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t ConnectionData::server_controller_port</td>
+          <td class="memname">uint16_t ConnectionData::server_control_port</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Port on server device for controller messages. </p>
+
+</div>
+</div>
+<a id="aea24363b708c7fef15a5d25863d78b21" name="aea24363b708c7fef15a5d25863d78b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea24363b708c7fef15a5d25863d78b21">&#9670;&#160;</a></span>server_cursor_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ConnectionData::server_cursor_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Port on server device for cursor input messages. </p>
 
 </div>
 </div>
@@ -242,6 +295,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Port on server device for controller messages. </p>
+
+</div>
+</div>
+<a id="a182323d8022f329161557b04bb22fce9" name="a182323d8022f329161557b04bb22fce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182323d8022f329161557b04bb22fce9">&#9670;&#160;</a></span>server_target_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ConnectionData::server_target_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Port on server device for target input messages. </p>
 
 </div>
 </div>

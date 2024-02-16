@@ -103,18 +103,18 @@ $(function(){initNavTree('group___messaging.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaef58917ee4598b04663734b04c4d2b59" id="r_gaef58917ee4598b04663734b04c4d2b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaef58917ee4598b04663734b04c4d2b59">packTargetData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *target, int targetIndex, char *buffer, size_t bufferSize)</td></tr>
-<tr class="memdesc:gaef58917ee4598b04663734b04c4d2b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs target data into a string buffer for transmission.  <br /></td></tr>
-<tr class="separator:gaef58917ee4598b04663734b04c4d2b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaabee5cc0b17a2b35afea5221148fcc79" id="r_gaabee5cc0b17a2b35afea5221148fcc79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaabee5cc0b17a2b35afea5221148fcc79">unpackTargetData</a> (char *buffer, size_t receivedBytes, <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **targets)</td></tr>
-<tr class="memdesc:gaabee5cc0b17a2b35afea5221148fcc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks target data from a received message and updates the targets array.  <br /></td></tr>
-<tr class="separator:gaabee5cc0b17a2b35afea5221148fcc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga91d7b2c145ad0494bed52f8d2a4cc49e" id="r_ga91d7b2c145ad0494bed52f8d2a4cc49e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga91d7b2c145ad0494bed52f8d2a4cc49e">packCursorData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, char *buffer, size_t bufferSize)</td></tr>
-<tr class="memdesc:ga91d7b2c145ad0494bed52f8d2a4cc49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs cursor data into a string buffer for transmission.  <br /></td></tr>
-<tr class="separator:ga91d7b2c145ad0494bed52f8d2a4cc49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga129e0b3451062d328bdc85c98ecc1d7c" id="r_ga129e0b3451062d328bdc85c98ecc1d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga129e0b3451062d328bdc85c98ecc1d7c">unpackCursorData</a> (char *buffer, size_t receivedBytes, <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor)</td></tr>
-<tr class="memdesc:ga129e0b3451062d328bdc85c98ecc1d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks cursor data from a received message and updates the cursor position.  <br /></td></tr>
-<tr class="separator:ga129e0b3451062d328bdc85c98ecc1d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86c825b79ecab3799c1269714823ea93" id="r_ga86c825b79ecab3799c1269714823ea93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga86c825b79ecab3799c1269714823ea93">packTargetData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *target, uint8_t targetIndex, uint8_t *buffer)</td></tr>
+<tr class="memdesc:ga86c825b79ecab3799c1269714823ea93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs target data into a string buffer for transmission.  <br /></td></tr>
+<tr class="separator:ga86c825b79ecab3799c1269714823ea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31f918143aa1ba8581b48f05266008d3" id="r_ga31f918143aa1ba8581b48f05266008d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga31f918143aa1ba8581b48f05266008d3">unpackTargetData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **targets, const uint8_t *buffer)</td></tr>
+<tr class="memdesc:ga31f918143aa1ba8581b48f05266008d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks target data from a received message and updates the targets array.  <br /></td></tr>
+<tr class="separator:ga31f918143aa1ba8581b48f05266008d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67020fdca08f4acd44551c62ee266507" id="r_ga67020fdca08f4acd44551c62ee266507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67020fdca08f4acd44551c62ee266507">packCursorData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, uint8_t *buffer)</td></tr>
+<tr class="memdesc:ga67020fdca08f4acd44551c62ee266507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs cursor data into a string buffer for transmission.  <br /></td></tr>
+<tr class="separator:ga67020fdca08f4acd44551c62ee266507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cb295f43a17ea202990a094ab10d40a" id="r_ga2cb295f43a17ea202990a094ab10d40a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cb295f43a17ea202990a094ab10d40a">unpackCursorData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, const uint8_t *buffer)</td></tr>
+<tr class="memdesc:ga2cb295f43a17ea202990a094ab10d40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks cursor data from a received message and updates the cursor position.  <br /></td></tr>
+<tr class="separator:ga2cb295f43a17ea202990a094ab10d40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc63d963106381a45301ba76725e668a" id="r_gafc63d963106381a45301ba76725e668a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafc63d963106381a45301ba76725e668a">packParameters</a> (const <a class="el" href="struct_task_parameters.html">TaskParameters</a> *params, uint8_t *buffer)</td></tr>
 <tr class="memdesc:gafc63d963106381a45301ba76725e668a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct into a byte buffer.  <br /></td></tr>
 <tr class="separator:gafc63d963106381a45301ba76725e668a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,8 +131,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Message handler functions for serializing and desiarilizing byte messages. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga91d7b2c145ad0494bed52f8d2a4cc49e" name="ga91d7b2c145ad0494bed52f8d2a4cc49e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga91d7b2c145ad0494bed52f8d2a4cc49e">&#9670;&#160;</a></span>packCursorData()</h2>
+<a id="ga67020fdca08f4acd44551c62ee266507" name="ga67020fdca08f4acd44551c62ee266507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67020fdca08f4acd44551c62ee266507">&#9670;&#160;</a></span>packCursorData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,12 +145,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bufferSize</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -161,7 +156,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">cursor</td><td>Pointer to the <a class="el" href="struct_rendered_circle_data.html" title="Structure to store &lt;x,y&gt; coordinate and radius/whether to show circle.">RenderedCircleData</a> structure representing the cursor data. </td></tr>
     <tr><td class="paramname">buffer</td><td>Pointer to the buffer where the packed data will be stored. </td></tr>
-    <tr><td class="paramname">bufferSize</td><td>Size of the buffer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -228,8 +222,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaef58917ee4598b04663734b04c4d2b59" name="gaef58917ee4598b04663734b04c4d2b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaef58917ee4598b04663734b04c4d2b59">&#9670;&#160;</a></span>packTargetData()</h2>
+<a id="ga86c825b79ecab3799c1269714823ea93" name="ga86c825b79ecab3799c1269714823ea93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86c825b79ecab3799c1269714823ea93">&#9670;&#160;</a></span>packTargetData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,36 +236,31 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em>, </span></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bufferSize</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Packs target data into a string buffer for transmission. </p>
+<p>This function packs messages in the format "x,y,radius,render,targetIndex".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target</td><td>Pointer to the <a class="el" href="struct_rendered_circle_data.html" title="Structure to store &lt;x,y&gt; coordinate and radius/whether to show circle.">RenderedCircleData</a> structure representing the target data. </td></tr>
     <tr><td class="paramname">targetIndex</td><td>Index of the target. </td></tr>
     <tr><td class="paramname">buffer</td><td>Pointer to the buffer where the packed data will be stored. </td></tr>
-    <tr><td class="paramname">bufferSize</td><td>Size of the buffer. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ga129e0b3451062d328bdc85c98ecc1d7c" name="ga129e0b3451062d328bdc85c98ecc1d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga129e0b3451062d328bdc85c98ecc1d7c">&#9670;&#160;</a></span>unpackCursorData()</h2>
+<a id="ga2cb295f43a17ea202990a094ab10d40a" name="ga2cb295f43a17ea202990a094ab10d40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2cb295f43a17ea202990a094ab10d40a">&#9670;&#160;</a></span>unpackCursorData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,17 +268,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void unpackCursorData </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
+          <td class="paramtype"><a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *</td>          <td class="paramname"><span class="paramname"><em>cursor</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>receivedBytes</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *</td>          <td class="paramname"><span class="paramname"><em>cursor</em></span>&#160;)</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -298,9 +282,8 @@ Functions</h2></td></tr>
 <p>This function assumes that the received message is in the format "x,y".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>Pointer to the buffer containing the received message. </td></tr>
-    <tr><td class="paramname">receivedBytes</td><td>Number of bytes received. </td></tr>
     <tr><td class="paramname">cursor</td><td>Pointer to the <a class="el" href="struct_rendered_circle_data.html" title="Structure to store &lt;x,y&gt; coordinate and radius/whether to show circle.">RenderedCircleData</a> structure representing the cursor. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer containing the received message. </td></tr>
   </table>
   </dd>
 </dl>
@@ -367,8 +350,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaabee5cc0b17a2b35afea5221148fcc79" name="gaabee5cc0b17a2b35afea5221148fcc79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaabee5cc0b17a2b35afea5221148fcc79">&#9670;&#160;</a></span>unpackTargetData()</h2>
+<a id="ga31f918143aa1ba8581b48f05266008d3" name="ga31f918143aa1ba8581b48f05266008d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31f918143aa1ba8581b48f05266008d3">&#9670;&#160;</a></span>unpackTargetData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,28 +359,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void unpackTargetData </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
+          <td class="paramtype"><a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **</td>          <td class="paramname"><span class="paramname"><em>targets</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>receivedBytes</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **</td>          <td class="paramname"><span class="paramname"><em>targets</em></span>&#160;)</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Unpacks target data from a received message and updates the targets array. </p>
-<p>This function assumes that the received message is in the format "x,y,targetIndex,render".</p>
+<p>This function assumes that the received message is in the format "x,y,radius,render,targetIndex".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>Pointer to the buffer containing the received message. </td></tr>
-    <tr><td class="paramname">receivedBytes</td><td>Number of bytes received. </td></tr>
     <tr><td class="paramname">targets</td><td>Array of pointers to <a class="el" href="struct_rendered_circle_data.html" title="Structure to store &lt;x,y&gt; coordinate and radius/whether to show circle.">RenderedCircleData</a> structures representing the targets. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer containing the received message. </td></tr>
   </table>
   </dd>
 </dl>

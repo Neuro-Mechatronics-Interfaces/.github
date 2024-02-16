@@ -106,12 +106,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga199f827a3bea1e6c5b91c9fd7976074f" id="r_ga199f827a3bea1e6c5b91c9fd7976074f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga199f827a3bea1e6c5b91c9fd7976074f">sendMessage</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, char *message)</td></tr>
 <tr class="memdesc:ga199f827a3bea1e6c5b91c9fd7976074f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
 <tr class="separator:ga199f827a3bea1e6c5b91c9fd7976074f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2116eb432a95e31fabf2b5cd18f8a223" id="r_ga2116eb432a95e31fabf2b5cd18f8a223"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2116eb432a95e31fabf2b5cd18f8a223">sendCursorPosition</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, uint16_t x, uint16_t y, uint16_t r, int renderFlag)</td></tr>
-<tr class="memdesc:ga2116eb432a95e31fabf2b5cd18f8a223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
-<tr class="separator:ga2116eb432a95e31fabf2b5cd18f8a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga32f623c1ae4c3afa23a6ea29bb0366a2" id="r_ga32f623c1ae4c3afa23a6ea29bb0366a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga32f623c1ae4c3afa23a6ea29bb0366a2">sendTargetUpdate</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, uint16_t x, uint16_t y, uint16_t r, int renderFlag, int targetIndex)</td></tr>
-<tr class="memdesc:ga32f623c1ae4c3afa23a6ea29bb0366a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends target update information over UDP socket.  <br /></td></tr>
-<tr class="separator:ga32f623c1ae4c3afa23a6ea29bb0366a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2cdc527f0e86170706a246658b563c9" id="r_gab2cdc527f0e86170706a246658b563c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab2cdc527f0e86170706a246658b563c9">sendCursorPosition</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, uint16_t x, uint16_t y, uint8_t r, uint8_t renderFlag)</td></tr>
+<tr class="memdesc:gab2cdc527f0e86170706a246658b563c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends cursor position over UDP socket.  <br /></td></tr>
+<tr class="separator:gab2cdc527f0e86170706a246658b563c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8682d0f34b1040719183939afa99a018" id="r_ga8682d0f34b1040719183939afa99a018"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8682d0f34b1040719183939afa99a018">sendTargetUpdate</a> (SOCKET udpSocket, struct sockaddr_in serverAddr, uint16_t x, uint16_t y, uint8_t r, uint8_t renderFlag, uint8_t targetIndex)</td></tr>
+<tr class="memdesc:ga8682d0f34b1040719183939afa99a018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends target update information over UDP socket.  <br /></td></tr>
+<tr class="separator:ga8682d0f34b1040719183939afa99a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82017dab2a76199e764ff280d806e981" id="r_ga82017dab2a76199e764ff280d806e981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga82017dab2a76199e764ff280d806e981">receiveCursorMessage</a> (SOCKET udpSocket, RenderedCircleData *cursor)</td></tr>
 <tr class="memdesc:ga82017dab2a76199e764ff280d806e981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives cursor message over UDP socket.  <br /></td></tr>
 <tr class="separator:ga82017dab2a76199e764ff280d806e981"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,8 +184,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2116eb432a95e31fabf2b5cd18f8a223" name="ga2116eb432a95e31fabf2b5cd18f8a223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2116eb432a95e31fabf2b5cd18f8a223">&#9670;&#160;</a></span>sendCursorPosition()</h2>
+<a id="gab2cdc527f0e86170706a246658b563c9" name="gab2cdc527f0e86170706a246658b563c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2cdc527f0e86170706a246658b563c9">&#9670;&#160;</a></span>sendCursorPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,12 +213,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>renderFlag</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>renderFlag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -278,8 +278,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga32f623c1ae4c3afa23a6ea29bb0366a2" name="ga32f623c1ae4c3afa23a6ea29bb0366a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga32f623c1ae4c3afa23a6ea29bb0366a2">&#9670;&#160;</a></span>sendTargetUpdate()</h2>
+<a id="ga8682d0f34b1040719183939afa99a018" name="ga8682d0f34b1040719183939afa99a018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8682d0f34b1040719183939afa99a018">&#9670;&#160;</a></span>sendTargetUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,17 +307,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>renderFlag</em>, </span></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>renderFlag</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

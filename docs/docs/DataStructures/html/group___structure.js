@@ -11,17 +11,22 @@ var group___structure =
       [ "new_parameters", "struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361", null ],
       [ "new_position", "struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18", null ],
       [ "new_set", "struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f", null ],
-      [ "new_subject", "struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15", null ]
+      [ "new_subject", "struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15", null ],
+      [ "new_targets", "struct_flag_data.html#a734bef03f7acebc3195d357540a82053", null ]
     ] ],
     [ "ConnectionData", "struct_connection_data.html", [
+      [ "controller_ip", "struct_connection_data.html#a6ead8c430344815ad50c7f90c01e032b", null ],
+      [ "controller_request_port", "struct_connection_data.html#a7eb96e803386833eaa639b19b8df5b98", null ],
       [ "render_cursor_port", "struct_connection_data.html#a7f42345a56c391644d56be097d1bad1f", null ],
       [ "render_ip", "struct_connection_data.html#a37ea5366afe50b4f97b19e71af6f41f7", null ],
       [ "render_target_port", "struct_connection_data.html#a99d11f5cd801f45f266b32a7a5a3e27b", null ],
       [ "reward_ip", "struct_connection_data.html#a171833c6e98368e9a327adc7411ee94b", null ],
       [ "reward_port", "struct_connection_data.html#aaf874df631677312cd1668feadf7ebd7", null ],
-      [ "server_controller_port", "struct_connection_data.html#a83ddae04a27d5abed317706bc76da2c6", null ],
+      [ "server_control_port", "struct_connection_data.html#a4563a96f2952aaa107521ac3c237e2fe", null ],
+      [ "server_cursor_port", "struct_connection_data.html#aea24363b708c7fef15a5d25863d78b21", null ],
       [ "server_ip", "struct_connection_data.html#a31249aa302a238786dd464c8697fdb63", null ],
-      [ "server_parameter_port", "struct_connection_data.html#afe551a8d0ec1982105ab40c3748ec0c7", null ]
+      [ "server_parameter_port", "struct_connection_data.html#afe551a8d0ec1982105ab40c3748ec0c7", null ],
+      [ "server_target_port", "struct_connection_data.html#a182323d8022f329161557b04bb22fce9", null ]
     ] ],
     [ "TaskParameters", "struct_task_parameters.html", [
       [ "bribeVolume", "struct_task_parameters.html#aa2861031e70b44d9c4c06cd3aac8cd4a", null ],
