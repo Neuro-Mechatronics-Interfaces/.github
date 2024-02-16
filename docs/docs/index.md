@@ -19,10 +19,12 @@ This page contains links to automatically-generated documentation produced using
 
 #### Libraries ####
 * [`DataStructures`]({{site.baseurl}}/docs/DataStructures/html/index.html) - Compiled c-library with common data structures for the NHP wrist center-out and other tasks.  
+* [`LogUtilities`]({{site.baseurl}}/docs/LogUtilities/html/index.html) - Compiled c-library with some useful logging utility functions.  
 * [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`NetworkUtilities`]({{site.baseurl}}/docs/NetworkUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
 * [`SoundSynth`]({{site.baseurl}}/docs/SoundSynth/html/index.html) - Compiled c-library with some compiled applications for synthesizing sinusoidal tones and playback on Windows devices.  
-* [`TaskParameters`]({{site.baseurl}}/docs/TaskParameters/html/index.html) - Compiled c-library with basic functions and data structure definitions for handling parameters.  
+* [`TaskParameters`]({{site.baseurl}}/docs/TaskParameters/html/index.html) - Compiled c-library with basic functions and data structure definitions for handling parameters. 
+* [`TimingUtilities`]({{site.baseurl}}/docs/TimingUtilities/html/index.html) - Compiled c-library with basic utility functions for timing with higher precision than time.h. 
 
 ### Contributing ###
 If you are contributing code and would like to use Doxygen to help maintain the documentation, then follow these steps:  

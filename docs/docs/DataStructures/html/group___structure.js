@@ -14,57 +14,42 @@ var group___structure =
       [ "new_subject", "struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15", null ],
       [ "new_targets", "struct_flag_data.html#a734bef03f7acebc3195d357540a82053", null ]
     ] ],
-    [ "ConnectionData", "struct_connection_data.html", [
-      [ "controller_ip", "struct_connection_data.html#a6ead8c430344815ad50c7f90c01e032b", null ],
-      [ "controller_request_port", "struct_connection_data.html#a7eb96e803386833eaa639b19b8df5b98", null ],
-      [ "render_cursor_port", "struct_connection_data.html#a7f42345a56c391644d56be097d1bad1f", null ],
-      [ "render_ip", "struct_connection_data.html#a37ea5366afe50b4f97b19e71af6f41f7", null ],
-      [ "render_target_port", "struct_connection_data.html#a99d11f5cd801f45f266b32a7a5a3e27b", null ],
-      [ "reward_ip", "struct_connection_data.html#a171833c6e98368e9a327adc7411ee94b", null ],
-      [ "reward_port", "struct_connection_data.html#aaf874df631677312cd1668feadf7ebd7", null ],
-      [ "server_control_port", "struct_connection_data.html#a4563a96f2952aaa107521ac3c237e2fe", null ],
-      [ "server_cursor_port", "struct_connection_data.html#aea24363b708c7fef15a5d25863d78b21", null ],
-      [ "server_ip", "struct_connection_data.html#a31249aa302a238786dd464c8697fdb63", null ],
-      [ "server_parameter_port", "struct_connection_data.html#afe551a8d0ec1982105ab40c3748ec0c7", null ],
-      [ "server_target_port", "struct_connection_data.html#a182323d8022f329161557b04bb22fce9", null ]
+    [ "ValueParameters", "struct_value_parameters.html", [
+      [ "bribeVolume", "struct_value_parameters.html#a03a3c4ad639b293aa70730e1cdc444ba", null ],
+      [ "cursorRadius", "struct_value_parameters.html#a0f3c0aeaa9ca05b530b87ececaa8cfc8", null ],
+      [ "fixedMOVETime", "struct_value_parameters.html#a8312cd08e77143fc208a717f17f26408", null ],
+      [ "fixedOVERSHOOTTime", "struct_value_parameters.html#a776df6a3946539bd049e04bf314b2852", null ],
+      [ "fixedREACTTime", "struct_value_parameters.html#ae0b51f508cfe9d1cdb72a1aeff2a49e6", null ],
+      [ "fixedT2HOLD1Time", "struct_value_parameters.html#a5b8eb8d6d8106b1837fe266134195eed", null ],
+      [ "fixedT2HOLD2Time", "struct_value_parameters.html#aba96336f93b431c63629856b25f089a0", null ],
+      [ "lineWidth", "struct_value_parameters.html#aa49b9d59b397213404609f64af69eae2", null ],
+      [ "maxOvershoots", "struct_value_parameters.html#ab597849b4572ebc3533303278b6488e5", null ],
+      [ "maxT1HOLD1Time", "struct_value_parameters.html#ac4e3d3e865be86698b2ecaa5dcb4aea7", null ],
+      [ "maxT1HOLD2Time", "struct_value_parameters.html#a4e61cf100fea3aae9052df67e3060cbd", null ],
+      [ "maxTrials", "struct_value_parameters.html#a352443d54efffff19126ef9b9bbdfeb0", null ],
+      [ "minT1HOLD1Time", "struct_value_parameters.html#ad506d07f40d9ac49217d0d9b04f24c70", null ],
+      [ "minT1HOLD2Time", "struct_value_parameters.html#ae0e41509cdd09a0584f1affd078144a5", null ],
+      [ "mode", "struct_value_parameters.html#a3b54930a32bcc296aae77e7b197dfc44", null ],
+      [ "nTrialsBeforeIncrease", "struct_value_parameters.html#acfadad07281f03316862334d1910c945", null ],
+      [ "orientation", "struct_value_parameters.html#a2ea304a26f3c05179351ffba8b282f55", null ],
+      [ "rewardVolume", "struct_value_parameters.html#a4607c3931e81bc9d5917617b2f76508f", null ],
+      [ "rewardVolumeIncrease", "struct_value_parameters.html#a001fe471cb6695e7e665f7173adf386a", null ],
+      [ "targetRadius", "struct_value_parameters.html#af09ce344b7a4f0198c14525b2718f69f", null ],
+      [ "travelDistance", "struct_value_parameters.html#a25ebb93d3210925cae33a3d240502b72", null ],
+      [ "xGain", "struct_value_parameters.html#a7a1cfc224f2051fdd80f11923d8f39d2", null ],
+      [ "yGain", "struct_value_parameters.html#ab70550c8bd24fbaa680c4c77d4641f20", null ]
     ] ],
     [ "TaskParameters", "struct_task_parameters.html", [
-      [ "bribeVolume", "struct_task_parameters.html#aa2861031e70b44d9c4c06cd3aac8cd4a", null ],
-      [ "cursorRadius", "struct_task_parameters.html#a4b2d4d33d303bef5ec1ad6b121b7bd10", null ],
-      [ "fixedMOVETime", "struct_task_parameters.html#a88d5448d1722cdc9534043817ffd1d38", null ],
-      [ "fixedOVERSHOOTTime", "struct_task_parameters.html#a8d162c7a5ff7f48a4826baa14ced77eb", null ],
-      [ "fixedREACTTime", "struct_task_parameters.html#aebd71045e3c698a42fd58a9705448747", null ],
-      [ "fixedT2HOLD1Time", "struct_task_parameters.html#a6c1d593d056ac57e8bec54f9901bc224", null ],
-      [ "fixedT2HOLD2Time", "struct_task_parameters.html#a1aafa2055db19c9e2559e641e319d2a8", null ],
-      [ "lineWidth", "struct_task_parameters.html#ae1be65200ef6037169af9341e7cdee70", null ],
-      [ "maxOvershoots", "struct_task_parameters.html#af2909757844ba4e333738ef19b8ec1ca", null ],
-      [ "maxT1HOLD1Time", "struct_task_parameters.html#a1690aa4eca76f9ca6171514f050358c0", null ],
-      [ "maxT1HOLD2Time", "struct_task_parameters.html#a73c5f75f74f609bf9bee5b4f145bc136", null ],
-      [ "maxTrials", "struct_task_parameters.html#a22fae62bf202816b45c9b0a8ee952614", null ],
-      [ "minT1HOLD1Time", "struct_task_parameters.html#ae7988958b1cc0e113a5091ecd854f9d7", null ],
-      [ "minT1HOLD2Time", "struct_task_parameters.html#af5bbdce44a2e47fc4f7fbf38df8518c8", null ],
-      [ "mode", "struct_task_parameters.html#a6e044b35908f9b1330a045bb0e4bbb14", null ],
-      [ "nTrialsBeforeIncrease", "struct_task_parameters.html#a248297217d1f14acb6f3369b5ad200d7", null ],
-      [ "orientation", "struct_task_parameters.html#aafd3f3266a228d34eefce8e672752a95", null ],
-      [ "rewardVolume", "struct_task_parameters.html#a987a3adbcfe06f2a6cb530bb50611d51", null ],
-      [ "rewardVolumeIncrease", "struct_task_parameters.html#aafceb2321ae9b37f24736f52844219cc", null ],
       [ "subject", "struct_task_parameters.html#a38911d7033193772a383369314e67a64", null ],
       [ "tag", "struct_task_parameters.html#a1ea9fa2e2673909de0d47223d17ed2ae", null ],
-      [ "targetRadius", "struct_task_parameters.html#a74fc0a103a3f8cba0b56b391035d91f2", null ],
-      [ "travelDistance", "struct_task_parameters.html#ab94f99d2133081ace7ff1aa115c71b67", null ],
-      [ "xGain", "struct_task_parameters.html#aea40bb962d280fab7b0390ca9f5adb08", null ],
-      [ "yGain", "struct_task_parameters.html#aefc3aaf22292524de8a29ea4077e2178", null ]
-    ] ],
-    [ "LoggerConfig", "struct_logger_config.html", [
-      [ "logReadFolder", "struct_logger_config.html#a4fbe73cd41a6d6bd5e9eb7a46d1581cf", null ],
-      [ "logSaveFolder", "struct_logger_config.html#a1cbe9147ade96fd8ddb049e224f98cde", null ]
+      [ "value", "struct_task_parameters.html#afabedee477daa7063f5e27f5e463ae05", null ]
     ] ],
     [ "CursorData", "struct_cursor_data.html", [
       [ "x", "struct_cursor_data.html#a88e65a8e2e027ffb5befb23db6387527", null ],
       [ "y", "struct_cursor_data.html#ae3250f9b991bb46541bf9861da5a7630", null ]
     ] ],
     [ "StateData", "struct_state_data.html", [
-      [ "cursor", "struct_state_data.html#afe08168370c8df46524090e5d865a552", null ],
+      [ "cursor", "struct_state_data.html#a65d2c24d520c3129da24de4ef3d316f4", null ],
       [ "direction", "struct_state_data.html#adb44ba8486e2cd6839cf1d30d66b3d09", null ],
       [ "orientation", "struct_state_data.html#a043ee18ae314c12cce0603b0f4789dfc", null ],
       [ "state", "struct_state_data.html#a63143802109c13ece432c04705084c65", null ],
@@ -78,12 +63,5 @@ var group___structure =
       [ "render", "struct_rendered_circle_data.html#acfb1dbaf2a9e52222a9b40fd936791bc", null ],
       [ "x", "struct_rendered_circle_data.html#a8bd3e58d8a750820c5556df44220b630", null ],
       [ "y", "struct_rendered_circle_data.html#a9b7f7de7477356fa52b596be61f17c76", null ]
-    ] ],
-    [ "HeaderData", "struct_header_data.html", [
-      [ "chunkSize", "struct_header_data.html#a48a1a9dd8fd3ed9037e71620be4b6e0a", null ],
-      [ "logIndex", "struct_header_data.html#a8642af9f7b14f997da389cdb44c36fcf", null ],
-      [ "logType", "struct_header_data.html#a8eed32bdc52ff438fc19f619e9d2143c", null ],
-      [ "logVersion", "struct_header_data.html#a6a10936e7958a923656398e86222fd8d", null ],
-      [ "timestamp", "struct_header_data.html#aad4af544ec73e58f9b45682f644a166a", null ]
     ] ]
 ];

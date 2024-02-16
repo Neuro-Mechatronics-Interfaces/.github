@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bribevolume_0',['bribeVolume',['../struct_task_parameters.html#aa2861031e70b44d9c4c06cd3aac8cd4a',1,'TaskParameters']]]
+  ['bribevolume_0',['bribeVolume',['../struct_value_parameters.html#a03a3c4ad639b293aa70730e1cdc444ba',1,'ValueParameters']]]
 ];

@@ -20,19 +20,10 @@
     <loc>https://code.nml.wtf/docs/group___utilities.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/struct_connection_data.html</loc>
-  </url>
-  <url>
     <loc>https://code.nml.wtf/docs/struct_cursor_data.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_flag_data.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_header_data.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/struct_logger_config.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_rendered_circle_data.html</loc>
@@ -45,6 +36,9 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_trial_data.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/struct_value_parameters.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/dir_68267d1309a1af8e8297ef4c3efbcdba.html</loc>
@@ -105,6 +99,12 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions_vars.html</loc>

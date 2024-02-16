@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fixedmovetime_0',['fixedMOVETime',['../struct_task_parameters.html#a88d5448d1722cdc9534043817ffd1d38',1,'TaskParameters']]],
-  ['fixedovershoottime_1',['fixedOVERSHOOTTime',['../struct_task_parameters.html#a8d162c7a5ff7f48a4826baa14ced77eb',1,'TaskParameters']]],
-  ['fixedreacttime_2',['fixedREACTTime',['../struct_task_parameters.html#aebd71045e3c698a42fd58a9705448747',1,'TaskParameters']]],
-  ['fixedt2hold1time_3',['fixedT2HOLD1Time',['../struct_task_parameters.html#a6c1d593d056ac57e8bec54f9901bc224',1,'TaskParameters']]],
-  ['fixedt2hold2time_4',['fixedT2HOLD2Time',['../struct_task_parameters.html#a1aafa2055db19c9e2559e641e319d2a8',1,'TaskParameters']]]
+  ['fixedmovetime_0',['fixedMOVETime',['../struct_value_parameters.html#a8312cd08e77143fc208a717f17f26408',1,'ValueParameters']]],
+  ['fixedovershoottime_1',['fixedOVERSHOOTTime',['../struct_value_parameters.html#a776df6a3946539bd049e04bf314b2852',1,'ValueParameters']]],
+  ['fixedreacttime_2',['fixedREACTTime',['../struct_value_parameters.html#ae0b51f508cfe9d1cdb72a1aeff2a49e6',1,'ValueParameters']]],
+  ['fixedt2hold1time_3',['fixedT2HOLD1Time',['../struct_value_parameters.html#a5b8eb8d6d8106b1837fe266134195eed',1,'ValueParameters']]],
+  ['fixedt2hold2time_4',['fixedT2HOLD2Time',['../struct_value_parameters.html#aba96336f93b431c63629856b25f089a0',1,'ValueParameters']]]
 ];

@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['maxovershoots_0',['maxOvershoots',['../struct_task_parameters.html#af2909757844ba4e333738ef19b8ec1ca',1,'TaskParameters']]],
-  ['maxt1hold1time_1',['maxT1HOLD1Time',['../struct_task_parameters.html#a1690aa4eca76f9ca6171514f050358c0',1,'TaskParameters']]],
-  ['maxt1hold2time_2',['maxT1HOLD2Time',['../struct_task_parameters.html#a73c5f75f74f609bf9bee5b4f145bc136',1,'TaskParameters']]],
-  ['maxtrials_3',['maxTrials',['../struct_task_parameters.html#a22fae62bf202816b45c9b0a8ee952614',1,'TaskParameters']]],
-  ['message_20formatting_4',['Message Formatting',['../group___messaging.html',1,'']]],
-  ['mid_5',['MID',['../group___enumerations.html#gga871118a09520247c78a71ecd7b0abd58a3bc56824c91d97fcda36dc99687bb236',1,'data_structures.h']]],
-  ['mint1hold1time_6',['minT1HOLD1Time',['../struct_task_parameters.html#ae7988958b1cc0e113a5091ecd854f9d7',1,'TaskParameters']]],
-  ['mint1hold2time_7',['minT1HOLD2Time',['../struct_task_parameters.html#af5bbdce44a2e47fc4f7fbf38df8518c8',1,'TaskParameters']]],
-  ['mode_8',['mode',['../struct_task_parameters.html#a6e044b35908f9b1330a045bb0e4bbb14',1,'TaskParameters']]],
-  ['mode_9',['Mode',['../group___enumerations.html#ga46c8a310cf4c094f8c80e1cb8dc1f911',1,'data_structures.h']]]
+  ['new_5fparameters_0',['new_parameters',['../struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361',1,'FlagData']]],
+  ['new_5fposition_1',['new_position',['../struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18',1,'FlagData']]],
+  ['new_5fset_2',['new_set',['../struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f',1,'FlagData']]],
+  ['new_5fsubject_3',['new_subject',['../struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15',1,'FlagData']]],
+  ['new_5ftargets_4',['new_targets',['../struct_flag_data.html#a734bef03f7acebc3195d357540a82053',1,'FlagData']]],
+  ['note_20about_20gcc_5',['Note about gcc',['../index.html#note-about-gcc',1,'']]],
+  ['ntrialsbeforeincrease_6',['nTrialsBeforeIncrease',['../struct_value_parameters.html#acfadad07281f03316862334d1910c945',1,'ValueParameters']]]
 ];

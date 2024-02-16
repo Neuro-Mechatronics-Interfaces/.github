@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['renderedcircledata_0',['RenderedCircleData',['../struct_rendered_circle_data.html',1,'']]]
+  ['taskparameters_0',['TaskParameters',['../struct_task_parameters.html',1,'']]],
+  ['trialdata_1',['TrialData',['../struct_trial_data.html',1,'']]]
 ];

@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['new_5fparameters_0',['new_parameters',['../struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361',1,'FlagData']]],
-  ['new_5fposition_1',['new_position',['../struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18',1,'FlagData']]],
-  ['new_5fset_2',['new_set',['../struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f',1,'FlagData']]],
-  ['new_5fsubject_3',['new_subject',['../struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15',1,'FlagData']]],
-  ['new_5ftargets_4',['new_targets',['../struct_flag_data.html#a734bef03f7acebc3195d357540a82053',1,'FlagData']]],
-  ['note_20about_20gcc_5',['Note about gcc',['../index.html#note-about-gcc',1,'']]],
-  ['ntrialsbeforeincrease_6',['nTrialsBeforeIncrease',['../struct_task_parameters.html#a248297217d1f14acb6f3369b5ad200d7',1,'TaskParameters']]]
+  ['orientation_0',['orientation',['../struct_value_parameters.html#a2ea304a26f3c05179351ffba8b282f55',1,'ValueParameters::orientation'],['../struct_state_data.html#a043ee18ae314c12cce0603b0f4789dfc',1,'StateData::orientation']]],
+  ['orientation_1',['Orientation',['../group___enumerations.html#ga871118a09520247c78a71ecd7b0abd58',1,'data_structures.h']]],
+  ['other_20projects_2',['Copying to Other Projects',['../index.html#copying-to-other-projects',1,'']]],
+  ['out_5fto_5fin_3',['OUT_TO_IN',['../group___enumerations.html#gga224b9163917ac32fc95a60d8c1eec3aaa59195444af10b0d58c531697e3795877',1,'data_structures.h']]],
+  ['overshoot_4',['OVERSHOOT',['../group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5',1,'data_structures.h']]]
 ];

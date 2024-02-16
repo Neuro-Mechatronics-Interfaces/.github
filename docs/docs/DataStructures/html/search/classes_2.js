@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['headerdata_0',['HeaderData',['../struct_header_data.html',1,'']]]
+  ['renderedcircledata_0',['RenderedCircleData',['../struct_rendered_circle_data.html',1,'']]]
 ];
