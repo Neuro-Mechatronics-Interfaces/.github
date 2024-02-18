@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['gcc_0',['Note about gcc',['../index.html#note-about-gcc',1,'']]],
-  ['generatesinwave_1',['generateSinWave',['../group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328',1,'generateSinWave(short *buffer, double frequency, double volume, int sampleRate, int numSamples):&#160;wsoundsynth.c'],['../group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328',1,'generateSinWave(short *buffer, double frequency, double volume, int sampleRate, int numSamples):&#160;wsoundsynth.c']]]
+  ['f_0',['f',['../struct_audio_buffer_data.html#abbbbe2c0a44d84cc6bbed8871fd7e52a',1,'AudioBufferData']]],
+  ['for_20external_20use_1',['For External Use',['../index.html#for-external-use',1,'']]],
+  ['format_2',['format',['../struct_audio_buffer_data.html#a6b9545eb73f69dc3360d7eeae61f2505',1,'AudioBufferData']]]
 ];

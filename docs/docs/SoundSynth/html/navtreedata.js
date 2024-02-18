@@ -26,13 +26,21 @@ var NAVTREE =
 [
   [ "SoundSynth", "index.html", [
     [ "Sound Synthesizer", "index.html", "index" ],
-    [ "Topics", "topics.html", "topics" ]
+    [ "Topics", "topics.html", "topics" ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"group___implementation.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

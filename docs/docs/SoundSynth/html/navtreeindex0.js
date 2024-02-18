@@ -1,9 +1,18 @@
 var NAVTREEINDEX0 =
 {
+"annotated.html":[2,0],
+"classes.html":[2,1],
+"functions.html":[2,2,0],
+"functions_vars.html":[2,2,1],
 "group___implementation.html":[1,1],
-"group___implementation.html#ga236f8b03f36ea9f85ee07ae1d153f162":[1,1,0],
+"group___implementation.html#ga06b1b273b6da713edca0ba502a615b42":[1,1,3],
+"group___implementation.html#gabe0ac0e88aaac534c600a9ed39bfc03b":[1,1,1],
+"group___implementation.html#gad48e2184a95b4720d328cee5111c430e":[1,1,0],
+"group___implementation.html#gae905373d57ee508fa83ec8225e14526e":[1,1,2],
 "group___synthesis.html":[1,0],
 "group___synthesis.html#ga0e0c8dd4fd8875c0f665967d88706328":[1,0,0],
+"group___synthesis.html#ga1288c4e4653acf543ed8ad7c4a69c15e":[1,0,2],
+"group___synthesis.html#ga9dcb2fde07c370120b43591214aa1bed":[1,0,1],
 "index.html":[],
 "index.html":[0],
 "index.html#compiling":[0,1],
@@ -14,5 +23,12 @@ var NAVTREEINDEX0 =
 "index.html#note-about-gcc":[0,2],
 "index.html#static-library":[0,1,2],
 "pages.html":[],
+"struct_audio_buffer_data.html":[2,0,0],
+"struct_audio_buffer_data.html#a588f088d6525da1239175e7da4f80f7f":[2,0,0,3],
+"struct_audio_buffer_data.html#a6b9545eb73f69dc3360d7eeae61f2505":[2,0,0,2],
+"struct_audio_buffer_data.html#aa7acb3566ff7602c6189bd25fb9c5063":[2,0,0,0],
+"struct_audio_buffer_data.html#abbbbe2c0a44d84cc6bbed8871fd7e52a":[2,0,0,1],
+"struct_audio_buffer_data.html#ad00244cb360a1f985e53d54e8ab8833d":[2,0,0,4],
+"struct_audio_buffer_data.html#ad2d4d982db3ca755f0024dd37c1353bd":[2,0,0,5],
 "topics.html":[1]
 };

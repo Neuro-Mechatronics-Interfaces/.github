@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['sound_20synthesizer_0',['Sound Synthesizer',['../index.html',1,'']]],
-  ['sounds_1',['Synthesizing Sounds',['../group___synthesis.html',1,'']]],
-  ['static_20library_2',['Static Library',['../index.html#static-library',1,'']]],
-  ['synthesizer_3',['Sound Synthesizer',['../index.html',1,'']]],
-  ['synthesizing_20sounds_4',['Synthesizing Sounds',['../group___synthesis.html',1,'']]]
+  ['library_0',['Library',['../index.html#dynamic-link-library',1,'Dynamic Link Library'],['../index.html#static-library',1,'Static Library']]],
+  ['link_20library_1',['Dynamic Link Library',['../index.html#dynamic-link-library',1,'']]]
 ];

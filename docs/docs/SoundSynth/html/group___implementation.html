@@ -103,15 +103,38 @@ $(function(){initNavTree('group___implementation.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga236f8b03f36ea9f85ee07ae1d153f162" id="r_ga236f8b03f36ea9f85ee07ae1d153f162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga236f8b03f36ea9f85ee07ae1d153f162">playAudio</a> (short *buffer, int sampleRate, int numSamples)</td></tr>
-<tr class="memdesc:ga236f8b03f36ea9f85ee07ae1d153f162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play audio stored in the provided buffer.  <br /></td></tr>
-<tr class="separator:ga236f8b03f36ea9f85ee07ae1d153f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad48e2184a95b4720d328cee5111c430e" id="r_gad48e2184a95b4720d328cee5111c430e"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad48e2184a95b4720d328cee5111c430e">isNumPadKeyPressed</a> (int key)</td></tr>
+<tr class="separator:gad48e2184a95b4720d328cee5111c430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe0ac0e88aaac534c600a9ed39bfc03b" id="r_gabe0ac0e88aaac534c600a9ed39bfc03b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe0ac0e88aaac534c600a9ed39bfc03b">playAudio</a> (HWAVEOUT hWaveOut, short *buffer, WAVEFORMATEX format, int numSamples)</td></tr>
+<tr class="memdesc:gabe0ac0e88aaac534c600a9ed39bfc03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play audio stored in the provided buffer.  <br /></td></tr>
+<tr class="separator:gabe0ac0e88aaac534c600a9ed39bfc03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae905373d57ee508fa83ec8225e14526e" id="r_gae905373d57ee508fa83ec8225e14526e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae905373d57ee508fa83ec8225e14526e">prepareAudioChannels</a> (HWAVEOUT hWaveOut, WAVEHDR headers, short *buffers, int numSamplesPerChannel, WAVEFORMATEX format)</td></tr>
+<tr class="separator:gae905373d57ee508fa83ec8225e14526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06b1b273b6da713edca0ba502a615b42" id="r_ga06b1b273b6da713edca0ba502a615b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga06b1b273b6da713edca0ba502a615b42">updateWaveHeader</a> (WAVEHDR *header, short *buffer)</td></tr>
+<tr class="separator:ga06b1b273b6da713edca0ba502a615b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to playback of synthesized tones or recording/saving files for later playback/use. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga236f8b03f36ea9f85ee07ae1d153f162" name="ga236f8b03f36ea9f85ee07ae1d153f162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga236f8b03f36ea9f85ee07ae1d153f162">&#9670;&#160;</a></span>playAudio()</h2>
+<a id="gad48e2184a95b4720d328cee5111c430e" name="gad48e2184a95b4720d328cee5111c430e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad48e2184a95b4720d328cee5111c430e">&#9670;&#160;</a></span>isNumPadKeyPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL isNumPadKeyPressed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe0ac0e88aaac534c600a9ed39bfc03b" name="gabe0ac0e88aaac534c600a9ed39bfc03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe0ac0e88aaac534c600a9ed39bfc03b">&#9670;&#160;</a></span>playAudio()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,12 +142,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void playAudio </td>
           <td>(</td>
+          <td class="paramtype">HWAVEOUT</td>          <td class="paramname"><span class="paramname"><em>hWaveOut</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">short *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em>, </span></td>
+          <td class="paramtype">WAVEFORMATEX</td>          <td class="paramname"><span class="paramname"><em>format</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -138,12 +166,69 @@ Functions</h2></td></tr>
 <p>This function plays audio stored in the buffer using the system's default audio output device.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>Pointer to the buffer containing audio data. </td></tr>
-    <tr><td class="paramname">sampleRate</td><td>The sample rate of the audio data (e.g., 44100 for CD quality). </td></tr>
-    <tr><td class="paramname">numSamples</td><td>The number of samples in the buffer. </td></tr>
+    <tr><td class="paramname">buffer</td><td>The pointer to the buffer containing audio signals. </td></tr>
+    <tr><td class="paramname">format</td><td>The format struct specifying format to play in. </td></tr>
+    <tr><td class="paramname">numSamples</td><td>Total number of samples to play back. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="gae905373d57ee508fa83ec8225e14526e" name="gae905373d57ee508fa83ec8225e14526e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae905373d57ee508fa83ec8225e14526e">&#9670;&#160;</a></span>prepareAudioChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prepareAudioChannels </td>
+          <td>(</td>
+          <td class="paramtype">HWAVEOUT</td>          <td class="paramname"><span class="paramname"><em>hWaveOut</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WAVEHDR</td>          <td class="paramname"><span class="paramname"><em>headers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *</td>          <td class="paramname"><span class="paramname"><em>buffers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numSamplesPerChannel</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WAVEFORMATEX</td>          <td class="paramname"><span class="paramname"><em>format</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga06b1b273b6da713edca0ba502a615b42" name="ga06b1b273b6da713edca0ba502a615b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06b1b273b6da713edca0ba502a615b42">&#9670;&#160;</a></span>updateWaveHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateWaveHeader </td>
+          <td>(</td>
+          <td class="paramtype">WAVEHDR *</td>          <td class="paramname"><span class="paramname"><em>header</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

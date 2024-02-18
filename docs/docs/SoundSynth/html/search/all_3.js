@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['executables_0',['Executables',['../index.html#executables',1,'']]],
-  ['external_20use_1',['For External Use',['../index.html#for-external-use',1,'']]]
+  ['dynamic_20link_20library_0',['Dynamic Link Library',['../index.html#dynamic-link-library',1,'']]]
 ];

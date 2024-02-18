@@ -114,7 +114,7 @@ Compiling</h1>
 <h2><a class="anchor" id="library"></a>
 Library</h2>
 <p>To re-compile the dynamic link library (<code>.dll</code>) and static link library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -lws2_32 -Llib -lDataStructures &amp;&amp; gcc -c src/network.c -Iinclude -o lib/network.o -lws2_32 -Llib -lDataStructures &amp;&amp; ar rcs lib/Network.lib lib/network.o</div>
+ </p><div class="fragment"><div class="line">gcc -shared -o bin/Network.dll -Iinclude src/network.c -lws2_32 -Llib -lDataStructures &amp;&amp; gcc -c src/network.c -Iinclude -o lib/network.o &amp;&amp; ar rcs lib/Network.lib lib/network.o</div>
 </div><!-- fragment --><h2><a class="anchor" id="copying"></a>
 Copying</h2>
 <p>To copy the re-compiled library and header to the relevant projects, use the following command: <br  />
