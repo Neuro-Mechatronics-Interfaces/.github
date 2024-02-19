@@ -13,9 +13,8 @@ This page contains links to automatically-generated documentation produced using
 
 ### Repos ###
 #### Applications ####
-* [`TaskIO`]({{site.baseurl}}/docs/TaskIO/html/index.html) - NHP Wrist Center-Out task compiled c-applications for logging and configuration. 
-* [`NHP_Wrist_Center_Out`]({{site.baseurl}}/docs/NHP_Wrist_Center_Out/html/index.html) - Compiled c-application for rendering the NHP wrist task on Jetson Nano 2 running Ubuntu 20.4.  
-* [`StateServer`]({{site.baseurl}}/docs/StateServer/html/index.html) - Compiled c-application for managing the real-time state timing, transitions, and logging used in the NHP wrist task (runs on Windows 10 64-bit).  
+* [`NHP State Server`]({{site.baseurl}}/docs/StateServer/html/index.html) - This is the main workhorse for running the NHP wrist task. 
+* [`NHP Wrist Renderer`]({{site.baseurl}}/docs/NHP_Wrist_Center_Out/html/index.html) - Compiled c application for rendering the cursor and targets.  
 
 #### Libraries ####
 * [`DataStructures`]({{site.baseurl}}/docs/DataStructures/html/index.html) - Compiled c-library with common data structures for the NHP wrist center-out and other tasks.  
