@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NetworkUtilities: HeaderData Struct Reference</title>
+<title>LogUtilities: HeaderData Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -107,34 +107,14 @@ $(function(){initNavTree('struct_header_data.html',''); initResizable(); });
 Data Fields</h2></td></tr>
 <tr class="memitem:aad4af544ec73e58f9b45682f644a166a" id="r_aad4af544ec73e58f9b45682f644a166a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4af544ec73e58f9b45682f644a166a">timestamp</a></td></tr>
 <tr class="separator:aad4af544ec73e58f9b45682f644a166a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eed32bdc52ff438fc19f619e9d2143c" id="r_a8eed32bdc52ff438fc19f619e9d2143c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eed32bdc52ff438fc19f619e9d2143c">logType</a> [16]</td></tr>
-<tr class="separator:a8eed32bdc52ff438fc19f619e9d2143c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a10936e7958a923656398e86222fd8d" id="r_a6a10936e7958a923656398e86222fd8d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a10936e7958a923656398e86222fd8d">logVersion</a> [16]</td></tr>
 <tr class="separator:a6a10936e7958a923656398e86222fd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8642af9f7b14f997da389cdb44c36fcf" id="r_a8642af9f7b14f997da389cdb44c36fcf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8642af9f7b14f997da389cdb44c36fcf">logIndex</a></td></tr>
 <tr class="separator:a8642af9f7b14f997da389cdb44c36fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48a1a9dd8fd3ed9037e71620be4b6e0a" id="r_a48a1a9dd8fd3ed9037e71620be4b6e0a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48a1a9dd8fd3ed9037e71620be4b6e0a">chunkSize</a></td></tr>
-<tr class="separator:a48a1a9dd8fd3ed9037e71620be4b6e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to store header data. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a48a1a9dd8fd3ed9037e71620be4b6e0a" name="a48a1a9dd8fd3ed9037e71620be4b6e0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48a1a9dd8fd3ed9037e71620be4b6e0a">&#9670;&#160;</a></span>chunkSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t HeaderData::chunkSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Size of data chunk. <br  />
- </p>
-
-</div>
-</div>
 <a id="a8642af9f7b14f997da389cdb44c36fcf" name="a8642af9f7b14f997da389cdb44c36fcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8642af9f7b14f997da389cdb44c36fcf">&#9670;&#160;</a></span>logIndex</h2>
 
@@ -147,22 +127,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Index of the log. <br  />
- </p>
-
-</div>
-</div>
-<a id="a8eed32bdc52ff438fc19f619e9d2143c" name="a8eed32bdc52ff438fc19f619e9d2143c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eed32bdc52ff438fc19f619e9d2143c">&#9670;&#160;</a></span>logType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char HeaderData::logType[16]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Type of log. <br  />
  </p>
 
 </div>

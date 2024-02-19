@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['standard_5fpractice_0',['STANDARD_PRACTICE',['../group___enumerations.html#gga46c8a310cf4c094f8c80e1cb8dc1f911a50696eda0128e0d2b4affe4e842f6dc6',1,'data_structures.h']]],
-  ['standard_5frecording_1',['STANDARD_RECORDING',['../group___enumerations.html#gga46c8a310cf4c094f8c80e1cb8dc1f911a61f6dee017c65a84a4cecb84b4b8127b',1,'data_structures.h']]]
+  ['repeat_0',['REPEAT',['../group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51',1,'data_structures.h']]],
+  ['reward_1',['REWARD',['../group___enumerations.html#gga5d74787dedbc4e11c1ab15bf487e61f8a2717847ad14276d623008dbe2d104f10',1,'data_structures.h']]]
 ];

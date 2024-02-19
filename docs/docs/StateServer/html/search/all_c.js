@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['parameters_0',['parameters',['../struct_thread_safe_args.html#aed48b710a2a9089fdf36e7de36257199',1,'ThreadSafeArgs']]],
-  ['position_1',['position',['../struct_thread_safe_args.html#ae4131c65a093bd8485d7378725d85293',1,'ThreadSafeArgs']]],
-  ['processor_5ffrequency_2',['PROCESSOR_FREQUENCY',['../group___enumerations.html#gaf0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;timing.c'],['../group___enumerations.html#gaf0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;timing.c'],['../group___enumerations.html#gaf0d7df9ec131357b6a9c13bc7cc505cd',1,'PROCESSOR_FREQUENCY:&#160;ui.c']]]
+  ['readtaskstate_0',['readTaskState',['../group___memory_data.html#gad95a86462eec496a664866b99c76ff69',1,'readTaskState(FILE *log, LogData *logData):&#160;state_server.c'],['../group___memory_data.html#gad95a86462eec496a664866b99c76ff69',1,'readTaskState(FILE *log, LogData *logData):&#160;state_server.c']]],
+  ['requests_20test_20strong_1',['&lt;strong&gt;NHP Wrist Requests Test&lt;/strong&gt;',['../index.html#nhp-wrist-requests-test',1,'']]],
+  ['reset_5fclock_2',['reset_clock',['../group___flags.html#ga21a2a994dafb6dca74af682f9e0606b5',1,'reset_clock:&#160;state_server.c'],['../group___flags.html#ga21a2a994dafb6dca74af682f9e0606b5',1,'reset_clock:&#160;state_server.c']]],
+  ['routines_3',['Startup Routines',['../group___starters.html',1,'']]],
+  ['run_4',['run',['../group___starters.html#ga108475aa3297b4188120b831dead11b2',1,'run(ThreadSafeArgs *args):&#160;state_server.c'],['../group___starters.html#ga108475aa3297b4188120b831dead11b2',1,'run(ThreadSafeArgs *args):&#160;state_server.c']]],
+  ['running_5',['running',['../group___flags.html#gaf3270a6e782fe74a057a44a74d4b29f9',1,'running:&#160;state_server.c'],['../group___flags.html#gaf3270a6e782fe74a057a44a74d4b29f9',1,'running:&#160;state_server.c']]]
 ];

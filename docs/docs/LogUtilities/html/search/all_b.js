@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['readconfig_0',['readConfig',['../group___readers.html#ga11a8d364e7732b213c45b4f50b01c445',1,'readConfig(Config *config):&#160;log_utilities.c'],['../group___readers.html#ga11a8d364e7732b213c45b4f50b01c445',1,'readConfig(Config *config):&#160;log_utilities.c']]],
-  ['reader_20functions_1',['Reader functions',['../group___readers.html',1,'']]],
-  ['readfileheader_2',['readFileHeader',['../group___readers.html#gaefc0229f81ecdb28be83693094a355db',1,'readFileHeader(FILE *logFile, HeaderData *headerData):&#160;log_utilities.c'],['../group___readers.html#gaefc0229f81ecdb28be83693094a355db',1,'readFileHeader(FILE *logFile, HeaderData *headerData):&#160;log_utilities.c']]],
-  ['render_5fip_3',['render_ip',['../struct_connection_data.html#a37ea5366afe50b4f97b19e71af6f41f7',1,'ConnectionData']]],
-  ['replacebackslashes_4',['replaceBackslashes',['../group___file_i_o.html#gae7864271fb6e5e977050018e8b0ff333',1,'replaceBackslashes(char *filePath, char *filePathFS):&#160;log_utilities.c'],['../group___file_i_o.html#gae7864271fb6e5e977050018e8b0ff333',1,'replaceBackslashes(char *filePath, char *filePathFS):&#160;log_utilities.c']]],
-  ['reward_5fip_5',['reward_ip',['../struct_connection_data.html#a171833c6e98368e9a327adc7411ee94b',1,'ConnectionData']]]
+  ['plexon_5fip_0',['plexon_ip',['../struct_connection_data.html#a13273249fb0939b2c64711aca636d9b3',1,'ConnectionData']]],
+  ['printheaderdata_1',['printHeaderData',['../group___formatting.html#ga2e282aea2deff291f7b730fdaf285753',1,'printHeaderData(HeaderData *headerData):&#160;log_utilities.c'],['../group___formatting.html#ga2e282aea2deff291f7b730fdaf285753',1,'printHeaderData(HeaderData *headerData):&#160;log_utilities.c']]]
 ];

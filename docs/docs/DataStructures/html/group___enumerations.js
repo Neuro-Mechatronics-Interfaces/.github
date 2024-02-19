@@ -1,5 +1,15 @@
 var group___enumerations =
 [
+    [ "Command", "group___enumerations.html#ga2afce0a47a93eee73a314d53e4890153", [
+      [ "CMD_IDLE_ENTER", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a39d6d1e029ba01940159e39d17aebb64", null ],
+      [ "CMD_IDLE_EXIT", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153aee889fd4c80c34e5f812f758cc25775c", null ],
+      [ "CMD_SHUTDOWN", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a8bbf29869938b9b99e9e98e2685c2af0", null ],
+      [ "CMD_LOGGING_ON", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153af17a6d04116c7204f97d722456c724bc", null ],
+      [ "CMD_LOGGING_OFF", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a004984de0690a9809b38817879b785ee", null ],
+      [ "CMD_NEW_SET", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a1cc979969dccdc2c71e7b6fa134426e6", null ],
+      [ "CMD_NEW_SESSION", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153acade36214f37d1398ba85119490e9a77", null ],
+      [ "CMD_RESET_CLOCK", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a4e3b71ab7d92ae3844dd60300cbddae4", null ]
+    ] ],
     [ "Direction", "group___enumerations.html#ga224b9163917ac32fc95a60d8c1eec3aa", [
       [ "IN_TO_OUT", "group___enumerations.html#gga224b9163917ac32fc95a60d8c1eec3aaa47e159126c273fb247e78de172fa925e", null ],
       [ "OUT_TO_IN", "group___enumerations.html#gga224b9163917ac32fc95a60d8c1eec3aaa59195444af10b0d58c531697e3795877", null ]
@@ -42,5 +52,12 @@ var group___enumerations =
       [ "ADVANCE", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfade3fd11080d31927ed6732ccad31fee6", null ],
       [ "OVERSHOOT", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa8ef1fc7f3987737775dfb5d0cf5f7fd5", null ],
       [ "FAIL", "group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715", null ]
-    ] ]
+    ] ],
+    [ "commandToString", "group___enumerations.html#gab7329024c7d3a656d92a6bcce30e6947", null ],
+    [ "directionToString", "group___enumerations.html#ga9584a0c22a6ea2dff4f885764be827cd", null ],
+    [ "modeToString", "group___enumerations.html#gab71e3a8e37f591d9192163af90169fdd", null ],
+    [ "orientationToString", "group___enumerations.html#gaad01381f2c40e4abd94a645b20794740", null ],
+    [ "stateToString", "group___enumerations.html#gac634093e471374a79cf78537033984e7", null ],
+    [ "targetToString", "group___enumerations.html#ga377ec60901944e414328860be61c368f", null ],
+    [ "transitionToString", "group___enumerations.html#ga97c11e63c0fe655cb7f64a5af42e7a9a", null ]
 ];

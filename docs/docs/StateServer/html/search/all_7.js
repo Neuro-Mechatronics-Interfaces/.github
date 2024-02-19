@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['initialization_20and_20cleanup_0',['Initialization and Cleanup',['../group___init_cleanup.html',1,'']]],
-  ['initthreadargs_1',['initThreadArgs',['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c'],['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c']]],
-  ['inputhandler_2',['inputHandler',['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c'],['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c']]]
+  ['log_0',['log',['../struct_thread_safe_args.html#a2282d4824ed5597a8316d8d89cc6eb47',1,'ThreadSafeArgs']]],
+  ['logging_1',['logging',['../group___flags.html#ga4c5ef813afe59e122687587c8425baf2',1,'logging:&#160;state_server.c'],['../group___flags.html#ga4c5ef813afe59e122687587c8425baf2',1,'logging:&#160;state_server.c']]]
 ];

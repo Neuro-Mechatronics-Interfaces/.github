@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['new_5fparameters_0',['new_parameters',['../struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361',1,'FlagData']]],
-  ['new_5fposition_1',['new_position',['../struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18',1,'FlagData']]],
-  ['new_5fset_2',['new_set',['../struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f',1,'FlagData']]],
-  ['new_5fsubject_3',['new_subject',['../struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15',1,'FlagData']]],
-  ['new_5ftargets_4',['new_targets',['../struct_flag_data.html#a734bef03f7acebc3195d357540a82053',1,'FlagData']]],
-  ['ntrialsbeforeincrease_5',['nTrialsBeforeIncrease',['../struct_value_parameters.html#acfadad07281f03316862334d1910c945',1,'ValueParameters']]]
+  ['target_0',['target',['../struct_state_data.html#a6292e811be9a16b7119d08023b43dc4a',1,'StateData']]],
+  ['tl_1',['tl',['../struct_state_data.html#ae8f658dc0d5e5b40c1462b3e13335102',1,'StateData']]],
+  ['total_5fattempts_2',['total_attempts',['../struct_trial_data.html#a22fcd09bc8ecbf2ab6808ba7ce00c579',1,'TrialData']]],
+  ['total_5fsuccesses_3',['total_successes',['../struct_trial_data.html#a80956b6599bf51ceb7aeaea303d84522',1,'TrialData']]],
+  ['transition_4',['transition',['../struct_state_data.html#a2093e5e2ed3ec82a3b22850b26cac647',1,'StateData']]],
+  ['trial_5',['trial',['../struct_log_data.html#a8e4fcc85b0aefb25f1356b7377025546',1,'LogData']]],
+  ['ts_6',['ts',['../struct_state_data.html#a24406f1fd7d9381a2eab000ae9228a1a',1,'StateData']]]
 ];

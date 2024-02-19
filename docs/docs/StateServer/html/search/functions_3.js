@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initthreadargs_0',['initThreadArgs',['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c'],['../group___init_cleanup.html#ga70a17b5b1b3717ebd032c73863e852ef',1,'initThreadArgs(ThreadSafeArgs *args):&#160;state_server.c']]],
-  ['inputhandler_1',['inputHandler',['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c'],['../group___handlers.html#ga31b98aa826b2d91ab6b16256b3d6af43',1,'inputHandler(void *arg):&#160;state_server.c']]]
+  ['readtaskstate_0',['readTaskState',['../group___memory_data.html#gad95a86462eec496a664866b99c76ff69',1,'readTaskState(FILE *log, LogData *logData):&#160;state_server.c'],['../group___memory_data.html#gad95a86462eec496a664866b99c76ff69',1,'readTaskState(FILE *log, LogData *logData):&#160;state_server.c']]],
+  ['run_1',['run',['../group___starters.html#ga108475aa3297b4188120b831dead11b2',1,'run(ThreadSafeArgs *args):&#160;state_server.c'],['../group___starters.html#ga108475aa3297b4188120b831dead11b2',1,'run(ThreadSafeArgs *args):&#160;state_server.c']]]
 ];

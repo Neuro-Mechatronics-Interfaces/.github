@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writeparameterfile_0',['writeParameterFile',['../group___files.html#gaed5766b3ea91d3a21ae1d85a37d30989',1,'writeParameterFile(const char *filename, const TaskParameters *params):&#160;parameters.c'],['../group___files.html#gaed5766b3ea91d3a21ae1d85a37d30989',1,'writeParameterFile(const char *filename, const TaskParameters *params):&#160;parameters.c']]]
+  ['unpackparameters_0',['unpackParameters',['../group___packing.html#gaf0ac6d9408e1fc7f82025e1d054e9f49',1,'unpackParameters(TaskParameters *params, const char *buffer):&#160;parameters.c'],['../group___packing.html#gaf0ac6d9408e1fc7f82025e1d054e9f49',1,'unpackParameters(TaskParameters *params, const char *buffer):&#160;parameters.c']]]
 ];

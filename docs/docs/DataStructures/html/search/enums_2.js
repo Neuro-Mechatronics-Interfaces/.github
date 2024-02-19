@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orientation_0',['Orientation',['../group___enumerations.html#ga871118a09520247c78a71ecd7b0abd58',1,'data_structures.h']]]
+  ['mode_0',['Mode',['../group___enumerations.html#ga46c8a310cf4c094f8c80e1cb8dc1f911',1,'data_structures.h']]]
 ];

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -94,7 +94,7 @@ $(function(){initNavTree('struct_thread_safe_args.html',''); initResizable(); })
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">ThreadSafeArgs Struct Reference<div class="ingroups"><a class="el" href="group___structures.html">Data Structures</a></div></div></div>
+  <div class="headertitle"><div class="title">ThreadSafeArgs Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,40 +105,22 @@ $(function(){initNavTree('struct_thread_safe_args.html',''); initResizable(); })
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aa22f893e0d752a375d2847bb5c2420cf" id="r_aa22f893e0d752a375d2847bb5c2420cf"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22f893e0d752a375d2847bb5c2420cf">state_log</a></td></tr>
-<tr class="separator:aa22f893e0d752a375d2847bb5c2420cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc00f7a898b930f6022be7260a87dbd" id="r_a5fc00f7a898b930f6022be7260a87dbd"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fc00f7a898b930f6022be7260a87dbd">cursor_log</a></td></tr>
-<tr class="separator:a5fc00f7a898b930f6022be7260a87dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2282d4824ed5597a8316d8d89cc6eb47" id="r_a2282d4824ed5597a8316d8d89cc6eb47"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2282d4824ed5597a8316d8d89cc6eb47">log</a></td></tr>
+<tr class="separator:a2282d4824ed5597a8316d8d89cc6eb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48246d0f72529eddcf4655ca618229be" id="r_a48246d0f72529eddcf4655ca618229be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48246d0f72529eddcf4655ca618229be">sample_period</a></td></tr>
 <tr class="separator:a48246d0f72529eddcf4655ca618229be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76cd8837eb53cb672843450f7cafd3bb" id="r_a76cd8837eb53cb672843450f7cafd3bb"><td class="memItemLeft" align="right" valign="top">volatile sig_atomic_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76cd8837eb53cb672843450f7cafd3bb">running</a></td></tr>
-<tr class="separator:a76cd8837eb53cb672843450f7cafd3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace44d00a54a671d03312f50e12bc0361" id="r_ace44d00a54a671d03312f50e12bc0361"><td class="memItemLeft" align="right" valign="top">volatile sig_atomic_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace44d00a54a671d03312f50e12bc0361">logging</a></td></tr>
-<tr class="separator:ace44d00a54a671d03312f50e12bc0361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b092f85f0846b7d77b1396d394ce5f" id="r_a58b092f85f0846b7d77b1396d394ce5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b092f85f0846b7d77b1396d394ce5f">target_index</a></td></tr>
-<tr class="separator:a58b092f85f0846b7d77b1396d394ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c0fa031c4f9946a0908c4ff3297b473" id="r_a6c0fa031c4f9946a0908c4ff3297b473"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c0fa031c4f9946a0908c4ff3297b473">mutex</a></td></tr>
-<tr class="separator:a6c0fa031c4f9946a0908c4ff3297b473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a624e25f62d1676bd7445481c502b1941" id="r_a624e25f62d1676bd7445481c502b1941"><td class="memItemLeft" align="right" valign="top">pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a624e25f62d1676bd7445481c502b1941">wake_output_handler</a></td></tr>
-<tr class="separator:a624e25f62d1676bd7445481c502b1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19f27709401f00b8cb977413fa8341a8" id="r_a19f27709401f00b8cb977413fa8341a8"><td class="memItemLeft" align="right" valign="top">pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19f27709401f00b8cb977413fa8341a8">wake_input_handler</a></td></tr>
-<tr class="separator:a19f27709401f00b8cb977413fa8341a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d7db023aff7f1029e3d49cafc140e3a" id="r_a8d7db023aff7f1029e3d49cafc140e3a"><td class="memItemLeft" align="right" valign="top">pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7db023aff7f1029e3d49cafc140e3a">wake_state_handler</a></td></tr>
-<tr class="separator:a8d7db023aff7f1029e3d49cafc140e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae480230380462e6f9630d5aadd14c9c9" id="r_ae480230380462e6f9630d5aadd14c9c9"><td class="memItemLeft" align="right" valign="top">pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae480230380462e6f9630d5aadd14c9c9">wake_controller_handler</a></td></tr>
-<tr class="separator:ae480230380462e6f9630d5aadd14c9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d91f40c9005363fb80ba808051c38ee" id="r_a2d91f40c9005363fb80ba808051c38ee"><td class="memItemLeft" align="right" valign="top">pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d91f40c9005363fb80ba808051c38ee">wake_clock_handler</a></td></tr>
-<tr class="separator:a2d91f40c9005363fb80ba808051c38ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd14673daae193bbb034839756390e28" id="r_abd14673daae193bbb034839756390e28"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd14673daae193bbb034839756390e28">set_index</a></td></tr>
+<tr class="separator:abd14673daae193bbb034839756390e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b99d5c8f27ebe00308f802449cdb84" id="r_a73b99d5c8f27ebe00308f802449cdb84"><td class="memItemLeft" align="right" valign="top">FlagData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73b99d5c8f27ebe00308f802449cdb84">flags</a></td></tr>
 <tr class="separator:a73b99d5c8f27ebe00308f802449cdb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add9f49a77d10c74623438015b8dc2946" id="r_add9f49a77d10c74623438015b8dc2946"><td class="memItemLeft" align="right" valign="top">ConnectionData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add9f49a77d10c74623438015b8dc2946">connections</a></td></tr>
-<tr class="separator:add9f49a77d10c74623438015b8dc2946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b617a0695ae446fa489dfcb6bf2c2d" id="r_a01b617a0695ae446fa489dfcb6bf2c2d"><td class="memItemLeft" align="right" valign="top">Config *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01b617a0695ae446fa489dfcb6bf2c2d">config</a></td></tr>
+<tr class="separator:a01b617a0695ae446fa489dfcb6bf2c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b9699c16e8fd2a2f8ff22beb644b9d" id="r_a62b9699c16e8fd2a2f8ff22beb644b9d"><td class="memItemLeft" align="right" valign="top">HeaderData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b9699c16e8fd2a2f8ff22beb644b9d">header</a></td></tr>
+<tr class="separator:a62b9699c16e8fd2a2f8ff22beb644b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46e1e1d9529c5ec1f802778bbb3ae59" id="r_ad46e1e1d9529c5ec1f802778bbb3ae59"><td class="memItemLeft" align="right" valign="top">TrialData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad46e1e1d9529c5ec1f802778bbb3ae59">trial</a></td></tr>
 <tr class="separator:ad46e1e1d9529c5ec1f802778bbb3ae59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444fdf64bf896ac33010f7901811091b" id="r_a444fdf64bf896ac33010f7901811091b"><td class="memItemLeft" align="right" valign="top">StateData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a444fdf64bf896ac33010f7901811091b">state</a></td></tr>
 <tr class="separator:a444fdf64bf896ac33010f7901811091b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4131c65a093bd8485d7378725d85293" id="r_ae4131c65a093bd8485d7378725d85293"><td class="memItemLeft" align="right" valign="top">CursorData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4131c65a093bd8485d7378725d85293">position</a></td></tr>
-<tr class="separator:ae4131c65a093bd8485d7378725d85293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85053f6e87a3d4a10819863e256c8037" id="r_a85053f6e87a3d4a10819863e256c8037"><td class="memItemLeft" align="right" valign="top">RenderedCircleData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85053f6e87a3d4a10819863e256c8037">target</a> [2]</td></tr>
 <tr class="separator:a85053f6e87a3d4a10819863e256c8037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed48b710a2a9089fdf36e7de36257199" id="r_aed48b710a2a9089fdf36e7de36257199"><td class="memItemLeft" align="right" valign="top">TaskParameters *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed48b710a2a9089fdf36e7de36257199">parameters</a></td></tr>
@@ -147,33 +129,18 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread-safe state-data/argument structure. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="add9f49a77d10c74623438015b8dc2946" name="add9f49a77d10c74623438015b8dc2946"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add9f49a77d10c74623438015b8dc2946">&#9670;&#160;</a></span>connections</h2>
+<a id="a01b617a0695ae446fa489dfcb6bf2c2d" name="a01b617a0695ae446fa489dfcb6bf2c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b617a0695ae446fa489dfcb6bf2c2d">&#9670;&#160;</a></span>config</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ConnectionData* ThreadSafeArgs::connections</td>
+          <td class="memname">Config* ThreadSafeArgs::config</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to controller data </p>
-
-</div>
-</div>
-<a id="a5fc00f7a898b930f6022be7260a87dbd" name="a5fc00f7a898b930f6022be7260a87dbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fc00f7a898b930f6022be7260a87dbd">&#9670;&#160;</a></span>cursor_log</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE* ThreadSafeArgs::cursor_log</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Cursor log file </p>
+<p>Pointer to log and network configuration data </p>
 
 </div>
 </div>
@@ -192,33 +159,33 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ace44d00a54a671d03312f50e12bc0361" name="ace44d00a54a671d03312f50e12bc0361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace44d00a54a671d03312f50e12bc0361">&#9670;&#160;</a></span>logging</h2>
+<a id="a62b9699c16e8fd2a2f8ff22beb644b9d" name="a62b9699c16e8fd2a2f8ff22beb644b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b9699c16e8fd2a2f8ff22beb644b9d">&#9670;&#160;</a></span>header</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">volatile sig_atomic_t ThreadSafeArgs::logging</td>
+          <td class="memname">HeaderData* ThreadSafeArgs::header</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flag indicating whether the logs are being added to </p>
+<p>Pointer to the log header data struct. </p>
 
 </div>
 </div>
-<a id="a6c0fa031c4f9946a0908c4ff3297b473" name="a6c0fa031c4f9946a0908c4ff3297b473"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c0fa031c4f9946a0908c4ff3297b473">&#9670;&#160;</a></span>mutex</h2>
+<a id="a2282d4824ed5597a8316d8d89cc6eb47" name="a2282d4824ed5597a8316d8d89cc6eb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2282d4824ed5597a8316d8d89cc6eb47">&#9670;&#160;</a></span>log</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pthread_mutex_t ThreadSafeArgs::mutex</td>
+          <td class="memname">FILE* ThreadSafeArgs::log</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Mutex for thread safety </p>
+<p>Log file </p>
 
 </div>
 </div>
@@ -237,36 +204,6 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4131c65a093bd8485d7378725d85293" name="ae4131c65a093bd8485d7378725d85293"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4131c65a093bd8485d7378725d85293">&#9670;&#160;</a></span>position</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CursorData* ThreadSafeArgs::position</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to cursor position data </p>
-
-</div>
-</div>
-<a id="a76cd8837eb53cb672843450f7cafd3bb" name="a76cd8837eb53cb672843450f7cafd3bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76cd8837eb53cb672843450f7cafd3bb">&#9670;&#160;</a></span>running</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile sig_atomic_t ThreadSafeArgs::running</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Flag indicating whether the server is running </p>
-
-</div>
-</div>
 <a id="a48246d0f72529eddcf4655ca618229be" name="a48246d0f72529eddcf4655ca618229be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48246d0f72529eddcf4655ca618229be">&#9670;&#160;</a></span>sample_period</h2>
 
@@ -278,7 +215,22 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sampling period </p>
+<p>Sample duration for CLOCK thread. </p>
+
+</div>
+</div>
+<a id="abd14673daae193bbb034839756390e28" name="abd14673daae193bbb034839756390e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd14673daae193bbb034839756390e28">&#9670;&#160;</a></span>set_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ThreadSafeArgs::set_index</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Index for the current set. </p>
 
 </div>
 </div>
@@ -297,21 +249,6 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="aa22f893e0d752a375d2847bb5c2420cf" name="aa22f893e0d752a375d2847bb5c2420cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa22f893e0d752a375d2847bb5c2420cf">&#9670;&#160;</a></span>state_log</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE* ThreadSafeArgs::state_log</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>State log file </p>
-
-</div>
-</div>
 <a id="a85053f6e87a3d4a10819863e256c8037" name="a85053f6e87a3d4a10819863e256c8037"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85053f6e87a3d4a10819863e256c8037">&#9670;&#160;</a></span>target</h2>
 
@@ -327,21 +264,6 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a58b092f85f0846b7d77b1396d394ce5f" name="a58b092f85f0846b7d77b1396d394ce5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58b092f85f0846b7d77b1396d394ce5f">&#9670;&#160;</a></span>target_index</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ThreadSafeArgs::target_index</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Index of target to send </p>
-
-</div>
-</div>
 <a id="ad46e1e1d9529c5ec1f802778bbb3ae59" name="ad46e1e1d9529c5ec1f802778bbb3ae59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad46e1e1d9529c5ec1f802778bbb3ae59">&#9670;&#160;</a></span>trial</h2>
 
@@ -354,81 +276,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Pointer to trial data </p>
-
-</div>
-</div>
-<a id="a2d91f40c9005363fb80ba808051c38ee" name="a2d91f40c9005363fb80ba808051c38ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d91f40c9005363fb80ba808051c38ee">&#9670;&#160;</a></span>wake_clock_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_cond_t ThreadSafeArgs::wake_clock_handler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Condition variable for waking clock handler thread </p>
-
-</div>
-</div>
-<a id="ae480230380462e6f9630d5aadd14c9c9" name="ae480230380462e6f9630d5aadd14c9c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae480230380462e6f9630d5aadd14c9c9">&#9670;&#160;</a></span>wake_controller_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_cond_t ThreadSafeArgs::wake_controller_handler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Condition variable for waking controller handler thraed </p>
-
-</div>
-</div>
-<a id="a19f27709401f00b8cb977413fa8341a8" name="a19f27709401f00b8cb977413fa8341a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19f27709401f00b8cb977413fa8341a8">&#9670;&#160;</a></span>wake_input_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_cond_t ThreadSafeArgs::wake_input_handler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Condition variable for waking input handler thread </p>
-
-</div>
-</div>
-<a id="a624e25f62d1676bd7445481c502b1941" name="a624e25f62d1676bd7445481c502b1941"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a624e25f62d1676bd7445481c502b1941">&#9670;&#160;</a></span>wake_output_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_cond_t ThreadSafeArgs::wake_output_handler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Condition variable for waking output handler thread </p>
-
-</div>
-</div>
-<a id="a8d7db023aff7f1029e3d49cafc140e3a" name="a8d7db023aff7f1029e3d49cafc140e3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d7db023aff7f1029e3d49cafc140e3a">&#9670;&#160;</a></span>wake_state_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_cond_t ThreadSafeArgs::wake_state_handler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Condition variable for waking state handler thread </p>
 
 </div>
 </div>

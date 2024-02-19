@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.3.2</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.6.0</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -93,7 +93,8 @@ $(function(){initNavTree('group___enumerations.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Enumerations</div></div>
 </div><!--header-->
 <div class="contents">
@@ -162,10 +163,82 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga705b6d5c20f363b5e02982179fe730bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of state transitions.  <a href="#ga705b6d5c20f363b5e02982179fe730bf">More...</a><br /></td></tr>
 <tr class="separator:ga705b6d5c20f363b5e02982179fe730bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2afce0a47a93eee73a314d53e4890153" id="r_ga2afce0a47a93eee73a314d53e4890153"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2afce0a47a93eee73a314d53e4890153">Command</a> { <br />
+&#160;&#160;<a class="el" href="#gga2afce0a47a93eee73a314d53e4890153a39d6d1e029ba01940159e39d17aebb64">CMD_IDLE_ENTER</a> = 0
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153aee889fd4c80c34e5f812f758cc25775c">CMD_IDLE_EXIT</a> = 1
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153a8bbf29869938b9b99e9e98e2685c2af0">CMD_SHUTDOWN</a> = 2
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153af17a6d04116c7204f97d722456c724bc">CMD_LOGGING_ON</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#gga2afce0a47a93eee73a314d53e4890153a004984de0690a9809b38817879b785ee">CMD_LOGGING_OFF</a> = 4
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153a1cc979969dccdc2c71e7b6fa134426e6">CMD_NEW_SET</a> = 5
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153acade36214f37d1398ba85119490e9a77">CMD_NEW_SESSION</a> = 6
+, <a class="el" href="#gga2afce0a47a93eee73a314d53e4890153a4e3b71ab7d92ae3844dd60300cbddae4">CMD_RESET_CLOCK</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:ga2afce0a47a93eee73a314d53e4890153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerations for task modes.  <a href="#ga2afce0a47a93eee73a314d53e4890153">More...</a><br /></td></tr>
+<tr class="separator:ga2afce0a47a93eee73a314d53e4890153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac634093e471374a79cf78537033984e7" id="r_gac634093e471374a79cf78537033984e7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac634093e471374a79cf78537033984e7">stateToString</a> (<a class="el" href="#ga5d74787dedbc4e11c1ab15bf487e61f8">State</a> state)</td></tr>
+<tr class="memdesc:gac634093e471374a79cf78537033984e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a State enumeration.  <br /></td></tr>
+<tr class="separator:gac634093e471374a79cf78537033984e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab71e3a8e37f591d9192163af90169fdd" id="r_gab71e3a8e37f591d9192163af90169fdd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab71e3a8e37f591d9192163af90169fdd">modeToString</a> (<a class="el" href="#ga46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> mode)</td></tr>
+<tr class="memdesc:gab71e3a8e37f591d9192163af90169fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a Mode enumeration.  <br /></td></tr>
+<tr class="separator:gab71e3a8e37f591d9192163af90169fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad01381f2c40e4abd94a645b20794740" id="r_gaad01381f2c40e4abd94a645b20794740"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaad01381f2c40e4abd94a645b20794740">orientationToString</a> (<a class="el" href="#ga871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation)</td></tr>
+<tr class="memdesc:gaad01381f2c40e4abd94a645b20794740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to an Orientation enumeration.  <br /></td></tr>
+<tr class="separator:gaad01381f2c40e4abd94a645b20794740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9584a0c22a6ea2dff4f885764be827cd" id="r_ga9584a0c22a6ea2dff4f885764be827cd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9584a0c22a6ea2dff4f885764be827cd">directionToString</a> (<a class="el" href="#ga224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:ga9584a0c22a6ea2dff4f885764be827cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a Direction enumeration.  <br /></td></tr>
+<tr class="separator:ga9584a0c22a6ea2dff4f885764be827cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga377ec60901944e414328860be61c368f" id="r_ga377ec60901944e414328860be61c368f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga377ec60901944e414328860be61c368f">targetToString</a> (<a class="el" href="#ga31488d29805a596498c0234ae392d35d">Target</a> target)</td></tr>
+<tr class="memdesc:ga377ec60901944e414328860be61c368f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a Target enumeration.  <br /></td></tr>
+<tr class="separator:ga377ec60901944e414328860be61c368f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97c11e63c0fe655cb7f64a5af42e7a9a" id="r_ga97c11e63c0fe655cb7f64a5af42e7a9a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga97c11e63c0fe655cb7f64a5af42e7a9a">transitionToString</a> (<a class="el" href="#ga705b6d5c20f363b5e02982179fe730bf">Transition</a> transition)</td></tr>
+<tr class="memdesc:ga97c11e63c0fe655cb7f64a5af42e7a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a Transition enumeration.  <br /></td></tr>
+<tr class="separator:ga97c11e63c0fe655cb7f64a5af42e7a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7329024c7d3a656d92a6bcce30e6947" id="r_gab7329024c7d3a656d92a6bcce30e6947"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab7329024c7d3a656d92a6bcce30e6947">commandToString</a> (<a class="el" href="#ga2afce0a47a93eee73a314d53e4890153">Command</a> command)</td></tr>
+<tr class="memdesc:gab7329024c7d3a656d92a6bcce30e6947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string corresponding to a Command enumeration.  <br /></td></tr>
+<tr class="separator:gab7329024c7d3a656d92a6bcce30e6947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Key experimental categories or task state enumerations. </p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga2afce0a47a93eee73a314d53e4890153" name="ga2afce0a47a93eee73a314d53e4890153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2afce0a47a93eee73a314d53e4890153">&#9670;&#160;</a></span>Command</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ga2afce0a47a93eee73a314d53e4890153">Command</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerations for task modes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153a39d6d1e029ba01940159e39d17aebb64" name="gga2afce0a47a93eee73a314d53e4890153a39d6d1e029ba01940159e39d17aebb64"></a>CMD_IDLE_ENTER&#160;</td><td class="fielddoc"><p>CMD_IDLE_ENTER command puts the task into "idle" mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153aee889fd4c80c34e5f812f758cc25775c" name="gga2afce0a47a93eee73a314d53e4890153aee889fd4c80c34e5f812f758cc25775c"></a>CMD_IDLE_EXIT&#160;</td><td class="fielddoc"><p>CMD_IDLE_EXIT command sets "idle" mode to false. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153a8bbf29869938b9b99e9e98e2685c2af0" name="gga2afce0a47a93eee73a314d53e4890153a8bbf29869938b9b99e9e98e2685c2af0"></a>CMD_SHUTDOWN&#160;</td><td class="fielddoc"><p>CMD_SHUTDOWN command shuts down the state server. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153af17a6d04116c7204f97d722456c724bc" name="gga2afce0a47a93eee73a314d53e4890153af17a6d04116c7204f97d722456c724bc"></a>CMD_LOGGING_ON&#160;</td><td class="fielddoc"><p>CMD_LOGGING_ON command turns on logging. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153a004984de0690a9809b38817879b785ee" name="gga2afce0a47a93eee73a314d53e4890153a004984de0690a9809b38817879b785ee"></a>CMD_LOGGING_OFF&#160;</td><td class="fielddoc"><p>CMD_LOGGING_OFF command turns off logging. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153a1cc979969dccdc2c71e7b6fa134426e6" name="gga2afce0a47a93eee73a314d53e4890153a1cc979969dccdc2c71e7b6fa134426e6"></a>CMD_NEW_SET&#160;</td><td class="fielddoc"><p>CMD_NEW_SET command indicates a new "set" of trials. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153acade36214f37d1398ba85119490e9a77" name="gga2afce0a47a93eee73a314d53e4890153acade36214f37d1398ba85119490e9a77"></a>CMD_NEW_SESSION&#160;</td><td class="fielddoc"><p>CMD_NEW_SESSION command indicates a new session. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2afce0a47a93eee73a314d53e4890153a4e3b71ab7d92ae3844dd60300cbddae4" name="gga2afce0a47a93eee73a314d53e4890153a4e3b71ab7d92ae3844dd60300cbddae4"></a>CMD_RESET_CLOCK&#160;</td><td class="fielddoc"><p>CMD_RESET_CLOCK command to reset the elapsed milliseconds on clock to zero. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga224b9163917ac32fc95a60d8c1eec3aa" name="ga224b9163917ac32fc95a60d8c1eec3aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga224b9163917ac32fc95a60d8c1eec3aa">&#9670;&#160;</a></span>Direction</h2>
 
@@ -333,6 +406,189 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715" name="gga705b6d5c20f363b5e02982179fe730bfa936c4a5547a9360243178f726f6b2715"></a>FAIL&#160;</td><td class="fielddoc"><p>Fail, returning to T1_MOVE state. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gab7329024c7d3a656d92a6bcce30e6947" name="gab7329024c7d3a656d92a6bcce30e6947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7329024c7d3a656d92a6bcce30e6947">&#9670;&#160;</a></span>commandToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * commandToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga2afce0a47a93eee73a314d53e4890153">Command</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a Command enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The Command enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Command. </dd></dl>
+
+</div>
+</div>
+<a id="ga9584a0c22a6ea2dff4f885764be827cd" name="ga9584a0c22a6ea2dff4f885764be827cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9584a0c22a6ea2dff4f885764be827cd">&#9670;&#160;</a></span>directionToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * directionToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga224b9163917ac32fc95a60d8c1eec3aa">Direction</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a Direction enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The Direction enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Direction. </dd></dl>
+
+</div>
+</div>
+<a id="gab71e3a8e37f591d9192163af90169fdd" name="gab71e3a8e37f591d9192163af90169fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab71e3a8e37f591d9192163af90169fdd">&#9670;&#160;</a></span>modeToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * modeToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a Mode enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>The Mode enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Mode. </dd></dl>
+
+</div>
+</div>
+<a id="gaad01381f2c40e4abd94a645b20794740" name="gaad01381f2c40e4abd94a645b20794740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad01381f2c40e4abd94a645b20794740">&#9670;&#160;</a></span>orientationToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * orientationToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga871118a09520247c78a71ecd7b0abd58">Orientation</a></td>          <td class="paramname"><span class="paramname"><em>orientation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to an Orientation enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>The Orientation enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Orientation. </dd></dl>
+
+</div>
+</div>
+<a id="gac634093e471374a79cf78537033984e7" name="gac634093e471374a79cf78537033984e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac634093e471374a79cf78537033984e7">&#9670;&#160;</a></span>stateToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * stateToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a State enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated State. </dd></dl>
+
+</div>
+</div>
+<a id="ga377ec60901944e414328860be61c368f" name="ga377ec60901944e414328860be61c368f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga377ec60901944e414328860be61c368f">&#9670;&#160;</a></span>targetToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * targetToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga31488d29805a596498c0234ae392d35d">Target</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a Target enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The Target enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Target. </dd></dl>
+
+</div>
+</div>
+<a id="ga97c11e63c0fe655cb7f64a5af42e7a9a" name="ga97c11e63c0fe655cb7f64a5af42e7a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97c11e63c0fe655cb7f64a5af42e7a9a">&#9670;&#160;</a></span>transitionToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * transitionToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga705b6d5c20f363b5e02982179fe730bf">Transition</a></td>          <td class="paramname"><span class="paramname"><em>transition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string corresponding to a Transition enumeration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transition</td><td>The Transition enumeration value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string corresponding to the enumerated Transition. </dd></dl>
 
 </div>
 </div>

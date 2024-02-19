@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['network_0',['network',['../struct_config.html#a1bd93b2aa4e67522f97c44d44a3d26ce',1,'Config']]],
-  ['network_20configuration_20functions_1',['Network Configuration functions',['../group___net_config.html',1,'']]],
-  ['note_20about_20gcc_2',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
+  ['library_0',['Library',['../index.html#library',1,'']]],
+  ['log_20utilities_1',['Log Utilities',['../index.html',1,'']]],
+  ['logindex_2',['logIndex',['../struct_header_data.html#a8642af9f7b14f997da389cdb44c36fcf',1,'HeaderData']]],
+  ['logreadfolder_3',['logReadFolder',['../struct_config.html#ad07a3d99916739ce19b33eb1235e227d',1,'Config']]],
+  ['logsavefolder_4',['logSaveFolder',['../struct_config.html#af0689008881a651255f116210d22b214',1,'Config']]],
+  ['logversion_5',['logVersion',['../struct_header_data.html#a6a10936e7958a923656398e86222fd8d',1,'HeaderData']]]
 ];

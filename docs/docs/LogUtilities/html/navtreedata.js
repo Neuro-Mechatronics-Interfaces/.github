@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "NetworkUtilities", "index.html", [
+  [ "LogUtilities", "index.html", [
     [ "Log Utilities", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [

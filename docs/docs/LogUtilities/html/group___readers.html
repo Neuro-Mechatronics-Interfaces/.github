@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NetworkUtilities: Reader functions</title>
+<title>LogUtilities: Reader functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -106,9 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0e029d2277ae5b187a8d2f33f3fd0467" id="r_ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0e029d2277ae5b187a8d2f33f3fd0467">openLogForReading</a> (const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, const char *tag, uint16_t index, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData, <a class="el" href="struct_config.html">Config</a> *config)</td></tr>
 <tr class="memdesc:ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a log file for reading.  <br /></td></tr>
 <tr class="separator:ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga11a8d364e7732b213c45b4f50b01c445" id="r_ga11a8d364e7732b213c45b4f50b01c445"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga11a8d364e7732b213c45b4f50b01c445">readConfig</a> (<a class="el" href="struct_config.html">Config</a> *config)</td></tr>
-<tr class="memdesc:ga11a8d364e7732b213c45b4f50b01c445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the configuration from the config.yaml file.  <br /></td></tr>
-<tr class="separator:ga11a8d364e7732b213c45b4f50b01c445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb07fb54a4ccfa0ddb21c0f273318394" id="r_gadb07fb54a4ccfa0ddb21c0f273318394"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadb07fb54a4ccfa0ddb21c0f273318394">readConfig</a> (<a class="el" href="struct_config.html">Config</a> *config, const char *configFileIn)</td></tr>
+<tr class="memdesc:gadb07fb54a4ccfa0ddb21c0f273318394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the configuration from the config.yaml file.  <br /></td></tr>
+<tr class="separator:gadb07fb54a4ccfa0ddb21c0f273318394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaefc0229f81ecdb28be83693094a355db" id="r_gaefc0229f81ecdb28be83693094a355db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaefc0229f81ecdb28be83693094a355db">readFileHeader</a> (FILE *logFile, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData)</td></tr>
 <tr class="memdesc:gaefc0229f81ecdb28be83693094a355db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the header data from the log file.  <br /></td></tr>
 <tr class="separator:gaefc0229f81ecdb28be83693094a355db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,8 +184,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga11a8d364e7732b213c45b4f50b01c445" name="ga11a8d364e7732b213c45b4f50b01c445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11a8d364e7732b213c45b4f50b01c445">&#9670;&#160;</a></span>readConfig()</h2>
+<a id="gadb07fb54a4ccfa0ddb21c0f273318394" name="gadb07fb54a4ccfa0ddb21c0f273318394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb07fb54a4ccfa0ddb21c0f273318394">&#9670;&#160;</a></span>readConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,8 +193,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int readConfig </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>configFileIn</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,6 +207,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>Pointer to the configuration structure. </td></tr>
+    <tr><td class="paramname">configFileIn</td><td>String corresponding to name of the config file, or NULL to use default ("config.yaml" in executable folder). </td></tr>
   </table>
   </dd>
 </dl>

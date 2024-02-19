@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['enumerations_0',['Enumerations',['../group___enumerations.html',1,'']]],
-  ['external_1',['External',['../group___external.html',1,'']]]
+  ['flags_0',['Global Condition Flags',['../group___flags.html',1,'']]]
 ];

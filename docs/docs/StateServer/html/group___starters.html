@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -119,31 +119,30 @@ Functions</h2></td></tr>
 <tr class="memitem:ga712626323eec3380d5b40b4681a682b9" id="r_ga712626323eec3380d5b40b4681a682b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga712626323eec3380d5b40b4681a682b9">startControllerThread</a> (<a class="el" href="struct_thread_safe_args.html">ThreadSafeArgs</a> *args, pthread_t *thread)</td></tr>
 <tr class="memdesc:ga712626323eec3380d5b40b4681a682b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the controller thread.  <br /></td></tr>
 <tr class="separator:ga712626323eec3380d5b40b4681a682b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13e0589c2320246725be7d0ab94ed491" id="r_ga13e0589c2320246725be7d0ab94ed491"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga13e0589c2320246725be7d0ab94ed491">run</a> (void *args)</td></tr>
-<tr class="memdesc:ga13e0589c2320246725be7d0ab94ed491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to start the server.  <br /></td></tr>
-<tr class="separator:ga13e0589c2320246725be7d0ab94ed491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga108475aa3297b4188120b831dead11b2" id="r_ga108475aa3297b4188120b831dead11b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga108475aa3297b4188120b831dead11b2">run</a> (<a class="el" href="struct_thread_safe_args.html">ThreadSafeArgs</a> *args)</td></tr>
+<tr class="memdesc:ga108475aa3297b4188120b831dead11b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to start the server.  <br /></td></tr>
+<tr class="separator:ga108475aa3297b4188120b831dead11b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Start the handler threads with appropriate attributes and data. <br  />
  </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga13e0589c2320246725be7d0ab94ed491" name="ga13e0589c2320246725be7d0ab94ed491"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga13e0589c2320246725be7d0ab94ed491">&#9670;&#160;</a></span>run()</h2>
+<a id="ga108475aa3297b4188120b831dead11b2" name="ga108475aa3297b4188120b831dead11b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga108475aa3297b4188120b831dead11b2">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * run </td>
+          <td class="memname">void run </td>
           <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_thread_safe_args.html">ThreadSafeArgs</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Main function to start the server. </p>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful, otherwise 1. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getcurrenttimestamp_0',['getCurrentTimestamp',['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c'],['../group___enumerations.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;ui.c'],['../group___external.html#ga48d1fdc58eca18e99d188f9457eadb32',1,'getCurrentTimestamp():&#160;timing.c']]],
-  ['getelapsedtime_1',['getElapsedTime',['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c'],['../group___enumerations.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;ui.c'],['../group___external.html#gaff502ebc7862ef8c0df94d92af545be0',1,'getElapsedTime(LONGLONG qstart, LONGLONG qend):&#160;timing.c']]]
+  ['outputhandler_0',['outputHandler',['../group___handlers.html#ga5007d76b897084fd25c18db4b1339bd1',1,'outputHandler(void *arg):&#160;state_server.c'],['../group___handlers.html#ga5007d76b897084fd25c18db4b1339bd1',1,'outputHandler(void *arg):&#160;state_server.c']]]
 ];

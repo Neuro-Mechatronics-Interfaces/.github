@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -104,20 +104,37 @@ $(function(){initNavTree('group___handlers.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gad2e59c7203b3bddc1bc9a2224b52e8e7" id="r_gad2e59c7203b3bddc1bc9a2224b52e8e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad2e59c7203b3bddc1bc9a2224b52e8e7">signalHandler</a> (int signal)</td></tr>
+<tr class="separator:gad2e59c7203b3bddc1bc9a2224b52e8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga19d9c1506449a50b88bf4fdbe81cb232" id="r_ga19d9c1506449a50b88bf4fdbe81cb232"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga19d9c1506449a50b88bf4fdbe81cb232">clockHandler</a> (void *arg)</td></tr>
 <tr class="separator:ga19d9c1506449a50b88bf4fdbe81cb232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2e3e21d68800d421ff39fc0c2360da2" id="r_gaa2e3e21d68800d421ff39fc0c2360da2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa2e3e21d68800d421ff39fc0c2360da2">controllerHandler</a> (void *arg)</td></tr>
+<tr class="separator:gaa2e3e21d68800d421ff39fc0c2360da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5007d76b897084fd25c18db4b1339bd1" id="r_ga5007d76b897084fd25c18db4b1339bd1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5007d76b897084fd25c18db4b1339bd1">outputHandler</a> (void *arg)</td></tr>
 <tr class="separator:ga5007d76b897084fd25c18db4b1339bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga31b98aa826b2d91ab6b16256b3d6af43" id="r_ga31b98aa826b2d91ab6b16256b3d6af43"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga31b98aa826b2d91ab6b16256b3d6af43">inputHandler</a> (void *arg)</td></tr>
 <tr class="separator:ga31b98aa826b2d91ab6b16256b3d6af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5c4f1006b0a01f5fcdbb40a9b98b0945" id="r_ga5c4f1006b0a01f5fcdbb40a9b98b0945"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5c4f1006b0a01f5fcdbb40a9b98b0945">stateHandler</a> (void *arg)</td></tr>
 <tr class="separator:ga5c4f1006b0a01f5fcdbb40a9b98b0945"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2e3e21d68800d421ff39fc0c2360da2" id="r_gaa2e3e21d68800d421ff39fc0c2360da2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa2e3e21d68800d421ff39fc0c2360da2">controllerHandler</a> (void *arg)</td></tr>
-<tr class="separator:gaa2e3e21d68800d421ff39fc0c2360da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Core of the multi-threaded <code>state_server</code> application. <br  />
  </p>
+<p>There are 5 core "handler" threads, which allow the server to manage the state of the task and interface to external user control/input sources. <br  />
+ The threads are managed by <code>pthread_mutex_t</code> lock guards with <code>pthread_cond_t</code> condition signals to ensure concurrency. <br  />
+ In the event that a condition signal is missed, there is an additional layer of protection added by condition flags, so that it is highly unlikely that the state server will ever break the following "cycle" of thread management: <br  />
+</p><ol type="1">
+<li>CLOCK - Waits for a fixed period of time before waking the controller handler thread. <br  />
+</li>
+<li>CONTROLLER - Takes "light" input e.g. from user interface controlling the subject/logging state of the server. <br  />
+</li>
+<li>INPUT - Takes "heavy" input, constantly updating the cursor position and occasionally the target positions (as they are requested from the controller). <br  />
+</li>
+<li>STATE - Handles calculations of whether to stay in current task state, advance to next task state, or fail to beginning of task. <br  />
+</li>
+<li>OUTPUT - Outputs the cursor position and any changes in target position/visibility to the rendering device. Also issues sound requests to the rendering device as appropriate, and issues reward delivery requests to the reward controller as appropriate. Finally, logs the current state of this cycle, with cursor position and timestamp. <br  />
+</li>
+</ol>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga19d9c1506449a50b88bf4fdbe81cb232" name="ga19d9c1506449a50b88bf4fdbe81cb232"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga19d9c1506449a50b88bf4fdbe81cb232">&#9670;&#160;</a></span>clockHandler()</h2>
@@ -188,6 +205,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Thread function for handling output messages etc </p>
+
+</div>
+</div>
+<a id="gad2e59c7203b3bddc1bc9a2224b52e8e7" name="gad2e59c7203b3bddc1bc9a2224b52e8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2e59c7203b3bddc1bc9a2224b52e8e7">&#9670;&#160;</a></span>signalHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signalHandler </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>signal</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handles SIGINT for ctrl+c shutdown case. </p>
 
 </div>
 </div>

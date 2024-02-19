@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['functions_0',['Timing Functions',['../group___timing.html',1,'']]]
+  ['global_20condition_20flags_0',['Global Condition Flags',['../group___flags.html',1,'']]]
 ];

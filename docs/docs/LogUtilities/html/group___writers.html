@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NetworkUtilities: Writer functions</title>
+<title>LogUtilities: Writer functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -103,18 +103,21 @@ $(function(){initNavTree('group___writers.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga83cc3cffa729bb3ffc3ebcc40c5e6ee0" id="r_ga83cc3cffa729bb3ffc3ebcc40c5e6ee0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga83cc3cffa729bb3ffc3ebcc40c5e6ee0">addFileHeader</a> (FILE *logFile, const char *tag, uint16_t index, size_t chunkSize, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData)</td></tr>
-<tr class="memdesc:ga83cc3cffa729bb3ffc3ebcc40c5e6ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes header information to the log file.  <br /></td></tr>
-<tr class="separator:ga83cc3cffa729bb3ffc3ebcc40c5e6ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga247897db29b57572ac9843aa56befd1a" id="r_ga247897db29b57572ac9843aa56befd1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga247897db29b57572ac9843aa56befd1a">addFileHeader</a> (FILE *logFile, uint16_t index, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData)</td></tr>
+<tr class="memdesc:ga247897db29b57572ac9843aa56befd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes header information to the log file.  <br /></td></tr>
+<tr class="separator:ga247897db29b57572ac9843aa56befd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2125071c2538680e0b453475aa141c63" id="r_ga2125071c2538680e0b453475aa141c63"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2125071c2538680e0b453475aa141c63">openLogForWriting</a> (const char *subject, const char *tag, uint16_t index, size_t chunkSize, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData, <a class="el" href="struct_config.html">Config</a> *config)</td></tr>
 <tr class="memdesc:ga2125071c2538680e0b453475aa141c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a log file for writing.  <br /></td></tr>
 <tr class="separator:ga2125071c2538680e0b453475aa141c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e6e2f5c0639bc6a2d56e9020368acad" id="r_ga2e6e2f5c0639bc6a2d56e9020368acad"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2e6e2f5c0639bc6a2d56e9020368acad">openNewLogForWriting</a> (const char *subject, const char *tag, uint16_t index, size_t chunkSize, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData, <a class="el" href="struct_config.html">Config</a> *config)</td></tr>
+<tr class="memdesc:ga2e6e2f5c0639bc6a2d56e9020368acad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a <b>new</b> log file for writing.  <br /></td></tr>
+<tr class="separator:ga2e6e2f5c0639bc6a2d56e9020368acad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for writing to log or config files. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga83cc3cffa729bb3ffc3ebcc40c5e6ee0" name="ga83cc3cffa729bb3ffc3ebcc40c5e6ee0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83cc3cffa729bb3ffc3ebcc40c5e6ee0">&#9670;&#160;</a></span>addFileHeader()</h2>
+<a id="ga247897db29b57572ac9843aa56befd1a" name="ga247897db29b57572ac9843aa56befd1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga247897db29b57572ac9843aa56befd1a">&#9670;&#160;</a></span>addFileHeader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,17 +130,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>tag</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>chunkSize</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -151,9 +144,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">logFile</td><td>Pointer to the log file. </td></tr>
-    <tr><td class="paramname">tag</td><td>The tag of the log file. </td></tr>
     <tr><td class="paramname">index</td><td>The index of the log file. </td></tr>
-    <tr><td class="paramname">chunkSize</td><td>The size of each data chunk. </td></tr>
     <tr><td class="paramname">headerData</td><td>Pointer to the header data structure. </td></tr>
   </table>
   </dd>
@@ -202,6 +193,61 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Opens a log file for writing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subject</td><td>The subject of the log file. </td></tr>
+    <tr><td class="paramname">tag</td><td>The tag of the log file. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the log file. </td></tr>
+    <tr><td class="paramname">chunkSize</td><td>The size of each data chunk. </td></tr>
+    <tr><td class="paramname">headerData</td><td>Pointer to the header data structure. </td></tr>
+    <tr><td class="paramname">config</td><td>Pointer to the logger configuration. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the opened log file if successful, NULL otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga2e6e2f5c0639bc6a2d56e9020368acad" name="ga2e6e2f5c0639bc6a2d56e9020368acad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e6e2f5c0639bc6a2d56e9020368acad">&#9670;&#160;</a></span>openNewLogForWriting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * openNewLogForWriting </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>subject</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>tag</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>chunkSize</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_header_data.html">HeaderData</a> *</td>          <td class="paramname"><span class="paramname"><em>headerData</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opens a <b>new</b> log file for writing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">subject</td><td>The subject of the log file. </td></tr>

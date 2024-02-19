@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.3.2</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.6.0</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -103,36 +103,30 @@ $(function(){initNavTree('group___messaging.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga86c825b79ecab3799c1269714823ea93" id="r_ga86c825b79ecab3799c1269714823ea93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga86c825b79ecab3799c1269714823ea93">packTargetData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *target, uint8_t targetIndex, uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga86c825b79ecab3799c1269714823ea93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs target data into a string buffer for transmission.  <br /></td></tr>
-<tr class="separator:ga86c825b79ecab3799c1269714823ea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga31f918143aa1ba8581b48f05266008d3" id="r_ga31f918143aa1ba8581b48f05266008d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga31f918143aa1ba8581b48f05266008d3">unpackTargetData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **targets, const uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga31f918143aa1ba8581b48f05266008d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks target data from a received message and updates the targets array.  <br /></td></tr>
-<tr class="separator:ga31f918143aa1ba8581b48f05266008d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67020fdca08f4acd44551c62ee266507" id="r_ga67020fdca08f4acd44551c62ee266507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67020fdca08f4acd44551c62ee266507">packCursorData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga67020fdca08f4acd44551c62ee266507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs cursor data into a string buffer for transmission.  <br /></td></tr>
-<tr class="separator:ga67020fdca08f4acd44551c62ee266507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2cb295f43a17ea202990a094ab10d40a" id="r_ga2cb295f43a17ea202990a094ab10d40a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cb295f43a17ea202990a094ab10d40a">unpackCursorData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, const uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga2cb295f43a17ea202990a094ab10d40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks cursor data from a received message and updates the cursor position.  <br /></td></tr>
-<tr class="separator:ga2cb295f43a17ea202990a094ab10d40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc63d963106381a45301ba76725e668a" id="r_gafc63d963106381a45301ba76725e668a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafc63d963106381a45301ba76725e668a">packParameters</a> (const <a class="el" href="struct_task_parameters.html">TaskParameters</a> *params, uint8_t *buffer)</td></tr>
-<tr class="memdesc:gafc63d963106381a45301ba76725e668a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct into a byte buffer.  <br /></td></tr>
-<tr class="separator:gafc63d963106381a45301ba76725e668a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga73f706874a00908abc656fd822e18819" id="r_ga73f706874a00908abc656fd822e18819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga73f706874a00908abc656fd822e18819">unpackParameters</a> (<a class="el" href="struct_task_parameters.html">TaskParameters</a> *params, const uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga73f706874a00908abc656fd822e18819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks byte buffer into <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct.  <br /></td></tr>
-<tr class="separator:ga73f706874a00908abc656fd822e18819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4bf88ab97347773c1d2f4c3bc813e64f" id="r_ga4bf88ab97347773c1d2f4c3bc813e64f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4bf88ab97347773c1d2f4c3bc813e64f">packStateData</a> (const <a class="el" href="struct_state_data.html">StateData</a> *stateData, uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga4bf88ab97347773c1d2f4c3bc813e64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> struct into a byte buffer.  <br /></td></tr>
-<tr class="separator:ga4bf88ab97347773c1d2f4c3bc813e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga659b1cd199b2e61d54dd62a04b061fbd" id="r_ga659b1cd199b2e61d54dd62a04b061fbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga659b1cd199b2e61d54dd62a04b061fbd">unpackStateData</a> (<a class="el" href="struct_state_data.html">StateData</a> *stateData, const uint8_t *buffer)</td></tr>
-<tr class="memdesc:ga659b1cd199b2e61d54dd62a04b061fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks byte buffer into <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> struct.  <br /></td></tr>
-<tr class="separator:ga659b1cd199b2e61d54dd62a04b061fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac66aa69880bbf0791231e5bff990a5f6" id="r_gac66aa69880bbf0791231e5bff990a5f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac66aa69880bbf0791231e5bff990a5f6">packTargetData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *target, uint8_t targetIndex, char *buffer)</td></tr>
+<tr class="memdesc:gac66aa69880bbf0791231e5bff990a5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs target data into a string buffer for transmission.  <br /></td></tr>
+<tr class="separator:gac66aa69880bbf0791231e5bff990a5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga025029c232c2d46f61951cd684a74dab" id="r_ga025029c232c2d46f61951cd684a74dab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga025029c232c2d46f61951cd684a74dab">unpackTargetData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> **targets, const char *buffer)</td></tr>
+<tr class="memdesc:ga025029c232c2d46f61951cd684a74dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks target data from a received message and updates the targets array.  <br /></td></tr>
+<tr class="separator:ga025029c232c2d46f61951cd684a74dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa19ea09d3aaeeb22c7faf70b2a0f7b7d" id="r_gaa19ea09d3aaeeb22c7faf70b2a0f7b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa19ea09d3aaeeb22c7faf70b2a0f7b7d">packCursorData</a> (const <a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, char *buffer)</td></tr>
+<tr class="memdesc:gaa19ea09d3aaeeb22c7faf70b2a0f7b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs cursor data into a string buffer for transmission.  <br /></td></tr>
+<tr class="separator:gaa19ea09d3aaeeb22c7faf70b2a0f7b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ada1b9e88948cdedd8f01c8d7f83b58" id="r_ga5ada1b9e88948cdedd8f01c8d7f83b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ada1b9e88948cdedd8f01c8d7f83b58">unpackCursorData</a> (<a class="el" href="struct_rendered_circle_data.html">RenderedCircleData</a> *cursor, const char *buffer)</td></tr>
+<tr class="memdesc:ga5ada1b9e88948cdedd8f01c8d7f83b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks cursor data from a received message and updates the cursor position.  <br /></td></tr>
+<tr class="separator:ga5ada1b9e88948cdedd8f01c8d7f83b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5dd5899251e4a5e898248050598a591" id="r_gab5dd5899251e4a5e898248050598a591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab5dd5899251e4a5e898248050598a591">packStateData</a> (const <a class="el" href="struct_state_data.html">StateData</a> *stateData, char *buffer)</td></tr>
+<tr class="memdesc:gab5dd5899251e4a5e898248050598a591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> struct into a byte buffer.  <br /></td></tr>
+<tr class="separator:gab5dd5899251e4a5e898248050598a591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bcae9ac9d21ad14cf23d5e485aa7612" id="r_ga5bcae9ac9d21ad14cf23d5e485aa7612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5bcae9ac9d21ad14cf23d5e485aa7612">unpackStateData</a> (<a class="el" href="struct_state_data.html">StateData</a> *stateData, const char *buffer)</td></tr>
+<tr class="memdesc:ga5bcae9ac9d21ad14cf23d5e485aa7612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks byte buffer into <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> struct.  <br /></td></tr>
+<tr class="separator:ga5bcae9ac9d21ad14cf23d5e485aa7612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Message handler functions for serializing and desiarilizing byte messages. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga67020fdca08f4acd44551c62ee266507" name="ga67020fdca08f4acd44551c62ee266507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga67020fdca08f4acd44551c62ee266507">&#9670;&#160;</a></span>packCursorData()</h2>
+<a id="gaa19ea09d3aaeeb22c7faf70b2a0f7b7d" name="gaa19ea09d3aaeeb22c7faf70b2a0f7b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa19ea09d3aaeeb22c7faf70b2a0f7b7d">&#9670;&#160;</a></span>packCursorData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +139,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -162,38 +156,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafc63d963106381a45301ba76725e668a" name="gafc63d963106381a45301ba76725e668a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafc63d963106381a45301ba76725e668a">&#9670;&#160;</a></span>packParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void packParameters </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_task_parameters.html">TaskParameters</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Packs <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct into a byte buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">params</td><td>Pointer to the <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct to pack. </td></tr>
-    <tr><td class="paramname">buffer</td><td>Pointer to the byte buffer where packed data will be stored. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga4bf88ab97347773c1d2f4c3bc813e64f" name="ga4bf88ab97347773c1d2f4c3bc813e64f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4bf88ab97347773c1d2f4c3bc813e64f">&#9670;&#160;</a></span>packStateData()</h2>
+<a id="gab5dd5899251e4a5e898248050598a591" name="gab5dd5899251e4a5e898248050598a591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5dd5899251e4a5e898248050598a591">&#9670;&#160;</a></span>packStateData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +170,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -222,8 +186,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga86c825b79ecab3799c1269714823ea93" name="ga86c825b79ecab3799c1269714823ea93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga86c825b79ecab3799c1269714823ea93">&#9670;&#160;</a></span>packTargetData()</h2>
+<a id="gac66aa69880bbf0791231e5bff990a5f6" name="gac66aa69880bbf0791231e5bff990a5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac66aa69880bbf0791231e5bff990a5f6">&#9670;&#160;</a></span>packTargetData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +205,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -259,8 +223,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2cb295f43a17ea202990a094ab10d40a" name="ga2cb295f43a17ea202990a094ab10d40a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2cb295f43a17ea202990a094ab10d40a">&#9670;&#160;</a></span>unpackCursorData()</h2>
+<a id="ga5ada1b9e88948cdedd8f01c8d7f83b58" name="ga5ada1b9e88948cdedd8f01c8d7f83b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ada1b9e88948cdedd8f01c8d7f83b58">&#9670;&#160;</a></span>unpackCursorData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +237,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -290,38 +254,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga73f706874a00908abc656fd822e18819" name="ga73f706874a00908abc656fd822e18819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73f706874a00908abc656fd822e18819">&#9670;&#160;</a></span>unpackParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void unpackParameters </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_task_parameters.html">TaskParameters</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unpacks byte buffer into <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">params</td><td>Pointer to the <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct to populate. </td></tr>
-    <tr><td class="paramname">buffer</td><td>Pointer to the byte buffer containing packed data. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga659b1cd199b2e61d54dd62a04b061fbd" name="ga659b1cd199b2e61d54dd62a04b061fbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga659b1cd199b2e61d54dd62a04b061fbd">&#9670;&#160;</a></span>unpackStateData()</h2>
+<a id="ga5bcae9ac9d21ad14cf23d5e485aa7612" name="ga5bcae9ac9d21ad14cf23d5e485aa7612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bcae9ac9d21ad14cf23d5e485aa7612">&#9670;&#160;</a></span>unpackStateData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +268,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,8 +284,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga31f918143aa1ba8581b48f05266008d3" name="ga31f918143aa1ba8581b48f05266008d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga31f918143aa1ba8581b48f05266008d3">&#9670;&#160;</a></span>unpackTargetData()</h2>
+<a id="ga025029c232c2d46f61951cd684a74dab" name="ga025029c232c2d46f61951cd684a74dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga025029c232c2d46f61951cd684a74dab">&#9670;&#160;</a></span>unpackTargetData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +298,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

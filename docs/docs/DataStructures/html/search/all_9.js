@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['maxovershoots_0',['maxOvershoots',['../struct_value_parameters.html#ab597849b4572ebc3533303278b6488e5',1,'ValueParameters']]],
-  ['maxt1hold1time_1',['maxT1HOLD1Time',['../struct_value_parameters.html#ac4e3d3e865be86698b2ecaa5dcb4aea7',1,'ValueParameters']]],
-  ['maxt1hold2time_2',['maxT1HOLD2Time',['../struct_value_parameters.html#a4e61cf100fea3aae9052df67e3060cbd',1,'ValueParameters']]],
-  ['maxtrials_3',['maxTrials',['../struct_value_parameters.html#a352443d54efffff19126ef9b9bbdfeb0',1,'ValueParameters']]],
-  ['message_20formatting_4',['Message Formatting',['../group___messaging.html',1,'']]],
-  ['mid_5',['MID',['../group___enumerations.html#gga871118a09520247c78a71ecd7b0abd58a3bc56824c91d97fcda36dc99687bb236',1,'data_structures.h']]],
-  ['mint1hold1time_6',['minT1HOLD1Time',['../struct_value_parameters.html#ad506d07f40d9ac49217d0d9b04f24c70',1,'ValueParameters']]],
-  ['mint1hold2time_7',['minT1HOLD2Time',['../struct_value_parameters.html#ae0e41509cdd09a0584f1affd078144a5',1,'ValueParameters']]],
-  ['mode_8',['mode',['../struct_value_parameters.html#a3b54930a32bcc296aae77e7b197dfc44',1,'ValueParameters']]],
-  ['mode_9',['Mode',['../group___enumerations.html#ga46c8a310cf4c094f8c80e1cb8dc1f911',1,'data_structures.h']]]
+  ['new_5fparameters_0',['new_parameters',['../struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361',1,'FlagData']]],
+  ['new_5fposition_1',['new_position',['../struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18',1,'FlagData']]],
+  ['new_5fset_2',['new_set',['../struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f',1,'FlagData']]],
+  ['new_5fsubject_3',['new_subject',['../struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15',1,'FlagData']]],
+  ['new_5ftargets_4',['new_targets',['../struct_flag_data.html#a734bef03f7acebc3195d357540a82053',1,'FlagData']]],
+  ['note_20about_20gcc_5',['Note about gcc',['../index.html#note-about-gcc',1,'']]]
 ];

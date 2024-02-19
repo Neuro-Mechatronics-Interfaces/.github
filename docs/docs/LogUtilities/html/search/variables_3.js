@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plexon_5fip_0',['plexon_ip',['../struct_connection_data.html#a13273249fb0939b2c64711aca636d9b3',1,'ConnectionData']]]
+  ['network_0',['network',['../struct_config.html#a1bd93b2aa4e67522f97c44d44a3d26ce',1,'Config']]]
 ];

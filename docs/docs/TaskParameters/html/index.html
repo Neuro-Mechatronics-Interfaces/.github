@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.4.0</span>
    </div>
    <div id="projectbrief">Compiled `c` library for task parameter data structures and functions.</div>
   </td>
@@ -105,6 +105,7 @@ Contents</h1>
 <li><a class="el" href="#compiling">Compiling</a><ul>
 <li>Libraries</li>
 <li><a class="el" href="#copying">Copying</a></li>
+<li><a class="el" href="#applications">Applications</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
 </li>
@@ -114,13 +115,18 @@ Contents</h1>
 Compiling</h1>
 <h2><a class="anchor" id="libraries"></a>
 Libraries</h2>
-<p>To re-compile the dynamic link library (<code>.dll</code>) and static link library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -shared -o bin/TaskParameters.dll -Iinclude src/parameters.c &amp;&amp; gcc -c src/parameters.c -Iinclude -o lib/parameters.o &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>
+<p>To re-compile the static link library (<code>.lib</code>), use the following command: <br  />
+ </p><div class="fragment"><div class="line">gcc -c src/parameters.c -o lib/parameters.o -Iinclude &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>
 </div><!-- fragment --><h2><a class="anchor" id="copying"></a>
 Copying</h2>
 <p>To copy to the relevant other projects, use the following command: <br  />
- </p><div class="fragment"><div class="line">cp src/parameters.h ../TaskIO/include/parameters.h &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskIO/lib/TaskParameters.lib &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib</div>
-</div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
+ </p><div class="fragment"><div class="line">cp src/parameters.h ../TaskIO/include/parameters.h &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskIO/lib/TaskParameters.lib &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib &amp;&amp; cp src/parameters.h include/parameters.h</div>
+</div><!-- fragment --><h2><a class="anchor" id="applications"></a>
+Applications</h2>
+<p>To re-compile the parameter generator application <code>bin/genparams.exe</code>, use the following command: </p><div class="fragment"><div class="line">gcc src/gen_params.c -Iinclude -o bin/genparams.exe -Llib -lDataStructures</div>
+</div><!-- fragment --><p>To re-compile the test parameter application <code>bin/test_params.exe</code>, use the following comand: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -Iinclude -Llib -lDataStructures -lTaskParameters -obin/test_params.exe</div>
+</div><!-- fragment --><p> (Note that this requires having already compiled <code>lib/TaskParameters.lib</code> as shown above).</p>
+<h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />
  </p><div class="fragment"><div class="line">my_project</div>

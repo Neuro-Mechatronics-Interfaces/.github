@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fixedmovetime_0',['fixedMOVETime',['../struct_value_parameters.html#a8312cd08e77143fc208a717f17f26408',1,'ValueParameters']]],
-  ['fixedovershoottime_1',['fixedOVERSHOOTTime',['../struct_value_parameters.html#a776df6a3946539bd049e04bf314b2852',1,'ValueParameters']]],
-  ['fixedreacttime_2',['fixedREACTTime',['../struct_value_parameters.html#ae0b51f508cfe9d1cdb72a1aeff2a49e6',1,'ValueParameters']]],
-  ['fixedt2hold1time_3',['fixedT2HOLD1Time',['../struct_value_parameters.html#a5b8eb8d6d8106b1837fe266134195eed',1,'ValueParameters']]],
-  ['fixedt2hold2time_4',['fixedT2HOLD2Time',['../struct_value_parameters.html#aba96336f93b431c63629856b25f089a0',1,'ValueParameters']]]
+  ['new_5fparameters_0',['new_parameters',['../struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361',1,'FlagData']]],
+  ['new_5fposition_1',['new_position',['../struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18',1,'FlagData']]],
+  ['new_5fset_2',['new_set',['../struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f',1,'FlagData']]],
+  ['new_5fsubject_3',['new_subject',['../struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15',1,'FlagData']]],
+  ['new_5ftargets_4',['new_targets',['../struct_flag_data.html#a734bef03f7acebc3195d357540a82053',1,'FlagData']]]
 ];

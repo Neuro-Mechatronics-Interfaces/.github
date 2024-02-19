@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NetworkUtilities: Log Utilities</title>
+<title>LogUtilities: Log Utilities</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.0.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -116,9 +116,9 @@ Usage</h1>
  </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_header_data.html">HeaderData</a>* headerData = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_header_data.html">HeaderData</a>));</div>
 <div class="line"><a class="code hl_struct" href="struct_config.html">Config</a>* config = malloc(<span class="keyword">sizeof</span>(LoggingConfig));</div>
 <div class="line">FILE* myLog = <a class="code hl_function" href="group___readers.html#ga0e029d2277ae5b187a8d2f33f3fd0467">openLogForReading</a>(<span class="stringliteral">&quot;MySubject&quot;</span>, 2024, 2, 16,  <span class="stringliteral">&quot;TaskGrouping&quot;</span>, 0, headerData, config);</div>
-<div class="ttc" id="agroup___readers_html_ga0e029d2277ae5b187a8d2f33f3fd0467"><div class="ttname"><a href="group___readers.html#ga0e029d2277ae5b187a8d2f33f3fd0467">openLogForReading</a></div><div class="ttdeci">FILE * openLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, const char *tag, uint16_t index, HeaderData *headerData, Config *config)</div><div class="ttdoc">Opens a log file for reading.</div><div class="ttdef"><b>Definition</b> log_utilities.c:108</div></div>
-<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdoc">Structure to store configuration data parsed from yaml files.</div><div class="ttdef"><b>Definition</b> log_utilities.h:66</div></div>
-<div class="ttc" id="astruct_header_data_html"><div class="ttname"><a href="struct_header_data.html">HeaderData</a></div><div class="ttdoc">Structure to store header data.</div><div class="ttdef"><b>Definition</b> log_utilities.h:42</div></div>
+<div class="ttc" id="agroup___readers_html_ga0e029d2277ae5b187a8d2f33f3fd0467"><div class="ttname"><a href="group___readers.html#ga0e029d2277ae5b187a8d2f33f3fd0467">openLogForReading</a></div><div class="ttdeci">FILE * openLogForReading(const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, const char *tag, uint16_t index, HeaderData *headerData, Config *config)</div><div class="ttdoc">Opens a log file for reading.</div><div class="ttdef"><b>Definition</b> log_utilities.c:106</div></div>
+<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdoc">Structure to store configuration data parsed from yaml files.</div><div class="ttdef"><b>Definition</b> log_utilities.h:65</div></div>
+<div class="ttc" id="astruct_header_data_html"><div class="ttname"><a href="struct_header_data.html">HeaderData</a></div><div class="ttdoc">Structure to store header data.</div><div class="ttdef"><b>Definition</b> log_utilities.h:43</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="compiling"></a>
 Compiling</h1>
 <h2><a class="anchor" id="library"></a>

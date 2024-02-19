@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['valueparameters_0',['ValueParameters',['../struct_value_parameters.html',1,'']]]
+  ['trialdata_0',['TrialData',['../struct_trial_data.html',1,'']]]
 ];

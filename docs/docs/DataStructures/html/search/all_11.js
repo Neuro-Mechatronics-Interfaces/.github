@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../struct_task_parameters.html#afabedee477daa7063f5e27f5e463ae05',1,'TaskParameters']]],
-  ['valueparameters_1',['ValueParameters',['../struct_value_parameters.html',1,'']]]
+  ['y_0',['y',['../struct_cursor_data.html#ae3250f9b991bb46541bf9861da5a7630',1,'CursorData::y'],['../struct_rendered_circle_data.html#a9b7f7de7477356fa52b596be61f17c76',1,'RenderedCircleData::y']]]
 ];

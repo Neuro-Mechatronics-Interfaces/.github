@@ -1,12 +1,9 @@
 var topics =
 [
     [ "Task State Machine", "group___state_machine.html", "group___state_machine" ],
-    [ "Data Structures", "group___structures.html", "group___structures" ],
-    [ "Initialization and Cleanup", "group___init_cleanup.html", "group___init_cleanup" ],
     [ "Handler Threads", "group___handlers.html", "group___handlers" ],
-    [ "Startup Routines", "group___starters.html", "group___starters" ],
-    [ "Timing Functions", "group___timing.html", "group___timing" ],
-    [ "External", "group___external.html", "group___external" ],
-    [ "Callbacks", "group___callbacks.html", "group___callbacks" ],
-    [ "Utilities", "group___utility.html", null ]
+    [ "Thread Management", "group___thread_managers.html", "group___thread_managers" ],
+    [ "Global Condition Flags", "group___flags.html", "group___flags" ],
+    [ "Memory and Data Handlers", "group___memory_data.html", "group___memory_data" ],
+    [ "Startup Routines", "group___starters.html", "group___starters" ]
 ];

@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['radius_0',['radius',['../struct_rendered_circle_data.html#a11fb2593d193a577102a0a9f42234995',1,'RenderedCircleData']]],
-  ['render_1',['render',['../struct_rendered_circle_data.html#acfb1dbaf2a9e52222a9b40fd936791bc',1,'RenderedCircleData']]],
-  ['renderedcircledata_2',['RenderedCircleData',['../struct_rendered_circle_data.html',1,'']]],
-  ['repeat_3',['REPEAT',['../group___enumerations.html#gga705b6d5c20f363b5e02982179fe730bfa972f3df9d279a3d3acc88bcbe4452d51',1,'data_structures.h']]],
-  ['resettrialdata_4',['resetTrialData',['../group___initialization.html#ga2eda5c665c0273004859ac0bae51cd21',1,'resetTrialData(TrialData *trial):&#160;data_structures.c'],['../group___initialization.html#ga2eda5c665c0273004859ac0bae51cd21',1,'resetTrialData(TrialData *trialData):&#160;data_structures.c']]],
-  ['reward_5',['REWARD',['../group___enumerations.html#gga5d74787dedbc4e11c1ab15bf487e61f8a2717847ad14276d623008dbe2d104f10',1,'data_structures.h']]],
-  ['rewardvolume_6',['rewardVolume',['../struct_value_parameters.html#a4607c3931e81bc9d5917617b2f76508f',1,'ValueParameters']]],
-  ['rewardvolumeincrease_7',['rewardVolumeIncrease',['../struct_value_parameters.html#a001fe471cb6695e7e665f7173adf386a',1,'ValueParameters']]]
+  ['set_5findex_0',['set_index',['../struct_log_data.html#a41578eddf8e33446e9ee4c3d7aca4a06',1,'LogData']]],
+  ['standard_5fpractice_1',['STANDARD_PRACTICE',['../group___enumerations.html#gga46c8a310cf4c094f8c80e1cb8dc1f911a50696eda0128e0d2b4affe4e842f6dc6',1,'data_structures.h']]],
+  ['standard_5frecording_2',['STANDARD_RECORDING',['../group___enumerations.html#gga46c8a310cf4c094f8c80e1cb8dc1f911a61f6dee017c65a84a4cecb84b4b8127b',1,'data_structures.h']]],
+  ['state_3',['state',['../struct_state_data.html#a63143802109c13ece432c04705084c65',1,'StateData::state'],['../struct_log_data.html#a14dce919ad144217f7a8448fb07b4173',1,'LogData::state']]],
+  ['state_4',['State',['../group___enumerations.html#ga5d74787dedbc4e11c1ab15bf487e61f8',1,'data_structures.h']]],
+  ['statedata_5',['StateData',['../struct_state_data.html',1,'']]],
+  ['statetostring_6',['stateToString',['../group___enumerations.html#gac634093e471374a79cf78537033984e7',1,'stateToString(State state):&#160;data_structures.c'],['../group___enumerations.html#gac634093e471374a79cf78537033984e7',1,'stateToString(State state):&#160;data_structures.c']]],
+  ['structured_20data_7',['Utility Functions for Structured Data',['../group___utilities.html',1,'']]],
+  ['structures_8',['Structures',['../group___structure.html',1,'Data Structures'],['../index.html',1,'Data Structures']]]
 ];

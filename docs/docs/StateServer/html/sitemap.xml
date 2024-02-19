@@ -8,31 +8,19 @@
     <loc>https://code.nml.wtf/docs/group___state_machine.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___structures.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___init_cleanup.html</loc>
-  </url>
-  <url>
     <loc>https://code.nml.wtf/docs/group___handlers.html</loc>
   </url>
   <url>
+    <loc>https://code.nml.wtf/docs/group___thread_managers.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___flags.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___memory_data.html</loc>
+  </url>
+  <url>
     <loc>https://code.nml.wtf/docs/group___starters.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___timing.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___external.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___callbacks.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___utility.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/group___enumerations.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_thread_safe_args.html</loc>
@@ -75,18 +63,6 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/functions_vars.html</loc>

@@ -14,36 +14,6 @@ var group___structure =
       [ "new_subject", "struct_flag_data.html#a24b6ab54c75fe6f1d56a9dc2b13d0a15", null ],
       [ "new_targets", "struct_flag_data.html#a734bef03f7acebc3195d357540a82053", null ]
     ] ],
-    [ "ValueParameters", "struct_value_parameters.html", [
-      [ "bribeVolume", "struct_value_parameters.html#a03a3c4ad639b293aa70730e1cdc444ba", null ],
-      [ "cursorRadius", "struct_value_parameters.html#a0f3c0aeaa9ca05b530b87ececaa8cfc8", null ],
-      [ "fixedMOVETime", "struct_value_parameters.html#a8312cd08e77143fc208a717f17f26408", null ],
-      [ "fixedOVERSHOOTTime", "struct_value_parameters.html#a776df6a3946539bd049e04bf314b2852", null ],
-      [ "fixedREACTTime", "struct_value_parameters.html#ae0b51f508cfe9d1cdb72a1aeff2a49e6", null ],
-      [ "fixedT2HOLD1Time", "struct_value_parameters.html#a5b8eb8d6d8106b1837fe266134195eed", null ],
-      [ "fixedT2HOLD2Time", "struct_value_parameters.html#aba96336f93b431c63629856b25f089a0", null ],
-      [ "lineWidth", "struct_value_parameters.html#aa49b9d59b397213404609f64af69eae2", null ],
-      [ "maxOvershoots", "struct_value_parameters.html#ab597849b4572ebc3533303278b6488e5", null ],
-      [ "maxT1HOLD1Time", "struct_value_parameters.html#ac4e3d3e865be86698b2ecaa5dcb4aea7", null ],
-      [ "maxT1HOLD2Time", "struct_value_parameters.html#a4e61cf100fea3aae9052df67e3060cbd", null ],
-      [ "maxTrials", "struct_value_parameters.html#a352443d54efffff19126ef9b9bbdfeb0", null ],
-      [ "minT1HOLD1Time", "struct_value_parameters.html#ad506d07f40d9ac49217d0d9b04f24c70", null ],
-      [ "minT1HOLD2Time", "struct_value_parameters.html#ae0e41509cdd09a0584f1affd078144a5", null ],
-      [ "mode", "struct_value_parameters.html#a3b54930a32bcc296aae77e7b197dfc44", null ],
-      [ "nTrialsBeforeIncrease", "struct_value_parameters.html#acfadad07281f03316862334d1910c945", null ],
-      [ "orientation", "struct_value_parameters.html#a2ea304a26f3c05179351ffba8b282f55", null ],
-      [ "rewardVolume", "struct_value_parameters.html#a4607c3931e81bc9d5917617b2f76508f", null ],
-      [ "rewardVolumeIncrease", "struct_value_parameters.html#a001fe471cb6695e7e665f7173adf386a", null ],
-      [ "targetRadius", "struct_value_parameters.html#af09ce344b7a4f0198c14525b2718f69f", null ],
-      [ "travelDistance", "struct_value_parameters.html#a25ebb93d3210925cae33a3d240502b72", null ],
-      [ "xGain", "struct_value_parameters.html#a7a1cfc224f2051fdd80f11923d8f39d2", null ],
-      [ "yGain", "struct_value_parameters.html#ab70550c8bd24fbaa680c4c77d4641f20", null ]
-    ] ],
-    [ "TaskParameters", "struct_task_parameters.html", [
-      [ "subject", "struct_task_parameters.html#a38911d7033193772a383369314e67a64", null ],
-      [ "tag", "struct_task_parameters.html#a1ea9fa2e2673909de0d47223d17ed2ae", null ],
-      [ "value", "struct_task_parameters.html#afabedee477daa7063f5e27f5e463ae05", null ]
-    ] ],
     [ "CursorData", "struct_cursor_data.html", [
       [ "x", "struct_cursor_data.html#a88e65a8e2e027ffb5befb23db6387527", null ],
       [ "y", "struct_cursor_data.html#ae3250f9b991bb46541bf9861da5a7630", null ]
@@ -63,5 +33,10 @@ var group___structure =
       [ "render", "struct_rendered_circle_data.html#acfb1dbaf2a9e52222a9b40fd936791bc", null ],
       [ "x", "struct_rendered_circle_data.html#a8bd3e58d8a750820c5556df44220b630", null ],
       [ "y", "struct_rendered_circle_data.html#a9b7f7de7477356fa52b596be61f17c76", null ]
+    ] ],
+    [ "LogData", "struct_log_data.html", [
+      [ "set_index", "struct_log_data.html#a41578eddf8e33446e9ee4c3d7aca4a06", null ],
+      [ "state", "struct_log_data.html#a14dce919ad144217f7a8448fb07b4173", null ],
+      [ "trial", "struct_log_data.html#a8e4fcc85b0aefb25f1356b7377025546", null ]
     ] ]
 ];
