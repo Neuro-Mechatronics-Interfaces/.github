@@ -111,7 +111,7 @@ Contents</h1>
 <li><a class="el" href="#test-applications">Test Applications</a><ul>
 <li><a class="el" href="#nhp-wrist-controller-test">`NHP_Wrist_Controller_Test.exe`</a></li>
 <li><a class="el" href="#nhp-wrist-parameters-test">`NHP_Wrist_Parameters_Test.exe`</a></li>
-<li><a class="el" href="#nhp-wrist-requests-test">`NHP_Wrist_Requests_Test.exe`</a></li>
+<li>`NHP_Wrist_Requests_Test.exe`</li>
 </ul>
 </li>
 </ul>
@@ -132,7 +132,7 @@ Main Applications</h2>
 <b>NHP Wrist State Server</b></h3>
 <p><em>This application launches the State Server on a Windows host. It should be run on some other machine than the Plexon rig computer, but preferably still a good computer. <b>Important:</b> <code>config.yaml</code> <b>must be present</b> in whichever folder contains the <code>NHP_Wrist_State_Server.exe</code> when it is run. Therefore, if you copy the executable out of that folder make sure you copy <code>config.yaml</code> along with it. <b>You must properly set up <code>config.yaml</code> according to the current configuration of devices in your task network, or this executable will not work!</b></em> <br  />
 </p>
-<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lDataStructures -lTiming -lTaskParameters -lMathUtilities -lLogUtilities</div>
+<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures -lTiming -lMathUtilities &amp;&amp; doxygen</div>
 </div><!-- fragment --><p> <b>Note 1:</b> it is critically important to link <code>ws2_32</code> only after <code>Network</code>; also, since the other libraries include <code>&lt;Windows.h&gt;</code>, <code>-lws2_32</code> must precede any of the other libraries. <br  />
  <b>Note 2:</b> during the compilation and linking of the static <code>lib/Network.lib</code> (in <a href="https://code.nml.wtf/docs/NetworkUtilities/html/index.html"><code>NetworkUtilities</code></a>), please make sure to <em><b>not</b></em> link <code>-lws2_32</code> in the gcc static object file generation step. The static library does not require external libraries; the external libraries should only be linked in the final compilation step (i.e. when producing a <code>.dll</code> dynamic link library or when producing a <code>.exe</code> executable to run the application). <br  />
 </p>
@@ -152,7 +152,9 @@ Main Applications</h2>
 </ul>
 <h2><a class="anchor" id="test-applications"></a>
 Test Applications</h2>
-<h3><a class="anchor" id="nhp-wrist-controller-test"></a>
+<p>To re-compile all test executables, use the following bash command: <br  />
+ </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc tests/test_controller.c -o bin/tests/NHP_Wrist_Controller_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lDataStructures &amp;&amp; gcc tests/test_parameters.c -o bin/tests/NHP_Wrist_Parameters_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lTaskParameters -lLogUtilities -lDataStructures &amp;&amp; gcc tests/test_log_reader.c -o bin/tests/NHP_Wrist_Log_Reader_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures</div>
+</div><!-- fragment --><h3><a class="anchor" id="nhp-wrist-controller-test"></a>
 <b>NHP Wrist Controller Test</b></h3>
 <p><em>This should be run after starting <code>NHP_Wrist_State_Server.exe</code>. It sends a few test commands to the server, checking that the <code>controllerHandlerThread</code> correctly receives the control commands to enter the idle state, exit the idle state, and shut down.</em> <br  />
 </p>
@@ -161,12 +163,12 @@ Test Applications</h2>
 <b>NHP Wrist Parameters Test</b></h3>
 <p><em>This should be run after starting <code>NHP_Wrist_State_Server.exe</code>. It sends an example parameter message to the server, checking that the <code>controllerHandlerThread</code> correctly updates the received parameters message.</em> <br  />
 </p>
-<p>To re-compile the executable <code>bin/tests/NHP_Wrist_Parameters_Test.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -o bin/NHP_Wrist_Parameters_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lDataStructures -lTaskParameters</div>
-</div><!-- fragment --><h3><a class="anchor" id="nhp-wrist-requests-test"></a>
-<b>NHP Wrist Requests Test</b></h3>
+<p>To re-compile the executable <code>bin/tests/NHP_Wrist_Parameters_Test.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -o bin/tests/NHP_Wrist_Parameters_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lTaskParameters -lLogUtilities -lDataStructures </div>
+</div><!-- fragment --><h3><a class="anchor" id="nhp-wrist-log-reader-test"></a>
+<b>NHP Wrist Log Reader Test</b></h3>
 <p><em>This should be run after starting <code>NHP_Wrist_State_Server.exe</code>. It sends an example parameter message to the server, checking that the <code>outputHandlerThread</code> correctly issues a sound request message (i.e. as would occur on different task cues in the corresponding state) and finally that it correctly issues a reward request message (which prompts sending back a message with updated target locations).</em> <br  />
 </p>
-<p>To re-compile the executable <code>bin/tests/NHP_Wrist_Requests_Test.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc tests/test_requests.c -o bin/NHP_Wrist_Requests_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lDataStructures -lTaskParameters</div>
+<p>To re-compile the executable <code>bin/tests/NHP_Wrist_Log_Reader_Test.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc tests/test_log_reader.c -o bin/tests/NHP_Wrist_Log_Reader_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures </div>
 </div><!-- fragment --><hr  />
 <h2><a class="anchor" id="deprecated-tests"></a>
 Deprecated Tests</h2>

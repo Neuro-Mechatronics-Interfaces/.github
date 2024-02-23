@@ -104,7 +104,6 @@ Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
 <li>Libraries</li>
-<li><a class="el" href="#copying">Copying</a></li>
 <li><a class="el" href="#applications">Applications</a></li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
@@ -116,15 +115,11 @@ Compiling</h1>
 <h2><a class="anchor" id="libraries"></a>
 Libraries</h2>
 <p>To re-compile the static link library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc -c src/parameters.c -o lib/parameters.o -Iinclude &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o</div>
-</div><!-- fragment --><h2><a class="anchor" id="copying"></a>
-Copying</h2>
-<p>To copy to the relevant other projects, use the following command: <br  />
- </p><div class="fragment"><div class="line">cp src/parameters.h ../TaskIO/include/parameters.h &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskIO/lib/TaskParameters.lib &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib &amp;&amp; cp src/parameters.h include/parameters.h</div>
+ </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/TaskParameters &amp;&amp; gcc -c src/parameters.c -o lib/parameters.o -Iinclude &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib &amp;&amp; cp src/parameters.h include/parameters.h &amp;&amp; cp src/parameters.h ../TaskController/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskController/lib/TaskParameters.lib &amp;&amp; doxygen</div>
 </div><!-- fragment --><h2><a class="anchor" id="applications"></a>
 Applications</h2>
-<p>To re-compile the parameter generator application <code>bin/genparams.exe</code>, use the following command: </p><div class="fragment"><div class="line">gcc src/gen_params.c -Iinclude -o bin/genparams.exe -Llib -lDataStructures</div>
-</div><!-- fragment --><p>To re-compile the test parameter application <code>bin/test_params.exe</code>, use the following comand: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -Iinclude -Llib -lDataStructures -lTaskParameters -obin/test_params.exe</div>
+<p>To re-compile the parameter generator application <code>bin/gen_params.exe</code>, use the following command: </p><div class="fragment"><div class="line">gcc src/gen_params.c -Iinclude -o bin/gen_params.exe -Llib -lTaskParameters -lDataStructures </div>
+</div><!-- fragment --><p>To re-compile the test parameter application <code>bin/test_params.exe</code>, use the following comand: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -Iinclude -Llib -lTaskParameters -lDataStructures -obin/test_params.exe</div>
 </div><!-- fragment --><p> (Note that this requires having already compiled <code>lib/TaskParameters.lib</code> as shown above).</p>
 <h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>

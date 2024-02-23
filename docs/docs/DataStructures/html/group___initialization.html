@@ -106,6 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5629506ee11be923044eddc18ab14df2" id="r_ga5629506ee11be923044eddc18ab14df2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5629506ee11be923044eddc18ab14df2">initLogicFlags</a> (<a class="el" href="struct_flag_data.html">FlagData</a> *flags)</td></tr>
 <tr class="memdesc:ga5629506ee11be923044eddc18ab14df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logical flag structure.  <br /></td></tr>
 <tr class="separator:ga5629506ee11be923044eddc18ab14df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84c00b942e7cd9181f7ababdbb8a5bc0" id="r_ga84c00b942e7cd9181f7ababdbb8a5bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84c00b942e7cd9181f7ababdbb8a5bc0">initLogData</a> (<a class="el" href="struct_log_data.html">LogData</a> *logData, <a class="el" href="struct_state_data.html">StateData</a> *pstate, <a class="el" href="struct_trial_data.html">TrialData</a> *ptrial)</td></tr>
+<tr class="memdesc:ga84c00b942e7cd9181f7ababdbb8a5bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logdata structure for logging.  <br /></td></tr>
+<tr class="separator:ga84c00b942e7cd9181f7ababdbb8a5bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga47845e3d13cbfb2673c2cb3749ed8729" id="r_ga47845e3d13cbfb2673c2cb3749ed8729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga47845e3d13cbfb2673c2cb3749ed8729">initTrialData</a> (<a class="el" href="struct_trial_data.html">TrialData</a> *trial)</td></tr>
 <tr class="memdesc:ga47845e3d13cbfb2673c2cb3749ed8729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the trial-data-tracking structure.  <br /></td></tr>
 <tr class="separator:ga47845e3d13cbfb2673c2cb3749ed8729"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +147,42 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cursorData</td><td>Pointer to the <a class="el" href="struct_cursor_data.html" title="Structure to store timestamped cursor data.">CursorData</a> structure to be initialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga84c00b942e7cd9181f7ababdbb8a5bc0" name="ga84c00b942e7cd9181f7ababdbb8a5bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84c00b942e7cd9181f7ababdbb8a5bc0">&#9670;&#160;</a></span>initLogData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initLogData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_log_data.html">LogData</a> *</td>          <td class="paramname"><span class="paramname"><em>logData</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_state_data.html">StateData</a> *</td>          <td class="paramname"><span class="paramname"><em>pstate</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_trial_data.html">TrialData</a> *</td>          <td class="paramname"><span class="paramname"><em>ptrial</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the logdata structure for logging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logData</td><td><a class="el" href="struct_log_data.html" title="Structure to store/retrieve data from/to logs.">LogData</a> structure to initialize. </td></tr>
+    <tr><td class="paramname">pstate</td><td>If NULL, initialize state field using initStateData, otherwise use values pointed to by this <a class="el" href="struct_state_data.html" title="Structure to store timestamped task state data.">StateData</a> pointer. </td></tr>
+    <tr><td class="paramname">ptrial</td><td>If NULL, initialize trial field using initTrialData, otherwise use values pointed to by this <a class="el" href="struct_trial_data.html" title="Data structure for tracking basic task success rates.">TrialData</a> pointer. </td></tr>
   </table>
   </dd>
 </dl>

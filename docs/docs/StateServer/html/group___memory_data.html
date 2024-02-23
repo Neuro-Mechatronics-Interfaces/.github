@@ -110,6 +110,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gad95a86462eec496a664866b99c76ff69" id="r_gad95a86462eec496a664866b99c76ff69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad95a86462eec496a664866b99c76ff69">readTaskState</a> (FILE *log, LogData *logData)</td></tr>
 <tr class="memdesc:gad95a86462eec496a664866b99c76ff69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read task state data from a binary log file.  <br /></td></tr>
 <tr class="separator:gad95a86462eec496a664866b99c76ff69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1710f7d4fd10e1cdcd657c76d60da21" id="r_gae1710f7d4fd10e1cdcd657c76d60da21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae1710f7d4fd10e1cdcd657c76d60da21">saveParametersToFile</a> (const char *paramFolderFS, TaskParameters *parameters, uint16_t parameters_index)</td></tr>
+<tr class="memdesc:gae1710f7d4fd10e1cdcd657c76d60da21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write parameters to text file.  <br /></td></tr>
+<tr class="separator:gae1710f7d4fd10e1cdcd657c76d60da21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadc464985e50a48c1bdb96ceb1cbe5ee7" id="r_gadc464985e50a48c1bdb96ceb1cbe5ee7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadc464985e50a48c1bdb96ceb1cbe5ee7">saveTaskState</a> (FILE *log, LogData *logData)</td></tr>
 <tr class="memdesc:gadc464985e50a48c1bdb96ceb1cbe5ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write task state data to binary log file.  <br /></td></tr>
 <tr class="separator:gadc464985e50a48c1bdb96ceb1cbe5ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +175,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if successful, 0 if the end of file is reached or an error occurs. </dd></dl>
+
+</div>
+</div>
+<a id="gae1710f7d4fd10e1cdcd657c76d60da21" name="gae1710f7d4fd10e1cdcd657c76d60da21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1710f7d4fd10e1cdcd657c76d60da21">&#9670;&#160;</a></span>saveParametersToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saveParametersToFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>paramFolderFS</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TaskParameters *</td>          <td class="paramname"><span class="paramname"><em>parameters</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>parameters_index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write parameters to text file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramFolderFS</td><td>Folder where the parameters files will be saved, using forward-slashes for file-separators and no "final" file separator. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Pointer to TaskParameters parameter struct. </td></tr>
+    <tr><td class="paramname">parameters_index</td><td>Index to be associated with the saved parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

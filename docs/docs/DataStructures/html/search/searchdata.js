@@ -3,9 +3,9 @@ var indexSectionsWithContent =
   0: "acdefgilmnoprstuxy",
   1: "cflrst",
   2: "cdfimoprstu",
-  3: "cdinorstxy",
+  3: "cdnoprstxy",
   4: "cdmost",
-  5: "acfimoprst",
+  5: "cdmost",
   6: "defimsu",
   7: "ds"
 };

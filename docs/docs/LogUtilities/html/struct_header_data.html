@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -105,12 +105,14 @@ $(function(){initNavTree('struct_header_data.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aad4af544ec73e58f9b45682f644a166a" id="r_aad4af544ec73e58f9b45682f644a166a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4af544ec73e58f9b45682f644a166a">timestamp</a></td></tr>
-<tr class="separator:aad4af544ec73e58f9b45682f644a166a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ab6383176d83ed385dc7f46181b19a" id="r_a52ab6383176d83ed385dc7f46181b19a"><td class="memItemLeft" align="right" valign="top">ULONGLONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ab6383176d83ed385dc7f46181b19a">timestamp</a></td></tr>
+<tr class="separator:a52ab6383176d83ed385dc7f46181b19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a10936e7958a923656398e86222fd8d" id="r_a6a10936e7958a923656398e86222fd8d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a10936e7958a923656398e86222fd8d">logVersion</a> [16]</td></tr>
 <tr class="separator:a6a10936e7958a923656398e86222fd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8642af9f7b14f997da389cdb44c36fcf" id="r_a8642af9f7b14f997da389cdb44c36fcf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8642af9f7b14f997da389cdb44c36fcf">logIndex</a></td></tr>
 <tr class="separator:a8642af9f7b14f997da389cdb44c36fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff3035b6ce0a8453b12aa3cc1a887df" id="r_a3ff3035b6ce0a8453b12aa3cc1a887df"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ff3035b6ce0a8453b12aa3cc1a887df">seed</a></td></tr>
+<tr class="separator:a3ff3035b6ce0a8453b12aa3cc1a887df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to store header data. </p>
@@ -147,14 +149,29 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="aad4af544ec73e58f9b45682f644a166a" name="aad4af544ec73e58f9b45682f644a166a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4af544ec73e58f9b45682f644a166a">&#9670;&#160;</a></span>timestamp</h2>
+<a id="a3ff3035b6ce0a8453b12aa3cc1a887df" name="a3ff3035b6ce0a8453b12aa3cc1a887df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff3035b6ce0a8453b12aa3cc1a887df">&#9670;&#160;</a></span>seed</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t HeaderData::timestamp</td>
+          <td class="memname">unsigned int HeaderData::seed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Random seed used for trials in this log. </p>
+
+</div>
+</div>
+<a id="a52ab6383176d83ed385dc7f46181b19a" name="a52ab6383176d83ed385dc7f46181b19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ab6383176d83ed385dc7f46181b19a">&#9670;&#160;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ULONGLONG HeaderData::timestamp</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.2.1</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -110,8 +110,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:af0689008881a651255f116210d22b214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad07a3d99916739ce19b33eb1235e227d" id="r_ad07a3d99916739ce19b33eb1235e227d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad07a3d99916739ce19b33eb1235e227d">logReadFolder</a> [64]</td></tr>
 <tr class="separator:ad07a3d99916739ce19b33eb1235e227d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae43d4e0bee87fd3e2288549d08301e3a" id="r_ae43d4e0bee87fd3e2288549d08301e3a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae43d4e0bee87fd3e2288549d08301e3a">defaultParametersFile</a> [128]</td></tr>
-<tr class="separator:ae43d4e0bee87fd3e2288549d08301e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16302388043e0b68cd6f8355fa1ffc14" id="r_a16302388043e0b68cd6f8355fa1ffc14"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16302388043e0b68cd6f8355fa1ffc14">defaultParametersFile</a> [MAX_PATH]</td></tr>
+<tr class="separator:a16302388043e0b68cd6f8355fa1ffc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77921bad2a11033dcf5b1c48bcdd9145" id="r_a77921bad2a11033dcf5b1c48bcdd9145"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77921bad2a11033dcf5b1c48bcdd9145">paramSaveFolder</a> [64]</td></tr>
+<tr class="separator:a77921bad2a11033dcf5b1c48bcdd9145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bd93b2aa4e67522f97c44d44a3d26ce" id="r_a1bd93b2aa4e67522f97c44d44a3d26ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_connection_data.html">ConnectionData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd93b2aa4e67522f97c44d44a3d26ce">network</a></td></tr>
 <tr class="separator:a1bd93b2aa4e67522f97c44d44a3d26ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -119,14 +121,14 @@ Data Fields</h2></td></tr>
 <div class="textblock"><p>Structure to store configuration data parsed from yaml files. <br  />
  </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="ae43d4e0bee87fd3e2288549d08301e3a" name="ae43d4e0bee87fd3e2288549d08301e3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae43d4e0bee87fd3e2288549d08301e3a">&#9670;&#160;</a></span>defaultParametersFile</h2>
+<a id="a16302388043e0b68cd6f8355fa1ffc14" name="a16302388043e0b68cd6f8355fa1ffc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16302388043e0b68cd6f8355fa1ffc14">&#9670;&#160;</a></span>defaultParametersFile</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char Config::defaultParametersFile[128]</td>
+          <td class="memname">char Config::defaultParametersFile[MAX_PATH]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -176,6 +178,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p><a class="el" href="struct_connection_data.html" title="Data structure related to connection IP and port addresses.">ConnectionData</a> struct pointer for network connection IPs and ports. </p>
+
+</div>
+</div>
+<a id="a77921bad2a11033dcf5b1c48bcdd9145" name="a77921bad2a11033dcf5b1c48bcdd9145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77921bad2a11033dcf5b1c48bcdd9145">&#9670;&#160;</a></span>paramSaveFolder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Config::paramSaveFolder[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Folder path for saving parameters. </p>
 
 </div>
 </div>

@@ -116,6 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf0ac6d9408e1fc7f82025e1d054e9f49" id="r_gaf0ac6d9408e1fc7f82025e1d054e9f49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf0ac6d9408e1fc7f82025e1d054e9f49">unpackParameters</a> (<a class="el" href="struct_task_parameters.html">TaskParameters</a> *params, const char *buffer)</td></tr>
 <tr class="memdesc:gaf0ac6d9408e1fc7f82025e1d054e9f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpacks byte buffer into <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct.  <br /></td></tr>
 <tr class="separator:gaf0ac6d9408e1fc7f82025e1d054e9f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fced0646451bb59173ad2fc9ee4f5fc" id="r_ga6fced0646451bb59173ad2fc9ee4f5fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6fced0646451bb59173ad2fc9ee4f5fc">updateTag</a> (<a class="el" href="struct_task_parameters.html">TaskParameters</a> *params, uint16_t index)</td></tr>
+<tr class="memdesc:ga6fced0646451bb59173ad2fc9ee4f5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <code>tag</code> parameter field, using current value of params-&gt;value-&gt;orientation.  <br /></td></tr>
+<tr class="separator:ga6fced0646451bb59173ad2fc9ee4f5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Handles initializing, packing, unpacking, and console print of Parameter data structures. <br  />
@@ -232,6 +235,36 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">params</td><td>Pointer to the <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct to populate. </td></tr>
     <tr><td class="paramname">buffer</td><td>Pointer to the byte buffer containing packed data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6fced0646451bb59173ad2fc9ee4f5fc" name="ga6fced0646451bb59173ad2fc9ee4f5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fced0646451bb59173ad2fc9ee4f5fc">&#9670;&#160;</a></span>updateTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateTag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_task_parameters.html">TaskParameters</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the <code>tag</code> parameter field, using current value of params-&gt;value-&gt;orientation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td>Pointer to the <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct to populate. </td></tr>
+    <tr><td class="paramname">index</td><td>Set index for the current set. </td></tr>
   </table>
   </dd>
 </dl>

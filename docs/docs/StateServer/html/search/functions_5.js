@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transitionstate_0',['transitionState',['../group___state_machine.html#gaf8131c4ceff1d3e2b36a63d2e9e2d50f',1,'transitionState(State s, Transition t, double ts, double *tl):&#160;state_server.c'],['../group___state_machine.html#gaf8131c4ceff1d3e2b36a63d2e9e2d50f',1,'transitionState(State s, Transition t, double ts, double *tl):&#160;state_server.c']]]
+  ['transitionstate_0',['transitionState',['../group___state_machine.html#ga3f709e563a07ae10f31916fc5b57dce5',1,'transitionState(StateData *stateData, State *previous):&#160;state_server.c'],['../group___state_machine.html#ga3f709e563a07ae10f31916fc5b57dce5',1,'transitionState(StateData *s, State *previous):&#160;state_server.c']]]
 ];

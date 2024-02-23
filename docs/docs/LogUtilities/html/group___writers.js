@@ -1,6 +1,6 @@
 var group___writers =
 [
-    [ "addFileHeader", "group___writers.html#ga247897db29b57572ac9843aa56befd1a", null ],
+    [ "addFileHeader", "group___writers.html#gaa9ba9a6aa0deb8d432e830a9dde311e5", null ],
     [ "openLogForWriting", "group___writers.html#ga2125071c2538680e0b453475aa141c63", null ],
-    [ "openNewLogForWriting", "group___writers.html#ga2e6e2f5c0639bc6a2d56e9020368acad", null ]
+    [ "openNewLogForWriting", "group___writers.html#gadc6c0b1564b41403ebf7a5793b497f46", null ]
 ];

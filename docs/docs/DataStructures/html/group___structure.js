@@ -7,7 +7,7 @@ var group___structure =
       [ "total_successes", "struct_trial_data.html#a80956b6599bf51ceb7aeaea303d84522", null ]
     ] ],
     [ "FlagData", "struct_flag_data.html", [
-      [ "idle", "struct_flag_data.html#a6d5c1ca594396f7abc98830f816ff8da", null ],
+      [ "needs_targets", "struct_flag_data.html#a3b92d6c63f201b54a06f178dafeb0573", null ],
       [ "new_parameters", "struct_flag_data.html#ace95cc7ace0fb15d764b98f2dfed7361", null ],
       [ "new_position", "struct_flag_data.html#a23664d3b47821fabdaec73a908b91b18", null ],
       [ "new_set", "struct_flag_data.html#aee9452e9c95fde90eb95ccdeebf6e75f", null ],
@@ -35,6 +35,7 @@ var group___structure =
       [ "y", "struct_rendered_circle_data.html#a9b7f7de7477356fa52b596be61f17c76", null ]
     ] ],
     [ "LogData", "struct_log_data.html", [
+      [ "parameters_index", "struct_log_data.html#af3c684153d6fabc4b0fca555a20cd044", null ],
       [ "set_index", "struct_log_data.html#a41578eddf8e33446e9ee4c3d7aca4a06", null ],
       [ "state", "struct_log_data.html#a14dce919ad144217f7a8448fb07b4173", null ],
       [ "trial", "struct_log_data.html#a8e4fcc85b0aefb25f1356b7377025546", null ]

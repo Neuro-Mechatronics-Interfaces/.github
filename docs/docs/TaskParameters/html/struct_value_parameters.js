@@ -19,6 +19,7 @@ var struct_value_parameters =
     [ "orientation", "struct_value_parameters.html#a2ea304a26f3c05179351ffba8b282f55", null ],
     [ "rewardVolume", "struct_value_parameters.html#a4607c3931e81bc9d5917617b2f76508f", null ],
     [ "rewardVolumeIncrease", "struct_value_parameters.html#a001fe471cb6695e7e665f7173adf386a", null ],
+    [ "seed", "struct_value_parameters.html#a2836f738eac7fec0558b7499b0f6129f", null ],
     [ "targetRadius", "struct_value_parameters.html#abc178fad7439d100da763eeb3b40c366", null ],
     [ "travelDistance", "struct_value_parameters.html#a25ebb93d3210925cae33a3d240502b72", null ],
     [ "xGain", "struct_value_parameters.html#a7a1cfc224f2051fdd80f11923d8f39d2", null ],

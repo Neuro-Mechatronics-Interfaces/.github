@@ -9,7 +9,7 @@ var index =
       [ "Test Applications", "index.html#test-applications", [
         [ "NHP Wrist Controller Test", "index.html#nhp-wrist-controller-test", null ],
         [ "NHP Wrist Parameters Test", "index.html#nhp-wrist-parameters-test", null ],
-        [ "NHP Wrist Requests Test", "index.html#nhp-wrist-requests-test", null ]
+        [ "NHP Wrist Log Reader Test", "index.html#nhp-wrist-log-reader-test", null ]
       ] ],
       [ "Deprecated Tests", "index.html#deprecated-tests", [
         [ "Test UI", "index.html#test-ui", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addfileheader_0',['addFileHeader',['../group___writers.html#ga247897db29b57572ac9843aa56befd1a',1,'addFileHeader(FILE *logFile, uint16_t index, HeaderData *headerData):&#160;log_utilities.c'],['../group___writers.html#ga247897db29b57572ac9843aa56befd1a',1,'addFileHeader(FILE *logFile, uint16_t index, HeaderData *headerData):&#160;log_utilities.c']]]
+  ['addfileheader_0',['addFileHeader',['../group___writers.html#gaa9ba9a6aa0deb8d432e830a9dde311e5',1,'addFileHeader(FILE *logFile, uint16_t index, HeaderData *headerData, unsigned int *seed):&#160;log_utilities.c'],['../group___writers.html#gaa9ba9a6aa0deb8d432e830a9dde311e5',1,'addFileHeader(FILE *logFile, uint16_t index, HeaderData *headerData, unsigned int *seed):&#160;log_utilities.c']]]
 ];
