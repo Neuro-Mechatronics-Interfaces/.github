@@ -5,6 +5,9 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
+    <loc>https://code.nml.wtf/docs/group___buffer_allocation.html</loc>
+  </url>
+  <url>
     <loc>https://code.nml.wtf/docs/group___port_creation.html</loc>
   </url>
   <url>

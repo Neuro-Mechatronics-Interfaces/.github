@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.2.3</span>
+   <div id="projectname">NetworkUtilities<span id="projectnumber">&#160;1.3.2</span>
    </div>
    <div id="projectbrief">A small compiled library for C network utility functions.</div>
   </td>
@@ -103,6 +103,9 @@ $(function(){initNavTree('group___port_creation.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gaa303de61fbc4dc92f47ced4ddf0ce871" id="r_gaa303de61fbc4dc92f47ced4ddf0ce871"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa303de61fbc4dc92f47ced4ddf0ce871">initSocketAddress</a> (char *ip_address, uint16_t port)</td></tr>
+<tr class="memdesc:gaa303de61fbc4dc92f47ced4ddf0ce871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a socket address.  <br /></td></tr>
+<tr class="separator:gaa303de61fbc4dc92f47ced4ddf0ce871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ee93bf6ea9d1f37eedb43e05ebf0157" id="r_ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ee93bf6ea9d1f37eedb43e05ebf0157">initializeWinsock</a> ()</td></tr>
 <tr class="memdesc:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes Winsock library.  <br /></td></tr>
 <tr class="separator:ga5ee93bf6ea9d1f37eedb43e05ebf0157"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +228,37 @@ Functions</h2></td></tr>
 <p>Initializes Winsock library. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, EXIT_FAILURE on failure.</dd></dl>
 <p>This function initializes the Winsock library. It must be called before any other Winsock functions. If initialization fails, an error message is printed to stderr and the function returns EXIT_FAILURE code. </p>
+
+</div>
+</div>
+<a id="gaa303de61fbc4dc92f47ced4ddf0ce871" name="gaa303de61fbc4dc92f47ced4ddf0ce871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa303de61fbc4dc92f47ced4ddf0ce871">&#9670;&#160;</a></span>initSocketAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in initSocketAddress </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ip_address</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a socket address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_address</td><td>String containing the allowed connection IP address, or NULL to allow any connection. </td></tr>
+    <tr><td class="paramname">port</td><td>Port over which socket messages will be exchanged for this address structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct sockaddr_in a data structure containing the namespace-formatted port and IP address. </dd></dl>
 
 </div>
 </div>

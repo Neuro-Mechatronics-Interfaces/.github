@@ -32,7 +32,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"group___clean_up.html"
+"group___buffer_allocation.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
