@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.4</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.13</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -105,7 +105,7 @@ $(function(){initNavTree('group___state_machine.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga3f709e563a07ae10f31916fc5b57dce5" id="r_ga3f709e563a07ae10f31916fc5b57dce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f709e563a07ae10f31916fc5b57dce5">transitionState</a> (StateData *s, State *previous)</td></tr>
-<tr class="memdesc:ga3f709e563a07ae10f31916fc5b57dce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the updated State value based on state-transition for this state-update cycle.  <br /></td></tr>
+<tr class="memdesc:ga3f709e563a07ae10f31916fc5b57dce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <code>state</code> field by reference based on the <code>transition</code> field and previous state.  <br /></td></tr>
 <tr class="separator:ga3f709e563a07ae10f31916fc5b57dce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -131,19 +131,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the updated State value based on state-transition for this state-update cycle. </p>
-<p>This function calculates the new state based on the current state <code>s</code>, the transition <code>t</code>, and updates the time <code>tl</code> accordingly.</p>
+<p>Updates the <code>state</code> field by reference based on the <code>transition</code> field and previous state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The current state. </td></tr>
-    <tr><td class="paramname">t</td><td>Pointer to the transition. </td></tr>
-    <tr><td class="paramname">ts</td><td>The timestamp. </td></tr>
-    <tr><td class="paramname">tl</td><td>Pointer to the time to update. </td></tr>
-    <tr><td class="paramname">previous</td><td>Pointer to the previous state. </td></tr>
+    <tr><td class="paramname">previous</td><td>Pointer to the previous state.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The updated State value.</dd></dl>
 <div class="image">
 <img src="state_transition_flowchart.png" alt=""/>
 <div class="caption">

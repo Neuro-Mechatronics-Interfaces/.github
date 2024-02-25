@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.4</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.13</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -111,7 +111,7 @@ Contents</h1>
 <li><a class="el" href="#test-applications">Test Applications</a><ul>
 <li><a class="el" href="#nhp-wrist-controller-test">`NHP_Wrist_Controller_Test.exe`</a></li>
 <li><a class="el" href="#nhp-wrist-parameters-test">`NHP_Wrist_Parameters_Test.exe`</a></li>
-<li>`NHP_Wrist_Requests_Test.exe`</li>
+<li><a class="el" href="#nhp-wrist-log-reader-test">`NHP_Wrist_Log_Reader_Test.exe`</a></li>
 </ul>
 </li>
 </ul>
@@ -121,7 +121,7 @@ Contents</h1>
 <h1><a class="anchor" id="state-machine"></a>
 State Machine</h1>
 <p>The wrist center-out task state machine for the NHP task runs as shown by the following image generated using <a href="https://graphviz.org/download/"><code>graphviz</code></a>: <br  />
- <img src="state_transition_flowchart.png" alt="Figure 1: NHP wrist center-out task state machine." class="inline"/>. <br  />
+ <img src="state_transition_flowchart.png" alt="" class="inline" title="Figure 1: NHP wrist center-out task state machine."/>     . <br  />
  To modify this image, you need to update the corresponding lines in <code>state_transition_flowchart.dot</code> (which is located in the project root of this repository). After modifying <code>state_transition_flowchart.dot</code>, you must regenerate the static image file that is used in the documentation. To do so, first make sure that <a href="https://graphviz.org/download/"><code>graphviz</code></a> is installed on your device and that the associated binaries folder (e.g. <code>C:/Program Files/graphviz/bin</code>) is in your environment <code>PATH</code> variable. With <code>graphviz</code> installed and on the <code>PATH</code>, issue the following command from a Windows Terminal: <br  />
  </p><div class="fragment"><div class="line">dot -Tpng state_transition_flowchart.dot -o &quot;%NML_DOXY_DOCS_DIRECTORY%/StateServer/html/state_transition_flowchart.png&quot;</div>
 </div><!-- fragment --><h1><a class="anchor" id="compiling"></a>
@@ -132,7 +132,7 @@ Main Applications</h2>
 <b>NHP Wrist State Server</b></h3>
 <p><em>This application launches the State Server on a Windows host. It should be run on some other machine than the Plexon rig computer, but preferably still a good computer. <b>Important:</b> <code>config.yaml</code> <b>must be present</b> in whichever folder contains the <code>NHP_Wrist_State_Server.exe</code> when it is run. Therefore, if you copy the executable out of that folder make sure you copy <code>config.yaml</code> along with it. <b>You must properly set up <code>config.yaml</code> according to the current configuration of devices in your task network, or this executable will not work!</b></em> <br  />
 </p>
-<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures -lTiming -lMathUtilities &amp;&amp; doxygen</div>
+<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures -lTiming -lMathUtilities &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
 </div><!-- fragment --><p> <b>Note 1:</b> it is critically important to link <code>ws2_32</code> only after <code>Network</code>; also, since the other libraries include <code>&lt;Windows.h&gt;</code>, <code>-lws2_32</code> must precede any of the other libraries. <br  />
  <b>Note 2:</b> during the compilation and linking of the static <code>lib/Network.lib</code> (in <a href="https://code.nml.wtf/docs/NetworkUtilities/html/index.html"><code>NetworkUtilities</code></a>), please make sure to <em><b>not</b></em> link <code>-lws2_32</code> in the gcc static object file generation step. The static library does not require external libraries; the external libraries should only be linked in the final compilation step (i.e. when producing a <code>.dll</code> dynamic link library or when producing a <code>.exe</code> executable to run the application). <br  />
 </p>
@@ -170,24 +170,9 @@ Test Applications</h2>
 </p>
 <p>To re-compile the executable <code>bin/tests/NHP_Wrist_Log_Reader_Test.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc tests/test_log_reader.c -o bin/tests/NHP_Wrist_Log_Reader_Test.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures </div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="deprecated-tests"></a>
-Deprecated Tests</h2>
-<p><em>Tests under this header are likely deprecated but might still be useful so they are hanging around.</em> <br  />
-</p>
-<h3><a class="anchor" id="test-ui"></a>
-<b>Test UI</b></h3>
-<p><em>Tests the (kind of old honestly) Windows <code>c</code> API for user interfaces.</em> <br  />
- To re-compile the executable <code>bin/tests/ui.exe</code> use the following command: <br  />
- </p><div class="fragment"><div class="line">gcc deprecated/ui.c -o bin/tests/ui.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lDataStructures -lTaskParameters -lTiming</div>
-</div><!-- fragment --><h3><a class="anchor" id="test-ui-sender"></a>
-<b>Test UI Sender</b></h3>
-<p><em>Sends messages to the test UI interface. Note that the message exchange format is likely broken at this point due to other library changes that happened after this became deprecated.</em> <br  />
-</p>
-<p>To re-compile the executable <code>bin/tests/test_sender.exe</code> use the following command: </p><div class="fragment"><div class="line">gcc deprecated/test_sender.c -o bin/tests/test_sender.exe -Iinclude -Isrc -Llib -lNetwork -lws2_32 -lDataStructures -lTiming -lTaskParameters</div>
-</div><!-- fragment --><hr  />
 <h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
-<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
+<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download <a href="https://www.msys2.org"><code>msys2</code></a>, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
 </div><!-- fragment --><p> If you see anything in the terminal following this command, it means you already have <code>gcc</code>. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.): <br  />
  </p><div class="fragment"><div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
 </div><!-- fragment --><p> This will give several options for what you can install. If you are unsure what to do, just install all of them. <br  />

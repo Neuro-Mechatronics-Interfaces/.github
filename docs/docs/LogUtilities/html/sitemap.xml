@@ -5,7 +5,7 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://code.nml.wtf/docs/group___formatting.html</loc>
+    <loc>https://code.nml.wtf/docs/group___net_config.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/group___file_i_o.html</loc>
@@ -17,7 +17,7 @@
     <loc>https://code.nml.wtf/docs/group___writers.html</loc>
   </url>
   <url>
-    <loc>https://code.nml.wtf/docs/group___net_config.html</loc>
+    <loc>https://code.nml.wtf/docs/group___formatting.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/struct_config.html</loc>

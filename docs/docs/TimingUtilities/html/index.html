@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TimingUtilities<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">TimingUtilities<span id="projectnumber">&#160;1.0.8</span>
    </div>
    <div id="projectbrief">A small compiled library for C timing with greater precision than default time.h library.</div>
   </td>
@@ -98,6 +98,64 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a>This is a small compiled library for <code>C</code> timing functions with higher precision than time.h</p>
 <p><em><a href="https://code.nml.wtf/docs">(Return)</a></em></p>
 <hr  />
+<h1><a class="anchor" id="summary"></a>
+Summary</h1>
+<p>This is primarily used for generating "clock threads." That can help add interrupts with arbitrary precision for example while running some timed state within a larger state machine multi-threaded or networked application. <br  />
+</p>
+<h2><a class="anchor" id="example-use"></a>
+Example Use</h2>
+<p>Consider the following basic application, which just creates a thread and then sleeps a bit, stops the thread, and then prints out the number of tick cycles and total time elapsed based on the system time differences: </p><div class="fragment"><div class="line"><span class="comment">// timing_example.c</span></div>
+<div class="line"><span class="preprocessor">#include &quot;timing.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;pthread_t.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">  uint16_t counter = 0; <span class="comment">/*&lt; Number of ticks &gt;*/</span></div>
+<div class="line">  <span class="keywordtype">double</span> ts = 0; <span class="comment">/*&lt; Number of seconds elapsed from start &gt;*/</span></div>
+<div class="line">} Data;</div>
+<div class="line"><span class="keywordtype">int</span> running;</div>
+<div class="line">pthread_mutex_t mutex;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">  pthread_t thread;</div>
+<div class="line">  running = 1;</div>
+<div class="line">  Data* myData = malloc(<span class="keyword">sizeof</span>(Data));</div>
+<div class="line">  mutex = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line">  pthread_create(&amp;thread, myData, run, NULL); <span class="comment">// Create and start running the thread</span></div>
+<div class="line"> </div>
+<div class="line">  Sleep(500); <span class="comment">// Let thread run for 500 ms</span></div>
+<div class="line">  running = 0; <span class="comment">// Stop the thread</span></div>
+<div class="line">  pthread_join(thread, NULL); <span class="comment">// Wait for thread to cleanup</span></div>
+<div class="line">  pthread_mutex_destroy(&amp;mutex);</div>
+<div class="line">  printf(<span class="stringliteral">&quot;%hu ticks | %.3fs elapsed\n&quot;</span>, myData-&gt;counter, myData-&gt;ts);</div>
+<div class="line">  free(Data);</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span>* run(<span class="keywordtype">void</span>* arg) {</div>
+<div class="line">  Data* args = (Data*)arg; <span class="comment">// Cast to defined structure</span></div>
+<div class="line">  LARGE_INTEGER main_start, tick_start, tick_end;</div>
+<div class="line">  <span class="keywordtype">double</span> elapsed_time;</div>
+<div class="line">  QueryPerformanceCounter(&amp;main_start);</div>
+<div class="line">  tick_start = main_start;</div>
+<div class="line">  <span class="keywordflow">while</span> (running) {</div>
+<div class="line">    pthread_mutex_lock(&amp;mutex);</div>
+<div class="line">    QueryPerformanceCounter(&amp;tick_end);</div>
+<div class="line">    elapsed_time = <a class="code hl_function" href="group___timing.html#gaff502ebc7862ef8c0df94d92af545be0">getElapsedTime</a>(tick_start.QuadPart, tick_end.QuadPart);</div>
+<div class="line">    <span class="keywordflow">if</span> (elapsed_time &gt;= 0.001) { <span class="comment">// Does this part every millisecond then resets.</span></div>
+<div class="line">      args-&gt;counter++;</div>
+<div class="line">      tick_start = tick_end;</div>
+<div class="line">    }</div>
+<div class="line">    pthread_mutex_unlock(&amp;mutex);</div>
+<div class="line">  }</div>
+<div class="line">  pthread_mutex_lock(&amp;mutex);</div>
+<div class="line">  args-&gt;ts = <a class="code hl_function" href="group___timing.html#gaff502ebc7862ef8c0df94d92af545be0">getElapsedTime</a>(main_start.QuadPart, tick_end.QuadPart);</div>
+<div class="line">  pthread_mutex_unlock(&amp;mutex);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup___timing_html_gaff502ebc7862ef8c0df94d92af545be0"><div class="ttname"><a href="group___timing.html#gaff502ebc7862ef8c0df94d92af545be0">getElapsedTime</a></div><div class="ttdeci">double getElapsedTime(LONGLONG qstart, LONGLONG qend)</div><div class="ttdoc">Calculate the elapsed time between two given timestamps.</div><div class="ttdef"><b>Definition</b> timing.c:16</div></div>
+</div><!-- fragment --><p> Note how the data is shared in this thread. We can access the shared data structure safely using <code>pthread_mutex_lock(&amp;mutex);</code> to ensure synchronization in case we want to share this data structure with other threads.</p>
+<hr  />
 <h1><a class="anchor" id="contents"></a>
 Contents</h1>
 <ul>
@@ -131,7 +189,7 @@ For External Use</h2>
 <div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -Iinclude -lTiming</div>
 </div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
-<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>
+<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download <a href="https://www.msys2.org"><code>msys2</code></a>, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line"> (bash)</div>
 <div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
 </div><!-- fragment --><p> If you see anything in the terminal following this command, it means you already have <code>gcc</code>. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.): <br  />
  </p><div class="fragment"><div class="line"> (bash)</div>

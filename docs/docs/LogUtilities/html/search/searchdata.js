@@ -4,8 +4,10 @@ var indexSectionsWithContent =
   1: "ch",
   2: "acfgiopr",
   3: "cdlnprst",
-  4: "cfinorw",
-  5: "lu"
+  4: "c",
+  5: "c",
+  6: "cfinorw",
+  7: "lu"
 };
 
 var indexSectionNames =
@@ -14,8 +16,10 @@ var indexSectionNames =
   1: "classes",
   2: "functions",
   3: "variables",
-  4: "groups",
-  5: "pages"
+  4: "enums",
+  5: "enumvalues",
+  6: "groups",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +28,9 @@ var indexSectionLabels =
   1: "Data Structures",
   2: "Functions",
   3: "Variables",
-  4: "Modules",
-  5: "Pages"
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Modules",
+  7: "Pages"
 };
 

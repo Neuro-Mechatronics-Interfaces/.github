@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controller_5fip_0',['controller_ip',['../struct_connection_data.html#a6ead8c430344815ad50c7f90c01e032b',1,'ConnectionData']]]
+  ['controller_5fserver_5fip_0',['controller_server_ip',['../struct_connection_data.html#a5d333ebf2d82565697609e44b6f8c51c',1,'ConnectionData']]]
 ];

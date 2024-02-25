@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.4.0</span>
+   <div id="projectname">TaskParameters<span id="projectnumber">&#160;8.1.8</span>
    </div>
    <div id="projectbrief">Compiled `c` library for task parameter data structures and functions.</div>
   </td>
@@ -99,12 +99,81 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 </p>
 <p><em><a href="https://code.nml.wtf/docs">(Return)</a></em></p>
 <hr  />
+<h1><a class="anchor" id="summary"></a>
+Summary</h1>
+<p>The current <code><a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a></code> file version if <code>v8.1.0</code>. The versioning is more "advanced" than other repos and that reflects the carry-over on previous iterations of the task which did use the same or similarly-organized parameters, with the goal of some (limited/user-forced) backwards compatibility. <br  />
+</p>
+<h2><a class="anchor" id="task-parameters-1"></a>
+Task Parameters</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Parameter   </th><th class="markdownTableHeadCenter">Default Value   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Version   </td><td class="markdownTableBodyCenter">8.1.0   </td><td class="markdownTableBodyLeft">Current file version of parameters.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Subject   </td><td class="markdownTableBodyCenter">Default   </td><td class="markdownTableBodyLeft">Current file version of parameters.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Tag   </td><td class="markdownTableBodyCenter">MID-0   </td><td class="markdownTableBodyLeft">Identifier indicating something qualitative about the current dataset (i.e. which orientation and which run number).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Mode   </td><td class="markdownTableBodyCenter">STANDARD_PRACTICE   </td><td class="markdownTableBodyLeft">See enumerated options in the <a href="https://code.nml.wtf/docs/DataStructures/html/index.html"><code>DataStructures</code></a> repo for valid values.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Orientation   </td><td class="markdownTableBodyCenter">MID   </td><td class="markdownTableBodyLeft">Can be MID, PRO, or SUP (see also: <a href="https://code.nml.wtf/docs/DataStructures/html/index.html"><code>DataStructures</code></a>)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Trials   </td><td class="markdownTableBodyCenter">2500   </td><td class="markdownTableBodyLeft">Maximum trials to run for a single set.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Max Overshoots   </td><td class="markdownTableBodyCenter">1   </td><td class="markdownTableBodyLeft">Maximum allowable trials before failure when moving to T2.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Cursor Radius   </td><td class="markdownTableBodyCenter">8   </td><td class="markdownTableBodyLeft">Cursor radius (pixels).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Target Radius   </td><td class="markdownTableBodyCenter">40   </td><td class="markdownTableBodyLeft">Target radius (pixels).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Line Width   </td><td class="markdownTableBodyCenter">5   </td><td class="markdownTableBodyLeft">Width of lines rendered on screen (pixels). <b>NOT</b> included in "hit" calculations.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Travel Distance   </td><td class="markdownTableBodyCenter">275   </td><td class="markdownTableBodyLeft">Distance traveled from middle of center target to middle of outer target.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Min <code>T1_HOLD_1</code> Time   </td><td class="markdownTableBodyCenter">1.000   </td><td class="markdownTableBodyLeft">Minimum number of seconds in the <code>T1_HOLD_1</code> state (before T2 appears; see also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a> for State Machine).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Max <code>T1_HOLD_1</code> Time   </td><td class="markdownTableBodyCenter">1.000   </td><td class="markdownTableBodyLeft">Maximum number of seconds in the <code>T1_HOLD_1</code> state (before T2 appears; see also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a> for State Machine). If this is less than or equal to Min <code>T1_HOLD_1</code>, then the value of Min <code>T1_HOLD_1</code> is always used (non-random; see also: <a href="https://code.nml.wtf/docs/MathUtilities/html/index.html"><code>MathUtilities</code></a> for implementation details).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Min <code>T1_HOLD_2</code> Time   </td><td class="markdownTableBodyCenter">1.300   </td><td class="markdownTableBodyLeft">Minimum number of seconds in the <code>T1_HOLD_2</code> state (before T1 disappears; see also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a> for State Machine).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Max <code>T1_HOLD_2</code> Time   </td><td class="markdownTableBodyCenter">1.500   </td><td class="markdownTableBodyLeft">Maximum number of seconds in the <code>T1_HOLD_2</code> state (before T1 disappears; see also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a> for State Machine). If this is less than or equal to Min <code>T1_HOLD_2</code>, then the value of Min <code>T1_HOLD_2</code> is always used (non-random; see also: <a href="https://code.nml.wtf/docs/MathUtilities/html/index.html"><code>MathUtilities</code></a> for implementation details).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Fixed <code>REACT</code> Time   </td><td class="markdownTableBodyCenter">0.250   </td><td class="markdownTableBodyLeft">Number of seconds permitted before trial fails due to sitting in T1 for too long after T1 has disappeared (the "GO" cue). See also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Fixed <code>MOVE</code> Time   </td><td class="markdownTableBodyCenter">0.800   </td><td class="markdownTableBodyLeft">Number of seconds permitted before trial fails due to taking too long to reach T2 after the "GO" cue. See also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Fixed <code>OVERSHOOT</code> Time   </td><td class="markdownTableBodyCenter">0.500   </td><td class="markdownTableBodyLeft">Number of seconds permitted to return to T2 after entering then exiting it, before the trial fails. This is also used for a "soft" reset for T1, but overshoots of T1 prior to <code>T1_HOLD_2</code> do not count as a failure. See also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Fixed <code>T2_HOLD_1</code> Time   </td><td class="markdownTableBodyCenter">0.500   </td><td class="markdownTableBodyLeft">Number of seconds required to hold in T2 to successfully complete the trial. See also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Fixed <code>T2_HOLD_2</code> Time   </td><td class="markdownTableBodyCenter">0.300   </td><td class="markdownTableBodyLeft">Number of seconds delay after receiving the reward, to allow reward consumption. See also: <a href="https://code.nml.wtf/docs/StateServer/html/index.html"><code>StateServer</code></a>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">N Trials Before Increase   </td><td class="markdownTableBodyCenter">50   </td><td class="markdownTableBodyLeft">Number of trials allowed before increasing the reward amount by the fixed increment defined in the <code>Volume Increase</code> parameter.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Volume Increase   </td><td class="markdownTableBodyCenter">0.010   </td><td class="markdownTableBodyLeft">Number of mL to increase the reward size by every <code>N Trials Before Increase</code> trials.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Reward Volume   </td><td class="markdownTableBodyCenter">0.210   </td><td class="markdownTableBodyLeft">Initial reward volume (mL) for each successful trial, prior to any increases.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Bribe Volume   </td><td class="markdownTableBodyCenter">0.150   </td><td class="markdownTableBodyLeft">Size of "bribe" rewards (mL) that can be dispensed on an <em>ad hoc</em> basis.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">X Gain   </td><td class="markdownTableBodyCenter">1.00   </td><td class="markdownTableBodyLeft">The gain on scaling of pixels relative to the full range-of-motion x-axis calibration. Increasing this value causes the cursor to move <em>more</em> horizontal pixels for the same angular displacement of the x-axis potentiometer.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Y Gain   </td><td class="markdownTableBodyCenter">1.00   </td><td class="markdownTableBodyLeft">The gain on scaling of pixels relative to the full range-of-motion y-axis calibration. Increasing this value causes the cursor to move <em>more</em> vertical pixels for the same angular displacement of the y-axis potentiometer.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">RNG Seed   </td><td class="markdownTableBodyCenter">1708628427   </td><td class="markdownTableBodyLeft">Unsigned integer that is the random number seed by default. This can be used to help reproduce the order of targets/trial durations, etc.   </td></tr>
+</table>
+<hr  />
 <h1><a class="anchor" id="contents"></a>
 Contents</h1>
 <ul>
 <li><a class="el" href="#compiling">Compiling</a><ul>
-<li>Libraries</li>
-<li><a class="el" href="#applications">Applications</a></li>
+<li><a class="el" href="#libraries">Libraries</a></li>
+<li><a class="el" href="#applications">Applications</a><ul>
+<li><a class="el" href="#gen_paramsexe">`gen_params.exe`</a></li>
+<li><a class="el" href="#test_paramsexe">`test_params.exe`</a></li>
+</ul>
+</li>
 <li><a class="el" href="#for-external-use">In Other Projects</a></li>
 </ul>
 </li>
@@ -115,11 +184,17 @@ Compiling</h1>
 <h2><a class="anchor" id="libraries"></a>
 Libraries</h2>
 <p>To re-compile the static link library (<code>.lib</code>), use the following command: <br  />
- </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/TaskParameters &amp;&amp; gcc -c src/parameters.c -o lib/parameters.o -Iinclude &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib &amp;&amp; cp src/parameters.h include/parameters.h &amp;&amp; cp src/parameters.h ../TaskController/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskController/lib/TaskParameters.lib &amp;&amp; doxygen</div>
+ </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/TaskParameters &amp;&amp; gcc -c src/parameters.c -o lib/parameters.o -Iinclude &amp;&amp; ar rcs lib/TaskParameters.lib lib/parameters.o &amp;&amp; cp src/parameters.h ../StateServer/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../StateServer/lib/TaskParameters.lib &amp;&amp; cp src/parameters.h include/parameters.h &amp;&amp; cp src/parameters.h ../TaskController/include/parameters.h &amp;&amp; cp lib/TaskParameters.lib ../TaskController/lib/TaskParameters.lib &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
 </div><!-- fragment --><h2><a class="anchor" id="applications"></a>
 Applications</h2>
+<p>To test that parameters are generated/parsed correctly, it is recommended to first compile and run the executables for generating and test-reading the parameters. First, use <code>bin/gen_params.exe</code> to produce an example parameters file; then, use <code>bin/test_params.exe</code> to read the <code>example.tsv</code> file produced by <code>bin/gen_params.exe</code> and return <code>example_new.tsv</code> to indicate the ability to successfully copy and output the same values into a second UTF-8 encoded file. <br  />
+</p>
+<h3><a class="anchor" id="gen_paramsexe"></a>
+**<code>gen_params.exe</code>**</h3>
 <p>To re-compile the parameter generator application <code>bin/gen_params.exe</code>, use the following command: </p><div class="fragment"><div class="line">gcc src/gen_params.c -Iinclude -o bin/gen_params.exe -Llib -lTaskParameters -lDataStructures </div>
-</div><!-- fragment --><p>To re-compile the test parameter application <code>bin/test_params.exe</code>, use the following comand: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -Iinclude -Llib -lTaskParameters -lDataStructures -obin/test_params.exe</div>
+</div><!-- fragment --><h3><a class="anchor" id="test_paramsexe"></a>
+**<code>test_params.exe</code>**</h3>
+<p>To re-compile the test parameter application <code>bin/test_params.exe</code>, use the following comand: </p><div class="fragment"><div class="line">gcc tests/test_parameters.c -Iinclude -Llib -lTaskParameters -lDataStructures -obin/test_params.exe</div>
 </div><!-- fragment --><p> (Note that this requires having already compiled <code>lib/TaskParameters.lib</code> as shown above).</p>
 <h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
@@ -130,14 +205,19 @@ For External Use</h2>
 <div class="line">|  |--my_code.h</div>
 <div class="line">|</div>
 <div class="line">|--include</div>
+<div class="line">|  |--data_structures.h</div>
 <div class="line">|  |--parameters.h</div>
 <div class="line">|</div>
 <div class="line">|--lib</div>
+<div class="line">|  |--DataStructures.lib</div>
 <div class="line">|  |--TaskParameters.lib</div>
-</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -Iinclude -lTaskParameters</div>
-</div><!-- fragment --><h1><a class="anchor" id="note-about-gcc"></a>
+</div><!-- fragment --><p> To compile, you would use the following command: </p><div class="fragment"><div class="line">gcc -o bin/my_executable.exe src/my_code.c -Llib -Iinclude -lTaskParameters -lDataStructures</div>
+</div><!-- fragment --><p> _(Note 1: you do not link the DataStructures library during the static compilation of <code>lib/TaskParameters.lib</code>; however, since <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> includes DataStructures, it must be linked during compilation of any executable that uses <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> as indicated above; <code>-lTaskParameters</code> should be linked before <code>-lDataStructures</code> in the options order as shown)._ <br  />
+</p>
+<p>_(Note 2: the <code>#include data_structures.h</code> directive must come before the <code>#include parameters.h</code> directive in <code>my_code.h</code>)_</p>
+<h1><a class="anchor" id="note-about-gcc"></a>
 Note about gcc</h1>
-<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download `msys2`, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
+<p>Note that to use <code>gcc</code> on a Windows 64-bit architecture, the simplest way is to download <a href="https://www.msys2.org"><code>msys2</code></a>, which will allow you to use <code>pacman</code> from an <code>msys2</code> terminal. You can first check to see if you already have <code>gcc</code> installed: </p><div class="fragment"><div class="line">pacman -Q | grep mingw-w64-x86_64-gcc</div>
 </div><!-- fragment --><p> If you see anything in the terminal following this command, it means you already have <code>gcc</code>. Otherwise, you need to install it (and probably the rest of the toolchain, such as a linker etc.): <br  />
  </p><div class="fragment"><div class="line">pacman -S mingw-w64-x86_64-toolchain</div>
 </div><!-- fragment --><p> This will give several options for what you can install. If you are unsure what to do, just install all of them. <br  />

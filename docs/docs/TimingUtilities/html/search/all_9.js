@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['use_0',['For External Use',['../index.html#for-external-use',1,'']]],
-  ['utilities_1',['Timing Utilities',['../index.html',1,'']]]
+  ['timing_20functions_0',['Timing Functions',['../group___timing.html',1,'']]],
+  ['timing_20utilities_1',['Timing Utilities',['../index.html',1,'']]]
 ];

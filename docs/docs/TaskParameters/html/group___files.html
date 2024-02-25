@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskParameters<span id="projectnumber">&#160;1.4.0</span>
+   <div id="projectname">TaskParameters<span id="projectnumber">&#160;8.1.8</span>
    </div>
    <div id="projectbrief">Compiled `c` library for task parameter data structures and functions.</div>
   </td>
@@ -98,11 +98,15 @@ $(function(){initNavTree('group___files.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>Handling of parameter file read and write operations.  
+<p>Handling of parameter file read and write operations + <code>parameters.txt</code> file structure. <br  />
+  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga6f589016c9bdddb05f002de9f808acdc" id="r_ga6f589016c9bdddb05f002de9f808acdc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6f589016c9bdddb05f002de9f808acdc">findMostRecentParameters</a> (const char *subject, char *searchFolder)</td></tr>
+<tr class="memdesc:ga6f589016c9bdddb05f002de9f808acdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to find the most recent parameters filename for a given subject.  <br /></td></tr>
+<tr class="separator:ga6f589016c9bdddb05f002de9f808acdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga589270ff19aa1098209a49c79129373b" id="r_ga589270ff19aa1098209a49c79129373b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga589270ff19aa1098209a49c79129373b">parseParameterFile</a> (const char *filename, <a class="el" href="struct_task_parameters.html">TaskParameters</a> *params)</td></tr>
 <tr class="memdesc:ga589270ff19aa1098209a49c79129373b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a parameter file and populates a <a class="el" href="struct_task_parameters.html" title="Struct to hold task parameters.">TaskParameters</a> struct.  <br /></td></tr>
 <tr class="separator:ga589270ff19aa1098209a49c79129373b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,8 +115,44 @@ Functions</h2></td></tr>
 <tr class="separator:gaed5766b3ea91d3a21ae1d85a37d30989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Handling of parameter file read and write operations. </p>
+<p>Handling of parameter file read and write operations + <code>parameters.txt</code> file structure. <br  />
+ </p>
+<p>All parameter files are <code>UTF-8</code>-encoded tab-separated-value (.tsv) files. <br  />
+ To generate an example parameter text file, you should compile and run <code>bin\gen_params.exe</code> and view how it is read using <code>bin\test_params.exe</code> to ensure that the parameter format is working as expected. <br  />
+ As of 2024-02-24, the following structure is expected in the `</p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga6f589016c9bdddb05f002de9f808acdc" name="ga6f589016c9bdddb05f002de9f808acdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f589016c9bdddb05f002de9f808acdc">&#9670;&#160;</a></span>findMostRecentParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * findMostRecentParameters </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>subject</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>searchFolder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to find the most recent parameters filename for a given subject. </p>
+<p>If no parameter <code>.tsv</code> file exists within <code>searchFolder</code>, return NULL instead. Parameter files are expected to have the name convention: <code>Subject</code>_<code>YYYY</code>_<code>MM</code>_<code>DD</code>_<code>Tag</code>_<code>Index</code>.tsv Therefore, first all files for <code>Subject</code> are found. Next, only files from the most recent date (YYYY-MM-DD) are considered. Finally, use the file with the largest <code>Index</code> value. The returned name should be the full filename (including path).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subject</td><td>The subject for which to find the most recent parameters file. </td></tr>
+    <tr><td class="paramname">searchFolder</td><td>The folder in which to search for the parameters files. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The full filename of the most recent parameters file, or NULL if none found. </dd></dl>
+
+</div>
+</div>
 <a id="ga589270ff19aa1098209a49c79129373b" name="ga589270ff19aa1098209a49c79129373b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga589270ff19aa1098209a49c79129373b">&#9670;&#160;</a></span>parseParameterFile()</h2>
 

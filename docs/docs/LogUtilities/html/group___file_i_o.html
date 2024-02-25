@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.2</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.4</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -93,15 +93,26 @@ $(function(){initNavTree('group___file_i_o.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">File Input/Output</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Functions for making it easier to create/access files. <br  />
+<p>Functions for making it easier to create/access files. The <code>LogUtilities</code> let the user read from <code>config.yaml</code> so long as there is only a simple yaml syntax (i.e. no nested structures), and only handles explicitly-enumerated field name conventions. <br  />
   
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_header_data.html">HeaderData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store header data.  <a href="struct_header_data.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_config.html">Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store configuration data parsed from yaml files. <br  />
+  <a href="struct_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gad4ed85a0429b69738151de28387a7d09" id="r_gad4ed85a0429b69738151de28387a7d09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4ed85a0429b69738151de28387a7d09">containerFolder</a> (char *filePathFS, int levelsUp)</td></tr>
@@ -115,9 +126,41 @@ Functions</h2></td></tr>
 <tr class="separator:gae7864271fb6e5e977050018e8b0ff333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions for making it easier to create/access files. <br  />
+<p>Functions for making it easier to create/access files. The <code>LogUtilities</code> let the user read from <code>config.yaml</code> so long as there is only a simple yaml syntax (i.e. no nested structures), and only handles explicitly-enumerated field name conventions. <br  />
  </p>
-<h2 class="groupheader">Function Documentation</h2>
+<p>For example, <code>config.yaml</code> may take the following format (which includes the correct name syntax for valid yaml variables): <br  />
+ </p><div class="fragment"><div class="line"># Put this config.yaml in same folder as `NHP_Wrist_State_Server.exe`</div>
+<div class="line"> </div>
+<div class="line"># Controller Device IP Address (runs UI to control state machine)</div>
+<div class="line">ControllerDeviceIP: 127.0.0.1</div>
+<div class="line"> </div>
+<div class="line"># Default parameters file to load for file-based initialization</div>
+<div class="line">DefaultParametersFile: C:\Data\Parameters\Default\example_parameters.txt</div>
+<div class="line"> </div>
+<div class="line"># Folder where logs can be read from (for playback/debug etc.)</div>
+<div class="line">LogReadFolder: C:\Data\TaskLogs</div>
+<div class="line"> </div>
+<div class="line"># Folder where the logs will be saved</div>
+<div class="line">LogSaveFolder: C:\Data\TaskLogs</div>
+<div class="line"> </div>
+<div class="line"># Folder where the parameters are saved</div>
+<div class="line">ParameterSaveFolder: C:\Data\Parameters</div>
+<div class="line"> </div>
+<div class="line"># Plexon Device IP Address (for the machine running neural data acquisition)</div>
+<div class="line">PlexonDeviceIP: 127.0.0.1</div>
+<div class="line"> </div>
+<div class="line"># Render Device IP Address (i.e. the Jetson rendering the task)</div>
+<div class="line">RenderDeviceIP: 127.0.0.1</div>
+<div class="line"> </div>
+<div class="line"># Reward Device IP Address (i.e. some device connected to microcontroller with reward dispenser)</div>
+<div class="line">RewardDeviceIP: 127.0.0.1</div>
+<div class="line"> </div>
+<div class="line"># Server Device IP Address (i.e. any host device running task state server)</div>
+<div class="line">ServerDeviceIP: 127.0.0.1</div>
+<div class="line"> </div>
+<div class="line"># Starting port (i.e. for 3070, will use 3070-3079 so ensure they are open!)</div>
+<div class="line">StartPort: 3070</div>
+</div><!-- fragment --><h2 class="groupheader">Function Documentation</h2>
 <a id="gad4ed85a0429b69738151de28387a7d09" name="gad4ed85a0429b69738151de28387a7d09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad4ed85a0429b69738151de28387a7d09">&#9670;&#160;</a></span>containerFolder()</h2>
 

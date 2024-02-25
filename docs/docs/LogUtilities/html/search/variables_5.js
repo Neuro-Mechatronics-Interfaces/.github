@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['render_5fip_0',['render_ip',['../struct_connection_data.html#a37ea5366afe50b4f97b19e71af6f41f7',1,'ConnectionData']]],
-  ['reward_5fip_1',['reward_ip',['../struct_connection_data.html#a171833c6e98368e9a327adc7411ee94b',1,'ConnectionData']]]
+  ['render_5fserver_5fip_0',['render_server_ip',['../struct_connection_data.html#af56be23a351de22233718c14c836a5be',1,'ConnectionData']]],
+  ['reward_5fserver_5fip_1',['reward_server_ip',['../struct_connection_data.html#a11f21d8fedd4cf76ce370805b8ee5a33',1,'ConnectionData']]]
 ];

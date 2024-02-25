@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['enumerations_0',['Enumerations',['../group___enumerations.html',1,'']]],
+  ['example_20use_0',['Example Use',['../index.html#example-use',1,'']]],
   ['external_20use_1',['For External Use',['../index.html#for-external-use',1,'']]]
 ];

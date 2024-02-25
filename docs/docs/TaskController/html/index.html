@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;1.0.2</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;1.0.6</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -104,7 +104,7 @@ Compilation</h1>
 <h2><a class="anchor" id="nhp_task_controllerexe"></a>
 **<code>NHP_Task_Controller.exe</code>**</h2>
 <p>To compile, use <code>gcc</code>: <br  />
- </p><div class="fragment"><div class="line">gcc src/controller.c src/res/resource.o -o bin/NHP_Task_Controller.exe -Iinclude -Llib -lNetwork -lws2_32 -lTaskParameters -lLogUtilities -lDataStructures -lgdi32 -lComctl32</div>
+ </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/TaskController &amp;&amp; gcc src/controller.c src/res/resource.o -o bin/NHP_Task_Controller.exe -Iinclude -Llib -lNetwork -lws2_32 -lTaskParameters -lLogUtilities -lDataStructures -lgdi32 -lComctl32 &amp;&amp; doxyincrement.bat &amp;&amp; doyxgen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
 </div><!-- fragment --><p> To suppress the console, add <code>-mwindows</code> at the end.</p>
 <p>If you would like to update the icon you must change the resource file. To do this, first make sure you have the correct icon and other resource identifiers in your <code>src/resource.rc</code> file. Open it with a text editor. The first line should be: <br  />
  </p><div class="fragment"><div class="line">2001 ICON &quot;myicon.ico&quot;</div>
