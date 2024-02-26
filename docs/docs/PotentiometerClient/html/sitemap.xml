@@ -5,57 +5,9 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://code.nml.wtf/docs/class_circular_buffer.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/dir_68267d1309a1af8e8297ef4c3efbcdba.html</loc>
-  </url>
-  <url>
     <loc>https://code.nml.wtf/docs/index.html</loc>
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/doxygen_crawl.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/annotated.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/classes.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
-  </url>
-  <url>
-    <loc>https://code.nml.wtf/docs/functions_func.html</loc>
   </url>
 </urlset>

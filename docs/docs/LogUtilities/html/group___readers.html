@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.4</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.3.6</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -103,9 +103,9 @@ $(function(){initNavTree('group___readers.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0e029d2277ae5b187a8d2f33f3fd0467" id="r_ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0e029d2277ae5b187a8d2f33f3fd0467">openLogForReading</a> (const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, const char *tag, uint16_t index, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData, <a class="el" href="struct_config.html">Config</a> *config)</td></tr>
-<tr class="memdesc:ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a log file for reading.  <br /></td></tr>
-<tr class="separator:ga0e029d2277ae5b187a8d2f33f3fd0467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f8c233936ab17cb86afbcf43a3eb7ff" id="r_ga2f8c233936ab17cb86afbcf43a3eb7ff"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2f8c233936ab17cb86afbcf43a3eb7ff">openLogForReading</a> (const char *subject, uint16_t YYYY, uint8_t MM, uint8_t DD, const char *tag, uint16_t index, <a class="el" href="struct_header_data.html">HeaderData</a> *headerData, <a class="el" href="struct_config.html">Config</a> *config, const char *configFile)</td></tr>
+<tr class="memdesc:ga2f8c233936ab17cb86afbcf43a3eb7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a log file for reading.  <br /></td></tr>
+<tr class="separator:ga2f8c233936ab17cb86afbcf43a3eb7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb07fb54a4ccfa0ddb21c0f273318394" id="r_gadb07fb54a4ccfa0ddb21c0f273318394"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadb07fb54a4ccfa0ddb21c0f273318394">readConfig</a> (<a class="el" href="struct_config.html">Config</a> *config, const char *configFileIn)</td></tr>
 <tr class="memdesc:gadb07fb54a4ccfa0ddb21c0f273318394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the configuration from the config.yaml file.  <br /></td></tr>
 <tr class="separator:gadb07fb54a4ccfa0ddb21c0f273318394"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,8 +116,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for reading from log or config files. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga0e029d2277ae5b187a8d2f33f3fd0467" name="ga0e029d2277ae5b187a8d2f33f3fd0467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0e029d2277ae5b187a8d2f33f3fd0467">&#9670;&#160;</a></span>openLogForReading()</h2>
+<a id="ga2f8c233936ab17cb86afbcf43a3eb7ff" name="ga2f8c233936ab17cb86afbcf43a3eb7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f8c233936ab17cb86afbcf43a3eb7ff">&#9670;&#160;</a></span>openLogForReading()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +160,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>configFile</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -177,6 +182,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">index</td><td>The index of the log file. </td></tr>
     <tr><td class="paramname">headerData</td><td>Pointer to the header data structure to store the read header information. </td></tr>
     <tr><td class="paramname">config</td><td>Pointer to the logger configuration. </td></tr>
+    <tr><td class="paramname">configFile</td><td>The file and path of the configuration file. </td></tr>
   </table>
   </dd>
 </dl>
