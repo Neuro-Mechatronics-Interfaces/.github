@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.6.14</span>
+   <div id="projectname">DataStructures<span id="projectnumber">&#160;1.6.15</span>
    </div>
    <div id="projectbrief">A small compiled C library of data structures used in the NHP wrist center-out and other tasks.</div>
   </td>
@@ -113,7 +113,9 @@ Compiling</h1>
 <h2><a class="anchor" id="libraries"></a>
 Libraries</h2>
 <p>To re-compile the static (<code>.lib</code>) and dynamic (<code>.dll</code>) libraries, use the following command: <br  />
- </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/DataStructures &amp;&amp; gcc -c src/data_structures.c -o lib/data_structures.o &amp;&amp; ar rcs lib/DataStructures.lib lib/data_structures.o &amp;&amp; cp lib/DataStructures.lib ../NetworkUtilities/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../StateServer/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskParameters/lib/DataStructures.lib &amp;&amp; cp src/data_structures.h ../NetworkUtilities/include/data_structures.h &amp;&amp; cp src/data_structures.h ../StateServer/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskParameters/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskController/include/data_structures.h &amp;&amp; cp lib/DataStructures.lib ../TaskController/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../Rewarder/lib/DataStructures.lib &amp;&amp; cp src/data_structures.h ../Rewarder/include/data_structures.h &amp;&amp; doxygen</div>
+ </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/DataStructures &amp;&amp; gcc -c src/data_structures.c -o lib/data_structures.o &amp;&amp; ar rcs lib/DataStructures.lib lib/data_structures.o &amp;&amp; cp lib/DataStructures.lib ../NetworkUtilities/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../StateServer/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../TaskParameters/lib/DataStructures.lib &amp;&amp; cp src/data_structures.h ../NetworkUtilities/include/data_structures.h &amp;&amp; cp src/data_structures.h ../StateServer/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskParameters/include/data_structures.h &amp;&amp; cp src/data_structures.h ../TaskController/include/data_structures.h &amp;&amp; cp lib/DataStructures.lib ../TaskController/lib/DataStructures.lib &amp;&amp; cp lib/DataStructures.lib ../Rewarder/lib/DataStructures.lib &amp;&amp; cp src/data_structures.h ../Rewarder/include/data_structures.h &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
+</div><!-- fragment --><p>To re-compile the 32-bit static library (for <code>PotentiometerClient</code>), use the following command from a 32-bit MINGW32 bash terminal environment: <br  />
+ </p><div class="fragment"><div class="line">gcc -c src/data_structures.c -o lib/data_structures32.o &amp;&amp; ar rcs lib/DataStructures32.lib lib/data_structures32.o &amp;&amp; cp lib/DataStructures32.lib ../PotentiometerClient/lib/DataStructures32.lib &amp;&amp; cp src/data_structures.h ../PotentiometerClient/include/data_structures.h</div>
 </div><!-- fragment --><h2><a class="anchor" id="for-external-use"></a>
 For External Use</h2>
 <p>Assume we have the following project folder structure: <br  />

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['set_5findex_0',['set_index',['../struct_log_data.html#a41578eddf8e33446e9ee4c3d7aca4a06',1,'LogData']]],
-  ['state_1',['state',['../struct_state_data.html#a63143802109c13ece432c04705084c65',1,'StateData::state'],['../struct_log_data.html#a14dce919ad144217f7a8448fb07b4173',1,'LogData::state']]],
-  ['subject_2',['subject',['../struct_task_parameters.html#a38911d7033193772a383369314e67a64',1,'TaskParameters']]]
+  ['y_0',['y',['../struct_cursor_data.html#ae3250f9b991bb46541bf9861da5a7630',1,'CursorData::y'],['../struct_rendered_circle_data.html#a9b7f7de7477356fa52b596be61f17c76',1,'RenderedCircleData::y']]]
 ];

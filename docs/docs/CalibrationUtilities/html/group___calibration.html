@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CalibrationUtilities<span id="projectnumber">&#160;1.0.2</span>
+   <div id="projectname">CalibrationUtilities<span id="projectnumber">&#160;1.0.4</span>
    </div>
    <div id="projectbrief">A small compiled C library for handling cursor calibration operations.</div>
   </td>
@@ -110,9 +110,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7beb2f6b333afdfa047dae00cf523e3e" id="r_ga7beb2f6b333afdfa047dae00cf523e3e"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7beb2f6b333afdfa047dae00cf523e3e">calu_imax</a> (int16_t a, int16_t b)</td></tr>
 <tr class="memdesc:ga7beb2f6b333afdfa047dae00cf523e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum of two int16_t values.  <br /></td></tr>
 <tr class="separator:ga7beb2f6b333afdfa047dae00cf523e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3b9badc15839047cbe01aa14598fb13e" id="r_ga3b9badc15839047cbe01aa14598fb13e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3b9badc15839047cbe01aa14598fb13e">calu_rescale</a> (double input_voltage, double input_center, double input_range, int16_t output_center, int16_t output_range)</td></tr>
-<tr class="memdesc:ga3b9badc15839047cbe01aa14598fb13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rescales an input voltage to a uint16_t output value.  <br /></td></tr>
-<tr class="separator:ga3b9badc15839047cbe01aa14598fb13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ce231c3b9ddb9960e95490bc8debf3f" id="r_ga8ce231c3b9ddb9960e95490bc8debf3f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8ce231c3b9ddb9960e95490bc8debf3f">calu_rescale</a> (int16_t input_voltage, int16_t input_center, int16_t input_range, int16_t output_center, int16_t output_range)</td></tr>
+<tr class="memdesc:ga8ce231c3b9ddb9960e95490bc8debf3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rescales an input voltage to a uint16_t output value.  <br /></td></tr>
+<tr class="separator:ga8ce231c3b9ddb9960e95490bc8debf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae010518bdc63be607279a472893ed324" id="r_gae010518bdc63be607279a472893ed324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae010518bdc63be607279a472893ed324">calu_transform</a> (<a class="el" href="struct_calibration_data.html">CalibrationData</a> cal, double v0, double v1, uint16_t *px, uint16_t *py)</td></tr>
 <tr class="memdesc:gae010518bdc63be607279a472893ed324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms voltage values to pixel coordinates based on calibration data.  <br /></td></tr>
 <tr class="separator:gae010518bdc63be607279a472893ed324"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,8 +177,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3b9badc15839047cbe01aa14598fb13e" name="ga3b9badc15839047cbe01aa14598fb13e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3b9badc15839047cbe01aa14598fb13e">&#9670;&#160;</a></span>calu_rescale()</h2>
+<a id="ga8ce231c3b9ddb9960e95490bc8debf3f" name="ga8ce231c3b9ddb9960e95490bc8debf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ce231c3b9ddb9960e95490bc8debf3f">&#9670;&#160;</a></span>calu_rescale()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,17 +186,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint16_t calu_rescale </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>input_voltage</em>, </span></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>input_voltage</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>input_center</em>, </span></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>input_center</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>input_range</em>, </span></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>input_range</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -215,11 +215,11 @@ Functions</h2></td></tr>
 <p>This function rescales an input voltage to a uint16_t output value based on input center, input range, output center, and output range.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input_voltage</td><td>The input voltage value to be rescaled. </td></tr>
-    <tr><td class="paramname">input_center</td><td>The center of the input range. </td></tr>
-    <tr><td class="paramname">input_range</td><td>The range of the input values. </td></tr>
-    <tr><td class="paramname">output_center</td><td>The center of the output range. </td></tr>
-    <tr><td class="paramname">output_range</td><td>The range of the output values. </td></tr>
+    <tr><td class="paramname">input_voltage</td><td>The input voltage value (mV) to be rescaled. </td></tr>
+    <tr><td class="paramname">input_center</td><td>The center of the input range (mV). </td></tr>
+    <tr><td class="paramname">input_range</td><td>The range of the input values (mV). </td></tr>
+    <tr><td class="paramname">output_center</td><td>The center of the output range (pixels). </td></tr>
+    <tr><td class="paramname">output_range</td><td>The range of the output values (pixels). </td></tr>
   </table>
   </dd>
 </dl>
