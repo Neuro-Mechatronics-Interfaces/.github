@@ -19,6 +19,7 @@ This page contains links to automatically-generated documentation produced using
 * [`NHP Rewarder`]({{site.baseurl}}/docs/Rewarder/html/index.html) - Application for controlling reward delivery.  
 
 #### Libraries ####
+* [`CalibrationUtilities`]({{site.baseurl}}/docs/CalibrationUtilities/html/index.html) - A small compiled C library for handling cursor calibration operations.  
 * [`DataStructures`]({{site.baseurl}}/docs/DataStructures/html/index.html) - Compiled c-library with common data structures for the NHP wrist center-out and other tasks.  
 * [`LogUtilities`]({{site.baseurl}}/docs/LogUtilities/html/index.html) - Compiled c-library with some useful logging utility functions.  
 * [`MathUtilities`]({{site.baseurl}}/docs/MathUtilities/html/index.html) - Compiled c-library for some useful math functions that might be shared across repos.  
