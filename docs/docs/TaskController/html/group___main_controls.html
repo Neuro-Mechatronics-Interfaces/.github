@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;2.0.12</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;2.0.15</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -126,13 +126,16 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga84bd3ab7c2cbad7fb0b6233504515973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag giving the current "paused" state (PAUSED = 1 | RUNNING = 0).  <br /></td></tr>
 <tr class="separator:ga84bd3ab7c2cbad7fb0b6233504515973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga652b457479960309e4e0d97a1746ad88" id="r_ga652b457479960309e4e0d97a1746ad88"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga652b457479960309e4e0d97a1746ad88">current_successes</a></td></tr>
-<tr class="memdesc:ga652b457479960309e4e0d97a1746ad88"><td class="mdescLeft">&#160;</td><td class="mdescRight">For tracking the trial performance, etc.  <br /></td></tr>
+<tr class="memdesc:ga652b457479960309e4e0d97a1746ad88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the total successful trials on the current set.  <br /></td></tr>
 <tr class="separator:ga652b457479960309e4e0d97a1746ad88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab7ab31e6e8c0e28e59e89324ad11e387" id="r_gab7ab31e6e8c0e28e59e89324ad11e387"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab7ab31e6e8c0e28e59e89324ad11e387">current_attempts</a></td></tr>
+<tr class="memdesc:gab7ab31e6e8c0e28e59e89324ad11e387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the total successful trials on the current set.  <br /></td></tr>
 <tr class="separator:gab7ab31e6e8c0e28e59e89324ad11e387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac1201e13c7cc03c5f9e030fcc91342a0" id="r_gac1201e13c7cc03c5f9e030fcc91342a0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac1201e13c7cc03c5f9e030fcc91342a0">total_successes</a></td></tr>
+<tr class="memdesc:gac1201e13c7cc03c5f9e030fcc91342a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the total successful trials on the current session.  <br /></td></tr>
 <tr class="separator:gac1201e13c7cc03c5f9e030fcc91342a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga01f17ee45c4918fc44f0fa02e4199a14" id="r_ga01f17ee45c4918fc44f0fa02e4199a14"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga01f17ee45c4918fc44f0fa02e4199a14">total_attempts</a></td></tr>
+<tr class="memdesc:ga01f17ee45c4918fc44f0fa02e4199a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the total successful attempted trials in the current session.  <br /></td></tr>
 <tr class="separator:ga01f17ee45c4918fc44f0fa02e4199a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga266a8aebe45f8dbd37d1cf3e130ccb00" id="r_ga266a8aebe45f8dbd37d1cf3e130ccb00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga266a8aebe45f8dbd37d1cf3e130ccb00">randomTargetSet</a> [8]</td></tr>
 <tr class="memdesc:ga266a8aebe45f8dbd37d1cf3e130ccb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current order of group of 8 targets for keeping pseudo-randomized ordering.  <br /></td></tr>
@@ -278,12 +281,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t current_attempts</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Tracks the total successful trials on the current set. </p>
 
 </div>
 </div>
@@ -307,7 +320,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>For tracking the trial performance, etc. </p>
+<p>Tracks the total successful trials on the current set. </p>
 
 </div>
 </div>
@@ -412,12 +425,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t total_attempts</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Tracks the total successful attempted trials in the current session. </p>
 
 </div>
 </div>
@@ -426,12 +449,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint16_t total_successes</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Tracks the total successful trials on the current session. </p>
 
 </div>
 </div>

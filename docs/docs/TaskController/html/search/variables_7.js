@@ -6,6 +6,6 @@ var searchData=
   ['t2_5fy_3',['T2_y',['../struct_trial_targets.html#a1782e9d02835daf5a9a331ddbf371f37',1,'TrialTargets']]],
   ['target_4',['target',['../struct_trial_targets.html#a9b6095363c8f89a1bb882e38cac23dd2',1,'TrialTargets']]],
   ['target_5foutput_5fbuffer_5',['target_output_buffer',['../group___network.html#gafdf3d470722ba821fd3b792575bf13c2',1,'target_output_buffer:&#160;controller.c'],['../group___network.html#gafdf3d470722ba821fd3b792575bf13c2',1,'target_output_buffer:&#160;controller.c']]],
-  ['total_5fattempts_6',['total_attempts',['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'controller.h']]],
-  ['total_5fsuccesses_7',['total_successes',['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'controller.h']]]
+  ['total_5fattempts_6',['total_attempts',['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'total_attempts:&#160;controller.c'],['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'total_attempts:&#160;controller.c']]],
+  ['total_5fsuccesses_7',['total_successes',['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'total_successes:&#160;controller.c'],['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'total_successes:&#160;controller.c']]]
 ];

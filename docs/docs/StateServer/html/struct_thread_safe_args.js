@@ -1,5 +1,6 @@
 var struct_thread_safe_args =
 [
+    [ "cal", "struct_thread_safe_args.html#a9bd7968bbbdc9321761827c02540e1fe", null ],
     [ "config", "struct_thread_safe_args.html#a01b617a0695ae446fa489dfcb6bf2c2d", null ],
     [ "flags", "struct_thread_safe_args.html#a73b99d5c8f27ebe00308f802449cdb84", null ],
     [ "header", "struct_thread_safe_args.html#a62b9699c16e8fd2a2f8ff22beb644b9d", null ],

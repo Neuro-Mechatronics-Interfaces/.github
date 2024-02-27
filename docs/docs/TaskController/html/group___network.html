@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;2.0.12</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;2.0.15</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -113,6 +113,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gac8e65f0cab15c1e62b36cc9d53d184a0" id="r_gac8e65f0cab15c1e62b36cc9d53d184a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac8e65f0cab15c1e62b36cc9d53d184a0">SendTaskParametersToServer</a> (TaskParameters *params)</td></tr>
 <tr class="memdesc:gac8e65f0cab15c1e62b36cc9d53d184a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends task parameters to the server.  <br /></td></tr>
 <tr class="separator:gac8e65f0cab15c1e62b36cc9d53d184a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga879e00b7e895c6ff812556af31fedc97" id="r_ga879e00b7e895c6ff812556af31fedc97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga879e00b7e895c6ff812556af31fedc97">SendNextTargetToServer</a> (<a class="el" href="struct_trial_targets.html">TrialTargets</a> *tSeq)</td></tr>
+<tr class="memdesc:ga879e00b7e895c6ff812556af31fedc97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends task target data to the server.  <br /></td></tr>
+<tr class="separator:ga879e00b7e895c6ff812556af31fedc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga665c8d139bc96c0729f2339b6f96087c" id="r_ga665c8d139bc96c0729f2339b6f96087c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga665c8d139bc96c0729f2339b6f96087c">ReceiveStateUpdatesFromServer</a> (char *state_input_buffer, socklen_t *serverAddrStateInLen)</td></tr>
 <tr class="memdesc:ga665c8d139bc96c0729f2339b6f96087c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives state updates from the server via UDP socket.  <br /></td></tr>
 <tr class="separator:ga665c8d139bc96c0729f2339b6f96087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,23 +132,41 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga6a44a77efe9d36d03240f900d00dad80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration struct used by the application.  <br /></td></tr>
 <tr class="separator:ga6a44a77efe9d36d03240f900d00dad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga03852a250191ac1d2867a714dd616a08" id="r_ga03852a250191ac1d2867a714dd616a08"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga03852a250191ac1d2867a714dd616a08">udpSockCommandOut</a></td></tr>
-<tr class="memdesc:ga03852a250191ac1d2867a714dd616a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket for communication with the server.  <br /></td></tr>
+<tr class="memdesc:ga03852a250191ac1d2867a714dd616a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send "control" commands to the server.  <br /></td></tr>
 <tr class="separator:ga03852a250191ac1d2867a714dd616a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga869aa7a6b67cbec7fd20ef8b70aa7b26" id="r_ga869aa7a6b67cbec7fd20ef8b70aa7b26"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga869aa7a6b67cbec7fd20ef8b70aa7b26">udpSockParametersOut</a></td></tr>
+<tr class="memdesc:ga869aa7a6b67cbec7fd20ef8b70aa7b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send parameter changes to the server.  <br /></td></tr>
 <tr class="separator:ga869aa7a6b67cbec7fd20ef8b70aa7b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga44a2cd2e3dcd562c0a64e578628c2998" id="r_ga44a2cd2e3dcd562c0a64e578628c2998"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga44a2cd2e3dcd562c0a64e578628c2998">udpSockTargetOut</a></td></tr>
+<tr class="memdesc:ga44a2cd2e3dcd562c0a64e578628c2998"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send updates in target positions to the server.  <br /></td></tr>
 <tr class="separator:ga44a2cd2e3dcd562c0a64e578628c2998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga84afbf6d3929abf909649b9f176e80b4" id="r_ga84afbf6d3929abf909649b9f176e80b4"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84afbf6d3929abf909649b9f176e80b4">udpSockRewardOut</a></td></tr>
+<tr class="memdesc:ga84afbf6d3929abf909649b9f176e80b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send commands to the reward dispenser.  <br /></td></tr>
 <tr class="separator:ga84afbf6d3929abf909649b9f176e80b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga998774c7d316c4c63dcd1252fb8e76dc" id="r_ga998774c7d316c4c63dcd1252fb8e76dc"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga998774c7d316c4c63dcd1252fb8e76dc">udpSockStateIn</a></td></tr>
+<tr class="memdesc:ga998774c7d316c4c63dcd1252fb8e76dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive state updates (trial counts etc) from the server.  <br /></td></tr>
 <tr class="separator:ga998774c7d316c4c63dcd1252fb8e76dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9e748a94595a2596959d21ea0a0ff97" id="r_gac9e748a94595a2596959d21ea0a0ff97"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9e748a94595a2596959d21ea0a0ff97">udpSockParametersIn</a></td></tr>
+<tr class="memdesc:gac9e748a94595a2596959d21ea0a0ff97"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive initial parameter state message from server.  <br /></td></tr>
 <tr class="separator:gac9e748a94595a2596959d21ea0a0ff97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga57ef8fde5818fdc09496fa3ffbb7ed64" id="r_ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga57ef8fde5818fdc09496fa3ffbb7ed64">udpSockReqIn</a></td></tr>
+<tr class="memdesc:ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive requests from the server, such as to issue a reward or generate new targets.  <br /></td></tr>
 <tr class="separator:ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9f90484c31083476fba3d551be0f1bdc" id="r_ga9f90484c31083476fba3d551be0f1bdc"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in serverAddrCommandOut serverAddrParametersOut serverAddrTargetOut serverAddrRewardOut serverAddrStateIn serverAddrParametersIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f90484c31083476fba3d551be0f1bdc">serverAddrReqIn</a></td></tr>
-<tr class="memdesc:ga9f90484c31083476fba3d551be0f1bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket addresses associated with each socket.  <br /></td></tr>
-<tr class="separator:ga9f90484c31083476fba3d551be0f1bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6659ddf2b31f46dd7e9191718a4c3ad" id="r_gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6659ddf2b31f46dd7e9191718a4c3ad">serverAddrCommandOut</a></td></tr>
+<tr class="memdesc:gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket addresses associated with each socket.  <br /></td></tr>
+<tr class="separator:gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad682f576f715bb08a9287e24cebda7d9" id="r_gad682f576f715bb08a9287e24cebda7d9"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad682f576f715bb08a9287e24cebda7d9">serverAddrParametersOut</a></td></tr>
+<tr class="separator:gad682f576f715bb08a9287e24cebda7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a7026507c5b04e8f17cb2481c08d8c6" id="r_ga6a7026507c5b04e8f17cb2481c08d8c6"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a7026507c5b04e8f17cb2481c08d8c6">serverAddrTargetOut</a></td></tr>
+<tr class="separator:ga6a7026507c5b04e8f17cb2481c08d8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace80c5f347389cc8950e6761e6174541" id="r_gace80c5f347389cc8950e6761e6174541"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gace80c5f347389cc8950e6761e6174541">serverAddrRewardOut</a></td></tr>
+<tr class="separator:gace80c5f347389cc8950e6761e6174541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ddd23c755f26b629cef997c0ebc79ba" id="r_ga2ddd23c755f26b629cef997c0ebc79ba"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2ddd23c755f26b629cef997c0ebc79ba">serverAddrStateIn</a></td></tr>
+<tr class="separator:ga2ddd23c755f26b629cef997c0ebc79ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga839e6dbbcf76f9e9814456ea6ce1294a" id="r_ga839e6dbbcf76f9e9814456ea6ce1294a"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga839e6dbbcf76f9e9814456ea6ce1294a">serverAddrParametersIn</a></td></tr>
+<tr class="separator:ga839e6dbbcf76f9e9814456ea6ce1294a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79b1cca60fa8168bcfc1b2f85eaff821" id="r_ga79b1cca60fa8168bcfc1b2f85eaff821"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga79b1cca60fa8168bcfc1b2f85eaff821">serverAddrReqIn</a></td></tr>
+<tr class="separator:ga79b1cca60fa8168bcfc1b2f85eaff821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad53916ce987026d8bfe006c881e10790" id="r_gad53916ce987026d8bfe006c881e10790"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad53916ce987026d8bfe006c881e10790">state_command_output_buffer</a> [BYTES_STATE_COMMAND_BUFFER]</td></tr>
 <tr class="memdesc:gad53916ce987026d8bfe006c881e10790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for UDP Control Commands to be sent to server.  <br /></td></tr>
 <tr class="separator:gad53916ce987026d8bfe006c881e10790"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +360,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ga879e00b7e895c6ff812556af31fedc97" name="ga879e00b7e895c6ff812556af31fedc97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga879e00b7e895c6ff812556af31fedc97">&#9670;&#160;</a></span>SendNextTargetToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SendNextTargetToServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trial_targets.html">TrialTargets</a> *</td>          <td class="paramname"><span class="paramname"><em>tSeq</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends task target data to the server. </p>
+<p>If there are no targets in the table, populates random targets before sending.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tSeq</td><td>Pointer to the TaskTargets structure containing target data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns EXIT_SUCCESS on successful sending, EXIT_FAILURE otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="gac8e65f0cab15c1e62b36cc9d53d184a0" name="gac8e65f0cab15c1e62b36cc9d53d184a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac8e65f0cab15c1e62b36cc9d53d184a0">&#9670;&#160;</a></span>SendTaskParametersToServer()</h2>
 
@@ -502,8 +550,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga9f90484c31083476fba3d551be0f1bdc" name="ga9f90484c31083476fba3d551be0f1bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9f90484c31083476fba3d551be0f1bdc">&#9670;&#160;</a></span>serverAddrReqIn</h2>
+<a id="gaa6659ddf2b31f46dd7e9191718a4c3ad" name="gaa6659ddf2b31f46dd7e9191718a4c3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6659ddf2b31f46dd7e9191718a4c3ad">&#9670;&#160;</a></span>serverAddrCommandOut</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +560,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct sockaddr_in serverAddrCommandOut serverAddrParametersOut serverAddrTargetOut serverAddrRewardOut serverAddrStateIn serverAddrParametersIn serverAddrReqIn</td>
+          <td class="memname">struct sockaddr_in serverAddrCommandOut</td>
         </tr>
       </table>
   </td>
@@ -523,6 +571,138 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>UDP socket addresses associated with each socket. </p>
+
+</div>
+</div>
+<a id="ga839e6dbbcf76f9e9814456ea6ce1294a" name="ga839e6dbbcf76f9e9814456ea6ce1294a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga839e6dbbcf76f9e9814456ea6ce1294a">&#9670;&#160;</a></span>serverAddrParametersIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrParametersIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad682f576f715bb08a9287e24cebda7d9" name="gad682f576f715bb08a9287e24cebda7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad682f576f715bb08a9287e24cebda7d9">&#9670;&#160;</a></span>serverAddrParametersOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrParametersOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga79b1cca60fa8168bcfc1b2f85eaff821" name="ga79b1cca60fa8168bcfc1b2f85eaff821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79b1cca60fa8168bcfc1b2f85eaff821">&#9670;&#160;</a></span>serverAddrReqIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrReqIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gace80c5f347389cc8950e6761e6174541" name="gace80c5f347389cc8950e6761e6174541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace80c5f347389cc8950e6761e6174541">&#9670;&#160;</a></span>serverAddrRewardOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrRewardOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2ddd23c755f26b629cef997c0ebc79ba" name="ga2ddd23c755f26b629cef997c0ebc79ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ddd23c755f26b629cef997c0ebc79ba">&#9670;&#160;</a></span>serverAddrStateIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrStateIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6a7026507c5b04e8f17cb2481c08d8c6" name="ga6a7026507c5b04e8f17cb2481c08d8c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a7026507c5b04e8f17cb2481c08d8c6">&#9670;&#160;</a></span>serverAddrTargetOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrTargetOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -594,7 +774,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>UDP socket for communication with the server. </p>
+<p>UDP socket to send "control" commands to the server. </p>
 
 </div>
 </div>
@@ -603,12 +783,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockParametersIn</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to receive initial parameter state message from server. </p>
 
 </div>
 </div>
@@ -617,12 +807,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockParametersOut</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to send parameter changes to the server. </p>
 
 </div>
 </div>
@@ -631,12 +831,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockReqIn</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to receive requests from the server, such as to issue a reward or generate new targets. </p>
 
 </div>
 </div>
@@ -645,12 +855,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockRewardOut</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to send commands to the reward dispenser. </p>
 
 </div>
 </div>
@@ -659,12 +879,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockStateIn</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to receive state updates (trial counts etc) from the server. </p>
 
 </div>
 </div>
@@ -673,12 +903,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SOCKET udpSockTargetOut</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>UDP socket to send updates in target positions to the server. </p>
 
 </div>
 </div>

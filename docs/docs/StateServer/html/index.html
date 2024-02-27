@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">StateServer<span id="projectnumber">&#160;1.5.20</span>
+   <div id="projectname">StateServer<span id="projectnumber">&#160;1.6.1</span>
    </div>
    <div id="projectbrief">Compiled `c` application to handle task state logging and timing.</div>
   </td>
@@ -132,7 +132,7 @@ Main Applications</h2>
 <b>NHP Wrist State Server</b></h3>
 <p><em>This application launches the State Server on a Windows host. It should be run on some other machine than the Plexon rig computer, but preferably still a good computer. <b>Important:</b> <code>config.yaml</code> <b>must be present</b> in whichever folder contains the <code>NHP_Wrist_State_Server.exe</code> when it is run. Therefore, if you copy the executable out of that folder make sure you copy <code>config.yaml</code> along with it. <b>You must properly set up <code>config.yaml</code> according to the current configuration of devices in your task network, or this executable will not work!</b></em> <br  />
 </p>
-<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures -lTiming -lMathUtilities &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
+<p>To re-compile the executable <code>bin/NHP_Wrist_State_Server.exe</code> use the following command: </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/StateServer &amp;&amp; gcc src/state_server.c -o bin/NHP_Wrist_State_Server.exe -Iinclude -Llib -lNetwork -lws2_32 -lLogUtilities -lTaskParameters -lDataStructures -lTiming -lMathUtilities -lCalibrationUtilities &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
 </div><!-- fragment --><p> <b>Note 1:</b> it is critically important to link <code>ws2_32</code> only after <code>Network</code>; also, since the other libraries include <code>&lt;Windows.h&gt;</code>, <code>-lws2_32</code> must precede any of the other libraries. <br  />
  <b>Note 2:</b> during the compilation and linking of the static <code>lib/Network.lib</code> (in <a href="https://code.nml.wtf/docs/NetworkUtilities/html/index.html"><code>NetworkUtilities</code></a>), please make sure to <em><b>not</b></em> link <code>-lws2_32</code> in the gcc static object file generation step. The static library does not require external libraries; the external libraries should only be linked in the final compilation step (i.e. when producing a <code>.dll</code> dynamic link library or when producing a <code>.exe</code> executable to run the application). <br  />
 </p>

@@ -14,9 +14,8 @@ var searchData=
   ['targetwindowproc_11',['TargetWindowProc',['../group___target_controls.html#ga7507920c8be8e2440c805e19f4688b17',1,'TargetWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam):&#160;controller.c'],['../group___target_controls.html#ga7507920c8be8e2440c805e19f4688b17',1,'TargetWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam):&#160;controller.c']]],
   ['task_20controller_12',['Task Controller',['../index.html',1,'']]],
   ['todo_20list_13',['Todo List',['../todo.html',1,'']]],
-  ['total_5fattempts_14',['total_attempts',['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'controller.h']]],
-  ['total_5fsuccesses_15',['total_successes',['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'controller.h']]],
+  ['total_5fattempts_14',['total_attempts',['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'total_attempts:&#160;controller.c'],['../group___main_controls.html#ga01f17ee45c4918fc44f0fa02e4199a14',1,'total_attempts:&#160;controller.c']]],
+  ['total_5fsuccesses_15',['total_successes',['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'total_successes:&#160;controller.c'],['../group___main_controls.html#gac1201e13c7cc03c5f9e030fcc91342a0',1,'total_successes:&#160;controller.c']]],
   ['tracking_16',['Target Generation/Tracking',['../group___target_tracking.html',1,'']]],
-  ['trialtargets_17',['TrialTargets',['../struct_trial_targets.html',1,'']]],
-  ['tt_20nhp_5ftask_5fcontroller_20exe_20tt_18',['**&lt;tt&gt;NHP_Task_Controller.exe&lt;/tt&gt;**',['../index.html#nhp_task_controllerexe',1,'']]]
+  ['trialtargets_17',['TrialTargets',['../struct_trial_targets.html',1,'']]]
 ];

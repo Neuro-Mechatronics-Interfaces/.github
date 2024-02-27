@@ -2,7 +2,7 @@ var searchData=
 [
   ['sample_5fperiod_0',['sample_period',['../struct_thread_safe_args.html#a48246d0f72529eddcf4655ca618229be',1,'ThreadSafeArgs']]],
   ['saveparameterstofile_1',['saveParametersToFile',['../group___memory_data.html#gae1710f7d4fd10e1cdcd657c76d60da21',1,'saveParametersToFile(const char *paramFolderFS, TaskParameters *parameters, uint16_t parameters_index):&#160;state_server.c'],['../group___memory_data.html#gae1710f7d4fd10e1cdcd657c76d60da21',1,'saveParametersToFile(const char *paramFolderFS, TaskParameters *parameters, uint16_t parameters_index):&#160;state_server.c']]],
-  ['savetaskstate_2',['saveTaskState',['../group___memory_data.html#gadc464985e50a48c1bdb96ceb1cbe5ee7',1,'saveTaskState(FILE *log, LogData *logData):&#160;state_server.c'],['../group___memory_data.html#gadc464985e50a48c1bdb96ceb1cbe5ee7',1,'saveTaskState(FILE *log, LogData *logData):&#160;state_server.c']]],
+  ['savetaskstate_2',['saveTaskState',['../group___memory_data.html#gadc464985e50a48c1bdb96ceb1cbe5ee7',1,'saveTaskState(FILE *log, LogData *pLogData):&#160;state_server.c'],['../group___memory_data.html#gadc464985e50a48c1bdb96ceb1cbe5ee7',1,'saveTaskState(FILE *log, LogData *logData):&#160;state_server.c']]],
   ['server_3',['State Server',['../index.html',1,'']]],
   ['server_20strong_4',['&lt;strong&gt;NHP Wrist State Server&lt;/strong&gt;',['../index.html#nhp-wrist-state-server',1,'']]],
   ['set_5findex_5',['set_index',['../struct_thread_safe_args.html#abd14673daae193bbb034839756390e28',1,'ThreadSafeArgs']]],

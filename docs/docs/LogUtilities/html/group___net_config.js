@@ -21,7 +21,7 @@ var group___net_config =
       [ "CONN_RENDER_SERVER_SOUND", "group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671ab455d14e8ed1122e38c35690e525eb8d", null ],
       [ "CONN_CONTROLLER_SERVER_PARAMETER", "group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671ac919c89686ac4865bf55d4a3c61040c3", null ],
       [ "CONN_CONTROLLER_SERVER_STATE", "group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f", null ],
-      [ "CONN_STATE_CONTROLLER_CALIBRATION", "group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a92dcbe738e256d6a6b9fe8e4cf108bd3", null ]
+      [ "CONN_SERVER_CONTROLLER_CALIBRATION", "group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2", null ]
     ] ],
     [ "getPort", "group___net_config.html#ga4e94713ebf634feaa0539cca8630a959", null ],
     [ "initConnectionData", "group___net_config.html#gaa43fe1cc5bf3720089a2b4a4af18138c", null ]
