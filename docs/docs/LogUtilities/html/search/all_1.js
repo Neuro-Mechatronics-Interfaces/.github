@@ -15,10 +15,11 @@ var searchData=
   ['conn_5fserver_5fcontroller_5fparameter_12',['CONN_SERVER_CONTROLLER_PARAMETER',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c',1,'log_utilities.h']]],
   ['conn_5fserver_5fplexon_5fcursor_13',['CONN_SERVER_PLEXON_CURSOR',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d',1,'log_utilities.h']]],
   ['conn_5fserver_5fplexon_5ftarget_14',['CONN_SERVER_PLEXON_TARGET',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e',1,'log_utilities.h']]],
-  ['connection_15',['Connection',['../group___net_config.html#gab0845c0c8d309ee865c78b095b00e671',1,'log_utilities.h']]],
-  ['connectiondata_16',['ConnectionData',['../struct_connection_data.html',1,'']]],
-  ['containerfolder_17',['containerFolder',['../group___file_i_o.html#gad4ed85a0429b69738151de28387a7d09',1,'containerFolder(char *filePathFS, int levelsUp):&#160;log_utilities.c'],['../group___file_i_o.html#gad4ed85a0429b69738151de28387a7d09',1,'containerFolder(char *filePathFS, int levelsUp):&#160;log_utilities.c']]],
-  ['contents_18',['Contents',['../index.html#contents',1,'']]],
-  ['controller_5fserver_5fip_19',['controller_server_ip',['../struct_connection_data.html#a5d333ebf2d82565697609e44b6f8c51c',1,'ConnectionData']]],
-  ['createfolderifnotexists_20',['createFolderIfNotExists',['../group___file_i_o.html#gada40aab0761f926f39725890071a3059',1,'createFolderIfNotExists(const char *folderPath):&#160;log_utilities.c'],['../group___file_i_o.html#gada40aab0761f926f39725890071a3059',1,'createFolderIfNotExists(const char *folderPath):&#160;log_utilities.c']]]
+  ['conn_5fstate_5fcontroller_5fcalibration_15',['CONN_STATE_CONTROLLER_CALIBRATION',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a92dcbe738e256d6a6b9fe8e4cf108bd3',1,'log_utilities.h']]],
+  ['connection_16',['Connection',['../group___net_config.html#gab0845c0c8d309ee865c78b095b00e671',1,'log_utilities.h']]],
+  ['connectiondata_17',['ConnectionData',['../struct_connection_data.html',1,'']]],
+  ['containerfolder_18',['containerFolder',['../group___file_i_o.html#gad4ed85a0429b69738151de28387a7d09',1,'containerFolder(char *filePathFS, int levelsUp):&#160;log_utilities.c'],['../group___file_i_o.html#gad4ed85a0429b69738151de28387a7d09',1,'containerFolder(char *filePathFS, int levelsUp):&#160;log_utilities.c']]],
+  ['contents_19',['Contents',['../index.html#contents',1,'']]],
+  ['controller_5fserver_5fip_20',['controller_server_ip',['../struct_connection_data.html#a5d333ebf2d82565697609e44b6f8c51c',1,'ConnectionData']]],
+  ['createfolderifnotexists_21',['createFolderIfNotExists',['../group___file_i_o.html#gada40aab0761f926f39725890071a3059',1,'createFolderIfNotExists(const char *folderPath):&#160;log_utilities.c'],['../group___file_i_o.html#gada40aab0761f926f39725890071a3059',1,'createFolderIfNotExists(const char *folderPath):&#160;log_utilities.c']]]
 ];

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.1.14</span>
+   <div id="projectname">MathUtilities<span id="projectnumber">&#160;1.1.15</span>
    </div>
    <div id="projectbrief">Common math functions shared across compiled apps at NML-NHP.</div>
   </td>
@@ -115,6 +115,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga8d227e6e808be789c0391873ea7a4ec3" id="r_ga8d227e6e808be789c0391873ea7a4ec3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8d227e6e808be789c0391873ea7a4ec3">randomExponentialSeconds</a> (double minSeconds, double maxSeconds)</td></tr>
 <tr class="memdesc:ga8d227e6e808be789c0391873ea7a4ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random floating point value (seconds) between a minimum and maximum value.  <br /></td></tr>
 <tr class="separator:ga8d227e6e808be789c0391873ea7a4ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e274ddac175e2942b23628eef040f68" id="r_ga6e274ddac175e2942b23628eef040f68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6e274ddac175e2942b23628eef040f68">shuffle</a> (int arr[], int n)</td></tr>
+<tr class="memdesc:ga6e274ddac175e2942b23628eef040f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuffles the elements of an array.  <br /></td></tr>
+<tr class="separator:ga6e274ddac175e2942b23628eef040f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to random number generation. </p>
@@ -245,6 +248,37 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A random floating point value in seconds. </dd></dl>
+
+</div>
+</div>
+<a id="ga6e274ddac175e2942b23628eef040f68" name="ga6e274ddac175e2942b23628eef040f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e274ddac175e2942b23628eef040f68">&#9670;&#160;</a></span>shuffle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shuffle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>arr</em>[], </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shuffles the elements of an array. </p>
+<p>This function shuffles the elements of the given array in place. It uses the Fisher-Yates shuffle algorithm.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The array to be shuffled. </td></tr>
+    <tr><td class="paramname">n</td><td>The number of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

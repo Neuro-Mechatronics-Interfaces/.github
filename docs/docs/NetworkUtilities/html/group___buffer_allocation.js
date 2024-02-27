@@ -7,6 +7,7 @@ var group___buffer_allocation =
     [ "BYTES_RENDER_PARAMETER_BUFFER", "group___buffer_allocation.html#gace75003c0b443099f73a6ba837f09488", null ],
     [ "BYTES_RENDER_TARGET_BUFFER", "group___buffer_allocation.html#ga295cda3d5434efe67959264ca5fd1b4a", null ],
     [ "BYTES_REWARD_COMMAND_BUFFER", "group___buffer_allocation.html#ga14a6158bde0e97f619c5d2507b85ed2f", null ],
+    [ "BYTES_STATE_CALIBRATION_BUFFER", "group___buffer_allocation.html#ga36925cd486fff73b5f85659d1bc4511f", null ],
     [ "BYTES_STATE_COMMAND_BUFFER", "group___buffer_allocation.html#ga2ee0bbfd9a1abdd5797cc9677d3fd1b7", null ],
     [ "BYTES_STATE_CURSOR_BUFFER", "group___buffer_allocation.html#ga5c64bfa3f197129ea38481f18a469c13", null ],
     [ "BYTES_STATE_PARAMETER_BUFFER", "group___buffer_allocation.html#gadd4d831a6223d5736b2f4fc789161be3", null ],

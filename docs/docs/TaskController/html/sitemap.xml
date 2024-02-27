@@ -5,6 +5,33 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
+    <loc>https://code.nml.wtf/docs/todo.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___u_i_layout.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___main_controls.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___target_controls.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___calibration_controls.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___network.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___target_tracking.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/group___helpers.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/struct_trial_targets.html</loc>
+  </url>
+  <url>
     <loc>https://code.nml.wtf/docs/dir_68267d1309a1af8e8297ef4c3efbcdba.html</loc>
   </url>
   <url>
@@ -12,5 +39,35 @@
   </url>
   <url>
     <loc>https://code.nml.wtf/docs/doxygen_crawl.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/pages.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/topics.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/annotated.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/classes.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
+  </url>
+  <url>
+    <loc>https://code.nml.wtf/docs/functions_vars.html</loc>
   </url>
 </urlset>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['task_20controller_0',['Task Controller',['../index.html',1,'']]]
+  ['list_0',['Todo List',['../todo.html',1,'']]]
 ];

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['counttargetsintable_0',['countTargetsInTable',['../group___target_tracking.html#gaf0218b93838b14149dbb3b3b1f067410',1,'countTargetsInTable(HWND hTable):&#160;controller.c'],['../group___target_tracking.html#gaf0218b93838b14149dbb3b3b1f067410',1,'countTargetsInTable(HWND hTable):&#160;controller.c']]],
+  ['createcustombutton_1',['CreateCustomButton',['../group___u_i_layout.html#ga02ed42fe6629d793d4d2df5cb881b640',1,'CreateCustomButton(int y, HWND hwndParent, HMENU controlID, HINSTANCE hInstance):&#160;controller.c'],['../group___u_i_layout.html#ga02ed42fe6629d793d4d2df5cb881b640',1,'CreateCustomButton(int y, HWND hwndParent, HMENU controlID, HINSTANCE hInstance):&#160;controller.c']]],
+  ['createnumericedit_2',['CreateNumericEdit',['../group___u_i_layout.html#ga27e97019e6fe4f2b5bc4e8923221bc7f',1,'CreateNumericEdit(int y, HWND hwndParent, HMENU controlID, HINSTANCE hInstance):&#160;controller.c'],['../group___u_i_layout.html#ga27e97019e6fe4f2b5bc4e8923221bc7f',1,'CreateNumericEdit(int y, HWND hwndParent, HMENU controlID, HINSTANCE hInstance):&#160;controller.c']]],
+  ['createtargetchildwindow_3',['createTargetChildWindow',['../group___u_i_layout.html#ga08144a69fd2ef4a77c14b619ef0e579b',1,'createTargetChildWindow(HINSTANCE hInstance):&#160;controller.c'],['../group___u_i_layout.html#ga08144a69fd2ef4a77c14b619ef0e579b',1,'createTargetChildWindow(HINSTANCE hInstance):&#160;controller.c']]]
+];

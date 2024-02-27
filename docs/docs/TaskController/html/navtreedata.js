@@ -25,13 +25,23 @@
 var NAVTREE =
 [
   [ "TaskController", "index.html", [
-    [ "Task Controller", "index.html", "index" ]
+    [ "Task Controller", "index.html", "index" ],
+    [ "Todo List", "todo.html", null ],
+    [ "Topics", "topics.html", "topics" ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

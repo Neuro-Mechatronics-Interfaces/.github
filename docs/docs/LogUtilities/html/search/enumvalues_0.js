@@ -11,5 +11,6 @@ var searchData=
   ['conn_5fserver_5fcontroller_5fcommand_8',['CONN_SERVER_CONTROLLER_COMMAND',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a0c74b6cbc68f5ca1560f0cdbf3a5cab0',1,'log_utilities.h']]],
   ['conn_5fserver_5fcontroller_5fparameter_9',['CONN_SERVER_CONTROLLER_PARAMETER',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c',1,'log_utilities.h']]],
   ['conn_5fserver_5fplexon_5fcursor_10',['CONN_SERVER_PLEXON_CURSOR',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d',1,'log_utilities.h']]],
-  ['conn_5fserver_5fplexon_5ftarget_11',['CONN_SERVER_PLEXON_TARGET',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e',1,'log_utilities.h']]]
+  ['conn_5fserver_5fplexon_5ftarget_11',['CONN_SERVER_PLEXON_TARGET',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e',1,'log_utilities.h']]],
+  ['conn_5fstate_5fcontroller_5fcalibration_12',['CONN_STATE_CONTROLLER_CALIBRATION',['../group___net_config.html#ggab0845c0c8d309ee865c78b095b00e671a92dcbe738e256d6a6b9fe8e4cf108bd3',1,'log_utilities.h']]]
 ];
