@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;2.1.1</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;2.2.23</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -108,15 +108,19 @@ Compilation</h1>
 <p>To compile, use <code>gcc</code>: <br  />
  </p><div class="fragment"><div class="line">cd %NML_NHP_C_PROJECTS%/TaskController &amp;&amp; gcc src/controller.c src/res/resource.o -o bin/NHP_Task_Controller.exe -Wno-discarded-qualifiers -Iinclude -Llib -lNetwork -lws2_32 -lTaskParameters -lLogUtilities -lDataStructures -lgdi32 -lComctl32 -lMathUtilities -lCalibrationUtilities &amp;&amp; dot -Tpng controller_server_sockets.dot -o &quot;%NML_DOXY_DOCS_DIRECTORY%/TaskController/html/controller_server_sockets.png&quot; &amp;&amp; doxyincrement.bat &amp;&amp; doxygen &gt; %NML_NHP_C_PROJECTS%/doxygen_output.log</div>
 </div><!-- fragment --><p> To suppress the console, add <code>-mwindows</code> at the end.</p>
-<p>If you would like to update the icon you must change the resource file. To do this, first make sure you have the correct icon and other resource identifiers in your <code>src/resource.rc</code> file. Open it with a text editor. The first lines should be: <br  />
+<p>If you would like to update the icon you must change the resource file. To do this, first make sure you have the correct icon and other resource identifiers in your <code>src/resource.rc</code> file. Open it with a text editor. Among the initial block of lines, there should include the following: <br  />
  </p><div class="fragment"><div class="line">#include &quot;enum.h&quot;</div>
-<div class="line">IDI_APP_MAIN_ICON ICON &quot;res/NHP_Task_Controller.ico&quot;</div>
-<div class="line">IDI_APP_TARGET_ICON ICON &quot;res/NHP_Task_Controller_Targets.ico&quot;</div>
+<div class="line">IDI_RSS ICON &quot;res/rss.ico&quot;</div>
+<div class="line">IDI_TARGET ICON &quot;res/target.ico&quot;</div>
 </div><!-- fragment --><p> This gives the resource ID number, the type of the resource, and the filename, respectively. <br  />
- You can update to a new icon file in this way. To do so, you will need to update the macro (e.g. <code>#define IDI_APP_MAIN_ICON</code>) list in <code>src/enum.h</code> so that it has an ID associated to each new icon. <br  />
+</p>
+<p>There is a final line with a special directive: <br  />
+ </p><div class="fragment"><div class="line">MAINICON ICON &quot;res/rss.ico&quot;  </div>
+</div><!-- fragment --><p> The <code>MAINICON</code> directive is a special directive, telling the compiler to use this icon on the compiled executable.</p>
+<p>You can update to a new icon file in this way. To do so, you will need to update the macro (e.g. <code>#define IDI_RSS</code>) list in <code>src/enum.h</code> so that it has an ID associated to each new icon. <br  />
 </p>
 <p>Once you have finished modifying <code>res/res.rc</code> file you would open a terminal in the <code>res</code> sub-folder and use the following commands: <br  />
- </p><div class="fragment"><div class="line">windres src/resource.rc -o src/res/resource.o &amp;&amp; &quot;C:/Program Files (x86)/Windows Kits/10/bin/10.0.18362.0/x64/rc.exe&quot; /fo src/res/resource.res src/resource.rc</div>
+ </p><div class="fragment"><div class="line">windres src/resource.rc -o src/res/resource.o -i IDI_RSS &amp;&amp; &quot;C:/Program Files (x86)/Windows Kits/10/bin/10.0.18362.0/x64/rc.exe&quot; /fo src/res/resource.res src/resource.rc</div>
 </div><!-- fragment --><p> This will make sure you have the resources associated in a way that they can be incorporated by the compiler, given the linking to <code>src/res/resource.o</code> in the <code>gcc</code> compiler call shown above. <br  />
  </p>
 </div></div><!-- PageDoc -->

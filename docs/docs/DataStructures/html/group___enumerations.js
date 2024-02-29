@@ -10,6 +10,7 @@ var group___enumerations =
       [ "CMD_NEW_SESSION", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153acade36214f37d1398ba85119490e9a77", null ],
       [ "CMD_RESET_CLOCK", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a4e3b71ab7d92ae3844dd60300cbddae4", null ],
       [ "CMD_PING", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a1c0aa24c3612e77ea1a5ca1b82388da0", null ],
+      [ "CMD_CENTER", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a98d730c384e7a8df3896dab1653417eb", null ],
       [ "CMD_UNKNOWN", "group___enumerations.html#gga2afce0a47a93eee73a314d53e4890153a59c51f88aeda3ea6351f01c9c70b9ac7", null ]
     ] ],
     [ "Direction", "group___enumerations.html#ga224b9163917ac32fc95a60d8c1eec3aa", [

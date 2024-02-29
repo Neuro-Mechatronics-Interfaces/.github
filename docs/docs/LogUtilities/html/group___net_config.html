@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.4.2</span>
+   <div id="projectname">LogUtilities<span id="projectnumber">&#160;1.5.1</span>
    </div>
    <div id="projectbrief">A small compiled library for C logging and configuration utility functions.</div>
   </td>
@@ -120,7 +120,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a48164796678082896d778a20b3ebc6da">CONN_REWARDER_CONTROLLER_COMMAND</a> = 4
 , <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d">CONN_SERVER_PLEXON_CURSOR</a> = 5
-, <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e">CONN_SERVER_PLEXON_TARGET</a> = 6
+, <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a0ae528f568869abadf385a4928bbbabd">CONN_SERVER_CONTROLLER_TARGET</a> = 6
 , <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a0e8c09fb47fddf9c8a82278ac067913d">CONN_CONTROLLER_SERVER_REQUEST</a> = 7
 , <br />
 &#160;&#160;<a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a23b82463bd8d7127e9a7cf5748f9d3e1">CONN_RENDER_SERVER_PARAMETER</a> = 8
@@ -129,6 +129,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f">CONN_CONTROLLER_SERVER_STATE</a> = 11
 , <br />
 &#160;&#160;<a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2">CONN_SERVER_CONTROLLER_CALIBRATION</a> = 12
+, <a class="el" href="#ggab0845c0c8d309ee865c78b095b00e671ab67d2d6ce30e0a24d7987da9e724da2d">CONN_CONTROLLER_SERVER_CALIBRATION</a> = 13
 <br />
  }</td></tr>
 <tr class="memdesc:gab0845c0c8d309ee865c78b095b00e671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of state transitions.  <a href="#gab0845c0c8d309ee865c78b095b00e671">More...</a><br /></td></tr>
@@ -174,31 +175,33 @@ Functions</h2></td></tr>
  </li>
 </ul>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671af6847b7f21f809a7788f1b012c17f784" name="ggab0845c0c8d309ee865c78b095b00e671af6847b7f21f809a7788f1b012c17f784"></a>CONN_RENDER_SERVER_CURSOR&#160;</td><td class="fielddoc"><p>Port for cursor messages from state server on rendering device. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671af6847b7f21f809a7788f1b012c17f784" name="ggab0845c0c8d309ee865c78b095b00e671af6847b7f21f809a7788f1b012c17f784"></a>CONN_RENDER_SERVER_CURSOR&#160;</td><td class="fielddoc"><p>Destination port for cursor messages from state server on rendering device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ab3bec66d0c8d8e27b09d0d240f2c9608" name="ggab0845c0c8d309ee865c78b095b00e671ab3bec66d0c8d8e27b09d0d240f2c9608"></a>CONN_RENDER_SERVER_TARGET&#160;</td><td class="fielddoc"><p>Port for target messages from state server on rendering device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ab3bec66d0c8d8e27b09d0d240f2c9608" name="ggab0845c0c8d309ee865c78b095b00e671ab3bec66d0c8d8e27b09d0d240f2c9608"></a>CONN_RENDER_SERVER_TARGET&#160;</td><td class="fielddoc"><p>Destination port for target messages from state server on rendering device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c" name="ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c"></a>CONN_SERVER_CONTROLLER_PARAMETER&#160;</td><td class="fielddoc"><p>Port for parameter messages on state server device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c" name="ggab0845c0c8d309ee865c78b095b00e671ad3f50c1b1e94ea7d0e2945bb59799f2c"></a>CONN_SERVER_CONTROLLER_PARAMETER&#160;</td><td class="fielddoc"><p>Destination port for parameter messages on state server device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0c74b6cbc68f5ca1560f0cdbf3a5cab0" name="ggab0845c0c8d309ee865c78b095b00e671a0c74b6cbc68f5ca1560f0cdbf3a5cab0"></a>CONN_SERVER_CONTROLLER_COMMAND&#160;</td><td class="fielddoc"><p>Port for command messages from controller on state server device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0c74b6cbc68f5ca1560f0cdbf3a5cab0" name="ggab0845c0c8d309ee865c78b095b00e671a0c74b6cbc68f5ca1560f0cdbf3a5cab0"></a>CONN_SERVER_CONTROLLER_COMMAND&#160;</td><td class="fielddoc"><p>Destination port for command messages from controller on state server device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a48164796678082896d778a20b3ebc6da" name="ggab0845c0c8d309ee865c78b095b00e671a48164796678082896d778a20b3ebc6da"></a>CONN_REWARDER_CONTROLLER_COMMAND&#160;</td><td class="fielddoc"><p>Port for command messages from controller on reward delivery device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a48164796678082896d778a20b3ebc6da" name="ggab0845c0c8d309ee865c78b095b00e671a48164796678082896d778a20b3ebc6da"></a>CONN_REWARDER_CONTROLLER_COMMAND&#160;</td><td class="fielddoc"><p>Destination port for command messages from controller on reward delivery device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d" name="ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d"></a>CONN_SERVER_PLEXON_CURSOR&#160;</td><td class="fielddoc"><p>Port for cursor messages from plexon server on state server device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d" name="ggab0845c0c8d309ee865c78b095b00e671a0911c69d5e8c327fdc2783a76f45787d"></a>CONN_SERVER_PLEXON_CURSOR&#160;</td><td class="fielddoc"><p>Destination port for cursor messages from plexon server on state server device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e" name="ggab0845c0c8d309ee865c78b095b00e671a556f6d281ccade4a3ac830f4843be29e"></a>CONN_SERVER_PLEXON_TARGET&#160;</td><td class="fielddoc"><p>Port for target messages from plexon server on state server device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0ae528f568869abadf385a4928bbbabd" name="ggab0845c0c8d309ee865c78b095b00e671a0ae528f568869abadf385a4928bbbabd"></a>CONN_SERVER_CONTROLLER_TARGET&#160;</td><td class="fielddoc"><p>Destination port for target messages from controller on state server device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0e8c09fb47fddf9c8a82278ac067913d" name="ggab0845c0c8d309ee865c78b095b00e671a0e8c09fb47fddf9c8a82278ac067913d"></a>CONN_CONTROLLER_SERVER_REQUEST&#160;</td><td class="fielddoc"><p>Port for request messages from state server on controller device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a0e8c09fb47fddf9c8a82278ac067913d" name="ggab0845c0c8d309ee865c78b095b00e671a0e8c09fb47fddf9c8a82278ac067913d"></a>CONN_CONTROLLER_SERVER_REQUEST&#160;</td><td class="fielddoc"><p>Destination port for request messages from state server on controller device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a23b82463bd8d7127e9a7cf5748f9d3e1" name="ggab0845c0c8d309ee865c78b095b00e671a23b82463bd8d7127e9a7cf5748f9d3e1"></a>CONN_RENDER_SERVER_PARAMETER&#160;</td><td class="fielddoc"><p>Port for parameter messages from state server on rendering device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a23b82463bd8d7127e9a7cf5748f9d3e1" name="ggab0845c0c8d309ee865c78b095b00e671a23b82463bd8d7127e9a7cf5748f9d3e1"></a>CONN_RENDER_SERVER_PARAMETER&#160;</td><td class="fielddoc"><p>Destination port for parameter messages from state server on rendering device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ab455d14e8ed1122e38c35690e525eb8d" name="ggab0845c0c8d309ee865c78b095b00e671ab455d14e8ed1122e38c35690e525eb8d"></a>CONN_RENDER_SERVER_SOUND&#160;</td><td class="fielddoc"><p>Port for sound messages from state server on rendering device. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ab455d14e8ed1122e38c35690e525eb8d" name="ggab0845c0c8d309ee865c78b095b00e671ab455d14e8ed1122e38c35690e525eb8d"></a>CONN_RENDER_SERVER_SOUND&#160;</td><td class="fielddoc"><p>Destination port for sound messages from state server on rendering device. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ac919c89686ac4865bf55d4a3c61040c3" name="ggab0845c0c8d309ee865c78b095b00e671ac919c89686ac4865bf55d4a3c61040c3"></a>CONN_CONTROLLER_SERVER_PARAMETER&#160;</td><td class="fielddoc"><p>Port for parameter messages from state server to controller. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ac919c89686ac4865bf55d4a3c61040c3" name="ggab0845c0c8d309ee865c78b095b00e671ac919c89686ac4865bf55d4a3c61040c3"></a>CONN_CONTROLLER_SERVER_PARAMETER&#160;</td><td class="fielddoc"><p>Destination port for parameter messages from state server to controller. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f" name="ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f"></a>CONN_CONTROLLER_SERVER_STATE&#160;</td><td class="fielddoc"><p>Port for state messages from state server to controller. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f" name="ggab0845c0c8d309ee865c78b095b00e671a30e16495231be7a10f8b68110194cf2f"></a>CONN_CONTROLLER_SERVER_STATE&#160;</td><td class="fielddoc"><p>Destination port for state messages from state server to controller. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2" name="ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2"></a>CONN_SERVER_CONTROLLER_CALIBRATION&#160;</td><td class="fielddoc"><p>Port for calibration messages to the state server from the controller. </p>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2" name="ggab0845c0c8d309ee865c78b095b00e671a28bedc56cb014445dd3f85300d16b3b2"></a>CONN_SERVER_CONTROLLER_CALIBRATION&#160;</td><td class="fielddoc"><p>Destination port for calibration messages to the state server from the controller. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab0845c0c8d309ee865c78b095b00e671ab67d2d6ce30e0a24d7987da9e724da2d" name="ggab0845c0c8d309ee865c78b095b00e671ab67d2d6ce30e0a24d7987da9e724da2d"></a>CONN_CONTROLLER_SERVER_CALIBRATION&#160;</td><td class="fielddoc"><p>Destination port for calibration messages to the controller from the state server. </p>
 </td></tr>
 </table>
 

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;2.1.1</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;2.2.23</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -116,15 +116,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ga879e00b7e895c6ff812556af31fedc97" id="r_ga879e00b7e895c6ff812556af31fedc97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga879e00b7e895c6ff812556af31fedc97">SendNextTargetToServer</a> (<a class="el" href="struct_trial_targets.html">TrialTargets</a> *tSeq)</td></tr>
 <tr class="memdesc:ga879e00b7e895c6ff812556af31fedc97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends task target data to the server.  <br /></td></tr>
 <tr class="separator:ga879e00b7e895c6ff812556af31fedc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc2821026f48862dc75f02edbb787df1" id="r_gadc2821026f48862dc75f02edbb787df1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadc2821026f48862dc75f02edbb787df1">SendCalibrationDataToServer</a> (CalibrationData *calData)</td></tr>
+<tr class="memdesc:gadc2821026f48862dc75f02edbb787df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the current calibration data to the server.  <br /></td></tr>
+<tr class="separator:gadc2821026f48862dc75f02edbb787df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga239f98ff2dc7f6b7ae18471edd7906ee" id="r_ga239f98ff2dc7f6b7ae18471edd7906ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga239f98ff2dc7f6b7ae18471edd7906ee">SendDispenseCommandToRewardServer</a> ()</td></tr>
+<tr class="memdesc:ga239f98ff2dc7f6b7ae18471edd7906ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a command to the reward device to issue the desired dispense.  <br /></td></tr>
+<tr class="separator:ga239f98ff2dc7f6b7ae18471edd7906ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga665c8d139bc96c0729f2339b6f96087c" id="r_ga665c8d139bc96c0729f2339b6f96087c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga665c8d139bc96c0729f2339b6f96087c">ReceiveStateUpdatesFromServer</a> (char *state_input_buffer, socklen_t *serverAddrStateInLen)</td></tr>
 <tr class="memdesc:ga665c8d139bc96c0729f2339b6f96087c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives state updates from the server via UDP socket.  <br /></td></tr>
 <tr class="separator:ga665c8d139bc96c0729f2339b6f96087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga722ef179076792e7acb75643e9c842b3" id="r_ga722ef179076792e7acb75643e9c842b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga722ef179076792e7acb75643e9c842b3">ReceiveParameterUpdatesFromServer</a> (char *parameters_input_buffer, socklen_t *serverAddrParametersInLen)</td></tr>
-<tr class="memdesc:ga722ef179076792e7acb75643e9c842b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives parameter updates from the server via UDP socket.  <br /></td></tr>
-<tr class="separator:ga722ef179076792e7acb75643e9c842b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga230e526c5fab4be667d739452ad7750d" id="r_ga230e526c5fab4be667d739452ad7750d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga230e526c5fab4be667d739452ad7750d">ReceiveParameterUpdatesFromServer</a> (char *parameters_input_buffer, socklen_t *serverAddrParametersInLen, TaskParameters *parameters)</td></tr>
+<tr class="memdesc:ga230e526c5fab4be667d739452ad7750d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives parameter updates from the server via UDP socket.  <br /></td></tr>
+<tr class="separator:ga230e526c5fab4be667d739452ad7750d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4af757f8cbf818991987a0eff33accc7" id="r_ga4af757f8cbf818991987a0eff33accc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4af757f8cbf818991987a0eff33accc7">ReceiveRequestsFromServer</a> (char *req_input_buffer, socklen_t *serverAddrReqInLen)</td></tr>
 <tr class="memdesc:ga4af757f8cbf818991987a0eff33accc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives requests from the server via UDP socket.  <br /></td></tr>
 <tr class="separator:ga4af757f8cbf818991987a0eff33accc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98754f274596a4855b309615f729c78e" id="r_ga98754f274596a4855b309615f729c78e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga98754f274596a4855b309615f729c78e">ReceiveCalibrationsFromServer</a> (char *<a class="el" href="#gafbc976efff0a8e41b7aa069d4a6e79ed">calibration_buffer</a>, socklen_t *serverAddrCalibrationInLen, CalibrationData *calData, TaskParameters *parameters)</td></tr>
+<tr class="memdesc:ga98754f274596a4855b309615f729c78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives calibration UDP data packets from the server.  <br /></td></tr>
+<tr class="separator:ga98754f274596a4855b309615f729c78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -143,6 +152,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ga84afbf6d3929abf909649b9f176e80b4" id="r_ga84afbf6d3929abf909649b9f176e80b4"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84afbf6d3929abf909649b9f176e80b4">udpSockRewardOut</a></td></tr>
 <tr class="memdesc:ga84afbf6d3929abf909649b9f176e80b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send commands to the reward dispenser.  <br /></td></tr>
 <tr class="separator:ga84afbf6d3929abf909649b9f176e80b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c0362135f7b2a7d02838e1702da7e0d" id="r_ga6c0362135f7b2a7d02838e1702da7e0d"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6c0362135f7b2a7d02838e1702da7e0d">udpSockCalibrationOut</a></td></tr>
+<tr class="memdesc:ga6c0362135f7b2a7d02838e1702da7e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to send calibration data to the server.  <br /></td></tr>
+<tr class="separator:ga6c0362135f7b2a7d02838e1702da7e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga998774c7d316c4c63dcd1252fb8e76dc" id="r_ga998774c7d316c4c63dcd1252fb8e76dc"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga998774c7d316c4c63dcd1252fb8e76dc">udpSockStateIn</a></td></tr>
 <tr class="memdesc:ga998774c7d316c4c63dcd1252fb8e76dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive state updates (trial counts etc) from the server.  <br /></td></tr>
 <tr class="separator:ga998774c7d316c4c63dcd1252fb8e76dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +164,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ga57ef8fde5818fdc09496fa3ffbb7ed64" id="r_ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga57ef8fde5818fdc09496fa3ffbb7ed64">udpSockReqIn</a></td></tr>
 <tr class="memdesc:ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive requests from the server, such as to issue a reward or generate new targets.  <br /></td></tr>
 <tr class="separator:ga57ef8fde5818fdc09496fa3ffbb7ed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad27cfb42e66f7f5ecc62c9abb4b9a128" id="r_gad27cfb42e66f7f5ecc62c9abb4b9a128"><td class="memItemLeft" align="right" valign="top">SOCKET&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad27cfb42e66f7f5ecc62c9abb4b9a128">udpSockCalibrationIn</a></td></tr>
+<tr class="memdesc:gad27cfb42e66f7f5ecc62c9abb4b9a128"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket to receive calibration updates from the server.  <br /></td></tr>
+<tr class="separator:gad27cfb42e66f7f5ecc62c9abb4b9a128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6659ddf2b31f46dd7e9191718a4c3ad" id="r_gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6659ddf2b31f46dd7e9191718a4c3ad">serverAddrCommandOut</a></td></tr>
 <tr class="memdesc:gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP socket addresses associated with each socket.  <br /></td></tr>
 <tr class="separator:gaa6659ddf2b31f46dd7e9191718a4c3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,12 +176,16 @@ Variables</h2></td></tr>
 <tr class="separator:ga6a7026507c5b04e8f17cb2481c08d8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gace80c5f347389cc8950e6761e6174541" id="r_gace80c5f347389cc8950e6761e6174541"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gace80c5f347389cc8950e6761e6174541">serverAddrRewardOut</a></td></tr>
 <tr class="separator:gace80c5f347389cc8950e6761e6174541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80aacddb030d6d3bcce86b0061c4c58a" id="r_ga80aacddb030d6d3bcce86b0061c4c58a"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80aacddb030d6d3bcce86b0061c4c58a">serverAddrCalibrationOut</a></td></tr>
+<tr class="separator:ga80aacddb030d6d3bcce86b0061c4c58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2ddd23c755f26b629cef997c0ebc79ba" id="r_ga2ddd23c755f26b629cef997c0ebc79ba"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2ddd23c755f26b629cef997c0ebc79ba">serverAddrStateIn</a></td></tr>
 <tr class="separator:ga2ddd23c755f26b629cef997c0ebc79ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga839e6dbbcf76f9e9814456ea6ce1294a" id="r_ga839e6dbbcf76f9e9814456ea6ce1294a"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga839e6dbbcf76f9e9814456ea6ce1294a">serverAddrParametersIn</a></td></tr>
 <tr class="separator:ga839e6dbbcf76f9e9814456ea6ce1294a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga79b1cca60fa8168bcfc1b2f85eaff821" id="r_ga79b1cca60fa8168bcfc1b2f85eaff821"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga79b1cca60fa8168bcfc1b2f85eaff821">serverAddrReqIn</a></td></tr>
 <tr class="separator:ga79b1cca60fa8168bcfc1b2f85eaff821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86e53b5636f3bd8fe462d2c7082cbfdd" id="r_ga86e53b5636f3bd8fe462d2c7082cbfdd"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga86e53b5636f3bd8fe462d2c7082cbfdd">serverAddrCalibrationIn</a></td></tr>
+<tr class="separator:ga86e53b5636f3bd8fe462d2c7082cbfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad53916ce987026d8bfe006c881e10790" id="r_gad53916ce987026d8bfe006c881e10790"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad53916ce987026d8bfe006c881e10790">state_command_output_buffer</a> [BYTES_STATE_COMMAND_BUFFER]</td></tr>
 <tr class="memdesc:gad53916ce987026d8bfe006c881e10790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for UDP Control Commands to be sent to server.  <br /></td></tr>
 <tr class="separator:gad53916ce987026d8bfe006c881e10790"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +195,9 @@ Variables</h2></td></tr>
 <tr class="memitem:gafdf3d470722ba821fd3b792575bf13c2" id="r_gafdf3d470722ba821fd3b792575bf13c2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafdf3d470722ba821fd3b792575bf13c2">target_output_buffer</a> [BYTES_STATE_TARGET_BUFFER]</td></tr>
 <tr class="memdesc:gafdf3d470722ba821fd3b792575bf13c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for UDP Target Locations to be sent to server.  <br /></td></tr>
 <tr class="separator:gafdf3d470722ba821fd3b792575bf13c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbc976efff0a8e41b7aa069d4a6e79ed" id="r_gafbc976efff0a8e41b7aa069d4a6e79ed"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafbc976efff0a8e41b7aa069d4a6e79ed">calibration_buffer</a> [BYTES_STATE_CALIBRATION_BUFFER]</td></tr>
+<tr class="memdesc:gafbc976efff0a8e41b7aa069d4a6e79ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for UDP calibration messages exchanged between server and application.  <br /></td></tr>
+<tr class="separator:gafbc976efff0a8e41b7aa069d4a6e79ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1ea6be36f4e94a29b9864a5bb9e3f014" id="r_ga1ea6be36f4e94a29b9864a5bb9e3f014"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1ea6be36f4e94a29b9864a5bb9e3f014">edit_buffer</a> [128]</td></tr>
 <tr class="memdesc:ga1ea6be36f4e94a29b9864a5bb9e3f014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer that holds string inputs from parameter UI elements.  <br /></td></tr>
 <tr class="separator:ga1ea6be36f4e94a29b9864a5bb9e3f014"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,8 +242,52 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga722ef179076792e7acb75643e9c842b3" name="ga722ef179076792e7acb75643e9c842b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga722ef179076792e7acb75643e9c842b3">&#9670;&#160;</a></span>ReceiveParameterUpdatesFromServer()</h2>
+<a id="ga98754f274596a4855b309615f729c78e" name="ga98754f274596a4855b309615f729c78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98754f274596a4855b309615f729c78e">&#9670;&#160;</a></span>ReceiveCalibrationsFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReceiveCalibrationsFromServer </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>calibration_buffer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t *</td>          <td class="paramname"><span class="paramname"><em>serverAddrCalibrationInLen</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CalibrationData *</td>          <td class="paramname"><span class="paramname"><em>calData</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TaskParameters *</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receives calibration UDP data packets from the server. </p>
+<p>This function receives updated calibration data, for example on initialization or after the <code>SendCalibrationCenterCommandToServer</code> function has been invoked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calibration_buffer</td><td>Buffer to store the received calibration message bytes. </td></tr>
+    <tr><td class="paramname">serverAddrCalibrationInLen</td><td>Pointer to the length of the server address structure. </td></tr>
+    <tr><td class="paramname">calData</td><td>Pointer to the calibration data to update based on message contents. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Pointer to the parameter data structure. <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga230e526c5fab4be667d739452ad7750d" name="ga230e526c5fab4be667d739452ad7750d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga230e526c5fab4be667d739452ad7750d">&#9670;&#160;</a></span>ReceiveParameterUpdatesFromServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +300,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">socklen_t *</td>          <td class="paramname"><span class="paramname"><em>serverAddrParametersInLen</em></span>&#160;)</td>
+          <td class="paramtype">socklen_t *</td>          <td class="paramname"><span class="paramname"><em>serverAddrParametersInLen</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TaskParameters *</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -244,7 +315,8 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parameters_input_buffer</td><td>Buffer to store the received parameter data. </td></tr>
-    <tr><td class="paramname">serverAddrParametersInLen</td><td>Pointer to the length of the server address structure.</td></tr>
+    <tr><td class="paramname">serverAddrParametersInLen</td><td>Pointer to the length of the server address structure. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Pointer to parameter data structure.</td></tr>
   </table>
   </dd>
 </dl>
@@ -283,7 +355,7 @@ Variables</h2></td></tr>
 <p>The request data is expected to be formatted as follows:</p><ul>
 <li>Single character representing the type of request ('r' for reward, etc.)</li>
 <li><p class="startli">Additional fields depending on the type of request</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo</a></b></dt><dd>Implement handling of different types of requests:<ul>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd>Implement handling of different types of requests:<ul>
 <li>Send the reward command to the reward dispenser device.</li>
 <li>Send the next queued target.</li>
 <li>Log or send information about direction, target, reward time, and volume. </li>
@@ -334,6 +406,26 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="gadc2821026f48862dc75f02edbb787df1" name="gadc2821026f48862dc75f02edbb787df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc2821026f48862dc75f02edbb787df1">&#9670;&#160;</a></span>SendCalibrationDataToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SendCalibrationDataToServer </td>
+          <td>(</td>
+          <td class="paramtype">CalibrationData *</td>          <td class="paramname"><span class="paramname"><em>calData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends the current calibration data to the server. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo</a></b></dt><dd>Implement SendCalibrationDataToServer </dd></dl>
+
+</div>
+</div>
 <a id="ga7c2ec39514643c1512d694ea8a024e48" name="ga7c2ec39514643c1512d694ea8a024e48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7c2ec39514643c1512d694ea8a024e48">&#9670;&#160;</a></span>SendCommandToServer()</h2>
 
@@ -357,6 +449,26 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS if message sent successfully, else EXIT_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="ga239f98ff2dc7f6b7ae18471edd7906ee" name="ga239f98ff2dc7f6b7ae18471edd7906ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga239f98ff2dc7f6b7ae18471edd7906ee">&#9670;&#160;</a></span>SendDispenseCommandToRewardServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SendDispenseCommandToRewardServer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends a command to the reward device to issue the desired dispense. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo</a></b></dt><dd>Implement SendDispenseCommandToRewardServer </dd></dl>
 
 </div>
 </div>
@@ -414,6 +526,30 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="gafbc976efff0a8e41b7aa069d4a6e79ed" name="gafbc976efff0a8e41b7aa069d4a6e79ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbc976efff0a8e41b7aa069d4a6e79ed">&#9670;&#160;</a></span>calibration_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char calibration_buffer[BYTES_STATE_CALIBRATION_BUFFER]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Buffer for UDP calibration messages exchanged between server and application. </p>
+
+</div>
+</div>
 <a id="ga6a44a77efe9d36d03240f900d00dad80" name="ga6a44a77efe9d36d03240f900d00dad80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6a44a77efe9d36d03240f900d00dad80">&#9670;&#160;</a></span>config</h2>
 
@@ -547,6 +683,50 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Buffer for UDP Control Commands to be sent to reward device. </p>
+
+</div>
+</div>
+<a id="ga86e53b5636f3bd8fe462d2c7082cbfdd" name="ga86e53b5636f3bd8fe462d2c7082cbfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86e53b5636f3bd8fe462d2c7082cbfdd">&#9670;&#160;</a></span>serverAddrCalibrationIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrCalibrationIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga80aacddb030d6d3bcce86b0061c4c58a" name="ga80aacddb030d6d3bcce86b0061c4c58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80aacddb030d6d3bcce86b0061c4c58a">&#9670;&#160;</a></span>serverAddrCalibrationOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sockaddr_in serverAddrCalibrationOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -751,6 +931,54 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Buffer for UDP Target Locations to be sent to server. </p>
+
+</div>
+</div>
+<a id="gad27cfb42e66f7f5ecc62c9abb4b9a128" name="gad27cfb42e66f7f5ecc62c9abb4b9a128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad27cfb42e66f7f5ecc62c9abb4b9a128">&#9670;&#160;</a></span>udpSockCalibrationIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SOCKET udpSockCalibrationIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UDP socket to receive calibration updates from the server. </p>
+
+</div>
+</div>
+<a id="ga6c0362135f7b2a7d02838e1702da7e0d" name="ga6c0362135f7b2a7d02838e1702da7e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c0362135f7b2a7d02838e1702da7e0d">&#9670;&#160;</a></span>udpSockCalibrationOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SOCKET udpSockCalibrationOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UDP socket to send calibration data to the server. </p>
 
 </div>
 </div>

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TaskController<span id="projectnumber">&#160;2.1.1</span>
+   <div id="projectname">TaskController<span id="projectnumber">&#160;2.2.23</span>
    </div>
    <div id="projectbrief">A light-weight UI that serves as the task/parameter front-end.</div>
   </td>
@@ -112,10 +112,56 @@ Functions</h2></td></tr>
 <tr class="memitem:gabaa958f78afa70809f288a21ad68e088" id="r_gabaa958f78afa70809f288a21ad68e088"><td class="memItemLeft" align="right" valign="top">LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabaa958f78afa70809f288a21ad68e088">TargetRightPanelWndProc</a> (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="memdesc:gabaa958f78afa70809f288a21ad68e088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom window procedure for targets table.  <br /></td></tr>
 <tr class="separator:gabaa958f78afa70809f288a21ad68e088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b71afa11d563b28bde988d49c659304" id="r_ga4b71afa11d563b28bde988d49c659304"><td class="memItemLeft" align="right" valign="top">LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4b71afa11d563b28bde988d49c659304">CalibrationWindowProc</a> (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memdesc:ga4b71afa11d563b28bde988d49c659304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window procedure for handling messages sent to the calibration child-window.  <br /></td></tr>
+<tr class="separator:ga4b71afa11d563b28bde988d49c659304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Provides descriptions of individual control elements on the target-queue application interface. This group includes functions and structures related to managing targets, such as buttons for adding or removing targets, and a table for displaying target information. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga4b71afa11d563b28bde988d49c659304" name="ga4b71afa11d563b28bde988d49c659304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b71afa11d563b28bde988d49c659304">&#9670;&#160;</a></span>CalibrationWindowProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CALLBACK CalibrationWindowProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>hwnd</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>uMsg</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM</td>          <td class="paramname"><span class="paramname"><em>wParam</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM</td>          <td class="paramname"><span class="paramname"><em>lParam</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Window procedure for handling messages sent to the calibration child-window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>Handle to the window. </td></tr>
+    <tr><td class="paramname">uMsg</td><td>Message identifier. </td></tr>
+    <tr><td class="paramname">wParam</td><td>Additional message information. The contents of this parameter depend on the value of the uMsg parameter. </td></tr>
+    <tr><td class="paramname">lParam</td><td>Additional message information. The contents of this parameter depend on the value of the uMsg parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns zero if the message was processed, or a nonzero value if the message was ignored. </dd></dl>
+
+</div>
+</div>
 <a id="ga3695fb3feb888c91689f82cd8eaab818" name="ga3695fb3feb888c91689f82cd8eaab818"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3695fb3feb888c91689f82cd8eaab818">&#9670;&#160;</a></span>TargetLeftPanelWndProc()</h2>
 
