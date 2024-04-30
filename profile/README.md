@@ -5,10 +5,6 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 ## Contents ##
 - [A Note From Max](#a-note-from-max)
 - [Repos](#repos)
-  + [Clubs](#clubs)
-  + [ROS2](#ros2)
-  + [Unity](#unity)
-  + [Experiments](#experiments)
   + [MATLAB](#matlab)
 - [Contributing](#contributing)
 - [Resources](#resources)
@@ -22,37 +18,6 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 
 ## Repos ##  
 This README is a continual _work-in-progress_. Please add a brief snippet and link where you feel is appropriate, if you add any repository to this organization. This is typically better to do when you are just starting a project, as that is a good time to outline documentation for how you think the code should be organized anyways.  
-
-### Clubs ###  
-For now, just `programming club`, but I wasn't sure what header to put it under yet.  
-* [`programming club`](https://github.com/Neuro-Mechatronics-Interfaces/programming_club) - For bi-weekly collaborative code sessions.  
-
-### ROS2 ###
-Different ROS2 nodes (probably in Python3) that let task-devices communicate with other environments, such as Unity.  
-
-|   Name                                                     |  Maintainer                                                         | Description                                                                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **[NML Bag](https://github.com/ricmua/nml_bag)**           | [Andrew Whitford](https://github.com/ricmua)                        | A simple Python package for working with ROS2 bag files.                                             |
-| **[Force Dimension ROS2 package](https://github.com/ricmua/ros_force_dimension)** | [Andrew Whitford](https://github.com/ricmua) | A ROS2 package for interfacing with Force Dimension haptics robots.                                  |
-| **[ROS2 Data Agent](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Data_Agent)** | [Jonathan Shulgach](https://github.com/Jshulgach) | Code for a multipurpose file explorer specializing in reading ROS2 topic data from '.bag' or '.db3' files. |
-| **[ROS2 Reward Dispenser](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Reward_Dispenser)**           | [Jonathan Shulgach](https://github.com/Jshulgach)                        | A ROS2 package with Arduino sketches to operate a water reward system using serial commands. LED matrix display and loadcell measuring scale supported.                                            |
-
-### Unity ###
-Repos for compiled application-specific Unity source code or maybe just the static executables?
-
-|   Name                                                     |  Maintainer                                                         | Description                                                                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **[Empty ROS Unity3D Project](https://github.com/ricmua/empty_ros_unity_3d_project)**           | [Andrew Whitford](https://github.com/ricmua)                        | A simple repository meant to facilitate git-based management of Unity3D projects that use ROS2. |
-
-### Experiments ###
-Repos with code for running tasks or devices/sensors related to experiments.  
-
-|   Name                                                     |  Maintainer                                                         | Description                                                                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **[JSON Parameters Exporter](https://github.com/Neuro-Mechatronics-Interfaces/JSON_Parameters_Exporter)**           | [Max Murphy](https://github.com/m053m716)       | Python (`tkinter`) **PARAMETERS INTERFACE??!**                  |
-| **[Tkinter Center-Out](https://github.com/Neuro-Mechatronics-Interfaces/NHP_Radial_Cursor)** | [Max Murphy](https://github.com/m053m716) | Center-out task that runs the wrist center-out flexion/extension radial/ulnar deviation task.|
-| **[Microcontroller Sketches](https://github.com/Neuro-Mechatronics-Interfaces/Microcontroller_Sketches)** | Adapted by Max from many examples etc. | Contains *.ino sketch folders for different microcontroller applications. |
-| **[NHP Patch Online Renderer](https://github.com/Neuro-Mechatronics-Interfaces/NHP_Patch_Online_Render)** | [Max Murphy](https://github.com/m053m716) | Renders patch stimulation + brain volume visualization, online in [web interface](https://neuro-mechatronics-interfaces.github.io/NHP_Patch_Online_Render/). |
 
 ### MATLAB ###
 I've tried to start moving any MATLAB "packages" (folders led with `+` e.g. `+plot`, which effectively creates a namespace for functions in those folders e.g. `plot.data()` for function `data.m` in the `+plot` folder).  
@@ -78,6 +43,16 @@ Any such code repositories in this GitHub organization should start with the nam
 | **[+sounds](https://github.com/m053m716/-sounds)**           | [Max Murphy](https://github.com/m053m716)                        | Package with sound files (if initialized repo with Git-LFS) and function to play them.                |
 | **[+TMSiSAGA](https://github.com/Neuro-Mechatronics-Interfaces/TMSi_SAGA)** | Adapted by Max from [TMSi](https://info.tmsi.com/software-tmsi-polybench) | This repository contains code for the MATLAB and Python APIs compatible with Windows 10 v2.0.0 drivers and beyond for use with the TMSi SAGA data recorder. | 
 | **[+utils](https://github.com/Neuro-Mechatronics-Interfaces/NHP_MATLAB_Utilities)** | [Max Murphy](https://github.com/m053m716)   | Package with generic matlab utility functions, like parameter parsing from varargin, etc.             | 
+
+### ROS2 ###
+Different ROS2 nodes (probably in Python3) that let task-devices communicate with other environments, such as Unity.  
+
+|   Name                                                     |  Maintainer                                                         | Description                                                                                          |
+| ---------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **[NML Bag](https://github.com/ricmua/nml_bag)**           | [Andrew Whitford](https://github.com/ricmua)                        | A simple Python package for working with ROS2 bag files.                                             |
+| **[Force Dimension ROS2 package](https://github.com/ricmua/ros_force_dimension)** | [Andrew Whitford](https://github.com/ricmua) | A ROS2 package for interfacing with Force Dimension haptics robots.                                  |
+| **[ROS2 Data Agent](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Data_Agent)** | [Jonathan Shulgach](https://github.com/Jshulgach) | Code for a multipurpose file explorer specializing in reading ROS2 topic data from '.bag' or '.db3' files. |
+| **[ROS2 Reward Dispenser](https://github.com/Neuro-Mechatronics-Interfaces/ROS2_Reward_Dispenser)**           | [Jonathan Shulgach](https://github.com/Jshulgach)                        | A ROS2 package with Arduino sketches to operate a water reward system using serial commands. LED matrix display and loadcell measuring scale supported.                                            |
 
 ---
 
