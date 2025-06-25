@@ -17,8 +17,10 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 ---
 ## External Links ##
 * [Lab Wiki](https://nml-wiki.org)
-* [PBR Tasks](https://pbr.nml.wtf)
-* [Fitts' Grid Tasks](https://fitts.nml.wtf) 
+* Various WTF Links:
+  + [Code Guidelines](https://code.nml.wtf)
+  + [PBR Tasks](https://pbr.nml.wtf)
+  + [Fitts' Grid Tasks](https://fitts-task.nml.wtf) 
 
 ---
 
