@@ -5,7 +5,7 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 ## Contents ##
 - [Repos](#repos)
   + Add `MATLAB` packages from [this table](#matlab). 
-  + Use Interfaces
+  + User Interfaces
      * [DS8R](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__ds8r) | (Stimulus Isolator Controller)
      * [2TMSi MATLAB Streaming](https://github.com/Neuro-Mechatronics-Interfaces/2TMSi_MATLAB_Interface) | (Realtime streams/recording with the squiggles etc)
      * [LSL GUI for TMSi MATLAB](https://github.com/Neuro-Mechatronics-Interfaces/TMSi_MATLAB_LSL) | (Can connect to realtime streams any time someone runs 2TMSi interface, as long as both computers are connected to NML Wifi router)
@@ -13,6 +13,12 @@ This GitHub Organization hosts code that is developed and maintained by the memb
      * [Decomposition Export](https://github.com/Neuro-Mechatronics-Interfaces/Decomposition-Export) | See examples for how to export your TMSi `.poly5` data to `.mat` file format compatible with `DEMUSE`.
      * [Text Entry Prompter](https://github.com/Neuro-Mechatronics-Interfaces/matlab_package__typewriter) | Simple MATLAB GUI that lets you prompt subjects using a pre-curated list of simple phrases for text entry.
 - [Contributing](#contributing)
+
+---
+## External Links ##
+* [Lab Wiki](https://nml-wiki.org)
+* [PBR Tasks](https://pbr.nml.wtf)
+* [Fitts' Grid Tasks](https://fitts.nml.wtf) 
 
 ---
 
