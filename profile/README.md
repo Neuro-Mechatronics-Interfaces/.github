@@ -19,8 +19,9 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 * [Lab Wiki](https://nml-wiki.org)
 * Various WTF Links:
   + [Code Guidelines](https://code.nml.wtf)
-  + [PBR Tasks](https://pbr.nml.wtf)
-  + [Fitts' Grid Tasks](https://fitts-task.nml.wtf) 
+  + [Click-Hold-Release (CHR) Tasks](https://chr.nml.wtf)
+  + [Fitts' Grid Tasks](https://fitts-task.nml.wtf)
+  + [Simulations of varying utility](https://sims.nml.wtf)
 
 ---
 
