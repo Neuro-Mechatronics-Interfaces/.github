@@ -18,7 +18,6 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 ## External Links ##
 * [Lab Wiki](https://nml-wiki.org)
 * Various WTF Links:
-  + [Code Guidelines](https://code.nml.wtf)
   + [Click-Hold-Release (CHR) Tasks](https://chr.nml.wtf)
   + [Fitts' Grid Tasks](https://fitts-task.nml.wtf)
   + [Simulations of varying utility](https://sims.nml.wtf)
@@ -81,52 +80,3 @@ Please refer to **[this guide](https://code.nml.wtf/tutorials/2022/06/25/contrib
 ### Documenting contributions ###
 Please refer to **[this guide](https://code.nml.wtf/tutorials/2023/02/10/adding-a-repo.html)** for how to document your code contributions. **If you add a repo to this GitHub organization, _please_ follow these instructions when setting it up!**
 
----
-
-## Resources ##
-I've added links to some general and code-specific resources that I've found helpful.
-
-### NML ###
-* [Lab "wiki"](https://sites.google.com/andrew.cmu.edu/nml-wiki/)
-  + More of an internal lab webpage since it's technically *not* a wiki (sorry Doug).
-* [Lab manual](https://docs.google.com/document/d/16vjhJS-PAJfaK7ePl2iu_n1GC_jEd4QehurmFKuI0No/edit?usp=sharing)
-  + This is a helpful document that was primarily compiled by [Ashley](https://ashleydalrymple.com/).
-* [Lab onboarding](https://docs.google.com/document/d/1sjAKbXGcvK6zEjVtAKwhtRyCwtew3JxEYqOH46v00SU/edit)
-  + This onboarding document continues to evolve as students/staff join.
-* [Raptor](http://128.2.244.66/doc/)
-  + [Andrew](https://www.cs.cmu.edu/~awhitfor/) put together documentation and internally-hosted repos here.
-
-### Version Control ###
-* [git](https://git-scm.com)
-  + Start here if you are new to **[VCS](https://en.wikipedia.org/wiki/Version_control)** and git in general.
-* [GitKraken](https://www.gitkraken.com/)
-  + This is my favorite GitHub desktop graphical interface.
-  + It is pretty useful for tracking projects with multiple developers and branches.
-
-### IDEs ###
-* [Arduino](https://www.arduino.cc/en/software)
-  + My favorite tool for flashing code onto microcontrollers.
-  + Also, see this [tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) for CH34X drivers (in case you use cheap alternatives off Amazon like me, and always forget how to install...)
-* [Thonny](https://thonny.org/)
-  + Anaconda and PyCharm are both nice, but they are too big. Thonny is a light-weight IDE for Python that works right away on every platform I've ever tried (including running [MicroPython](https://micropython.org/) or [CircuitPython](https://circuitpython.org/) on [Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/), etc.)
-    - Incidentally, [this](https://eshop.wiznet.io/shop/module/w5100s-evb-pico/) is my favorite evaluation board that uses the RP2040 chipset. It has a hardwired TCP/IP controller that makes it easy to network on a local ethernet switch.
-* [Notepad++](https://notepad-plus-plus.org/downloads/)
-  + This is a small text editor that opens everything.
-  + Also I will fight you if you tell me this is not an IDE.
-
-### CAD ###
-* [OpenSCAD](https://openscad.org/downloads.html)
-  + This is a free, light-weight CAD tool.
-  + Also, check-out all the [free model libraries](https://github.com/nophead/NopSCADlib) others have shared!
-    - (Although, note that they do use GPL-3.0 license, if you care about that kind of stuff.)
-* [3D Slicer](https://download.slicer.org/)
-  + Really nice tool for visualizing/segmenting MRI image datasets (i.e. `.dcm` or `.nifti`, etc.)
-* [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/)
-  + This is what I use to slice `.stl` files to get the `.gcode` for [using my 3D-printer](https://sites.google.com/andrew.cmu.edu/nml-wiki/documentation/administrative/equipment/3d-printing?authuser=0), which anybody in NML can use if they want.
-
-### Graphics ###
-* [Inkscape](https://inkscape.org/release)
-  + This is a free tool that you can use instead of Adobe PhotoShop.
-  + Also, check out this helpful [Inkscape Tutorial](https://drive.google.com/file/d/1CRXf0ffctcGFzVo-XWRsYJNRVkoJU13I/view?usp=sharing) by [Ashley](https://ashleydalrymple.com/)!
-* [GIMP](https://www.gimp.org/downloads/)
-  + This is also free, you can use it instead of Adobe Illustrator.
