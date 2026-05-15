@@ -19,6 +19,8 @@ This GitHub Organization hosts code that is developed and maintained by the memb
 * [Lab Wiki](https://nml-wiki.org)
 * Various WTF Links:
   + [Click-Hold-Release (CHR) Tasks](https://chr.nml.wtf)
+  + [Neural-Network Figure Designer](https://render.nml.wtf)
+  + [TabletHID](https://tablet.nml.wtf)
   + [Fitts' Grid Tasks](https://fitts-task.nml.wtf)
   + [Simulations of varying utility](https://sims.nml.wtf)
 
